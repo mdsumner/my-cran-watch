@@ -1,0 +1,85 @@
+# my-cran-watch configuration
+#
+# This is the ONLY file that should contain anything specific to a person.
+# Everything in R/ and scripts/ reads from here. Keep it that way and the
+# repo can become a fork-modify-deploy template later by blanking this file.
+
+# All email addresses that appear in the Maintainer field of your packages.
+maintainer_emails:
+  - mdsumner@gmail.com
+  - michael.sumner@aad.gov.au
+
+# GitHub identity used in commit messages and issue assignment.
+github_user: mdsumner
+
+# r-universe universes to cross-check against the CRAN package list.
+universes:
+  - hypertidy
+  - mdsumner
+  - Trackage
+
+# Packages to watch regardless of the CRAN Maintainer field. Needed when
+# maintainership has changed in reality but not yet on CRAN (the field
+# only updates at the next accepted release), e.g. an adopted package.
+extra_packages:
+  - fasterize
+
+# Map of CRAN package name -> GitHub repo (owner/name).
+# Run scripts/init_repo_map.R to generate a draft of this from the URL and
+# BugReports fields in the CRAN db, then review by hand. Packages absent
+# from this map are watched and reported on, but never tagged/released
+# (the watcher will not push to a repo it was not explicitly told about).
+repo_map:
+  affinity: hypertidy/affinity
+  angstroms: AustralianAntarcticDivision/angstroms
+  area: hypertidy/area
+  basf: mdsumner/basf
+  bgmfiles: AustralianAntarcticDivision/bgmfiles
+  ceramic: hypertidy/ceramic
+  crsmeta: hypertidy/crsmeta
+  decido: hypertidy/decido
+  dsn: hypertidy/dsn
+  fasterize: ecohealthalliance/fasterize
+  geographiclib: hypertidy/geographiclib
+  geojson: ropensci/geojson
+  ggpolypath: mdsumner/ggpolypath
+  gibble: mdsumner/gibble
+  graticule: hypertidy/graticule
+  lazysf: hypertidy/lazysf
+  ncmeta: hypertidy/ncmeta
+  orsifronts: AustralianAntarcticDivision/orsifronts
+  ozmaps: mdsumner/ozmaps
+  palr: AustralianAntarcticDivision/palr
+  PROJ: hypertidy/PROJ
+  quadmesh: hypertidy/quadmesh
+  rbgm: AustralianAntarcticDivision/rbgm
+  reproj: hypertidy/reproj
+  sfdct: hypertidy/sfdct
+  silicate: hypertidy/silicate
+  sooty: mdsumner/sooty
+  spbabel: mdsumner/spbabel
+  spex: mdsumner/spex
+  tabularaster: hypertidy/tabularaster
+  textures: hypertidy/textures
+  tidync: ropensci/tidync
+  tissot: hypertidy/tissot
+  traipse: AustralianAntarcticDivision/traipse
+  trip: Trackage/trip
+  tripEstimation: Trackage/tripEstimation
+  unjoin: hypertidy/unjoin
+  vapour: hypertidy/vapour
+  vaster: hypertidy/vaster
+  wkpool: hypertidy/wkpool
+  ximage: hypertidy/ximage
+
+# Conditions must be observed on this many consecutive runs before an
+# issue is opened (CRAN flavors flake; see README).
+consecutive_required: 2
+
+# Flavors whose transient noise you never want to hear about. Matched as a
+# regex against the flavor name. Leave empty to hear everything.
+ignore_flavors: []
+#  - "macos"
+
+# Check statuses that count as noteworthy at all.
+notify_statuses: [NOTE, WARN, WARNING, ERROR, FAIL]

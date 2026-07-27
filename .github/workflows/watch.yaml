@@ -1,0 +1,51 @@
+name: watch
+
+on:
+  schedule:
+    # daily; offset from the top of the hour to be polite to CRAN mirrors
+    - cron: "17 19 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (no issues, no tags)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # commit state/state.json back to this repo
+  issues: write     # open/comment/close condition issues in this repo
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install dependencies
+        run: Rscript -e 'install.packages(c("jsonlite", "yaml", "foghorn"))'
+
+      - name: Run watcher
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # fine-grained PAT with contents:write on the repos in repo_map;
+          # only needed for tag/release pushes to OTHER repos
+          WATCH_PAT: ${{ secrets.WATCH_PAT }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            Rscript scripts/watch.R --dry-run
+          else
+            Rscript scripts/watch.R
+          fi
+
+      - name: Commit state
+        run: |
+          git config user.name "my-cran-watch"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/
+          git diff --cached --quiet || git commit -m "state: $(date -u +%F)"
+          git push
