@@ -1,0 +1,737 @@
+{
+  "packages": {
+    "affinity": {
+      "version": "0.2.5",
+      "first_seen": "2026-07-27"
+    },
+    "angstroms": {
+      "version": "0.0.1",
+      "first_seen": "2026-07-27"
+    },
+    "area": {
+      "version": "0.2.0",
+      "first_seen": "2026-07-27"
+    },
+    "basf": {
+      "version": "0.2.0",
+      "first_seen": "2026-07-27"
+    },
+    "bgmfiles": {
+      "version": "0.1.0",
+      "first_seen": "2026-07-27"
+    },
+    "ceramic": {
+      "version": "0.9.5",
+      "first_seen": "2026-07-27"
+    },
+    "crsmeta": {
+      "version": "0.3.0",
+      "first_seen": "2026-07-27"
+    },
+    "decido": {
+      "version": "0.4.0",
+      "first_seen": "2026-07-27"
+    },
+    "dsn": {
+      "version": "0.1.0",
+      "first_seen": "2026-07-27"
+    },
+    "fasterize": {
+      "version": "1.1.0",
+      "first_seen": "2026-07-27"
+    },
+    "geographiclib": {
+      "version": "0.4.2",
+      "first_seen": "2026-07-27"
+    },
+    "geojson": {
+      "version": "0.3.5",
+      "first_seen": "2026-07-27"
+    },
+    "ggpolypath": {
+      "version": "0.4.0",
+      "first_seen": "2026-07-27"
+    },
+    "gibble": {
+      "version": "0.4.0",
+      "first_seen": "2026-07-27"
+    },
+    "graticule": {
+      "version": "0.4.0",
+      "first_seen": "2026-07-27"
+    },
+    "lazysf": {
+      "version": "0.4.0",
+      "first_seen": "2026-07-27"
+    },
+    "ncmeta": {
+      "version": "0.4.0",
+      "first_seen": "2026-07-27"
+    },
+    "orsifronts": {
+      "version": "0.2.0",
+      "first_seen": "2026-07-27"
+    },
+    "ozmaps": {
+      "version": "0.4.5",
+      "first_seen": "2026-07-27"
+    },
+    "palr": {
+      "version": "0.4.0",
+      "first_seen": "2026-07-27"
+    },
+    "PROJ": {
+      "version": "0.7.0",
+      "first_seen": "2026-07-27"
+    },
+    "quadmesh": {
+      "version": "0.6.0",
+      "first_seen": "2026-07-27"
+    },
+    "rbgm": {
+      "version": "0.2.0",
+      "first_seen": "2026-07-27"
+    },
+    "reproj": {
+      "version": "0.8.0",
+      "first_seen": "2026-07-27"
+    },
+    "sfdct": {
+      "version": "0.3.0",
+      "first_seen": "2026-07-27"
+    },
+    "silicate": {
+      "version": "0.7.1",
+      "first_seen": "2026-07-27"
+    },
+    "sooty": {
+      "version": "0.6.1",
+      "first_seen": "2026-07-27"
+    },
+    "spbabel": {
+      "version": "0.6.0",
+      "first_seen": "2026-07-27"
+    },
+    "spex": {
+      "version": "0.7.1",
+      "first_seen": "2026-07-27"
+    },
+    "tabularaster": {
+      "version": "0.7.2",
+      "first_seen": "2026-07-27"
+    },
+    "textures": {
+      "version": "0.1.0",
+      "first_seen": "2026-07-27"
+    },
+    "tidync": {
+      "version": "0.4.0",
+      "first_seen": "2026-07-27"
+    },
+    "tissot": {
+      "version": "0.3.0",
+      "first_seen": "2026-07-27"
+    },
+    "traipse": {
+      "version": "0.4.0",
+      "first_seen": "2026-07-27"
+    },
+    "trip": {
+      "version": "1.10.0",
+      "first_seen": "2026-07-27"
+    },
+    "tripEstimation": {
+      "version": "0.0-46",
+      "first_seen": "2026-07-27"
+    },
+    "unjoin": {
+      "version": "0.1.0",
+      "first_seen": "2026-07-27"
+    },
+    "vapour": {
+      "version": "0.16.0",
+      "first_seen": "2026-07-27"
+    },
+    "vaster": {
+      "version": "0.6.0",
+      "first_seen": "2026-07-27"
+    },
+    "wkpool": {
+      "version": "0.3.0",
+      "first_seen": "2026-07-27"
+    },
+    "ximage": {
+      "version": "0.1.0",
+      "first_seen": "2026-07-27"
+    }
+  },
+  "conditions": {
+    "angstroms|r-devel-linux-x86_64-debian-clang": {
+      "status": "NOTE",
+      "text_hash": "2099242",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "decido|r-devel-linux-x86_64-debian-clang": {
+      "status": "NOTE",
+      "text_hash": "2323733",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "orsifronts|r-devel-linux-x86_64-debian-clang": {
+      "status": "NOTE",
+      "text_hash": "5039633",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "palr|r-devel-linux-x86_64-debian-clang": {
+      "status": "NOTE",
+      "text_hash": "1022174",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "quadmesh|r-devel-linux-x86_64-debian-clang": {
+      "status": "NOTE",
+      "text_hash": "5074007",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "reproj|r-devel-linux-x86_64-debian-clang": {
+      "status": "NOTE",
+      "text_hash": "3900627",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-devel-linux-x86_64-debian-clang": {
+      "status": "NOTE",
+      "text_hash": "35444998",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "textures|r-devel-linux-x86_64-debian-clang": {
+      "status": "NOTE",
+      "text_hash": "1288766",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "trip|r-devel-linux-x86_64-debian-clang": {
+      "status": "NOTE",
+      "text_hash": "11969959",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "tripEstimation|r-devel-linux-x86_64-debian-clang": {
+      "status": "NOTE",
+      "text_hash": "12090509",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "angstroms|r-devel-linux-x86_64-debian-gcc": {
+      "status": "NOTE",
+      "text_hash": "2099242",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "decido|r-devel-linux-x86_64-debian-gcc": {
+      "status": "NOTE",
+      "text_hash": "2323733",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "orsifronts|r-devel-linux-x86_64-debian-gcc": {
+      "status": "NOTE",
+      "text_hash": "5039633",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "palr|r-devel-linux-x86_64-debian-gcc": {
+      "status": "NOTE",
+      "text_hash": "1022174",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "quadmesh|r-devel-linux-x86_64-debian-gcc": {
+      "status": "NOTE",
+      "text_hash": "5074007",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "reproj|r-devel-linux-x86_64-debian-gcc": {
+      "status": "NOTE",
+      "text_hash": "3900627",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-devel-linux-x86_64-debian-gcc": {
+      "status": "NOTE",
+      "text_hash": "35444998",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "textures|r-devel-linux-x86_64-debian-gcc": {
+      "status": "NOTE",
+      "text_hash": "1288766",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "trip|r-devel-linux-x86_64-debian-gcc": {
+      "status": "NOTE",
+      "text_hash": "11969959",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "tripEstimation|r-devel-linux-x86_64-debian-gcc": {
+      "status": "NOTE",
+      "text_hash": "12090509",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "palr|r-devel-linux-x86_64-fedora-clang": {
+      "status": "NOTE",
+      "text_hash": "1022174",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-devel-linux-x86_64-fedora-clang": {
+      "status": "NOTE",
+      "text_hash": "35444998",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "textures|r-devel-linux-x86_64-fedora-clang": {
+      "status": "NOTE",
+      "text_hash": "1288766",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "trip|r-devel-linux-x86_64-fedora-clang": {
+      "status": "NOTE",
+      "text_hash": "3236311",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "decido|r-devel-linux-x86_64-fedora-gcc": {
+      "status": "NOTE",
+      "text_hash": "2323733",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "palr|r-devel-linux-x86_64-fedora-gcc": {
+      "status": "NOTE",
+      "text_hash": "1022174",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "quadmesh|r-devel-linux-x86_64-fedora-gcc": {
+      "status": "NOTE",
+      "text_hash": "5074007",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "reproj|r-devel-linux-x86_64-fedora-gcc": {
+      "status": "NOTE",
+      "text_hash": "3900627",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-devel-linux-x86_64-fedora-gcc": {
+      "status": "NOTE",
+      "text_hash": "35444998",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "textures|r-devel-linux-x86_64-fedora-gcc": {
+      "status": "NOTE",
+      "text_hash": "1288766",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "trip|r-devel-linux-x86_64-fedora-gcc": {
+      "status": "NOTE",
+      "text_hash": "3236311",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "decido|r-devel-windows-x86_64": {
+      "status": "NOTE",
+      "text_hash": "2323733",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "palr|r-devel-windows-x86_64": {
+      "status": "NOTE",
+      "text_hash": "1022174",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "quadmesh|r-devel-windows-x86_64": {
+      "status": "NOTE",
+      "text_hash": "5074007",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "reproj|r-devel-windows-x86_64": {
+      "status": "NOTE",
+      "text_hash": "3900627",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-devel-windows-x86_64": {
+      "status": "NOTE",
+      "text_hash": "35444998",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "textures|r-devel-windows-x86_64": {
+      "status": "NOTE",
+      "text_hash": "1288766",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "trip|r-devel-windows-x86_64": {
+      "status": "NOTE",
+      "text_hash": "3236311",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-patched-linux-x86_64": {
+      "status": "NOTE",
+      "text_hash": "9654157",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-release-linux-x86_64": {
+      "status": "NOTE",
+      "text_hash": "9654157",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-release-macos-arm64": {
+      "status": "NOTE",
+      "text_hash": "9654157",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "geographiclib|r-release-macos-x86_64": {
+      "status": "WARNING",
+      "text_hash": "107863191",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-release-macos-x86_64": {
+      "status": "NOTE",
+      "text_hash": "9654157",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-release-windows-x86_64": {
+      "status": "NOTE",
+      "text_hash": "9654157",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-oldrel-macos-arm64": {
+      "status": "NOTE",
+      "text_hash": "9654157",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-oldrel-macos-x86_64": {
+      "status": "NOTE",
+      "text_hash": "9654157",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|r-oldrel-windows-x86_64": {
+      "status": "NOTE",
+      "text_hash": "9654157",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "angstroms|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "basf|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "bgmfiles|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "geojson|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "ggpolypath|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "gibble|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "orsifronts|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "ozmaps|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "palr|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "rbgm|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "silicate|universe": {
+      "status": "GAP",
+      "text_hash": "46336",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "sooty|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "spbabel|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "spex|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "tidync|universe": {
+      "status": "GAP",
+      "text_hash": "67503",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    },
+    "angstroms|metadata": {
+      "status": "DRIFT",
+      "text_hash": "1564161",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27"
+    }
+  }
+}
