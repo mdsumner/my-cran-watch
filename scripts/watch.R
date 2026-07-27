@@ -30,11 +30,33 @@ if (!is.null(inc) && NROW(inc) > 0) {
 }
 
 # diff --------------------------------------------------------------------
+# reconcile ---------------------------------------------------------------
+# transitions can be missed (dry runs advance streaks without creating
+# issues; gh calls can fail) so heal rather than trust: any active
+# condition with no issue gets an opened event, unless one is pending
+reconcile_orphans <- function(state, events) {
+  pending <- vapply(events, function(e) e$key %||% "", character(1))
+  for (key in names(state$conditions)) {
+    cond <- state$conditions[[key]]
+    if (!identical(cond$lifecycle, "active") || !is.null(cond$issue_number) ||
+        key %in% pending) next
+    parts <- strsplit(key, "|", fixed = TRUE)[[1]]
+    type <- switch(parts[2], universe = "universe_gap",
+                   metadata = "metadata", "check")
+    events[[length(events) + 1L]] <- list(
+      type = type, event = "opened", key = key,
+      package = parts[1], flavor = parts[2],
+      status = cond$status, detail = cond$detail %||% "")
+  }
+  events
+}
+
 v <- diff_versions(state, mine);            state <- v$state
 c1 <- diff_checks(state, checks, cfg);      state <- c1$state
 u <- diff_universe(state, mine, uni, cfg);  state <- u$state
 m <- diff_metadata(state, mine, cfg);       state <- m$state
 events <- c(v$events, c1$events, u$events, m$events)
+events <- reconcile_orphans(state, events)
 msg("%d event(s)", length(events))
 
 # act ---------------------------------------------------------------------

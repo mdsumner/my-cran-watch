@@ -46,7 +46,8 @@ step_condition <- function(cond, observed_status, observed_text, required) {
   h <- text_hash(observed_text)
 
   if (is.null(cond)) {
-    cond <- list(status = observed_status, text_hash = h, streak = 1L,
+    cond <- list(status = observed_status, text_hash = h,
+                 detail = substr(observed_text, 1, 4000), streak = 1L,
                  lifecycle = "observed", issue_number = NULL,
                  first_seen = now, last_seen = now)
     return(list(cond = cond, event = NULL))
@@ -66,6 +67,7 @@ step_condition <- function(cond, observed_status, observed_text, required) {
     # changes character wakes up (this is the "worsening" escape hatch)
     cond$status <- observed_status
     cond$text_hash <- h
+    cond$detail <- substr(observed_text, 1, 4000)
     cond$streak <- 1L
     if (identical(cond$lifecycle, "snoozed")) {
       # wake up: the issue is already open, so back to active, and the
