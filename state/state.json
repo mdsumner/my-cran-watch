@@ -173,7 +173,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "CRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nFound the following (possibly) invalid file URI:\n  URI: CONDUCT.md\n    From: README.md"
     },
     "decido|r-devel-linux-x86_64-debian-clang": {
@@ -183,7 +183,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  decido/tests/testthat/test-handle-xy.R (.Dim: 1, .Dimnames: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "orsifronts|r-devel-linux-x86_64-debian-clang": {
@@ -193,7 +193,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "CRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nPackage CITATION file contains call(s) to old-style personList() or\nas.personList().  Please use c() on person objects instead.\nPackage CITATION file contains call(s) to old-style citEntry().  Please\nuse bibentry() instead."
     },
     "palr|r-devel-linux-x86_64-debian-clang": {
@@ -203,7 +203,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  palr/R/palr.R (.Names: 1)\n'.Names' should be changed to 'names'."
     },
     "quadmesh|r-devel-linux-x86_64-debian-clang": {
@@ -213,7 +213,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  quadmesh/tests/testthat/test-barycentric.R (.Dim: 1)\n  quadmesh/tests/testthat/test-reproject.R (.Dim: 2, .Dimnames: 2)\n  quadmesh/tests/testthat/test-tri-quads.R (.Dim: 2)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "reproj|r-devel-linux-x86_64-debian-clang": {
@@ -223,7 +223,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  reproj/tests/testthat/test-reproj-PROJ.R (.Dim: 2, .Dimnames: 1)\n  reproj/tests/testthat/test-reproj-proj4.R (.Dim: 2, .Dimnames: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "silicate|r-devel-linux-x86_64-debian-clang": {
@@ -233,7 +233,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  silicate/tests/testthat/test-plot.R (.Dim: 1, .Dimnames: 1, .Label: 1)\n  silicate/tests/testthat/test-triangles.R (.Dim: 1)\n  silicate/tests/testthat/test-trip.R (.Dim: 2, .Dimnames: 2)\n  silicate/man/tri_area.Rd (.Dim: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.\n'.Label' should be changed to 'levels'.\n---\nRd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "textures|r-devel-linux-x86_64-debian-clang": {
@@ -243,7 +243,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  textures/tests/testthat/test-quads.R (.Dim: 7)\n'.Dim' should be changed to 'dim'."
     },
     "trip|r-devel-linux-x86_64-debian-clang": {
@@ -253,7 +253,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  trip/tests/testthat/test-trip.R (.Label: 8, .Dim: 1, .Dimnames: 1)\n'.Label' should be changed to 'levels'.\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.\n---\nRd contents: Rd files without \\usage:\n  ‘rasterize.Rd’\n\\arguments should not be documented without \\usage."
     },
     "tripEstimation|r-devel-linux-x86_64-debian-clang": {
@@ -263,7 +263,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "CRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nThe BugReports field in DESCRIPTION has\n  https://github.com/Trackage/tripEstimation\nwhich should likely be\n  https://github.com/Trackage/tripEstimation/issues\ninstead.\n---\nRd contents: Rd files without \\usage:\n  ‘satellite.model.Rd’\n\\arguments should not be documented without \\usage."
     },
     "angstroms|r-devel-linux-x86_64-debian-gcc": {
@@ -273,7 +273,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "CRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nFound the following (possibly) invalid file URI:\n  URI: CONDUCT.md\n    From: README.md"
     },
     "decido|r-devel-linux-x86_64-debian-gcc": {
@@ -283,7 +283,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  decido/tests/testthat/test-handle-xy.R (.Dim: 1, .Dimnames: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "orsifronts|r-devel-linux-x86_64-debian-gcc": {
@@ -293,7 +293,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "CRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nPackage CITATION file contains call(s) to old-style personList() or\nas.personList().  Please use c() on person objects instead.\nPackage CITATION file contains call(s) to old-style citEntry().  Please\nuse bibentry() instead."
     },
     "palr|r-devel-linux-x86_64-debian-gcc": {
@@ -303,7 +303,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  palr/R/palr.R (.Names: 1)\n'.Names' should be changed to 'names'."
     },
     "quadmesh|r-devel-linux-x86_64-debian-gcc": {
@@ -313,7 +313,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  quadmesh/tests/testthat/test-barycentric.R (.Dim: 1)\n  quadmesh/tests/testthat/test-reproject.R (.Dim: 2, .Dimnames: 2)\n  quadmesh/tests/testthat/test-tri-quads.R (.Dim: 2)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "reproj|r-devel-linux-x86_64-debian-gcc": {
@@ -323,7 +323,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  reproj/tests/testthat/test-reproj-PROJ.R (.Dim: 2, .Dimnames: 1)\n  reproj/tests/testthat/test-reproj-proj4.R (.Dim: 2, .Dimnames: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "silicate|r-devel-linux-x86_64-debian-gcc": {
@@ -333,7 +333,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  silicate/tests/testthat/test-plot.R (.Dim: 1, .Dimnames: 1, .Label: 1)\n  silicate/tests/testthat/test-triangles.R (.Dim: 1)\n  silicate/tests/testthat/test-trip.R (.Dim: 2, .Dimnames: 2)\n  silicate/man/tri_area.Rd (.Dim: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.\n'.Label' should be changed to 'levels'.\n---\nRd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "textures|r-devel-linux-x86_64-debian-gcc": {
@@ -343,7 +343,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  textures/tests/testthat/test-quads.R (.Dim: 7)\n'.Dim' should be changed to 'dim'."
     },
     "trip|r-devel-linux-x86_64-debian-gcc": {
@@ -353,7 +353,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  trip/tests/testthat/test-trip.R (.Label: 8, .Dim: 1, .Dimnames: 1)\n'.Label' should be changed to 'levels'.\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.\n---\nRd contents: Rd files without \\usage:\n  ‘rasterize.Rd’\n\\arguments should not be documented without \\usage."
     },
     "tripEstimation|r-devel-linux-x86_64-debian-gcc": {
@@ -363,7 +363,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "CRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nThe BugReports field in DESCRIPTION has\n  https://github.com/Trackage/tripEstimation\nwhich should likely be\n  https://github.com/Trackage/tripEstimation/issues\ninstead.\n---\nRd contents: Rd files without \\usage:\n  ‘satellite.model.Rd’\n\\arguments should not be documented without \\usage."
     },
     "palr|r-devel-linux-x86_64-fedora-clang": {
@@ -373,7 +373,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  palr/R/palr.R (.Names: 1)\n'.Names' should be changed to 'names'."
     },
     "silicate|r-devel-linux-x86_64-fedora-clang": {
@@ -383,7 +383,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  silicate/tests/testthat/test-plot.R (.Dim: 1, .Dimnames: 1, .Label: 1)\n  silicate/tests/testthat/test-triangles.R (.Dim: 1)\n  silicate/tests/testthat/test-trip.R (.Dim: 2, .Dimnames: 2)\n  silicate/man/tri_area.Rd (.Dim: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.\n'.Label' should be changed to 'levels'.\n---\nRd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "textures|r-devel-linux-x86_64-fedora-clang": {
@@ -393,7 +393,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  textures/tests/testthat/test-quads.R (.Dim: 7)\n'.Dim' should be changed to 'dim'."
     },
     "trip|r-devel-linux-x86_64-fedora-clang": {
@@ -403,7 +403,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  trip/tests/testthat/test-trip.R (.Label: 8, .Dim: 1, .Dimnames: 1)\n'.Label' should be changed to 'levels'.\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "decido|r-devel-linux-x86_64-fedora-gcc": {
@@ -413,7 +413,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  decido/tests/testthat/test-handle-xy.R (.Dim: 1, .Dimnames: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "palr|r-devel-linux-x86_64-fedora-gcc": {
@@ -423,7 +423,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  palr/R/palr.R (.Names: 1)\n'.Names' should be changed to 'names'."
     },
     "quadmesh|r-devel-linux-x86_64-fedora-gcc": {
@@ -433,7 +433,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  quadmesh/tests/testthat/test-barycentric.R (.Dim: 1)\n  quadmesh/tests/testthat/test-reproject.R (.Dim: 2, .Dimnames: 2)\n  quadmesh/tests/testthat/test-tri-quads.R (.Dim: 2)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "reproj|r-devel-linux-x86_64-fedora-gcc": {
@@ -443,7 +443,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  reproj/tests/testthat/test-reproj-PROJ.R (.Dim: 2, .Dimnames: 1)\n  reproj/tests/testthat/test-reproj-proj4.R (.Dim: 2, .Dimnames: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "silicate|r-devel-linux-x86_64-fedora-gcc": {
@@ -453,7 +453,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  silicate/tests/testthat/test-plot.R (.Dim: 1, .Dimnames: 1, .Label: 1)\n  silicate/tests/testthat/test-triangles.R (.Dim: 1)\n  silicate/tests/testthat/test-trip.R (.Dim: 2, .Dimnames: 2)\n  silicate/man/tri_area.Rd (.Dim: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.\n'.Label' should be changed to 'levels'.\n---\nRd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "textures|r-devel-linux-x86_64-fedora-gcc": {
@@ -463,7 +463,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  textures/tests/testthat/test-quads.R (.Dim: 7)\n'.Dim' should be changed to 'dim'."
     },
     "trip|r-devel-linux-x86_64-fedora-gcc": {
@@ -473,7 +473,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  trip/tests/testthat/test-trip.R (.Label: 8, .Dim: 1, .Dimnames: 1)\n'.Label' should be changed to 'levels'.\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "decido|r-devel-windows-x86_64": {
@@ -483,7 +483,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  decido/tests/testthat/test-handle-xy.R (.Dim: 1, .Dimnames: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "palr|r-devel-windows-x86_64": {
@@ -493,7 +493,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  palr/R/palr.R (.Names: 1)\n'.Names' should be changed to 'names'."
     },
     "quadmesh|r-devel-windows-x86_64": {
@@ -503,7 +503,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  quadmesh/tests/testthat/test-barycentric.R (.Dim: 1)\n  quadmesh/tests/testthat/test-reproject.R (.Dim: 2, .Dimnames: 2)\n  quadmesh/tests/testthat/test-tri-quads.R (.Dim: 2)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "reproj|r-devel-windows-x86_64": {
@@ -513,7 +513,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  reproj/tests/testthat/test-reproj-PROJ.R (.Dim: 2, .Dimnames: 1)\n  reproj/tests/testthat/test-reproj-proj4.R (.Dim: 2, .Dimnames: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "silicate|r-devel-windows-x86_64": {
@@ -523,7 +523,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  silicate/tests/testthat/test-plot.R (.Dim: 1, .Dimnames: 1, .Label: 1)\n  silicate/tests/testthat/test-triangles.R (.Dim: 1)\n  silicate/tests/testthat/test-trip.R (.Dim: 2, .Dimnames: 2)\n  silicate/man/tri_area.Rd (.Dim: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.\n'.Label' should be changed to 'levels'.\n---\nRd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "textures|r-devel-windows-x86_64": {
@@ -533,7 +533,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  textures/tests/testthat/test-quads.R (.Dim: 7)\n'.Dim' should be changed to 'dim'."
     },
     "trip|r-devel-windows-x86_64": {
@@ -543,7 +543,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "R code for possible problems: Found calls to structure() using deprecated special names:\n  trip/tests/testthat/test-trip.R (.Label: 8, .Dim: 1, .Dimnames: 1)\n'.Label' should be changed to 'levels'.\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'."
     },
     "silicate|r-patched-linux-x86_64": {
@@ -553,7 +553,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "Rd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "silicate|r-release-linux-x86_64": {
@@ -563,7 +563,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "Rd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "silicate|r-release-macos-arm64": {
@@ -573,7 +573,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "Rd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "geographiclib|r-release-macos-x86_64": {
@@ -583,7 +583,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "whether package can be installed: Found the following significant warnings:\n  Math.cpp:59:8: warning: compound assignment to object of volatile-qualified type 'volatile float' is deprecated [-Wdeprecated-volatile]\n  Math.cpp:60:9: warning: compound assignment to object of volatile-qualified type 'volatile float' is deprecated [-Wdeprecated-volatile]\n  Math.cpp:59:8: warning: compound assignment to object of volatile-qualified type 'volatile double' is deprecated [-Wdeprecated-volatile]\n  Math.cpp:60:9: warning: compound assignment to object of volatile-qualified type 'volatile double' is deprecated [-Wdeprecated-volatile]\n  Math.cpp:59:8: warning: compound assignment to object of volatile-qualified type 'volatile long double' is deprecated [-Wdeprecated-volatile]\n  Math.cpp:60:9: warning: compound assignment to object of volatile-qualified type 'volatile long double' is deprecated [-Wdeprecated-volatile]\nSee ‘/Volumes/Builds/packages/big-sur-x86_64/results/4.6/geographiclib.Rcheck/00install.out’ for details.\n* used C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’\n* used SDK: ‘MacOSX11.3.1.sdk’"
     },
     "silicate|r-release-macos-x86_64": {
@@ -593,7 +593,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "Rd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "silicate|r-release-windows-x86_64": {
@@ -603,7 +603,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "Rd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "silicate|r-oldrel-macos-arm64": {
@@ -613,7 +613,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "Rd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "silicate|r-oldrel-macos-x86_64": {
@@ -623,7 +623,7 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "Rd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "silicate|r-oldrel-windows-x86_64": {
@@ -633,152 +633,152 @@
       "lifecycle": "observed",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
       "detail": "Rd files: checkRd: (-1) inlandwaters.Rd:14: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:15: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:16: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:17: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:18: Lost braces in \\itemize; meant \\describe ?\ncheckRd: (-1) inlandwaters.Rd:19: Lost braces in \\itemize; meant \\describe ?"
     },
     "angstroms|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "basf|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "bgmfiles|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "geojson|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "ggpolypath|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "gibble|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "orsifronts|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "ozmaps|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "palr|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "rbgm|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "silicate|universe": {
       "status": "GAP",
       "text_hash": "46336",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "sooty|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "spbabel|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "spex|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "tidync|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     },
     "angstroms|metadata": {
       "status": "DRIFT",
       "text_hash": "1564161",
-      "streak": 5,
+      "streak": 6,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27"
+      "last_seen": "2026-07-28"
     }
   }
 }
