@@ -3,7 +3,7 @@ name: watch
 on:
   schedule:
     # daily; offset from the top of the hour to be polite to CRAN mirrors
-    - cron: "17 19 * * *"
+    - cron: "17 19 */6 * *"
   workflow_dispatch:
     inputs:
       dry_run:
