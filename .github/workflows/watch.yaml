@@ -49,6 +49,6 @@ jobs:
         run: |
           git config user.name "my-cran-watch"
           git config user.email "actions@users.noreply.github.com"
-          git add state/
+          git add state/ docs/
           git diff --cached --quiet || git commit -m "state: $(date -u +%F)"
           git push
