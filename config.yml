@@ -29,7 +29,12 @@ extra_packages:
 # "interest" (you depend on it or just want to know), default "interest".
 # These get check issues (labelled by role) but are never tagged/released
 # and are not expected in your r-universes.
-watch: []
+watch:
+  - terra
+  - gdalraster
+  - wk
+  - sedonadb
+  - ggsql
 #  - package: sf
 #    role: contribute
 #  - package: terra
