@@ -60,7 +60,11 @@ step_condition <- function(cond, observed_status, observed_text, required) {
                  detail = substr(observed_text, 1, 4000), streak = 1L,
                  lifecycle = "observed", issue_number = NULL,
                  first_seen = now, last_seen = now)
-    return(list(cond = cond, event = NULL))
+    if (required <= 1) {
+      cond$lifecycle <- "active"
+      ev <- "opened"
+    }
+    return(list(cond = cond, event = ev))
   }
 
   cond$last_seen <- now

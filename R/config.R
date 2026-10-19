@@ -5,7 +5,28 @@ read_config <- function(path = "config.yml") {
   stopifnot(length(cfg$maintainer_emails) > 0)
   cfg$consecutive_required <- cfg$consecutive_required %||% 2
   cfg$notify_statuses <- cfg$notify_statuses %||% c("WARN", "WARNING", "ERROR", "FAIL")
+  cfg$watch <- normalize_watch(cfg$watch)
   cfg
+}
+
+# watch: packages maintained by someone else, each either a bare name or
+# {package, role}; role is "contribute" (I send PRs) or "interest" (I
+# depend on it / want to know).  Returns a data.frame(package, role).
+watch_roles <- c("contribute", "interest")
+normalize_watch <- function(x) {
+  if (!length(x)) return(data.frame(package = character(), role = character(),
+                                    stringsAsFactors = FALSE))
+  rows <- lapply(x, function(e) {
+    if (is.character(e)) e <- list(package = e)
+    role <- e$role %||% "interest"
+    if (!role %in% watch_roles) {
+      stop(sprintf("watch: %s has role '%s'; use one of %s", e$package, role,
+                   paste(watch_roles, collapse = ", ")))
+    }
+    data.frame(package = e$package, role = role, stringsAsFactors = FALSE)
+  })
+  out <- do.call(rbind, rows)
+  out[!duplicated(out$package), , drop = FALSE]
 }
 
 `%||%` <- function(a, b) if (is.null(a)) b else a

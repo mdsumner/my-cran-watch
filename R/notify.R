@@ -15,18 +15,31 @@ issue_title <- function(ev) {
     check        = sprintf("%s: %s on %s", ev$package, ev$status, ev$flavor),
     universe_gap = sprintf("%s: r-universe gap", ev$package),
     metadata     = sprintf("%s: CRAN metadata points away from repo", ev$package),
+    deadline     = sprintf("%s: CRAN deadline", ev$package),
+    archived     = sprintf("%s: archived on CRAN", ev$package),
+    revdeps      = sprintf("%s: reverse dependencies failing", ev$package),
+    canary       = sprintf("%s: GDAL canary failing", ev$package),
     stop("no issue title for event type ", ev$type))
+}
+
+# one label per role, so issues filter into mine / contribute / interest
+role_labels <- c(maintainer = "mine", contribute = "contribute", interest = "interest")
+
+ensure_labels <- function() {
+  for (l in role_labels) {
+    gh(c("label", "create", l, "--force", "--color", "ededed"))
+  }
 }
 
 issue_body <- function(ev, attribution = NULL) {
   body <- c(
     sprintf("condition-key: `%s`", ev$key),
+    sprintf("role: %s", ev$role %||% "maintainer"),
     "",
     switch(ev$type,
       check = c(sprintf("Status: **%s** on `%s`", ev$status, ev$flavor), "",
                 "```", substr(ev$detail %||% "", 1, 4000), "```"),
-      universe_gap = ev$detail,
-      metadata = ev$detail),
+      ev$detail),
     ""
   )
   if (!is.null(attribution)) body <- c(body, attribution, "")
@@ -76,7 +89,8 @@ notify_event <- function(ev, attribution = NULL) {
   if (identical(ev$event, "opened")) {
     existing <- find_issue(ev$key)
     if (!is.null(existing)) return(existing$number)
-    out <- gh(c("issue", "create",
+    label <- role_labels[[ev$role %||% "maintainer"]]
+    out <- gh(c("issue", "create", "--label", label,
                 "--title", shQuote(issue_title(ev)),
                 "--body", shQuote(issue_body(ev, attribution))))
     if (out$status != 0) return(NULL)
