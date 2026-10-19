@@ -47,8 +47,7 @@ fetch_my_packages <- function(cfg, db = tools::CRAN_package_db()) {
 }
 
 # per-flavor check results for a set of packages
-fetch_check_results <- function(pkgs, cfg) {
-  res <- tools::CRAN_check_results()
+fetch_check_results <- function(pkgs, cfg, res = tools::CRAN_check_results()) {
   res <- res[res$Package %in% pkgs, , drop = FALSE]
   if (length(cfg$ignore_flavors)) {
     drop <- Reduce(`|`, lapply(cfg$ignore_flavors, grepl, x = res$Flavor))

@@ -17,6 +17,16 @@ Everything the tool does is an instance of that loop:
   every CRAN wobble, and typically exists days before CRAN's email does.
 - **r-universe watcher**: a package on CRAN is absent from, or failing
   in, its universe -> issue.
+- **deadline watcher**: CRAN sets a "fix before" Deadline on one of my
+  packages -> issue on first sight, closed when the deadline is lifted.
+- **archive watcher**: a package seen before disappears from CRAN and its
+  CRAN page says it was archived -> issue with the archival note.
+- **revdep watcher**: reverse dependencies of my packages are ERROR on
+  CRAN -> one issue per package listing them (waits for
+  `consecutive_required`, like checks).
+- **gdal-r-ci canary**: open `canary` issues in hypertidy/gdal-r-ci
+  (override with `gdal_r_ci:` in config) are mirrored here, so GDAL/PROJ
+  breakage shows up alongside everything else without re-running it.
 - **incoming queue**: via foghorn, logs where submissions sit in the
   newbies/pretest/waiting folders during the days-to-weeks limbo.
 

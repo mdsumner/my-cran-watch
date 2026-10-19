@@ -15,6 +15,10 @@ issue_title <- function(ev) {
     check        = sprintf("%s: %s on %s", ev$package, ev$status, ev$flavor),
     universe_gap = sprintf("%s: r-universe gap", ev$package),
     metadata     = sprintf("%s: CRAN metadata points away from repo", ev$package),
+    deadline     = sprintf("%s: CRAN deadline", ev$package),
+    archived     = sprintf("%s: archived on CRAN", ev$package),
+    revdeps      = sprintf("%s: reverse dependencies failing", ev$package),
+    canary       = sprintf("%s: GDAL canary failing", ev$package),
     stop("no issue title for event type ", ev$type))
 }
 
@@ -35,8 +39,7 @@ issue_body <- function(ev, attribution = NULL) {
     switch(ev$type,
       check = c(sprintf("Status: **%s** on `%s`", ev$status, ev$flavor), "",
                 "```", substr(ev$detail %||% "", 1, 4000), "```"),
-      universe_gap = ev$detail,
-      metadata = ev$detail),
+      ev$detail),
     ""
   )
   if (!is.null(attribution)) body <- c(body, attribution, "")

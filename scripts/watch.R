@@ -19,7 +19,8 @@ for (r in unique(mine$role)) {
       paste(sort(mine$package[mine$role == r]), collapse = ", "))
 }
 
-checks <- fetch_check_results(mine$package, cfg)
+raw_checks <- tools::CRAN_check_results()
+checks <- fetch_check_results(mine$package, cfg, raw_checks)
 uni    <- fetch_universe(cfg)
 inc    <- fetch_incoming(cfg)
 if (!is.null(inc) && NROW(inc) > 0) {
@@ -43,8 +44,8 @@ reconcile_orphans <- function(state, events) {
     if (!identical(cond$lifecycle, "active") || !is.null(cond$issue_number) ||
         key %in% pending) next
     parts <- strsplit(key, "|", fixed = TRUE)[[1]]
-    type <- switch(parts[2], universe = "universe_gap",
-                   metadata = "metadata", "check")
+    type <- condition_kinds[key_kind(key)]
+    if (is.na(type)) type <- "check"
     events[[length(events) + 1L]] <- list(
       type = type, event = "opened", key = key,
       package = parts[1], flavor = parts[2],
@@ -57,7 +58,20 @@ v <- diff_versions(state, mine);            state <- v$state
 c1 <- diff_checks(state, checks, cfg);      state <- c1$state
 u <- diff_universe(state, mine, uni, cfg);  state <- u$state
 m <- diff_metadata(state, mine, cfg);       state <- m$state
-events <- c(v$events, c1$events, u$events, m$events)
+# deadlines, archival and gdal-r-ci canaries act on first sight; failing
+# revdeps flake like any check, so they wait for consecutive_required
+watchers <- list(
+  deadline = list(watch_deadlines(mine, db), 1L),
+  archived = list(watch_archived(state, db), 1L),
+  revdeps  = list(watch_revdeps(mine, db, raw_checks), cfg$consecutive_required),
+  canary   = list(watch_canary(cfg), 1L))
+w_events <- list()
+for (kind in names(watchers)) {
+  d <- diff_kind(state, watchers[[kind]][[1]], kind, watchers[[kind]][[2]])
+  state <- d$state
+  w_events <- c(w_events, d$events)
+}
+events <- c(v$events, c1$events, u$events, m$events, w_events)
 events <- reconcile_orphans(state, events)
 msg("%d event(s)", length(events))
 
@@ -82,6 +96,7 @@ for (ev in events) {
       attribute_upstream(ev$package, db, checks)
     } else NULL
     ev$role <- mine$role[match(ev$package, mine$package)]
+    if (is.na(ev$role)) ev$role <- "maintainer"  # canaries, archived
     if (!dry_run) {
       num <- notify_event(ev, attribution)
       if (!is.null(num) && !is.null(state$conditions[[ev$key]])) {
