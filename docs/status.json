@@ -1,0 +1,1836 @@
+{
+  "generated": "2026-10-19 19:59 UTC",
+  "repo": "mdsumner/my-cran-watch",
+  "packages": [
+    {
+      "package": "affinity",
+      "role": "maintainer",
+      "version": "0.2.5",
+      "published": "2021-06-02 07:50:05 UTC",
+      "repo": "hypertidy/affinity",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "angstroms",
+      "role": "maintainer",
+      "version": "0.0.1",
+      "published": "2017-05-01 10:35:22 UTC",
+      "repo": "AustralianAntarcticDivision/angstroms",
+      "worst": "NOTE",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "NOTE",
+        "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "angstroms|r-devel-linux-x86_64-debian-clang",
+          "package": "angstroms",
+          "kind": "r-devel-linux-x86_64-debian-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/8",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "angstroms|r-devel-linux-x86_64-debian-gcc",
+          "package": "angstroms",
+          "kind": "r-devel-linux-x86_64-debian-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/16",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "angstroms|universe",
+          "package": "angstroms",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/77",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "angstroms|metadata",
+          "package": "angstroms",
+          "kind": "metadata",
+          "status": "DRIFT",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/91",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "area",
+      "role": "maintainer",
+      "version": "0.2.0",
+      "published": "2023-12-21 11:20:02 UTC",
+      "repo": "hypertidy/area",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "basf",
+      "role": "maintainer",
+      "version": "0.2.0",
+      "published": "2020-12-09 08:30:18 UTC",
+      "repo": "mdsumner/basf",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "basf|universe",
+          "package": "basf",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/78",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "bgmfiles",
+      "role": "maintainer",
+      "version": "0.1.0",
+      "published": "2025-09-29 22:50:02 UTC",
+      "repo": "AustralianAntarcticDivision/bgmfiles",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "bgmfiles|universe",
+          "package": "bgmfiles",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/79",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "ceramic",
+      "role": "maintainer",
+      "version": "0.9.5",
+      "published": "2024-02-27 06:30:02 UTC",
+      "repo": "hypertidy/ceramic",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "crsmeta",
+      "role": "maintainer",
+      "version": "0.3.0",
+      "published": "2020-03-29 10:10:02 UTC",
+      "repo": "hypertidy/crsmeta",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "decido",
+      "role": "maintainer",
+      "version": "0.4.0",
+      "published": "2025-11-28 06:21:02 UTC",
+      "repo": "hypertidy/decido",
+      "worst": "NOTE",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "NOTE",
+        "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "NOTE",
+        "r-devel-linux-x86_64-fedora-gcc": "NOTE",
+        "r-devel-windows-x86_64": "NOTE",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": [
+        {
+          "key": "decido|r-devel-linux-x86_64-debian-clang",
+          "package": "decido",
+          "kind": "r-devel-linux-x86_64-debian-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/9",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "decido|r-devel-linux-x86_64-debian-gcc",
+          "package": "decido",
+          "kind": "r-devel-linux-x86_64-debian-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/17",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "decido|r-devel-linux-x86_64-fedora-gcc",
+          "package": "decido",
+          "kind": "r-devel-linux-x86_64-fedora-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/29",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "decido|r-devel-windows-x86_64",
+          "package": "decido",
+          "kind": "r-devel-windows-x86_64",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/34",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "decido|r-devel-linux-x86_64-fedora-clang",
+          "package": "decido",
+          "kind": "r-devel-linux-x86_64-fedora-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/24",
+          "first_seen": "2026-08-05"
+        }
+      ]
+    },
+    {
+      "package": "dsn",
+      "role": "maintainer",
+      "version": "0.1.0",
+      "published": "2026-07-17 12:50:24 UTC",
+      "repo": "hypertidy/dsn",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "fasterize",
+      "role": "maintainer",
+      "version": "1.1.0",
+      "published": "2024-10-01 13:30:02 UTC",
+      "repo": "ecohealthalliance/fasterize",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "geographiclib",
+      "role": "maintainer",
+      "version": "0.4.2",
+      "published": "2026-03-04 06:30:53 UTC",
+      "repo": "hypertidy/geographiclib",
+      "worst": "WARNING",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "WARNING",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": [
+        {
+          "key": "geographiclib|r-release-macos-x86_64",
+          "package": "geographiclib",
+          "kind": "r-release-macos-x86_64",
+          "status": "WARNING",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/39",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "geojson",
+      "role": "maintainer",
+      "version": "0.3.5",
+      "published": "2023-08-08 12:40:02 UTC",
+      "repo": "ropensci/geojson",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "geojson|universe",
+          "package": "geojson",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/80",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "ggpolypath",
+      "role": "maintainer",
+      "version": "0.4.0",
+      "published": "2025-07-24 05:50:02 UTC",
+      "repo": "mdsumner/ggpolypath",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "ggpolypath|universe",
+          "package": "ggpolypath",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/81",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "ggpolypath|revdeps",
+          "package": "ggpolypath",
+          "kind": "revdeps",
+          "status": "REVDEP",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "package": "gibble",
+      "role": "maintainer",
+      "version": "0.4.0",
+      "published": "2020-05-09 05:40:03 UTC",
+      "repo": "mdsumner/gibble",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "gibble|universe",
+          "package": "gibble",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/82",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "graticule",
+      "role": "maintainer",
+      "version": "0.4.0",
+      "published": "2023-09-25 10:00:02 UTC",
+      "repo": "hypertidy/graticule",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "grout",
+      "role": "maintainer",
+      "version": "0.1.0",
+      "published": "2026-08-20 14:30:13 UTC",
+      "repo": null,
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "lazysf",
+      "role": "maintainer",
+      "version": "0.4.0",
+      "published": "2026-07-13 05:10:02 UTC",
+      "repo": "hypertidy/lazysf",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "ncmeta",
+      "role": "maintainer",
+      "version": "0.5.0",
+      "published": "2026-07-29 17:10:02 UTC",
+      "repo": "hypertidy/ncmeta",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "orsifronts",
+      "role": "maintainer",
+      "version": "0.2.0",
+      "published": "2021-05-04 22:00:03 UTC",
+      "repo": "AustralianAntarcticDivision/orsifronts",
+      "worst": "NOTE",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "NOTE",
+        "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "orsifronts|r-devel-linux-x86_64-debian-clang",
+          "package": "orsifronts",
+          "kind": "r-devel-linux-x86_64-debian-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/10",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "orsifronts|r-devel-linux-x86_64-debian-gcc",
+          "package": "orsifronts",
+          "kind": "r-devel-linux-x86_64-debian-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/18",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "orsifronts|universe",
+          "package": "orsifronts",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/83",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "ozmaps",
+      "role": "maintainer",
+      "version": "0.4.5",
+      "published": "2021-08-03 04:10:02 UTC",
+      "repo": "mdsumner/ozmaps",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "ozmaps|universe",
+          "package": "ozmaps",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/84",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "palr",
+      "role": "maintainer",
+      "version": "0.5.0",
+      "published": "2026-08-05 05:30:02 UTC",
+      "repo": "AustralianAntarcticDivision/palr",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "palr|universe",
+          "package": "palr",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/85",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "PROJ",
+      "role": "maintainer",
+      "version": "0.7.0",
+      "published": "2026-07-10 07:10:02 UTC",
+      "repo": "hypertidy/PROJ",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "quadmesh",
+      "role": "maintainer",
+      "version": "0.6.0",
+      "published": "2026-07-11 02:20:02 UTC",
+      "repo": "hypertidy/quadmesh",
+      "worst": "NOTE",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "NOTE",
+        "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "NOTE",
+        "r-devel-linux-x86_64-fedora-gcc": "NOTE",
+        "r-devel-windows-x86_64": "NOTE",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": [
+        {
+          "key": "quadmesh|r-devel-linux-x86_64-debian-clang",
+          "package": "quadmesh",
+          "kind": "r-devel-linux-x86_64-debian-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/11",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "quadmesh|r-devel-linux-x86_64-debian-gcc",
+          "package": "quadmesh",
+          "kind": "r-devel-linux-x86_64-debian-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/19",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "quadmesh|r-devel-linux-x86_64-fedora-gcc",
+          "package": "quadmesh",
+          "kind": "r-devel-linux-x86_64-fedora-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/30",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "quadmesh|r-devel-windows-x86_64",
+          "package": "quadmesh",
+          "kind": "r-devel-windows-x86_64",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/35",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "quadmesh|r-devel-linux-x86_64-fedora-clang",
+          "package": "quadmesh",
+          "kind": "r-devel-linux-x86_64-fedora-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/25",
+          "first_seen": "2026-08-05"
+        }
+      ]
+    },
+    {
+      "package": "rbgm",
+      "role": "maintainer",
+      "version": "0.2.0",
+      "published": "2025-04-03 02:40:02 UTC",
+      "repo": "AustralianAntarcticDivision/rbgm",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "rbgm|universe",
+          "package": "rbgm",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/86",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "reproj",
+      "role": "maintainer",
+      "version": "0.8.0",
+      "published": "2026-07-10 12:00:02 UTC",
+      "repo": "hypertidy/reproj",
+      "worst": "NOTE",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "NOTE",
+        "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "NOTE",
+        "r-devel-linux-x86_64-fedora-gcc": "NOTE",
+        "r-devel-windows-x86_64": "NOTE",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": [
+        {
+          "key": "reproj|r-devel-linux-x86_64-debian-clang",
+          "package": "reproj",
+          "kind": "r-devel-linux-x86_64-debian-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/12",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "reproj|r-devel-linux-x86_64-debian-gcc",
+          "package": "reproj",
+          "kind": "r-devel-linux-x86_64-debian-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/20",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "reproj|r-devel-linux-x86_64-fedora-gcc",
+          "package": "reproj",
+          "kind": "r-devel-linux-x86_64-fedora-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/31",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "reproj|r-devel-windows-x86_64",
+          "package": "reproj",
+          "kind": "r-devel-windows-x86_64",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/36",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "reproj|r-devel-linux-x86_64-fedora-clang",
+          "package": "reproj",
+          "kind": "r-devel-linux-x86_64-fedora-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/26",
+          "first_seen": "2026-08-05"
+        }
+      ]
+    },
+    {
+      "package": "sds",
+      "role": "maintainer",
+      "version": "0.3.0",
+      "published": "2026-10-13 14:50:02 UTC",
+      "repo": null,
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "sfdct",
+      "role": "maintainer",
+      "version": "0.3.0",
+      "published": "2024-01-09 02:20:02 UTC",
+      "repo": "hypertidy/sfdct",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "silicate",
+      "role": "maintainer",
+      "version": "0.7.2",
+      "published": "2026-10-11 02:40:02 UTC",
+      "repo": "hypertidy/silicate",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "sooty",
+      "role": "maintainer",
+      "version": "0.6.1",
+      "published": "2026-03-10 06:10:08 UTC",
+      "repo": "mdsumner/sooty",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "sooty|universe",
+          "package": "sooty",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/87",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "spbabel",
+      "role": "maintainer",
+      "version": "0.6.0",
+      "published": "2023-03-12 10:20:11 UTC",
+      "repo": "mdsumner/spbabel",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "spbabel|universe",
+          "package": "spbabel",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/88",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "spex",
+      "role": "maintainer",
+      "version": "0.7.1",
+      "published": "2020-06-20 09:50:02 UTC",
+      "repo": "mdsumner/spex",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "spex|universe",
+          "package": "spex",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/89",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "tabularaster",
+      "role": "maintainer",
+      "version": "0.7.2",
+      "published": "2023-11-01 06:10:03 UTC",
+      "repo": "hypertidy/tabularaster",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "textures",
+      "role": "maintainer",
+      "version": "0.1.0",
+      "published": "2026-07-21 09:30:02 UTC",
+      "repo": "hypertidy/textures",
+      "worst": "NOTE",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "NOTE",
+        "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "NOTE",
+        "r-devel-linux-x86_64-fedora-gcc": "NOTE",
+        "r-devel-windows-x86_64": "NOTE",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": [
+        {
+          "key": "textures|r-devel-linux-x86_64-debian-clang",
+          "package": "textures",
+          "kind": "r-devel-linux-x86_64-debian-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/13",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "textures|r-devel-linux-x86_64-debian-gcc",
+          "package": "textures",
+          "kind": "r-devel-linux-x86_64-debian-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/21",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "textures|r-devel-linux-x86_64-fedora-clang",
+          "package": "textures",
+          "kind": "r-devel-linux-x86_64-fedora-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/27",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "textures|r-devel-linux-x86_64-fedora-gcc",
+          "package": "textures",
+          "kind": "r-devel-linux-x86_64-fedora-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/32",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "textures|r-devel-windows-x86_64",
+          "package": "textures",
+          "kind": "r-devel-windows-x86_64",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/37",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "tidync",
+      "role": "maintainer",
+      "version": "0.5.0",
+      "published": "2026-07-31 13:00:02 UTC",
+      "repo": "ropensci/tidync",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "tidync|universe",
+          "package": "tidync",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/90",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "tissot",
+      "role": "maintainer",
+      "version": "0.3.0",
+      "published": "2026-07-12 15:50:02 UTC",
+      "repo": "hypertidy/tissot",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "traipse",
+      "role": "maintainer",
+      "version": "0.4.0",
+      "published": "2026-02-27 13:00:02 UTC",
+      "repo": "AustralianAntarcticDivision/traipse",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "trip",
+      "role": "maintainer",
+      "version": "1.10.0",
+      "published": "2023-06-29 14:30:02 UTC",
+      "repo": "Trackage/trip",
+      "worst": "NOTE",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "NOTE",
+        "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "NOTE",
+        "r-devel-linux-x86_64-fedora-gcc": "NOTE",
+        "r-devel-windows-x86_64": "NOTE",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": [
+        {
+          "key": "trip|r-devel-linux-x86_64-debian-clang",
+          "package": "trip",
+          "kind": "r-devel-linux-x86_64-debian-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/14",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "trip|r-devel-linux-x86_64-debian-gcc",
+          "package": "trip",
+          "kind": "r-devel-linux-x86_64-debian-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/22",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "trip|r-devel-linux-x86_64-fedora-clang",
+          "package": "trip",
+          "kind": "r-devel-linux-x86_64-fedora-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/28",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "trip|r-devel-linux-x86_64-fedora-gcc",
+          "package": "trip",
+          "kind": "r-devel-linux-x86_64-fedora-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/33",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "trip|r-devel-windows-x86_64",
+          "package": "trip",
+          "kind": "r-devel-windows-x86_64",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/38",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "tripEstimation",
+      "role": "maintainer",
+      "version": "0.0-46",
+      "published": "2023-04-21 23:40:02 UTC",
+      "repo": "Trackage/tripEstimation",
+      "worst": "NOTE",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "NOTE",
+        "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": [
+        {
+          "key": "tripEstimation|r-devel-linux-x86_64-debian-clang",
+          "package": "tripEstimation",
+          "kind": "r-devel-linux-x86_64-debian-clang",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/15",
+          "first_seen": "2026-07-27"
+        },
+        {
+          "key": "tripEstimation|r-devel-linux-x86_64-debian-gcc",
+          "package": "tripEstimation",
+          "kind": "r-devel-linux-x86_64-debian-gcc",
+          "status": "NOTE",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/23",
+          "first_seen": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "package": "unjoin",
+      "role": "maintainer",
+      "version": "0.1.0",
+      "published": "2020-05-13 05:20:02 UTC",
+      "repo": "hypertidy/unjoin",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "vapour",
+      "role": "maintainer",
+      "version": "0.16.0",
+      "published": "2026-03-14 06:10:02 UTC",
+      "repo": "hypertidy/vapour",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "vaster",
+      "role": "maintainer",
+      "version": "0.6.0",
+      "published": "2026-03-10 11:50:02 UTC",
+      "repo": "hypertidy/vaster",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "failing",
+      "conditions": [
+        {
+          "key": "vaster|universe",
+          "package": "vaster",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/67",
+          "first_seen": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "package": "wkpool",
+      "role": "maintainer",
+      "version": "0.4.0",
+      "published": "2026-10-12 11:00:02 UTC",
+      "repo": "hypertidy/wkpool",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "ximage",
+      "role": "maintainer",
+      "version": "0.1.0",
+      "published": "2026-07-21 10:40:02 UTC",
+      "repo": "hypertidy/ximage",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "conditions": []
+    },
+    {
+      "package": "xyt",
+      "role": "maintainer",
+      "version": "0.1.0",
+      "published": "2026-10-05 16:00:02 UTC",
+      "repo": null,
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "absent",
+      "conditions": [
+        {
+          "key": "xyt|universe",
+          "package": "xyt",
+          "kind": "universe",
+          "status": "GAP",
+          "lifecycle": "active",
+          "issue": "https://github.com/mdsumner/my-cran-watch/issues/1",
+          "first_seen": "2026-10-07"
+        }
+      ]
+    },
+    {
+      "package": "gdalraster",
+      "role": "interest",
+      "version": "2.7.0",
+      "published": "2026-09-22 19:00:02 UTC",
+      "repo": null,
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": null,
+      "conditions": []
+    },
+    {
+      "package": "ggsql",
+      "role": "interest",
+      "version": "0.5.2",
+      "published": "2026-10-08 09:10:13 UTC",
+      "repo": null,
+      "worst": "ERROR",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "ERROR",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "ERROR",
+        "r-oldrel-macos-x86_64": "ERROR",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": null,
+      "conditions": [
+        {
+          "key": "ggsql|r-release-macos-x86_64",
+          "package": "ggsql",
+          "kind": "r-release-macos-x86_64",
+          "status": "ERROR",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
+        },
+        {
+          "key": "ggsql|r-oldrel-macos-arm64",
+          "package": "ggsql",
+          "kind": "r-oldrel-macos-arm64",
+          "status": "ERROR",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
+        },
+        {
+          "key": "ggsql|r-oldrel-macos-x86_64",
+          "package": "ggsql",
+          "kind": "r-oldrel-macos-x86_64",
+          "status": "ERROR",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "package": "terra",
+      "role": "interest",
+      "version": "1.9-50",
+      "published": "2026-09-08 15:50:02 UTC",
+      "repo": null,
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": null,
+      "conditions": []
+    },
+    {
+      "package": "wk",
+      "role": "interest",
+      "version": "0.9.5",
+      "published": "2025-12-18 06:10:16 UTC",
+      "repo": null,
+      "worst": "NOTE",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "NOTE",
+        "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "NOTE",
+        "r-devel-linux-x86_64-fedora-gcc": "NOTE",
+        "r-devel-windows-x86_64": "NOTE",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": null,
+      "conditions": [
+        {
+          "key": "wk|r-devel-linux-x86_64-debian-clang",
+          "package": "wk",
+          "kind": "r-devel-linux-x86_64-debian-clang",
+          "status": "NOTE",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
+        },
+        {
+          "key": "wk|r-devel-linux-x86_64-debian-gcc",
+          "package": "wk",
+          "kind": "r-devel-linux-x86_64-debian-gcc",
+          "status": "NOTE",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
+        },
+        {
+          "key": "wk|r-devel-linux-x86_64-fedora-clang",
+          "package": "wk",
+          "kind": "r-devel-linux-x86_64-fedora-clang",
+          "status": "NOTE",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
+        },
+        {
+          "key": "wk|r-devel-linux-x86_64-fedora-gcc",
+          "package": "wk",
+          "kind": "r-devel-linux-x86_64-fedora-gcc",
+          "status": "NOTE",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
+        },
+        {
+          "key": "wk|r-devel-windows-x86_64",
+          "package": "wk",
+          "kind": "r-devel-windows-x86_64",
+          "status": "NOTE",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
+        }
+      ]
+    }
+  ],
+  "other": [
+    {
+      "key": "gdal-r-ci#34|canary",
+      "package": "gdal-r-ci#34",
+      "kind": "canary",
+      "status": "CANARY",
+      "lifecycle": "active",
+      "issue": "https://github.com/mdsumner/my-cran-watch/issues/68",
+      "first_seen": "2026-10-19"
+    },
+    {
+      "key": "gdal-r-ci#33|canary",
+      "package": "gdal-r-ci#33",
+      "kind": "canary",
+      "status": "CANARY",
+      "lifecycle": "active",
+      "issue": "https://github.com/mdsumner/my-cran-watch/issues/69",
+      "first_seen": "2026-10-19"
+    },
+    {
+      "key": "gdal-r-ci#31|canary",
+      "package": "gdal-r-ci#31",
+      "kind": "canary",
+      "status": "CANARY",
+      "lifecycle": "active",
+      "issue": "https://github.com/mdsumner/my-cran-watch/issues/70",
+      "first_seen": "2026-10-19"
+    },
+    {
+      "key": "gdal-r-ci#30|canary",
+      "package": "gdal-r-ci#30",
+      "kind": "canary",
+      "status": "CANARY",
+      "lifecycle": "active",
+      "issue": "https://github.com/mdsumner/my-cran-watch/issues/71",
+      "first_seen": "2026-10-19"
+    },
+    {
+      "key": "gdal-r-ci#29|canary",
+      "package": "gdal-r-ci#29",
+      "kind": "canary",
+      "status": "CANARY",
+      "lifecycle": "active",
+      "issue": "https://github.com/mdsumner/my-cran-watch/issues/72",
+      "first_seen": "2026-10-19"
+    },
+    {
+      "key": "gdal-r-ci#28|canary",
+      "package": "gdal-r-ci#28",
+      "kind": "canary",
+      "status": "CANARY",
+      "lifecycle": "active",
+      "issue": "https://github.com/mdsumner/my-cran-watch/issues/73",
+      "first_seen": "2026-10-19"
+    },
+    {
+      "key": "gdal-r-ci#27|canary",
+      "package": "gdal-r-ci#27",
+      "kind": "canary",
+      "status": "CANARY",
+      "lifecycle": "active",
+      "issue": "https://github.com/mdsumner/my-cran-watch/issues/74",
+      "first_seen": "2026-10-19"
+    },
+    {
+      "key": "gdal-r-ci#25|canary",
+      "package": "gdal-r-ci#25",
+      "kind": "canary",
+      "status": "CANARY",
+      "lifecycle": "active",
+      "issue": "https://github.com/mdsumner/my-cran-watch/issues/75",
+      "first_seen": "2026-10-19"
+    },
+    {
+      "key": "gdal-r-ci#23|canary",
+      "package": "gdal-r-ci#23",
+      "kind": "canary",
+      "status": "CANARY",
+      "lifecycle": "active",
+      "issue": "https://github.com/mdsumner/my-cran-watch/issues/76",
+      "first_seen": "2026-10-19"
+    }
+  ]
+}
