@@ -49,8 +49,7 @@ diff_checks <- function(state, checks, cfg) {
   # conditions in state that are check-type and no longer observed -> clear
   # (other condition namespaces manage their own clearing)
   check_keys <- names(state$conditions) %||% character()
-  check_keys <- check_keys[!endsWith(check_keys, "|universe") &
-                             !endsWith(check_keys, "|metadata")]
+  check_keys <- check_keys[!key_kind(check_keys) %in% names(condition_kinds)]
   for (key in setdiff(check_keys, seen_keys)) {
     cleared <- clear_condition(state$conditions[[key]])
     if (!is.null(cleared$event)) {
