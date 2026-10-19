@@ -1,10 +1,11 @@
 #!/usr/bin/env Rscript
 # per-package details for the dashboard: docs/pkg/<pkg>.json holds one
-# entry per section (urlchecker for now), docs/pkg/index.json a count per
+# entry per section (urlchecker, checktor), docs/pkg/index.json a count per
 # package and section for the main table.  Runs from its own workflow on
 # a slower cadence than the watcher, since it downloads every source
 # tarball.  Another checker adds a section by adding a function to
-# `sections` returning list(summary = <one line>, problems = <data.frame>).
+# `sections` returning list(summary = <one line>, problems = <data.frame>),
+# optionally with `count`, the number shown on the dashboard (default: rows).
 #
 # Run from the repo root:  Rscript scripts/details.R [pkg ...]
 
@@ -27,6 +28,24 @@ sections <- list(
       stringsAsFactors = FALSE)
     list(summary = if (nrow(df)) sprintf("%d URL problem(s)", nrow(df)) else "all URLs ok",
          problems = df)
+  },
+  # checktor: CRAN-reviewer requirements R CMD check does not surface.
+  # issues() is its tidy table of findings (all severities, including
+  # "opinion"); columns are kept as checktor names them
+  checktor = function(dir) {
+    res <- checktor::checktor(dir, verbose = FALSE, progress = FALSE)
+    df <- as.data.frame(checktor::issues(res), stringsAsFactors = FALSE)
+    for (col in names(df)) {
+      if (is.list(df[[col]])) df[[col]] <- vapply(df[[col]], paste, character(1), collapse = ", ")
+    }
+    sev <- if ("severity" %in% names(df)) table(df$severity) else NULL
+    list(summary = if (!nrow(df)) "no findings"
+                   else if (length(sev)) paste(sprintf("%d %s", sev, names(sev)), collapse = ", ")
+                   else sprintf("%d finding(s)", nrow(df)),
+         problems = df,
+         # opinion-tier findings are listed but not counted on the dashboard
+         count = if ("severity" %in% names(df)) sum(df$severity %in% c("policy", "robustness"))
+                 else nrow(df))
   }
 )
 
@@ -51,7 +70,7 @@ for (pkg in pkgs) {
   for (s in names(sections)) {
     rec$sections[[s]] <- tryCatch(sections[[s]](src), error = function(e)
       list(summary = sprintf("failed: %s", conditionMessage(e)), problems = data.frame()))
-    index[[pkg]][[s]] <- nrow(rec$sections[[s]]$problems)
+    index[[pkg]][[s]] <- rec$sections[[s]]$count %||% nrow(rec$sections[[s]]$problems)
   }
   jsonlite::write_json(rec, file.path(out_dir, paste0(pkg, ".json")),
                        auto_unbox = TRUE, pretty = TRUE, dataframe = "rows")
