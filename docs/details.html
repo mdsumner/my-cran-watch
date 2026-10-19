@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Package details</title>
+<style>
+:root { --bg: #fff; --fg: #1d1d1f; --muted: #6b6b70; --line: #e3e3e6; --panel: #f6f6f8;
+        --ok: #2e7d32; --warn: #c45500; --link: #1a5fb4; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #151517; --fg: #ececee; --muted: #9a9aa2; --line: #2c2c31; --panel: #1d1d21;
+          --ok: #81c784; --warn: #ffab60; --link: #8ab4f8; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+       font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 22px; margin: 0 0 4px; }
+h2 { font-size: 16px; margin: 28px 0 4px; }
+.sub, .muted { color: var(--muted); }
+.ok { color: var(--ok); } .warn { color: var(--warn); }
+a { color: var(--link); }
+.wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 500; font-size: 12px; }
+td { word-break: break-word; }
+</style>
+</head>
+<body>
+<main>
+  <p class="sub"><a href="./">CRAN watch</a></p>
+  <h1 id="title">Package details</h1>
+  <p class="sub" id="meta"></p>
+  <div id="sections"></div>
+</main>
+<script>
+function el(tag, attrs, text) {
+  var e = document.createElement(tag);
+  for (var k in attrs || {}) e.setAttribute(k, attrs[k]);
+  if (text != null) e.textContent = text;
+  return e;
+}
+var pkg = new URLSearchParams(location.search).get("pkg") || "";
+document.getElementById("title").textContent = pkg || "Package details";
+document.title = pkg ? pkg + " details" : "Package details";
+fetch("pkg/" + encodeURIComponent(pkg) + ".json", { cache: "no-store" })
+  .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+  .then(function (d) {
+    var meta = document.getElementById("meta");
+    meta.appendChild(document.createTextNode("Version " + d.version + ", checked " + d.updated + " | "));
+    meta.appendChild(el("a", { href: "https://cran.r-project.org/web/checks/check_results_" + pkg + ".html" }, "CRAN check results"));
+    var box = document.getElementById("sections");
+    Object.keys(d.sections || {}).forEach(function (name) {
+      var s = d.sections[name], rows = s.problems || [];
+      box.appendChild(el("h2", {}, name));
+      box.appendChild(el("div", { "class": rows.length ? "warn" : "ok" }, s.summary));
+      if (!rows.length) return;
+      var cols = Object.keys(rows[0]);
+      var t = el("table"), hr = el("tr");
+      cols.forEach(function (c) { hr.appendChild(el("th", {}, c)); });
+      var th = el("thead"); th.appendChild(hr); t.appendChild(th);
+      var tb = el("tbody");
+      rows.forEach(function (row) {
+        var tr = el("tr");
+        cols.forEach(function (c) {
+          var v = row[c] == null ? "" : String(row[c]), td = el("td");
+          if (/^https?:\/\//.test(v)) td.appendChild(el("a", { href: v }, v)); else td.textContent = v;
+          tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb);
+      var w = el("div", { "class": "wrap" }); w.appendChild(t); box.appendChild(w);
+    });
+  })
+  .catch(function () {
+    document.getElementById("meta").textContent = "No details yet for " + pkg + ": they appear after the next details run.";
+  });
+</script>
+</body>
+</html>
