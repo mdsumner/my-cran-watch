@@ -21,7 +21,9 @@ write_site <- function(state, mine, checks_all, uni, cfg, path = "docs/status.js
     c <- conds[[key]]
     list(key = key, package = sub("\\|[^|]*$", "", key), kind = key_kind(key),
          status = c$status, lifecycle = c$lifecycle,
-         issue = if (!is.null(c$issue_number))
+         # only kinds that still get their own issue link to one; the
+         # rest are in the weekly summary
+         issue = if (!is.null(c$issue_number) && condition_kind(key) %in% cfg$issue_kinds)
            sprintf("https://github.com/%s/issues/%s", repo, c$issue_number),
          first_seen = c$first_seen)
   })

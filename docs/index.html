@@ -46,7 +46,7 @@ a { color: var(--link); }
   <div class="tiles" id="tiles"></div>
   <div class="filters" id="filters"></div>
   <div class="wrap"><table>
-    <thead><tr><th>Package</th><th>Version</th><th>CRAN checks</th><th>r-universe</th><th>Open conditions</th></tr></thead>
+    <thead><tr><th>Package</th><th>Version</th><th>CRAN checks</th><th>r-universe</th><th>Other alerts</th></tr></thead>
     <tbody id="rows"></tbody>
   </table></div>
   <h2>Other signals</h2>
@@ -92,14 +92,18 @@ function render(d) {
     td.appendChild(p.repo ? el("a", { href: "https://github.com/" + p.repo }, p.package) : el("span", {}, p.package));
     td.appendChild(el("div", { "class": "role" }, ROLES[p.role] || p.role));
     tr.appendChild(td);
-    var v = el("td"); v.appendChild(el("a", { href: "https://cran.r-project.org/web/checks/check_results_" + p.package + ".html" }, p.version));
-    v.appendChild(el("div", { "class": "role" }, p.published || "")); tr.appendChild(v);
+    var v = el("td"); v.appendChild(el("a", { href: "https://cran.r-project.org/package=" + p.package }, p.version));
+    v.appendChild(el("div", { "class": "role" }, (p.published || "").slice(0, 10))); tr.appendChild(v);
     var fl = p.flavors || {}, bad = Object.keys(fl).filter(function (k) { return fl[k] !== "OK"; });
-    var ct = el("td"); ct.appendChild(el("span", { "class": "s-" + (p.worst || "") }, p.worst || "-"));
-    if (bad.length) ct.appendChild(el("div", { "class": "role" }, bad.length + " of " + Object.keys(fl).length + " flavors"));
+    var ct = el("td"), worst = p.worst || "-";
+    var label = worst + (bad.length ? " (" + bad.length + "/" + Object.keys(fl).length + ")" : "");
+    ct.appendChild(el("a", { href: "https://cran.r-project.org/web/checks/check_results_" + p.package + ".html",
+                             "class": "s-" + worst, title: "CRAN check results" }, label));
     tr.appendChild(ct);
     tr.appendChild(el("td", { "class": p.universe === "ok" ? "s-OK" : (p.universe ? "s-WARN" : "muted") }, p.universe || "-"));
-    var cs = p.conditions || [], live = cs.filter(function (c) { return c.lifecycle !== "observed"; });
+    // check results live in the CRAN checks column; list the other kinds here
+    var KINDS = ["universe", "metadata", "deadline", "archived", "revdeps", "canary"];
+    var cs = (p.conditions || []).filter(function (c) { return KINDS.indexOf(c.kind) >= 0; }), live = cs.filter(function (c) { return c.lifecycle !== "observed"; });
     var cd = el("td"); live.forEach(function (c) { cd.appendChild(condLink(c)); });
     if (cs.length > live.length) cd.appendChild(el("span", { "class": "cond muted", title: "seen once, waiting to repeat before an issue opens" }, "+" + (cs.length - live.length) + " pending"));
     if (!cs.length) cd.appendChild(el("span", { "class": "muted" }, "none"));
