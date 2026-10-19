@@ -20,7 +20,17 @@ load_state <- function(path = "state/state.json") {
   if (!file.exists(path)) {
     return(list(packages = list(), conditions = list()))
   }
-  jsonlite::read_json(path)
+  state <- jsonlite::read_json(path)
+  # write_json(auto_unbox = TRUE) serialises a NULL field as {} and
+  # read_json brings that back as an empty named list, which is not NULL;
+  # left alone it makes every "no issue yet" condition look like it has one
+  state$conditions <- lapply(state$conditions, function(cond) {
+    for (f in names(cond)) {
+      if (is.list(cond[[f]]) && length(cond[[f]]) == 0) cond[f] <- list(NULL)
+    }
+    cond
+  })
+  state
 }
 
 save_state <- function(state, path = "state/state.json") {
@@ -54,7 +64,8 @@ step_condition <- function(cond, observed_status, observed_text, required) {
   }
 
   cond$last_seen <- now
-  same <- identical(cond$status, observed_status) && identical(cond$text_hash, h)
+  same <- identical(as.character(cond$status), as.character(observed_status)) &&
+    identical(as.character(cond$text_hash), h)
 
   if (same) {
     cond$streak <- (cond$streak %||% 0L) + 1L
