@@ -97,9 +97,11 @@ for (ev in events) {
     } else NULL
     ev$role <- mine$role[match(ev$package, mine$package)]
     if (is.na(ev$role)) ev$role <- "maintainer"  # canaries, archived
-    if (!ev$role %in% cfg$issue_roles) {
-      # tracked in state and on the site, but no issue; turning the role
-      # on later lets reconcile_orphans open issues for what is active
+    if (!ev$role %in% cfg$issue_roles ||
+        !condition_kind(ev$key) %in% cfg$issue_kinds) {
+      # tracked in state, on the site and in the weekly summary, but no
+      # issue of its own; enabling the role or kind later lets
+      # reconcile_orphans open issues for what is active
       next
     } else if (!dry_run) {
       num <- notify_event(ev, attribution)
@@ -111,6 +113,9 @@ for (ev in events) {
     }
   }
 }
+
+if (!dry_run) state <- close_superseded_issues(state, cfg)
+state <- write_summary(state, mine, checks, cfg, dry_run)
 
 save_state(state)
 write_site(state, mine, checks, uni, cfg)

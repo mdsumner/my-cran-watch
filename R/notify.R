@@ -28,7 +28,7 @@ issue_title <- function(ev) {
 role_labels <- c(maintainer = "mine", contribute = "contribute", interest = "interest")
 
 ensure_labels <- function() {
-  for (l in role_labels) {
+  for (l in c(role_labels, "summary")) {
     gh(c("label", "create", l, "--force", "--color", "ededed"))
   }
 }
