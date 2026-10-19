@@ -14,8 +14,10 @@ msg("== my-cran-watch run %s%s ==", today(), if (dry_run) " (dry run)" else "")
 # fetch -------------------------------------------------------------------
 db    <- tools::CRAN_package_db()
 mine  <- fetch_my_packages(cfg, db)
-msg("maintaining %d CRAN packages: %s", nrow(mine),
-    paste(sort(mine$package), collapse = ", "))
+for (r in unique(mine$role)) {
+  msg("%s: %d CRAN packages: %s", r, sum(mine$role == r),
+      paste(sort(mine$package[mine$role == r]), collapse = ", "))
+}
 
 checks <- fetch_check_results(mine$package, cfg)
 uni    <- fetch_universe(cfg)
@@ -60,12 +62,15 @@ events <- reconcile_orphans(state, events)
 msg("%d event(s)", length(events))
 
 # act ---------------------------------------------------------------------
+if (!dry_run) ensure_labels()
 for (ev in events) {
   if (ev$type == "new_version") {
     msg("new version: %s %s -> %s (published %s)",
         ev$package, ev$from, ev$to, ev$published)
     repo <- cfg$repo_map[[ev$package]]
-    if (is.null(repo)) {
+    if (!identical(ev$role, "maintainer")) {
+      msg("  %s is watched (%s), not mine; reporting only", ev$package, ev$role)
+    } else if (is.null(repo)) {
       msg("  %s not in repo_map; reporting only, not tagging", ev$package)
     } else if (!dry_run) {
       tryCatch(tag_release(ev$package, ev$to, repo),
@@ -76,6 +81,7 @@ for (ev in events) {
                        ev$status %in% c("WARN", "WARNING", "ERROR", "FAIL")) {
       attribute_upstream(ev$package, db, checks)
     } else NULL
+    ev$role <- mine$role[match(ev$package, mine$package)]
     if (!dry_run) {
       num <- notify_event(ev, attribution)
       if (!is.null(num) && !is.null(state$conditions[[ev$key]])) {

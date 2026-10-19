@@ -20,6 +20,17 @@ Everything the tool does is an instance of that loop:
 - **incoming queue**: via foghorn, logs where submissions sit in the
   newbies/pretest/waiting folders during the days-to-weeks limbo.
 
+## Which packages
+
+- **mine**: every CRAN package whose Maintainer field matches one of
+  `maintainer_emails`, plus `extra_packages`. Full treatment: checks,
+  r-universe, metadata drift, and tag + release when listed in `repo_map`.
+- **watched**: packages listed under `watch`, each with a role of
+  `contribute` or `interest`. Check issues only, never tagged or released.
+
+Every issue is labelled `mine`, `contribute` or `interest`, so the issue
+list filters by how much each one is your problem.
+
 ## Design points
 
 **State is committed back to the repo** (`state/state.json`), so the diff

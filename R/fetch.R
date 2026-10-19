@@ -23,8 +23,21 @@ fetch_my_packages <- function(cfg, db = tools::CRAN_package_db()) {
     }
     mine <- rbind(mine, add)
   }
+  # nominated packages: watched and reported on, never tagged/released
+  role <- rep("maintainer", nrow(mine))
+  nom <- cfg$watch[!cfg$watch$package %in% mine$Package, , drop = FALSE]
+  if (nrow(nom)) {
+    add <- db[db$Package %in% nom$package, , drop = FALSE]
+    missing <- setdiff(nom$package, add$Package)
+    if (length(missing)) {
+      msg("watch packages not found on CRAN: %s", paste(missing, collapse = ", "))
+    }
+    mine <- rbind(mine, add)
+    role <- c(role, nom$role[match(add$Package, nom$package)])
+  }
   data.frame(
     package   = mine$Package,
+    role      = role,
     version   = mine$Version,
     published = mine$Published,
     url       = mine$URL %||% NA_character_,

@@ -16,7 +16,7 @@ diff_versions <- function(state, mine) {
       state$packages[[pkg]] <- list(version = ver, first_seen = today())
     } else if (!identical(prev$version, ver)) {
       events[[length(events) + 1L]] <- list(
-        type = "new_version", package = pkg,
+        type = "new_version", package = pkg, role = mine$role[i],
         from = prev$version, to = ver, published = mine$published[i])
       state$packages[[pkg]]$version <- ver
     }
@@ -48,7 +48,7 @@ diff_checks <- function(state, checks, cfg) {
 
   # conditions in state that are check-type and no longer observed -> clear
   # (other condition namespaces manage their own clearing)
-  check_keys <- names(state$conditions)
+  check_keys <- names(state$conditions) %||% character()
   check_keys <- check_keys[!endsWith(check_keys, "|universe") &
                              !endsWith(check_keys, "|metadata")]
   for (key in setdiff(check_keys, seen_keys)) {
@@ -70,7 +70,8 @@ diff_universe <- function(state, mine, uni, cfg) {
   seen_keys <- character()
   if (is.null(uni) || nrow(uni) == 0) return(list(state = state, events = events))
 
-  for (pkg in mine$package) {
+  # only my own packages are expected to be in my universes
+  for (pkg in mine$package[mine$role == "maintainer"]) {
     row <- uni[uni$package == pkg, , drop = FALSE]
     gap <- if (nrow(row) == 0) {
       "absent from all configured universes"
@@ -91,7 +92,7 @@ diff_universe <- function(state, mine, uni, cfg) {
       }
     }
   }
-  ukeys <- names(state$conditions)
+  ukeys <- names(state$conditions) %||% character()
   ukeys <- ukeys[endsWith(ukeys, "|universe")]
   for (key in setdiff(ukeys, seen_keys)) {
     cleared <- clear_condition(state$conditions[[key]])
@@ -136,7 +137,7 @@ diff_metadata <- function(state, mine, cfg) {
         issue_number = stepped$cond$issue_number)
     }
   }
-  mkeys <- names(state$conditions)
+  mkeys <- names(state$conditions) %||% character()
   mkeys <- mkeys[endsWith(mkeys, "|metadata")]
   for (key in setdiff(mkeys, seen_keys)) {
     cleared <- clear_condition(state$conditions[[key]])

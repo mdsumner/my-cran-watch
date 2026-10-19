@@ -7,6 +7,7 @@
 for (f in list.files("R", full.names = TRUE)) source(f)
 cfg <- read_config()
 mine <- fetch_my_packages(cfg)
+mine <- mine[mine$role == "maintainer", , drop = FALSE]
 
 extract_repo <- function(...) {
   txt <- paste(c(...), collapse = " ")
