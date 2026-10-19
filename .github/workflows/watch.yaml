@@ -43,6 +43,9 @@ jobs:
           fi
 
       - name: Commit state
+        # always: a failed gh call fails the watcher step, but the state it
+        # saved (streaks, issue numbers) must still be kept
+        if: always()
         run: |
           git config user.name "my-cran-watch"
           git config user.email "actions@users.noreply.github.com"

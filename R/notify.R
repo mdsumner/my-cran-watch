@@ -38,8 +38,23 @@ issue_body <- function(ev, attribution = NULL) {
   paste(body, collapse = "\n")
 }
 
-gh_json <- function(args) {
+# gh failures are tolerated mid-run (state must still be saved) but
+# counted, so watch.R can fail the job at the end instead of going green
+.gh_failures <- new.env()
+.gh_failures$n <- 0L
+
+gh <- function(args) {
   out <- run("gh", args, allow_fail = TRUE)
+  if (out$status != 0) {
+    .gh_failures$n <- .gh_failures$n + 1L
+    msg("gh %s failed (%s): %s", paste(args[1:2], collapse = " "), out$status,
+        paste(out$output, collapse = " | "))
+  }
+  out
+}
+
+gh_json <- function(args) {
+  out <- gh(args)
   if (out$status != 0) return(NULL)
   tryCatch(jsonlite::fromJSON(paste(out$output, collapse = "\n")),
            error = function(e) NULL)
@@ -61,12 +76,13 @@ notify_event <- function(ev, attribution = NULL) {
   if (identical(ev$event, "opened")) {
     existing <- find_issue(ev$key)
     if (!is.null(existing)) return(existing$number)
-    out <- run("gh", c("issue", "create",
-                       "--title", shQuote(issue_title(ev)),
-                       "--body", shQuote(issue_body(ev, attribution))),
-               allow_fail = TRUE)
+    out <- gh(c("issue", "create",
+                "--title", shQuote(issue_title(ev)),
+                "--body", shQuote(issue_body(ev, attribution))))
+    if (out$status != 0) return(NULL)
     num <- suppressWarnings(as.integer(sub(".*/", "", utils::tail(out$output, 1))))
-    msg("opened issue #%s for %s", num %||% "?", ev$key)
+    if (is.na(num)) return(NULL)
+    msg("opened issue #%s for %s", num, ev$key)
     return(num)
 
   } else if (identical(ev$event, "changed")) {
@@ -74,13 +90,11 @@ notify_event <- function(ev, attribution = NULL) {
     if (is.null(existing)) return(notify_event(modifyList(ev, list(event = "opened")),
                                               attribution))
     if (existing$snoozed) {
-      run("gh", c("issue", "edit", existing$number, "--remove-label", "snoozed"),
-          allow_fail = TRUE)
+      gh(c("issue", "edit", existing$number, "--remove-label", "snoozed"))
     }
-    run("gh", c("issue", "comment", existing$number,
-                "--body", shQuote(paste0("Condition changed character:\n\n",
-                                         issue_body(ev, attribution)))),
-        allow_fail = TRUE)
+    gh(c("issue", "comment", existing$number,
+         "--body", shQuote(paste0("Condition changed character:\n\n",
+                                  issue_body(ev, attribution)))))
     msg("commented on issue #%s for %s", existing$number, ev$key)
     return(existing$number)
 
@@ -88,9 +102,8 @@ notify_event <- function(ev, attribution = NULL) {
     existing <- if (!is.null(ev$issue_number)) list(number = ev$issue_number)
                 else find_issue(ev$key)
     if (!is.null(existing) && !is.null(existing$number)) {
-      run("gh", c("issue", "close", existing$number,
-                  "--comment", shQuote("Condition no longer observed; closing.")),
-          allow_fail = TRUE)
+      gh(c("issue", "close", existing$number,
+           "--comment", shQuote("Condition no longer observed; closing.")))
       msg("closed issue #%s for %s", existing$number, ev$key)
     }
     return(NULL)

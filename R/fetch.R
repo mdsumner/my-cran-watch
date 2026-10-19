@@ -41,10 +41,12 @@ fetch_check_results <- function(pkgs, cfg) {
     drop <- Reduce(`|`, lapply(cfg$ignore_flavors, grepl, x = res$Flavor))
     res <- res[!drop, , drop = FALSE]
   }
+  # as.character: a factor status never compares identical() to the
+  # string stored in state, which resets every streak to 1 each run
   out <- data.frame(
-    package = res$Package,
-    flavor  = res$Flavor,
-    status  = res$Status,
+    package = as.character(res$Package),
+    flavor  = as.character(res$Flavor),
+    status  = as.character(res$Status),
     stringsAsFactors = FALSE
   )
   # attach detail text where available, for the text-hash "changed
