@@ -95,7 +95,14 @@ function render(d) {
     var v = el("td"); v.appendChild(el("a", { href: "https://cran.r-project.org/package=" + p.package }, p.version));
     v.appendChild(el("div", { "class": "role" }, (p.published || "").slice(0, 10))); tr.appendChild(v);
     var fl = p.flavors || {}, bad = Object.keys(fl).filter(function (k) { return fl[k] !== "OK"; });
-    var ct = el("td"), worst = p.worst || "-";
+    var ct = el("td"), worst = p.worst || "-", det = DETAILS[p.package];
+    if (det) {
+      var n = Object.keys(det).reduce(function (s, k) { return s + (det[k] || 0); }, 0);
+      ct.appendChild(el("a", { href: "details.html?pkg=" + encodeURIComponent(p.package),
+                               "class": n ? "s-WARN" : "s-OK", title: "urlchecker and other details" },
+                        n ? "details (" + n + ")" : "details"));
+      ct.appendChild(document.createTextNode(" "));
+    }
     var label = worst + (bad.length ? " (" + bad.length + "/" + Object.keys(fl).length + ")" : "");
     ct.appendChild(el("a", { href: "https://cran.r-project.org/web/checks/check_results_" + p.package + ".html",
                              "class": "s-" + worst, title: "CRAN check results" }, label));
@@ -114,7 +121,11 @@ function render(d) {
   if (!(d.other || []).length) o.textContent = "None.";
   (d.other || []).forEach(function (c) { var line = el("div"); line.appendChild(el("span", {}, c.package + " ")); line.appendChild(condLink(c)); o.appendChild(line); });
 }
-fetch("status.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(render)
+var DETAILS = {};
+fetch("pkg/index.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; })
+  .catch(function () { return {}; })
+  .then(function (d) { DETAILS = d || {}; return fetch("status.json", { cache: "no-store" }); })
+  .then(function (r) { return r.json(); }).then(render)
   .catch(function () { document.getElementById("gen").textContent = "No status.json yet: it appears after the next watcher run."; });
 </script>
 </body>
