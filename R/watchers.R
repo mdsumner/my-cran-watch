@@ -3,11 +3,11 @@
 # Each watcher turns one source into observations keyed "<pkg>|<kind>"
 # and hands them to diff_kind(), which runs the usual condition lifecycle
 # (observed -> active -> snoozed) and clears what is no longer observed.
-# kinds: deadline, archived, revdeps, canary.
+# kinds: checks, deadline, archived, revdeps, canary.
 
 # condition namespaces other than per-flavor checks; diff_checks must not
 # clear these, and reconcile/notify map them back to an event type
-condition_kinds <- c(universe = "universe_gap", metadata = "metadata",
+condition_kinds <- c(checks = "checks", universe = "universe_gap", metadata = "metadata",
                      deadline = "deadline", archived = "archived",
                      revdeps = "revdeps", canary = "canary")
 

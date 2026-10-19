@@ -91,7 +91,7 @@ for (ev in events) {
                error = function(e) msg("  tagging failed: %s", conditionMessage(e)))
     }
   } else {
-    attribution <- if (ev$type == "check" && ev$event %in% c("opened", "changed") &&
+    attribution <- if (ev$type %in% c("check", "checks") && ev$event %in% c("opened", "changed") &&
                        ev$status %in% c("WARN", "WARNING", "ERROR", "FAIL")) {
       attribute_upstream(ev$package, db, checks)
     } else NULL
