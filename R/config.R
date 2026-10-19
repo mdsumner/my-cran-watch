@@ -6,6 +6,7 @@ read_config <- function(path = "config.yml") {
   cfg$consecutive_required <- cfg$consecutive_required %||% 2
   cfg$notify_statuses <- cfg$notify_statuses %||% c("WARN", "WARNING", "ERROR", "FAIL")
   cfg$watch <- normalize_watch(cfg$watch)
+  cfg$issue_roles <- cfg$issue_roles %||% "maintainer"
   cfg
 }
 
