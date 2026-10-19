@@ -41,6 +41,13 @@ Everything the tool does is an instance of that loop:
 Every issue is labelled `mine`, `contribute` or `interest`, so the issue
 list filters by how much each one is your problem.
 
+## Summary site
+
+Every run writes `docs/status.json` (one row per package: version, worst
+CRAN check status, r-universe, open conditions with issue links), and
+`docs/index.html` renders it with a Mine / Contribute / Interest filter.
+Turn it on once: Settings > Pages > Deploy from a branch > `main` `/docs`.
+
 ## Design points
 
 **State is committed back to the repo** (`state/state.json`), so the diff

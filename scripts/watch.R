@@ -109,7 +109,8 @@ for (ev in events) {
 }
 
 save_state(state)
-msg("state saved; done")
+write_site(state, mine, checks, uni, cfg)
+msg("state and site saved; done")
 if (.gh_failures$n > 0) {
   msg("%d gh call(s) failed; failing the job so it does not report green",
       .gh_failures$n)

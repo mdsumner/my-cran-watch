@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRAN watch</title>
+<style>
+:root { --bg: #fff; --fg: #1d1d1f; --muted: #6b6b70; --line: #e3e3e6; --panel: #f6f6f8;
+        --ok: #2e7d32; --note: #8a6d00; --warn: #c45500; --err: #c62828; --link: #1a5fb4; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #151517; --fg: #ececee; --muted: #9a9aa2; --line: #2c2c31; --panel: #1d1d21;
+          --ok: #81c784; --note: #e0c050; --warn: #ffab60; --err: #ef7a7a; --link: #8ab4f8; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+       font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 22px; margin: 0 0 4px; }
+h2 { font-size: 16px; margin: 32px 0 8px; }
+.sub { color: var(--muted); margin: 0 0 16px; }
+.tiles { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.tile { background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+        padding: 8px 12px; min-width: 110px; }
+.tile b { display: block; font-size: 20px; }
+.tile span { color: var(--muted); font-size: 12px; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.filters button { font: inherit; border: 1px solid var(--line); background: var(--panel);
+                  color: var(--fg); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.filters button[aria-pressed="true"] { border-color: var(--fg); font-weight: 600; }
+.wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 500; font-size: 12px; }
+a { color: var(--link); }
+.s-OK { color: var(--ok); } .s-NOTE { color: var(--note); }
+.s-WARN, .s-WARNING { color: var(--warn); } .s-ERROR, .s-FAIL { color: var(--err); }
+.role { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.cond { display: inline-block; margin: 0 6px 2px 0; font-size: 12px; }
+.muted { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>CRAN watch</h1>
+  <p class="sub" id="gen">Loading...</p>
+  <div class="tiles" id="tiles"></div>
+  <div class="filters" id="filters"></div>
+  <div class="wrap"><table>
+    <thead><tr><th>Package</th><th>Version</th><th>CRAN checks</th><th>r-universe</th><th>Open conditions</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <h2>Other signals</h2>
+  <div id="other" class="muted"></div>
+</main>
+<script>
+var ROLES = { all: "All", maintainer: "Mine", contribute: "Contribute", interest: "Interest" };
+var role = "all";
+try { role = localStorage.getItem("role") || "all"; } catch (e) {}
+function el(tag, attrs, text) {
+  var e = document.createElement(tag);
+  for (var k in attrs || {}) e.setAttribute(k, attrs[k]);
+  if (text != null) e.textContent = text;
+  return e;
+}
+function condLink(c) {
+  var kind = c.kind.replace("-x86_64", "").replace("r-devel-", "devel-").replace("r-release-", "release-").replace("r-oldrel-", "oldrel-");
+  var label = c.status + " " + kind + (c.lifecycle === "snoozed" ? " (snoozed)" : "");
+  var e = c.issue ? el("a", { href: c.issue, "class": "cond" }, label) : el("span", { "class": "cond muted" }, label);
+  return e;
+}
+function render(d) {
+  document.getElementById("gen").textContent = "Updated " + d.generated + " from " + d.repo;
+  var pk = d.packages.filter(function (p) { return role === "all" || p.role === role; });
+  pk.sort(function (a, b) { return a.package.localeCompare(b.package); });
+  var count = function (f) { return pk.filter(f).length; };
+  var tiles = document.getElementById("tiles"); tiles.innerHTML = "";
+  [["Packages", pk.length],
+   ["ERROR / FAIL", count(function (p) { return p.worst === "ERROR" || p.worst === "FAIL"; })],
+   ["WARN", count(function (p) { return p.worst === "WARN" || p.worst === "WARNING"; })],
+   ["Open issues", pk.reduce(function (n, p) { return n + p.conditions.filter(function (c) { return c.issue; }).length; }, 0)]
+  ].forEach(function (t) { var e = el("div", { "class": "tile" }); e.appendChild(el("b", {}, t[1])); e.appendChild(el("span", {}, t[0])); tiles.appendChild(e); });
+  var f = document.getElementById("filters"); f.innerHTML = "";
+  Object.keys(ROLES).forEach(function (r) {
+    var b = el("button", { "aria-pressed": String(r === role) }, ROLES[r]);
+    b.onclick = function () { role = r; try { localStorage.setItem("role", r); } catch (e) {} render(d); };
+    f.appendChild(b);
+  });
+  var tb = document.getElementById("rows"); tb.innerHTML = "";
+  pk.forEach(function (p) {
+    var tr = el("tr");
+    var td = el("td");
+    td.appendChild(p.repo ? el("a", { href: "https://github.com/" + p.repo }, p.package) : el("span", {}, p.package));
+    td.appendChild(el("div", { "class": "role" }, ROLES[p.role] || p.role));
+    tr.appendChild(td);
+    var v = el("td"); v.appendChild(el("a", { href: "https://cran.r-project.org/web/checks/check_results_" + p.package + ".html" }, p.version));
+    v.appendChild(el("div", { "class": "role" }, p.published || "")); tr.appendChild(v);
+    var fl = p.flavors || {}, bad = Object.keys(fl).filter(function (k) { return fl[k] !== "OK"; });
+    var ct = el("td"); ct.appendChild(el("span", { "class": "s-" + (p.worst || "") }, p.worst || "-"));
+    if (bad.length) ct.appendChild(el("div", { "class": "role" }, bad.length + " of " + Object.keys(fl).length + " flavors"));
+    tr.appendChild(ct);
+    tr.appendChild(el("td", { "class": p.universe === "ok" ? "s-OK" : (p.universe ? "s-WARN" : "muted") }, p.universe || "-"));
+    var cs = p.conditions || [], live = cs.filter(function (c) { return c.lifecycle !== "observed"; });
+    var cd = el("td"); live.forEach(function (c) { cd.appendChild(condLink(c)); });
+    if (cs.length > live.length) cd.appendChild(el("span", { "class": "cond muted", title: "seen once, waiting to repeat before an issue opens" }, "+" + (cs.length - live.length) + " pending"));
+    if (!cs.length) cd.appendChild(el("span", { "class": "muted" }, "none"));
+    tr.appendChild(cd);
+    tb.appendChild(tr);
+  });
+  var o = document.getElementById("other"); o.innerHTML = "";
+  if (!(d.other || []).length) o.textContent = "None.";
+  (d.other || []).forEach(function (c) { var line = el("div"); line.appendChild(el("span", {}, c.package + " ")); line.appendChild(condLink(c)); o.appendChild(line); });
+}
+fetch("status.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(render)
+  .catch(function () { document.getElementById("gen").textContent = "No status.json yet: it appears after the next watcher run."; });
+</script>
+</body>
+</html>
