@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19 19:59 UTC",
+  "generated": "2026-10-19 20:03 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -52,24 +52,6 @@
       "universe": "absent",
       "conditions": [
         {
-          "key": "angstroms|r-devel-linux-x86_64-debian-clang",
-          "package": "angstroms",
-          "kind": "r-devel-linux-x86_64-debian-clang",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/8",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "angstroms|r-devel-linux-x86_64-debian-gcc",
-          "package": "angstroms",
-          "kind": "r-devel-linux-x86_64-debian-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/16",
-          "first_seen": "2026-07-27"
-        },
-        {
           "key": "angstroms|universe",
           "package": "angstroms",
           "kind": "universe",
@@ -84,8 +66,17 @@
           "kind": "metadata",
           "status": "DRIFT",
           "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/91",
+          "issue": null,
           "first_seen": "2026-07-27"
+        },
+        {
+          "key": "angstroms|checks",
+          "package": "angstroms",
+          "kind": "checks",
+          "status": "NOTE",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -259,49 +250,13 @@
       "universe": "ok",
       "conditions": [
         {
-          "key": "decido|r-devel-linux-x86_64-debian-clang",
+          "key": "decido|checks",
           "package": "decido",
-          "kind": "r-devel-linux-x86_64-debian-clang",
+          "kind": "checks",
           "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/9",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "decido|r-devel-linux-x86_64-debian-gcc",
-          "package": "decido",
-          "kind": "r-devel-linux-x86_64-debian-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/17",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "decido|r-devel-linux-x86_64-fedora-gcc",
-          "package": "decido",
-          "kind": "r-devel-linux-x86_64-fedora-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/29",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "decido|r-devel-windows-x86_64",
-          "package": "decido",
-          "kind": "r-devel-windows-x86_64",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/34",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "decido|r-devel-linux-x86_64-fedora-clang",
-          "package": "decido",
-          "kind": "r-devel-linux-x86_64-fedora-clang",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/24",
-          "first_seen": "2026-08-05"
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -380,13 +335,13 @@
       "universe": "ok",
       "conditions": [
         {
-          "key": "geographiclib|r-release-macos-x86_64",
+          "key": "geographiclib|checks",
           "package": "geographiclib",
-          "kind": "r-release-macos-x86_64",
+          "kind": "checks",
           "status": "WARNING",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/39",
-          "first_seen": "2026-07-27"
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -463,7 +418,7 @@
           "package": "ggpolypath",
           "kind": "revdeps",
           "status": "REVDEP",
-          "lifecycle": "observed",
+          "lifecycle": "active",
           "issue": null,
           "first_seen": "2026-10-19"
         }
@@ -629,24 +584,6 @@
       "universe": "absent",
       "conditions": [
         {
-          "key": "orsifronts|r-devel-linux-x86_64-debian-clang",
-          "package": "orsifronts",
-          "kind": "r-devel-linux-x86_64-debian-clang",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/10",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "orsifronts|r-devel-linux-x86_64-debian-gcc",
-          "package": "orsifronts",
-          "kind": "r-devel-linux-x86_64-debian-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/18",
-          "first_seen": "2026-07-27"
-        },
-        {
           "key": "orsifronts|universe",
           "package": "orsifronts",
           "kind": "universe",
@@ -654,6 +591,15 @@
           "lifecycle": "active",
           "issue": "https://github.com/mdsumner/my-cran-watch/issues/83",
           "first_seen": "2026-07-27"
+        },
+        {
+          "key": "orsifronts|checks",
+          "package": "orsifronts",
+          "kind": "checks",
+          "status": "NOTE",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -777,49 +723,13 @@
       "universe": "ok",
       "conditions": [
         {
-          "key": "quadmesh|r-devel-linux-x86_64-debian-clang",
+          "key": "quadmesh|checks",
           "package": "quadmesh",
-          "kind": "r-devel-linux-x86_64-debian-clang",
+          "kind": "checks",
           "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/11",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "quadmesh|r-devel-linux-x86_64-debian-gcc",
-          "package": "quadmesh",
-          "kind": "r-devel-linux-x86_64-debian-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/19",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "quadmesh|r-devel-linux-x86_64-fedora-gcc",
-          "package": "quadmesh",
-          "kind": "r-devel-linux-x86_64-fedora-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/30",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "quadmesh|r-devel-windows-x86_64",
-          "package": "quadmesh",
-          "kind": "r-devel-windows-x86_64",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/35",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "quadmesh|r-devel-linux-x86_64-fedora-clang",
-          "package": "quadmesh",
-          "kind": "r-devel-linux-x86_64-fedora-clang",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/25",
-          "first_seen": "2026-08-05"
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -883,49 +793,13 @@
       "universe": "ok",
       "conditions": [
         {
-          "key": "reproj|r-devel-linux-x86_64-debian-clang",
+          "key": "reproj|checks",
           "package": "reproj",
-          "kind": "r-devel-linux-x86_64-debian-clang",
+          "kind": "checks",
           "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/12",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "reproj|r-devel-linux-x86_64-debian-gcc",
-          "package": "reproj",
-          "kind": "r-devel-linux-x86_64-debian-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/20",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "reproj|r-devel-linux-x86_64-fedora-gcc",
-          "package": "reproj",
-          "kind": "r-devel-linux-x86_64-fedora-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/31",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "reproj|r-devel-windows-x86_64",
-          "package": "reproj",
-          "kind": "r-devel-windows-x86_64",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/36",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "reproj|r-devel-linux-x86_64-fedora-clang",
-          "package": "reproj",
-          "kind": "r-devel-linux-x86_64-fedora-clang",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/26",
-          "first_seen": "2026-08-05"
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -1034,7 +908,7 @@
           "kind": "universe",
           "status": "GAP",
           "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/87",
+          "issue": null,
           "first_seen": "2026-07-27"
         }
       ]
@@ -1069,7 +943,7 @@
           "kind": "universe",
           "status": "GAP",
           "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/88",
+          "issue": null,
           "first_seen": "2026-07-27"
         }
       ]
@@ -1104,7 +978,7 @@
           "kind": "universe",
           "status": "GAP",
           "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/89",
+          "issue": null,
           "first_seen": "2026-07-27"
         }
       ]
@@ -1159,49 +1033,13 @@
       "universe": "ok",
       "conditions": [
         {
-          "key": "textures|r-devel-linux-x86_64-debian-clang",
+          "key": "textures|checks",
           "package": "textures",
-          "kind": "r-devel-linux-x86_64-debian-clang",
+          "kind": "checks",
           "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/13",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "textures|r-devel-linux-x86_64-debian-gcc",
-          "package": "textures",
-          "kind": "r-devel-linux-x86_64-debian-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/21",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "textures|r-devel-linux-x86_64-fedora-clang",
-          "package": "textures",
-          "kind": "r-devel-linux-x86_64-fedora-clang",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/27",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "textures|r-devel-linux-x86_64-fedora-gcc",
-          "package": "textures",
-          "kind": "r-devel-linux-x86_64-fedora-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/32",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "textures|r-devel-windows-x86_64",
-          "package": "textures",
-          "kind": "r-devel-windows-x86_64",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/37",
-          "first_seen": "2026-07-27"
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -1235,7 +1073,7 @@
           "kind": "universe",
           "status": "GAP",
           "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/90",
+          "issue": null,
           "first_seen": "2026-07-27"
         }
       ]
@@ -1315,49 +1153,13 @@
       "universe": "ok",
       "conditions": [
         {
-          "key": "trip|r-devel-linux-x86_64-debian-clang",
+          "key": "trip|checks",
           "package": "trip",
-          "kind": "r-devel-linux-x86_64-debian-clang",
+          "kind": "checks",
           "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/14",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "trip|r-devel-linux-x86_64-debian-gcc",
-          "package": "trip",
-          "kind": "r-devel-linux-x86_64-debian-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/22",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "trip|r-devel-linux-x86_64-fedora-clang",
-          "package": "trip",
-          "kind": "r-devel-linux-x86_64-fedora-clang",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/28",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "trip|r-devel-linux-x86_64-fedora-gcc",
-          "package": "trip",
-          "kind": "r-devel-linux-x86_64-fedora-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/33",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "trip|r-devel-windows-x86_64",
-          "package": "trip",
-          "kind": "r-devel-windows-x86_64",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/38",
-          "first_seen": "2026-07-27"
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -1386,22 +1188,13 @@
       "universe": "ok",
       "conditions": [
         {
-          "key": "tripEstimation|r-devel-linux-x86_64-debian-clang",
+          "key": "tripEstimation|checks",
           "package": "tripEstimation",
-          "kind": "r-devel-linux-x86_64-debian-clang",
+          "kind": "checks",
           "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/15",
-          "first_seen": "2026-07-27"
-        },
-        {
-          "key": "tripEstimation|r-devel-linux-x86_64-debian-gcc",
-          "package": "tripEstimation",
-          "kind": "r-devel-linux-x86_64-debian-gcc",
-          "status": "NOTE",
-          "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/23",
-          "first_seen": "2026-07-27"
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -1570,7 +1363,7 @@
           "kind": "universe",
           "status": "GAP",
           "lifecycle": "active",
-          "issue": "https://github.com/mdsumner/my-cran-watch/issues/1",
+          "issue": null,
           "first_seen": "2026-10-07"
         }
       ]
@@ -1625,27 +1418,9 @@
       "universe": null,
       "conditions": [
         {
-          "key": "ggsql|r-release-macos-x86_64",
+          "key": "ggsql|checks",
           "package": "ggsql",
-          "kind": "r-release-macos-x86_64",
-          "status": "ERROR",
-          "lifecycle": "observed",
-          "issue": null,
-          "first_seen": "2026-10-19"
-        },
-        {
-          "key": "ggsql|r-oldrel-macos-arm64",
-          "package": "ggsql",
-          "kind": "r-oldrel-macos-arm64",
-          "status": "ERROR",
-          "lifecycle": "observed",
-          "issue": null,
-          "first_seen": "2026-10-19"
-        },
-        {
-          "key": "ggsql|r-oldrel-macos-x86_64",
-          "package": "ggsql",
-          "kind": "r-oldrel-macos-x86_64",
+          "kind": "checks",
           "status": "ERROR",
           "lifecycle": "observed",
           "issue": null,
@@ -1703,45 +1478,9 @@
       "universe": null,
       "conditions": [
         {
-          "key": "wk|r-devel-linux-x86_64-debian-clang",
+          "key": "wk|checks",
           "package": "wk",
-          "kind": "r-devel-linux-x86_64-debian-clang",
-          "status": "NOTE",
-          "lifecycle": "observed",
-          "issue": null,
-          "first_seen": "2026-10-19"
-        },
-        {
-          "key": "wk|r-devel-linux-x86_64-debian-gcc",
-          "package": "wk",
-          "kind": "r-devel-linux-x86_64-debian-gcc",
-          "status": "NOTE",
-          "lifecycle": "observed",
-          "issue": null,
-          "first_seen": "2026-10-19"
-        },
-        {
-          "key": "wk|r-devel-linux-x86_64-fedora-clang",
-          "package": "wk",
-          "kind": "r-devel-linux-x86_64-fedora-clang",
-          "status": "NOTE",
-          "lifecycle": "observed",
-          "issue": null,
-          "first_seen": "2026-10-19"
-        },
-        {
-          "key": "wk|r-devel-linux-x86_64-fedora-gcc",
-          "package": "wk",
-          "kind": "r-devel-linux-x86_64-fedora-gcc",
-          "status": "NOTE",
-          "lifecycle": "observed",
-          "issue": null,
-          "first_seen": "2026-10-19"
-        },
-        {
-          "key": "wk|r-devel-windows-x86_64",
-          "package": "wk",
-          "kind": "r-devel-windows-x86_64",
+          "kind": "checks",
           "status": "NOTE",
           "lifecycle": "observed",
           "issue": null,
