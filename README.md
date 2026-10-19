@@ -41,6 +41,15 @@ Everything the tool does is an instance of that loop:
 Every issue is labelled `mine`, `contribute` or `interest`, so the issue
 list filters by how much each one is your problem.
 
+## Weekly summary issue
+
+Most conditions do not get an issue each. At most every `summary_days`
+(default 6, matching the cron), one issue labelled `summary` lists what is
+new or changed since the last summary, what cleared, and everything
+current, with a link to the dashboard; the previous summary is closed.
+Only the kinds in `issue_kinds` (default: deadline, archived) still get
+their own issue. Check results are grouped per package (`<pkg>|checks`).
+
 ## Summary site
 
 Every run writes `docs/status.json` (one row per package: version, worst

@@ -25,40 +25,36 @@ diff_versions <- function(state, mine) {
 }
 
 diff_checks <- function(state, checks, cfg) {
-  events <- list()
-  seen_keys <- character()
-
+  # one condition per package ("<pkg>|checks") listing every noteworthy
+  # flavor, so a NOTE on five r-devel flavors is one issue, not five; the
+  # condition changes character (and comments) when the flavor set changes
   noteworthy <- checks[checks$status %in% cfg$notify_statuses, , drop = FALSE]
-  for (i in seq_len(nrow(noteworthy))) {
-    key <- condition_key(noteworthy$package[i], noteworthy$flavor[i])
-    seen_keys <- c(seen_keys, key)
-    stepped <- step_condition(state$conditions[[key]],
-                              noteworthy$status[i],
-                              noteworthy$detail[i],
-                              cfg$consecutive_required)
-    state$conditions[[key]] <- stepped$cond
-    if (!is.null(stepped$event)) {
-      events[[length(events) + 1L]] <- list(
-        type = "check", event = stepped$event, key = key,
-        package = noteworthy$package[i], flavor = noteworthy$flavor[i],
-        status = noteworthy$status[i], detail = noteworthy$detail[i],
-        issue_number = stepped$cond$issue_number)
-    }
+  obs <- empty_obs()
+  for (pkg in unique(noteworthy$package)) {
+    nw <- noteworthy[noteworthy$package == pkg, , drop = FALSE]
+    nw <- nw[order(nw$flavor), , drop = FALSE]
+    flavors <- sprintf("- %s: %s", nw$flavor, nw$status)
+    details <- unique(nw$detail[nzchar(nw$detail)])
+    obs <- rbind(obs, data.frame(
+      package = pkg, status = worst_status(nw$status),
+      detail = paste(c(flavors, "", details), collapse = "\n"),
+      stringsAsFactors = FALSE))
   }
+  d <- diff_kind(state, obs, "checks", cfg$consecutive_required)
+  state <- d$state
+  events <- d$events
 
-  # conditions in state that are check-type and no longer observed -> clear
-  # (other condition namespaces manage their own clearing)
-  check_keys <- names(state$conditions) %||% character()
-  check_keys <- check_keys[!key_kind(check_keys) %in% names(condition_kinds)]
-  for (key in setdiff(check_keys, seen_keys)) {
-    cleared <- clear_condition(state$conditions[[key]])
-    if (!is.null(cleared$event)) {
-      parts <- strsplit(key, "|", fixed = TRUE)[[1]]
-      events[[length(events) + 1L]] <- list(
-        type = "check", event = "cleared", key = key,
-        package = parts[1], flavor = parts[2],
-        issue_number = state$conditions[[key]]$issue_number)
-    }
+  # legacy per-flavor conditions ("<pkg>|<flavor>"): drop them and close
+  # any issue they opened, whatever their lifecycle (their issue numbers
+  # may never have reached committed state)
+  old <- names(state$conditions) %||% character()
+  old <- old[!key_kind(old) %in% names(condition_kinds)]
+  for (key in old) {
+    parts <- strsplit(key, "|", fixed = TRUE)[[1]]
+    events[[length(events) + 1L]] <- list(
+      type = "check", event = "cleared", key = key,
+      package = parts[1], flavor = parts[2],
+      issue_number = state$conditions[[key]]$issue_number)
     state$conditions[[key]] <- NULL
   }
   list(state = state, events = events)
