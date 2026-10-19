@@ -24,6 +24,10 @@ universes:
 extra_packages:
   - fasterize
 
+# Which roles open issues: maintainer (my packages), contribute, interest.
+# Everything is still tracked in state and shown on the site.
+issue_roles: [maintainer]
+
 # Packages maintained by someone else that you want to hear about. Each is
 # a bare name or {package, role}; role is "contribute" (you send fixes) or
 # "interest" (you depend on it or just want to know), default "interest".

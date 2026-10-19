@@ -97,7 +97,11 @@ for (ev in events) {
     } else NULL
     ev$role <- mine$role[match(ev$package, mine$package)]
     if (is.na(ev$role)) ev$role <- "maintainer"  # canaries, archived
-    if (!dry_run) {
+    if (!ev$role %in% cfg$issue_roles) {
+      # tracked in state and on the site, but no issue; turning the role
+      # on later lets reconcile_orphans open issues for what is active
+      next
+    } else if (!dry_run) {
       num <- notify_event(ev, attribution)
       if (!is.null(num) && !is.null(state$conditions[[ev$key]])) {
         state$conditions[[ev$key]]$issue_number <- num
