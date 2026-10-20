@@ -24,6 +24,7 @@ STATUS = "docs/status.json"
 OUT = "docs/queue.json"
 CONFIG = "config.yml"
 CACHE = ".cache/queue_maintainers.json"
+SKIP = {"archive"}
 MAX_READS = 300   # tarballs opened per run; the rest wait for the next run
 
 # Apache autoindex rows, plain or table style:
@@ -102,7 +103,9 @@ def by_maintainer(entries, emails, cache, read=maintainer):
 def main():
     with open(STATUS) as f:
         mine = {p["package"] for p in json.load(f)["packages"]}
-    queue = crawl()
+    # archive holds submissions that have left the queue (withdrawn,
+    # rejected, superseded): not news, and ~300 tarballs to read
+    queue = [e for e in crawl() if e["folder"] not in SKIP]
     cache = {}
     if os.path.exists(CACHE):
         with open(CACHE) as f:
