@@ -4,8 +4,33 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "3 URL problem(s)",
+      "problems": [
+        {
+          "url": "https://codecov.io/gh/hypertidy/affinity?branch=master",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.codecov.io/gh/hypertidy/affinity?branch=master",
+          "from": "README.md",
+          "_row": "https://codecov.io/gh/hypertidy/affinity?branch=master"
+        },
+        {
+          "url": "https://gdal.org/user/raster_data_model.html",
+          "status": "200",
+          "message": "OK",
+          "new": "https://gdal.org/en/stable/user/raster_data_model.html",
+          "from": "DESCRIPTION",
+          "_row": "https://gdal.org/user/raster_data_model.html"
+        },
+        {
+          "url": "https://travis-ci.org/hypertidy/affinity",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.travis-ci.com/hypertidy/affinity",
+          "from": "README.md",
+          "_row": "https://travis-ci.org/hypertidy/affinity"
+        }
+      ]
     },
     "checktor": {
       "summary": "1 opinion",

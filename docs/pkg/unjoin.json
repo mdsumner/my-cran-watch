@@ -4,8 +4,41 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "4 URL problem(s)",
+      "problems": [
+        {
+          "url": "https://codecov.io/github/hypertidy/unjoin?branch=master",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.codecov.io/github/hypertidy/unjoin?branch=master",
+          "from": "README.md",
+          "_row": "https://codecov.io/github/hypertidy/unjoin?branch=master"
+        },
+        {
+          "url": "https://github.com/r-gris/babelfish",
+          "status": "200",
+          "message": "OK",
+          "new": "https://github.com/dis-organization/babelfish",
+          "from": "README.md",
+          "_row": "https://github.com/r-gris/babelfish"
+        },
+        {
+          "url": "https://travis-ci.org/hypertidy/unjoin",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.travis-ci.com/hypertidy/unjoin",
+          "from": "README.md",
+          "_row": "https://travis-ci.org/hypertidy/unjoin"
+        },
+        {
+          "url": "https://www.tidyverse.org/lifecycle/#stable",
+          "status": "404",
+          "message": "Not Found",
+          "new": "https://tidyverse.org/lifecycle/#stable",
+          "from": "README.md",
+          "_row": "https://www.tidyverse.org/lifecycle/#stable"
+        }
+      ]
     },
     "checktor": {
       "summary": "2 opinion",

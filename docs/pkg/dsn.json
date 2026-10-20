@@ -4,8 +4,17 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "1 URL problem(s)",
+      "problems": [
+        {
+          "url": "https://github.com/mdsumner/fixoisst",
+          "status": "404",
+          "message": "Not Found",
+          "new": "",
+          "from": "README.md",
+          "_row": "https://github.com/mdsumner/fixoisst"
+        }
+      ]
     },
     "checktor": {
       "summary": "no findings",

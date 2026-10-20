@@ -4,8 +4,25 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "2 URL problem(s)",
+      "problems": [
+        {
+          "url": "https://codecov.io/github/mdsumner/ozmaps?branch=master",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.codecov.io/github/mdsumner/ozmaps?branch=master",
+          "from": "README.md",
+          "_row": "https://codecov.io/github/mdsumner/ozmaps?branch=master"
+        },
+        {
+          "url": "https://travis-ci.org/mdsumner/ozmaps",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.travis-ci.com/mdsumner/ozmaps",
+          "from": "README.md",
+          "_row": "https://travis-ci.org/mdsumner/ozmaps"
+        }
+      ]
     },
     "checktor": {
       "summary": "5 opinion",

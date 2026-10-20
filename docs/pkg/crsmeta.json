@@ -4,8 +4,25 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "2 URL problem(s)",
+      "problems": [
+        {
+          "url": "http://docs.opengeospatial.org/is/12-063r5/12-063r5.html",
+          "status": "200",
+          "message": "OK",
+          "new": "https://docs.ogc.org/is/12-063r5/12-063r5.html",
+          "from": "DESCRIPTION, man/crs_wkt2.Rd, man/crsmeta-package.Rd",
+          "_row": "http://docs.opengeospatial.org/is/12-063r5/12-063r5.html"
+        },
+        {
+          "url": "https://www.tidyverse.org/lifecycle/#maturing",
+          "status": "404",
+          "message": "Not Found",
+          "new": "https://tidyverse.org/lifecycle/#maturing",
+          "from": "README.md",
+          "_row": "https://www.tidyverse.org/lifecycle/#maturing"
+        }
+      ]
     },
     "checktor": {
       "summary": "10 opinion",

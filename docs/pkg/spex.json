@@ -4,8 +4,33 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "3 URL problem(s)",
+      "problems": [
+        {
+          "url": "https://codecov.io/github/mdsumner/spex?branch=master",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.codecov.io/github/mdsumner/spex?branch=master",
+          "from": "README.md",
+          "_row": "https://codecov.io/github/mdsumner/spex?branch=master"
+        },
+        {
+          "url": "https://travis-ci.org/mdsumner/spex",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.travis-ci.com/mdsumner/spex",
+          "from": "README.md",
+          "_row": "https://travis-ci.org/mdsumner/spex"
+        },
+        {
+          "url": "https://www.tidyverse.org/lifecycle/#stable",
+          "status": "404",
+          "message": "Not Found",
+          "new": "https://tidyverse.org/lifecycle/#stable",
+          "from": "README.md",
+          "_row": "https://www.tidyverse.org/lifecycle/#stable"
+        }
+      ]
     },
     "checktor": {
       "summary": "6 opinion",

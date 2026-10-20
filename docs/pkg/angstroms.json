@@ -4,8 +4,41 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "4 URL problem(s)",
+      "problems": [
+        {
+          "url": "https://codecov.io/github/mdsumner/angstroms?branch=master",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.codecov.io/github/mdsumner/angstroms?branch=master",
+          "from": "README.md",
+          "_row": "https://codecov.io/github/mdsumner/angstroms?branch=master"
+        },
+        {
+          "url": "https://github.com/mdsumner/angstroms",
+          "status": "200",
+          "message": "OK",
+          "new": "https://github.com/AustralianAntarcticDivision/angstroms",
+          "from": "DESCRIPTION",
+          "_row": "https://github.com/mdsumner/angstroms"
+        },
+        {
+          "url": "https://github.com/mdsumner/angstroms/issues",
+          "status": "200",
+          "message": "OK",
+          "new": "https://github.com/AustralianAntarcticDivision/angstroms/issues",
+          "from": "DESCRIPTION",
+          "_row": "https://github.com/mdsumner/angstroms/issues"
+        },
+        {
+          "url": "https://travis-ci.org/mdsumner/angstroms",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.travis-ci.com/mdsumner/angstroms",
+          "from": "README.md",
+          "_row": "https://travis-ci.org/mdsumner/angstroms"
+        }
+      ]
     },
     "checktor": {
       "summary": "10 opinion, 1 policy, 1 robustness",

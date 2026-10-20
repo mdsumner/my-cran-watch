@@ -4,8 +4,41 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "4 URL problem(s)",
+      "problems": [
+        {
+          "url": "https://github.com/ecohealthalliance/fasterize",
+          "status": "200",
+          "message": "OK",
+          "new": "https://github.com/hypertidy/fasterize",
+          "from": "DESCRIPTION, man/fasterize-package.Rd",
+          "_row": "https://github.com/ecohealthalliance/fasterize"
+        },
+        {
+          "url": "https://github.com/ecohealthalliance/fasterize/issues",
+          "status": "200",
+          "message": "OK",
+          "new": "https://github.com/hypertidy/fasterize/issues",
+          "from": "DESCRIPTION, man/fasterize-package.Rd",
+          "_row": "https://github.com/ecohealthalliance/fasterize/issues"
+        },
+        {
+          "url": "https://labs.wsu.edu/wayne-cochran/",
+          "status": "200",
+          "message": "OK",
+          "new": "https://vancouver.labs.wsu.edu/wayne-cochran/",
+          "from": "man/fasterize.Rd",
+          "_row": "https://labs.wsu.edu/wayne-cochran/"
+        },
+        {
+          "url": "https://www.ecohealthalliance.org/",
+          "status": "Error",
+          "message": "Timeout was reached [www.ecohealthalliance.org]:\nConnection timed out after 5002 milliseconds",
+          "new": "",
+          "from": "inst/doc/using-fasterize.html",
+          "_row": "https://www.ecohealthalliance.org/"
+        }
+      ]
     },
     "checktor": {
       "summary": "no findings",

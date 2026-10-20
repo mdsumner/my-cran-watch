@@ -4,8 +4,33 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "3 URL problem(s)",
+      "problems": [
+        {
+          "url": "http://www.r-pkg.org/pkg/gibble",
+          "status": "200",
+          "message": "OK",
+          "new": "https://www.r-pkg.org:443/pkg/gibble",
+          "from": "README.md",
+          "_row": "http://www.r-pkg.org/pkg/gibble"
+        },
+        {
+          "url": "https://codecov.io/github/mdsumner/gibble?branch=master",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.codecov.io/github/mdsumner/gibble?branch=master",
+          "from": "README.md",
+          "_row": "https://codecov.io/github/mdsumner/gibble?branch=master"
+        },
+        {
+          "url": "https://travis-ci.org/mdsumner/gibble",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.travis-ci.com/mdsumner/gibble",
+          "from": "README.md",
+          "_row": "https://travis-ci.org/mdsumner/gibble"
+        }
+      ]
     },
     "checktor": {
       "summary": "4 opinion",

@@ -1,10 +1,10 @@
 {
   "affinity": {
-    "urlchecker": 0,
+    "urlchecker": 3,
     "checktor": 0
   },
   "angstroms": {
-    "urlchecker": 0,
+    "urlchecker": 4,
     "checktor": 2
   },
   "area": {
@@ -20,11 +20,11 @@
     "checktor": 0
   },
   "ceramic": {
-    "urlchecker": 0,
+    "urlchecker": 1,
     "checktor": 0
   },
   "crsmeta": {
-    "urlchecker": 0,
+    "urlchecker": 2,
     "checktor": 0
   },
   "decido": {
@@ -32,11 +32,11 @@
     "checktor": 0
   },
   "dsn": {
-    "urlchecker": 0,
+    "urlchecker": 1,
     "checktor": 0
   },
   "fasterize": {
-    "urlchecker": 0,
+    "urlchecker": 4,
     "checktor": 0
   },
   "geographiclib": {
@@ -44,19 +44,19 @@
     "checktor": 0
   },
   "geojson": {
-    "urlchecker": 0,
+    "urlchecker": 1,
     "checktor": 8
   },
   "ggpolypath": {
-    "urlchecker": 0,
+    "urlchecker": 1,
     "checktor": 2
   },
   "gibble": {
-    "urlchecker": 0,
+    "urlchecker": 3,
     "checktor": 0
   },
   "graticule": {
-    "urlchecker": 0,
+    "urlchecker": 1,
     "checktor": 7
   },
   "grout": {
@@ -72,11 +72,11 @@
     "checktor": 0
   },
   "orsifronts": {
-    "urlchecker": 0,
+    "urlchecker": 2,
     "checktor": 4
   },
   "ozmaps": {
-    "urlchecker": 0,
+    "urlchecker": 2,
     "checktor": 0
   },
   "palr": {
@@ -92,7 +92,7 @@
     "checktor": 2
   },
   "rbgm": {
-    "urlchecker": 0,
+    "urlchecker": 1,
     "checktor": 5
   },
   "reproj": {
@@ -116,15 +116,15 @@
     "checktor": 0
   },
   "spbabel": {
-    "urlchecker": 0,
+    "urlchecker": 1,
     "checktor": 12
   },
   "spex": {
-    "urlchecker": 0,
+    "urlchecker": 3,
     "checktor": 0
   },
   "tabularaster": {
-    "urlchecker": 0,
+    "urlchecker": 1,
     "checktor": 0
   },
   "textures": {
@@ -152,11 +152,11 @@
     "checktor": 24
   },
   "unjoin": {
-    "urlchecker": 0,
+    "urlchecker": 4,
     "checktor": 0
   },
   "vapour": {
-    "urlchecker": 0,
+    "urlchecker": 1,
     "checktor": 2
   },
   "vaster": {

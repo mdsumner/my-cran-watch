@@ -4,8 +4,17 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "1 URL problem(s)",
+      "problems": [
+        {
+          "url": "http://www.geopackage.org/",
+          "status": "200",
+          "message": "OK",
+          "new": "https://www.geopackage.org/",
+          "from": "inst/doc/BGM_Spatial.html",
+          "_row": "http://www.geopackage.org/"
+        }
+      ]
     },
     "checktor": {
       "summary": "4 opinion, 5 policy",

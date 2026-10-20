@@ -4,8 +4,17 @@
   "updated": "2026-10-20",
   "sections": {
     "urlchecker": {
-      "summary": "failed: pandoc is not installed and on the PATH.",
-      "problems": []
+      "summary": "1 URL problem(s)",
+      "problems": [
+        {
+          "url": "https://twitter.com/hashtag/rstats",
+          "status": "200",
+          "message": "OK",
+          "new": "https://x.com/hashtag/rstats",
+          "from": "inst/doc/tabularaster-usage.html",
+          "_row": "https://twitter.com/hashtag/rstats"
+        }
+      ]
     },
     "checktor": {
       "summary": "2 opinion",
