@@ -51,6 +51,7 @@ a { color: var(--link); }
   <h1>CRAN watch</h1>
   <p class="sub" id="gen">Loading...</p>
   <div class="tiles" id="tiles"></div>
+  <p id="newsubs" hidden></p>
   <div class="filters" id="filters"></div>
   <div class="wrap"><table>
     <thead><tr><th data-sort="package">Package</th><th data-sort="published">Version</th><th data-sort="checks">CRAN checks</th><th data-sort="universe">r-universe</th><th data-sort="alerts">Other alerts</th></tr></thead>
@@ -107,6 +108,19 @@ function render(d) {
   document.getElementById("gen").textContent = "Updated " + d.generated + " from " + d.repo +
     (QUEUE_AT ? "; CRAN queue checked hourly, last changed " + QUEUE_AT : "");
   var byRole = d.packages.filter(function (p) { return role === "all" || p.role === role; });
+  // submissions of packages not on CRAN yet, found by Maintainer email
+  var ns = document.getElementById("newsubs"), known = {};
+  d.packages.forEach(function (p) { known[p.package] = true; });
+  var fresh = Object.keys(QUEUE).filter(function (k) { return !known[k]; }).sort();
+  ns.innerHTML = ""; ns.hidden = !fresh.length;
+  if (fresh.length) ns.appendChild(el("span", { "class": "muted" }, "New packages in the CRAN queue: "));
+  fresh.forEach(function (k) {
+    QUEUE[k].forEach(function (q) {
+      ns.appendChild(el("a", { href: q.url, "class": "queue", title: "in CRAN incoming since " + q.modified },
+                        k + " " + q.version + ": " + q.folder + (q.subfolder ? "/" + q.subfolder : "")));
+      ns.appendChild(document.createTextNode(" "));
+    });
+  });
   var tiles = document.getElementById("tiles"); tiles.innerHTML = "";
   Object.keys(STATUS).forEach(function (s) {
     var e = el("button", { "class": "tile", "aria-pressed": String(s === status),

@@ -16,6 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      # maintainer of each submitted tarball, so each is downloaded once
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: queue-maintainers-${{ github.run_id }}
+          restore-keys: queue-maintainers-
+
       - name: Snapshot CRAN incoming queue
         run: python3 scripts/cran_queue.py
 
