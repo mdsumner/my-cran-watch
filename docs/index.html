@@ -105,8 +105,10 @@ function condLink(c) {
   return e;
 }
 function render(d) {
-  document.getElementById("gen").textContent = "Updated " + d.generated + " from " + d.repo +
-    (QUEUE_AT ? "; CRAN queue checked twice daily, last changed " + QUEUE_AT : "");
+  var gen = document.getElementById("gen"); gen.innerHTML = "";
+  gen.appendChild(document.createTextNode("Updated " + d.generated + " from "));
+  gen.appendChild(el("a", { href: "https://github.com/" + d.repo }, d.repo));
+  if (QUEUE_AT) gen.appendChild(document.createTextNode("; CRAN queue checked twice daily, last changed " + QUEUE_AT));
   // submissions of packages not on CRAN yet, found by Maintainer email;
   // they join the table as rows of mine that only the queue filter shows
   var ns = document.getElementById("newsubs"), known = {};
