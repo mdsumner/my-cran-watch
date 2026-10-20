@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About CRAN watch</title>
+<meta name="description" content="A small, forkable watcher for your CRAN packages: checks, deadlines, the incoming queue and more, on a dashboard run by GitHub Actions.">
+<style>
+:root { --bg: #fff; --fg: #1d1d1f; --muted: #6b6b70; --line: #e3e3e6; --panel: #f6f6f8;
+        --ok: #2e7d32; --note: #8a6d00; --warn: #c45500; --err: #c62828; --link: #1a5fb4;
+        --accent: #1a5fb4; --accent-soft: #e8f0fb; --code: #f0f0f3; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #151517; --fg: #ececee; --muted: #9a9aa2; --line: #2c2c31; --panel: #1d1d21;
+          --ok: #81c784; --note: #e0c050; --warn: #ffab60; --err: #ef7a7a; --link: #8ab4f8;
+          --accent: #8ab4f8; --accent-soft: #1d2a3d; --code: #232328; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+       font: 15px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+code { font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+       background: var(--code); padding: 1px 5px; border-radius: 4px; }
+pre { background: var(--code); padding: 12px 14px; border-radius: 8px; overflow-x: auto; margin: 8px 0 0; }
+pre code { padding: 0; background: none; }
+.nav { border-bottom: 1px solid var(--line); }
+.nav div { max-width: 920px; margin: 0 auto; padding: 10px 16px; display: flex; gap: 18px;
+           align-items: baseline; flex-wrap: wrap; }
+.nav b { margin-right: auto; }
+.nav a { text-decoration: none; }
+.nav a[aria-current="page"] { color: var(--fg); font-weight: 600; }
+main { max-width: 920px; margin: 0 auto; padding: 8px 16px 64px; }
+.hero { padding: 40px 0 24px; }
+.hero h1 { font-size: 32px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; }
+.hero p { font-size: 17px; color: var(--muted); margin: 0; max-width: 680px; }
+.cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+.btn { display: inline-block; padding: 8px 16px; border-radius: 999px; text-decoration: none;
+       border: 1px solid var(--line); background: var(--panel); color: var(--fg); font-weight: 500; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+h2 { font-size: 20px; margin: 44px 0 6px; }
+h2 + p.lead { color: var(--muted); margin: 0 0 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.grid.two { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.card h3 { font-size: 15px; margin: 0 0 4px; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+.loop { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0 4px; }
+.step { background: var(--accent-soft); border: 1px solid var(--line); border-radius: 8px;
+        padding: 8px 12px; font-weight: 500; }
+.arrow { color: var(--muted); }
+ol.steps { padding-left: 0; list-style: none; counter-reset: s; margin: 12px 0 0; }
+ol.steps > li { counter-increment: s; position: relative; padding: 0 0 18px 44px; }
+ol.steps > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 28px; height: 28px;
+                        border-radius: 50%; background: var(--accent); color: var(--bg);
+                        display: grid; place-items: center; font-weight: 600; font-size: 14px; }
+ol.steps > li b { display: block; }
+.wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 500; font-size: 12px; }
+.note { border-left: 3px solid var(--accent); background: var(--panel); padding: 10px 14px; border-radius: 0 8px 8px 0; margin: 16px 0 0; }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<nav class="nav"><div>
+  <b>CRAN watch</b>
+  <a href="./">Dashboard</a>
+  <a href="about.html" aria-current="page">About</a>
+  <a id="repo" href="https://github.com/mdsumner/my-cran-watch">Repository</a>
+</div></nav>
+<main>
+
+<section class="hero">
+  <h1>Early warning for your CRAN packages</h1>
+  <p>CRAN watch is a small repository that keeps an eye on the R packages you maintain, contribute to or depend on. It runs on GitHub Actions, writes a dashboard to GitHub Pages and opens an issue only when something needs you.</p>
+  <div class="cta">
+    <a class="btn primary" href="./">Open the dashboard</a>
+    <a class="btn" href="#fork">Make your own</a>
+  </div>
+</section>
+
+<h2>What it watches</h2>
+<p class="lead">Each watcher reads a public source, compares it with what it saw last time, and records what changed.</p>
+<div class="grid">
+  <div class="card"><h3>CRAN checks</h3><p>The worst result across all CRAN flavors for every package, linked to CRAN's results page.</p></div>
+  <div class="card"><h3>Deadlines and archival</h3><p>A "fix before" date set by CRAN, or a package removed from CRAN. These open an issue straight away.</p></div>
+  <div class="card"><h3>CRAN incoming queue</h3><p>Where your submissions sit (newbies, pretest, pending, a reviewer's folder), including brand-new packages that are not on CRAN yet.</p></div>
+  <div class="card"><h3>Reverse dependencies</h3><p>Packages that depend on yours and are failing on CRAN, which is often the first sign a release broke someone.</p></div>
+  <div class="card"><h3>r-universe</h3><p>Whether each package is present in your r-universe and whether the CRAN metadata points back to your repository.</p></div>
+  <div class="card"><h3>Package details</h3><p>A weekly per-package page with URL checks (urlchecker), CRAN policy checks (checktor) and, on request, rOpenSci pkgcheck.</p></div>
+</div>
+
+<h2>How it works</h2>
+<p class="lead">Every job is the same loop, run on a schedule and committed back to the repository.</p>
+<div class="loop" aria-label="fetch, diff, act, publish">
+  <span class="step">Fetch sources</span><span class="arrow">&rarr;</span>
+  <span class="step">Diff against saved state</span><span class="arrow">&rarr;</span>
+  <span class="step">Act on what changed</span><span class="arrow">&rarr;</span>
+  <span class="step">Publish the dashboard</span>
+</div>
+<p>State lives in <code>state/state.json</code>, so each run knows what it saw last time and git history doubles as an audit log. CRAN flavors flake, so a problem must persist across runs before it counts, and an issue can be <em>snoozed</em> with a label until the problem changes character. Most changes go into one summary issue every few days that links here; only deadlines and archival get an issue of their own.</p>
+<div class="wrap"><table>
+  <thead><tr><th>Workflow</th><th>Runs</th><th>Writes</th></tr></thead>
+  <tbody>
+    <tr><td><code>watch</code></td><td>every 6 days, or by hand</td><td>checks, deadlines, revdeps, r-universe; <code>docs/status.json</code>; issues</td></tr>
+    <tr><td><code>queue</code></td><td>twice a day, or by hand</td><td>CRAN incoming snapshot; <code>docs/queue.json</code></td></tr>
+    <tr><td><code>details</code></td><td>weekly, or by hand</td><td>urlchecker and checktor; <code>docs/pkg/</code></td></tr>
+    <tr><td><code>pkgcheck</code></td><td>by hand only</td><td>rOpenSci pkgcheck for listed packages; <code>docs/pkg/</code></td></tr>
+  </tbody>
+</table></div>
+
+<h2>What you can use it for</h2>
+<div class="grid two">
+  <div class="card"><h3>Hear before CRAN emails</h3><p>A new NOTE or ERROR shows on the dashboard days before the "please correct" message arrives.</p></div>
+  <div class="card"><h3>Follow a submission</h3><p>See which folder each submission is in, without remembering to check.</p></div>
+  <div class="card"><h3>Watch your ecosystem</h3><p>Track packages you contribute to (found automatically from author lists) or depend on, without opening issues for them.</p></div>
+  <div class="card"><h3>Triage in one place</h3><p>Filter by severity, open issues or queue, and sort by status, date or alerts.</p></div>
+</div>
+
+<h2 id="fork">Make your own</h2>
+<p class="lead">Everything specific to one person lives in <code>config.yml</code>. Fork, edit that file, and turn on Pages.</p>
+<ol class="steps">
+  <li><b>Fork the repository</b>
+    Use the Fork button on GitHub. Then clear the previous owner's data so your first run starts fresh: delete <code>state/state.json</code>, <code>docs/status.json</code>, <code>docs/queue.json</code> and the files in <code>docs/pkg/</code>.</li>
+  <li><b>Edit <code>config.yml</code></b>
+    Set your Maintainer emails and the name forms that appear in author lists, and replace the previous owner's lists (<code>watch</code>, <code>universes</code>, <code>repo_map</code>, <code>extra_packages</code>, <code>pkgcheck</code>) with your own or empty ones.
+<pre><code>maintainer_emails:
+  - you@example.org
+author_names:
+  - Your Name
+universes: [your-universe]
+watch:
+  - package: somepkg
+    role: interest
+repo_map: {}</code></pre></li>
+  <li><b>Enable Actions and Pages</b>
+    In the Actions tab, enable workflows (forks start with them off). In Settings &gt; Pages, deploy from the <code>main</code> branch, <code>/docs</code> folder.</li>
+  <li><b>Do a first run</b>
+    Actions &gt; watch &gt; Run workflow with "Dry run" ticked. It records state without opening issues. Then run <code>queue</code> and <code>details</code> once, and the dashboard fills in.</li>
+  <li><b>Tune it</b>
+    Change the schedules in <code>.github/workflows/</code>, choose which problems open issues with <code>issue_kinds</code>, or add a check to the details page by adding an entry to <code>sections</code> in <code>scripts/details.R</code>.</li>
+</ol>
+<p class="note">Reporting uses only the repository's own token and never writes outside it. The optional release tagging needs a separate <code>WATCH_PAT</code> secret and an explicit <code>repo_map</code>; leave both out and it never runs. The README has the full details.</p>
+
+<h2>Built on</h2>
+<p>CRAN's package database and check results through <code>tools::CRAN_package_db()</code> and friends, the r-universe API, the CRAN incoming folder (the same listing <a href="https://github.com/r-hub/cransays">cransays</a> and <a href="https://nx10.github.io/cransubs/">cransubs</a> read), <a href="https://cran.r-project.org/package=urlchecker">urlchecker</a>, <a href="https://cran.r-project.org/package=checktor">checktor</a>, rOpenSci's <a href="https://docs.ropensci.org/pkgcheck/">pkgcheck</a>, and the canary issues of <a href="https://github.com/hypertidy/gdal-r-ci">hypertidy/gdal-r-ci</a>.</p>
+
+<footer>CRAN watch is an unofficial tool and is not affiliated with CRAN or the R Foundation.</footer>
+</main>
+<script>
+// point the repo link at whichever fork is serving this page
+(function () {
+  var m = location.hostname.match(/^([^.]+)\.github\.io$/), p = location.pathname.split("/")[1];
+  if (m && p) document.getElementById("repo").href = "https://github.com/" + m[1] + "/" + p;
+})();
+</script>
+</body>
+</html>
