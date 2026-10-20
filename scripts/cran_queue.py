@@ -108,7 +108,10 @@ def main():
         with open(CACHE) as f:
             cache = json.load(f)
     emails = config_emails()
-    new = by_maintainer([e for e in queue if e["package"] not in mine], emails, cache) if emails else []
+    # live folders first: archive alone can use up a run's MAX_READS
+    unknown = sorted((e for e in queue if e["package"] not in mine),
+                     key=lambda e: e["folder"] == "archive")
+    new = by_maintainer(unknown, emails, cache) if emails else []
     # forget tarballs that have left the queue
     live = {"%s%s_%s.tar.gz" % (e["url"], e["package"], e["version"]) for e in queue}
     os.makedirs(os.path.dirname(CACHE), exist_ok=True)
