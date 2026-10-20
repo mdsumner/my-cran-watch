@@ -25,7 +25,7 @@ OUT = "docs/queue.json"
 CONFIG = "config.yml"
 CACHE = ".cache/queue_maintainers.json"
 SKIP = {"archive"}
-MAX_READS = 300   # tarballs opened per run; the rest wait for the next run
+MAX_READS = 600   # tarballs opened per run; the rest wait for the next run
 
 # Apache autoindex rows, plain or table style:
 #   <a href="name">name</a></td><td align="right">2026-10-19 21:03 ...
@@ -93,7 +93,7 @@ def by_maintainer(entries, emails, cache, read=maintainer):
             try:
                 cache[key] = read(key, e["package"])
             except Exception as err:   # moved or half-uploaded: retry next run
-                print("could not read %s: %s" % (key, err))
+                print("::warning::could not read %s: %s" % (key, err))
                 continue
         if cache[key] in emails:
             out.append(dict(e, new=True))
@@ -117,7 +117,16 @@ def main():
     os.makedirs(os.path.dirname(CACHE), exist_ok=True)
     with open(CACHE, "w") as f:
         json.dump({k: v for k, v in cache.items() if k in live}, f)
-    print("queue: %d submissions, %d new of mine" % (len(queue), len(new)))
+    folders = {}
+    for e in queue:
+        folders[e["folder"]] = folders.get(e["folder"], 0) + 1
+    unread = sum(1 for e in queue if e["package"] not in mine and
+                 "%s%s_%s.tar.gz" % (e["url"], e["package"], e["version"]) not in cache)
+    # notices show on the run page, so a run can be checked without its log
+    print("::notice::queue: %d submissions (%s); %d maintainers known, %d unread; new of mine: %s" % (
+        len(queue), ", ".join("%s %d" % kv for kv in sorted(folders.items())),
+        len(live & cache.keys()), unread,
+        ", ".join("%s %s (%s)" % (e["package"], e["version"], e["folder"]) for e in new) or "none"))
     entries = sorted([e for e in queue if e["package"] in mine] + new,
                      key=lambda e: (e["package"], e["folder"], e["subfolder"]))
     old = None
