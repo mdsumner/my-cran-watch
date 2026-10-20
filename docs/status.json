@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 11:40 UTC",
+  "generated": "2026-10-20 11:52 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -489,7 +489,7 @@
       "role": "maintainer",
       "version": "0.1.0",
       "published": "2026-08-20 14:30:13 UTC",
-      "repo": null,
+      "repo": "hypertidy/grout",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -808,7 +808,7 @@
       "role": "maintainer",
       "version": "0.3.0",
       "published": "2026-10-13 14:50:02 UTC",
-      "repo": null,
+      "repo": "hypertidy/sds",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1338,7 +1338,7 @@
       "role": "maintainer",
       "version": "0.1.0",
       "published": "2026-10-05 16:00:02 UTC",
-      "repo": null,
+      "repo": "AustralianAntarcticDivision/xyt",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1373,7 +1373,7 @@
       "role": "interest",
       "version": "2.7.0",
       "published": "2026-09-22 19:00:02 UTC",
-      "repo": null,
+      "repo": "firelab/gdalraster",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1398,7 +1398,7 @@
       "role": "interest",
       "version": "0.5.2",
       "published": "2026-10-08 09:10:13 UTC",
-      "repo": null,
+      "repo": "posit-dev/ggsql-r",
       "worst": "ERROR",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1433,7 +1433,7 @@
       "role": "interest",
       "version": "1.9-50",
       "published": "2026-09-08 15:50:02 UTC",
-      "repo": null,
+      "repo": "rspatial/terra",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1458,7 +1458,7 @@
       "role": "interest",
       "version": "0.9.5",
       "published": "2025-12-18 06:10:16 UTC",
-      "repo": null,
+      "repo": "paleolimbot/wk",
       "worst": "NOTE",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
@@ -1493,7 +1493,7 @@
       "role": "contribute",
       "version": "4.3.1",
       "published": "2026-03-03 07:40:02 UTC",
-      "repo": null,
+      "repo": "ccamlr/CCAMLRGIS",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1518,7 +1518,7 @@
       "role": "contribute",
       "version": "0.1.2",
       "published": "2025-10-12 06:20:02 UTC",
-      "repo": null,
+      "repo": "cboettig/duckdbfs",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1568,7 +1568,7 @@
       "role": "contribute",
       "version": "0.1.1",
       "published": "2025-03-24 16:40:06 UTC",
-      "repo": null,
+      "repo": "hypertidy/geodist",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1593,7 +1593,7 @@
       "role": "contribute",
       "version": "0.1.1",
       "published": "2024-07-18 16:30:06 UTC",
-      "repo": null,
+      "repo": "ropensci/mapscanner",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1618,7 +1618,7 @@
       "role": "contribute",
       "version": "2.11.4",
       "published": "2025-09-08 07:00:18 UTC",
-      "repo": null,
+      "repo": "r-spatial/mapview",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1643,7 +1643,7 @@
       "role": "contribute",
       "version": "0.2.5",
       "published": "2026-10-11 11:20:02 UTC",
-      "repo": null,
+      "repo": "ropensci-review-tools/pkgstats",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1668,7 +1668,7 @@
       "role": "contribute",
       "version": "3.6-32",
       "published": "2025-03-28 08:10:02 UTC",
-      "repo": null,
+      "repo": "rspatial/raster",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1693,7 +1693,7 @@
       "role": "contribute",
       "version": "1.3.36",
       "published": "2026-03-06 05:00:02 UTC",
-      "repo": null,
+      "repo": "dmurdoch/rgl",
       "worst": "NOTE",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
@@ -1717,7 +1717,7 @@
           "package": "rgl",
           "kind": "checks",
           "status": "NOTE",
-          "lifecycle": "observed",
+          "lifecycle": "active",
           "issue": null,
           "first_seen": "2026-10-20"
         }
@@ -1728,7 +1728,7 @@
       "role": "contribute",
       "version": "0.3.3",
       "published": "2026-04-09 09:50:02 UTC",
-      "repo": null,
+      "repo": "Permian-Global-Research/rsi",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1753,7 +1753,7 @@
       "role": "contribute",
       "version": "1.6-0.15",
       "published": "2025-04-14 08:50:02 UTC",
-      "repo": null,
+      "repo": "davidcsterratt/RTriangle",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1778,7 +1778,7 @@
       "role": "contribute",
       "version": "1.1-3",
       "published": "2026-09-11 06:40:02 UTC",
-      "repo": null,
+      "repo": "r-spatial/sf",
       "worst": "NOTE",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
@@ -1802,7 +1802,7 @@
           "package": "sf",
           "kind": "checks",
           "status": "NOTE",
-          "lifecycle": "observed",
+          "lifecycle": "active",
           "issue": null,
           "first_seen": "2026-10-20"
         }
@@ -1813,7 +1813,7 @@
       "role": "contribute",
       "version": "0.4.5",
       "published": "2025-11-25 19:20:02 UTC",
-      "repo": null,
+      "repo": "dcooley/sfheaders",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1838,7 +1838,7 @@
       "role": "contribute",
       "version": "0.3.1",
       "published": "2019-06-28 16:20:03 UTC",
-      "repo": null,
+      "repo": "milesmcbain/slippymath",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1863,7 +1863,7 @@
       "role": "contribute",
       "version": "2.2-4",
       "published": "2026-10-11 22:30:09 UTC",
-      "repo": null,
+      "repo": "edzer/sp",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1913,7 +1913,7 @@
       "role": "contribute",
       "version": "0.7-3",
       "published": "2026-07-20 21:00:02 UTC",
-      "repo": null,
+      "repo": "r-spatial/stars",
       "worst": "NOTE",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
@@ -1937,7 +1937,7 @@
           "package": "stars",
           "kind": "checks",
           "status": "NOTE",
-          "lifecycle": "observed",
+          "lifecycle": "active",
           "issue": null,
           "first_seen": "2026-10-20"
         }
@@ -1948,7 +1948,7 @@
       "role": "contribute",
       "version": "1.8.0",
       "published": "2026-01-26 16:20:02 UTC",
-      "repo": null,
+      "repo": "r-transit/tidytransit",
       "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
@@ -1973,7 +1973,7 @@
       "role": "contribute",
       "version": "4.4-1",
       "published": "2026-06-26 12:30:02 UTC",
-      "repo": null,
+      "repo": "r-tmap/tmap",
       "worst": "NOTE",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
@@ -1997,7 +1997,7 @@
           "package": "tmap",
           "kind": "checks",
           "status": "NOTE",
-          "lifecycle": "observed",
+          "lifecycle": "active",
           "issue": null,
           "first_seen": "2026-10-20"
         }
