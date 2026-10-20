@@ -24,6 +24,7 @@ STATUS = "docs/status.json"
 OUT = "docs/queue.json"
 CONFIG = "config.yml"
 CACHE = ".cache/queue_maintainers.json"
+SKIP = {"archive"}
 MAX_READS = 300   # tarballs opened per run; the rest wait for the next run
 
 # Apache autoindex rows, plain or table style:
@@ -102,16 +103,15 @@ def by_maintainer(entries, emails, cache, read=maintainer):
 def main():
     with open(STATUS) as f:
         mine = {p["package"] for p in json.load(f)["packages"]}
-    queue = crawl()
+    # archive holds submissions that have left the queue (withdrawn,
+    # rejected, superseded): not news, and ~300 tarballs to read
+    queue = [e for e in crawl() if e["folder"] not in SKIP]
     cache = {}
     if os.path.exists(CACHE):
         with open(CACHE) as f:
             cache = json.load(f)
     emails = config_emails()
-    # live folders first: archive alone can use up a run's MAX_READS
-    unknown = sorted((e for e in queue if e["package"] not in mine),
-                     key=lambda e: e["folder"] == "archive")
-    new = by_maintainer(unknown, emails, cache) if emails else []
+    new = by_maintainer([e for e in queue if e["package"] not in mine], emails, cache) if emails else []
     # forget tarballs that have left the queue
     live = {"%s%s_%s.tar.gz" % (e["url"], e["package"], e["version"]) for e in queue}
     os.makedirs(os.path.dirname(CACHE), exist_ok=True)
