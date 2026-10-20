@@ -18,7 +18,10 @@ pkgs <- if (length(only)) only else mine$package[mine$role == "maintainer"]
 
 sections <- list(
   urlchecker = function(dir) {
-    res <- urlchecker::url_check(dir, progress = FALSE)
+    # urlchecker >= 1.1 errors on flagged URLs unless fail = FALSE
+    args <- list(dir, progress = FALSE)
+    if ("fail" %in% names(formals(urlchecker::url_check))) args$fail <- FALSE
+    res <- do.call(urlchecker::url_check, args)
     df <- data.frame(
       url     = as.character(res$URL),
       status  = as.character(res$Status),
@@ -74,8 +77,11 @@ for (pkg in pkgs) {
               version = mine$version[match(pkg, mine$package)],
               updated = today(), sections = prev[setdiff(names(prev), names(sections))])
   for (s in names(sections)) {
-    rec$sections[[s]] <- tryCatch(sections[[s]](src), error = function(e)
-      list(summary = sprintf("failed: %s", conditionMessage(e)), problems = data.frame()))
+    rec$sections[[s]] <- tryCatch(sections[[s]](src), error = function(e) {
+      # a failed section must not read as clean: warn on the run page
+      msg("::warning::details: %s %s failed: %s", pkg, s, conditionMessage(e))
+      list(summary = sprintf("failed: %s", conditionMessage(e)), problems = data.frame())
+    })
     index[[pkg]][[s]] <- rec$sections[[s]]$count %||% nrow(rec$sections[[s]]$problems)
   }
   jsonlite::write_json(rec, path,
@@ -83,7 +89,8 @@ for (pkg in pkgs) {
   unlink(src, recursive = TRUE)
 }
 jsonlite::write_json(index, idx_path, auto_unbox = TRUE, pretty = TRUE)
-msg("::notice::details: %d of %d package(s) written: %s", length(index), length(pkgs),
-    paste(vapply(names(index), function(p) sprintf("%s (%s)", p,
+done <- intersect(pkgs, names(index))
+msg("::notice::details: %d of %d package(s) written: %s", length(done), length(pkgs),
+    paste(vapply(done, function(p) sprintf("%s (%s)", p,
       paste(sprintf("%s %s", names(index[[p]]), unlist(index[[p]])), collapse = ", ")),
       character(1)), collapse = "; "))
