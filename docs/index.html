@@ -65,7 +65,7 @@ var ROLES = { all: "All", maintainer: "Mine", contribute: "Contribute", interest
 // status filters double as the summary tiles; a package matches on its worst flavor
 var RANK = { ERROR: 4, FAIL: 4, WARN: 3, WARNING: 3, NOTE: 2, OK: 1 };
 var STATUS = {
-  all:    ["Packages",     function () { return true; }],
+  all:    ["Packages",     function (p) { return !p.fresh; }],
   err:    ["ERROR / FAIL", function (p) { return RANK[p.worst] === 4; }],
   warn:   ["WARN",         function (p) { return RANK[p.worst] === 3; }],
   note:   ["NOTE",         function (p) { return RANK[p.worst] === 2; }],
@@ -106,12 +106,16 @@ function condLink(c) {
 }
 function render(d) {
   document.getElementById("gen").textContent = "Updated " + d.generated + " from " + d.repo +
-    (QUEUE_AT ? "; CRAN queue checked hourly, last changed " + QUEUE_AT : "");
-  var byRole = d.packages.filter(function (p) { return role === "all" || p.role === role; });
-  // submissions of packages not on CRAN yet, found by Maintainer email
+    (QUEUE_AT ? "; CRAN queue checked twice daily, last changed " + QUEUE_AT : "");
+  // submissions of packages not on CRAN yet, found by Maintainer email;
+  // they join the table as rows of mine that only the queue filter shows
   var ns = document.getElementById("newsubs"), known = {};
   d.packages.forEach(function (p) { known[p.package] = true; });
   var fresh = Object.keys(QUEUE).filter(function (k) { return !known[k]; }).sort();
+  var rows = d.packages.concat(fresh.map(function (k) {
+    return { package: k, role: "maintainer", fresh: true, version: QUEUE[k][0].version, conditions: [] };
+  }));
+  var byRole = rows.filter(function (p) { return role === "all" || p.role === role; });
   ns.innerHTML = ""; ns.hidden = !fresh.length;
   if (fresh.length) ns.appendChild(el("span", { "class": "muted" }, "New packages in the CRAN queue: "));
   fresh.forEach(function (k) {
@@ -169,7 +173,15 @@ function render(d) {
                         "queue: " + where + " " + q.version));
     });
     tr.appendChild(td);
-    var v = el("td"); v.appendChild(el("a", { href: "https://cran.r-project.org/package=" + p.package }, p.version));
+    var v = el("td");
+    if (p.fresh) {
+      v.appendChild(el("span", {}, p.version));
+      v.appendChild(el("div", { "class": "role" }, "not on CRAN yet")); tr.appendChild(v);
+      ["-", "-", "-"].forEach(function (x) { tr.appendChild(el("td", { "class": "muted" }, x)); });
+      tb.appendChild(tr);
+      return;
+    }
+    v.appendChild(el("a", { href: "https://cran.r-project.org/package=" + p.package }, p.version));
     v.appendChild(el("div", { "class": "role" }, (p.published || "").slice(0, 10))); tr.appendChild(v);
     var fl = p.flavors || {}, bad = Object.keys(fl).filter(function (k) { return fl[k] !== "OK"; });
     var ct = el("td"), worst = p.worst || "-", det = DETAILS[p.package];
