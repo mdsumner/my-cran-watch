@@ -34,7 +34,7 @@ jobs:
         run: Rscript scripts/details.R $PKGS
 
       - name: Commit details
-        if: always()
+        if: always() && github.ref == 'refs/heads/main'   # elsewhere a dry run
         run: |
           git config user.name "my-cran-watch"
           git config user.email "actions@users.noreply.github.com"

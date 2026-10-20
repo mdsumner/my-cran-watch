@@ -62,7 +62,10 @@ for (pkg in pkgs) {
                                    repos = "https://cloud.r-project.org", quiet = TRUE)
     utils::untar(dl[1, 2], exdir = work)
     file.path(work, pkg)
-  }, error = function(e) { msg("  download failed: %s", conditionMessage(e)); NULL })
+  }, error = function(e) {
+    # ::warning:: shows on the run page, which is readable without the log
+    msg("::warning::details: %s download failed: %s", pkg, conditionMessage(e)); NULL
+  })
   if (is.null(src)) next
   # keep sections written by other workflows (pkgcheck)
   path <- file.path(out_dir, paste0(pkg, ".json"))
@@ -80,4 +83,7 @@ for (pkg in pkgs) {
   unlink(src, recursive = TRUE)
 }
 jsonlite::write_json(index, idx_path, auto_unbox = TRUE, pretty = TRUE)
-msg("details written for %d package(s)", length(pkgs))
+msg("::notice::details: %d of %d package(s) written: %s", length(index), length(pkgs),
+    paste(vapply(names(index), function(p) sprintf("%s (%s)", p,
+      paste(sprintf("%s %s", names(index[[p]]), unlist(index[[p]])), collapse = ", ")),
+      character(1)), collapse = "; "))
