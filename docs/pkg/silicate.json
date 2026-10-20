@@ -1,0 +1,57 @@
+{
+  "package": "silicate",
+  "version": "0.7.2",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "4 opinion, 1 robustness",
+      "problems": [
+        {
+          "category": "description",
+          "check": "title_length",
+          "severity": "opinion",
+          "location": "Title is 68 characters, so a listing that truncates at 65 would cut the last 3 characters",
+          "message": "Title length check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "PATH.Rd",
+          "location": "PATH.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "plot.SC.Rd",
+          "location": "plot.SC.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "sc_edge.Rd",
+          "location": "sc_edge.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_tf_usage",
+          "severity": "robustness",
+          "file": "silicate_topology_01.Rmd",
+          "line": 59,
+          "location": "vignette silicate_topology_01.Rmd:59",
+          "message": "Example T/F usage check"
+        }
+      ],
+      "count": 1
+    }
+  }
+}

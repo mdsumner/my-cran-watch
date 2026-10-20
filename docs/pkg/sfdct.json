@@ -1,0 +1,41 @@
+{
+  "package": "sfdct",
+  "version": "0.3.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "2 opinion, 1 policy",
+      "problems": [
+        {
+          "category": "description",
+          "check": "acronyms",
+          "severity": "opinion",
+          "location": "ISBN",
+          "message": "Acronyms check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_state",
+          "severity": "policy",
+          "file": "ct_triangulate.Rd",
+          "line": 91,
+          "location": "example ct_triangulate.Rd:91 (never restored)",
+          "message": "Example state check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://www.r-pkg.org/badges/version/sfdct (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 1
+    }
+  }
+}

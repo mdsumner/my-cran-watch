@@ -1,0 +1,75 @@
+{
+  "package": "vapour",
+  "version": "0.16.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "5 opinion, 2 policy",
+      "problems": [
+        {
+          "category": "code",
+          "check": "temp_cleanup",
+          "severity": "opinion",
+          "file": "00_warpgeneral.R",
+          "line": 103,
+          "location": "00_warpgeneral.R:103",
+          "message": "Temp cleanup check"
+        },
+        {
+          "category": "code",
+          "check": "sys_setenv",
+          "severity": "policy",
+          "file": "zzz.R",
+          "line": 55,
+          "location": "zzz.R:55",
+          "message": "Sys.setenv reset check"
+        },
+        {
+          "category": "code",
+          "check": "sys_setenv",
+          "severity": "policy",
+          "file": "zzz.R",
+          "line": 58,
+          "location": "zzz.R:58",
+          "message": "Sys.setenv reset check"
+        },
+        {
+          "category": "description",
+          "check": "acronyms",
+          "severity": "opinion",
+          "location": "GDAL",
+          "message": "Acronyms check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_structure",
+          "severity": "opinion",
+          "file": "vapour_set_config.Rd",
+          "location": "vapour_set_config.Rd: potential unnecessary \\dontrun{}",
+          "message": "Example structure check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://www.r-pkg.org/badges/version/vapour (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "vapour_vsi_list.Rd",
+          "location": "vapour_vsi_list.Rd: http://dapds00.nci.org.au/thredds/fileServer/rr2/national_geophysical_compilations (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 2
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "package": "ximage",
+  "version": "0.1.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "no findings",
+      "problems": [],
+      "count": 0
+    }
+  }
+}

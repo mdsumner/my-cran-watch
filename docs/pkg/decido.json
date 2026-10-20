@@ -1,0 +1,33 @@
+{
+  "package": "decido",
+  "version": "0.4.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "2 opinion",
+      "problems": [
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "plot_ears.Rd",
+          "location": "plot_ears.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://cranlogs.r-pkg.org/badges/decido (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 0
+    }
+  }
+}

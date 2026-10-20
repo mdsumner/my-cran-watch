@@ -1,0 +1,25 @@
+{
+  "package": "ceramic",
+  "version": "0.9.5",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "1 opinion",
+      "problems": [
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "clear_ceramic_cache.Rd",
+          "location": "clear_ceramic_cache.Rd",
+          "message": "Missing examples check"
+        }
+      ],
+      "count": 0
+    }
+  }
+}

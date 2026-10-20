@@ -1,0 +1,34 @@
+{
+  "package": "tidync",
+  "version": "0.5.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "1 opinion, 1 policy",
+      "problems": [
+        {
+          "category": "documentation",
+          "check": "example_structure",
+          "severity": "opinion",
+          "file": "tidync.Rd",
+          "location": "tidync.Rd: potential unnecessary \\dontrun{}",
+          "message": "Example structure check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_state",
+          "severity": "policy",
+          "file": "netcdf-with-tidync.Rmd",
+          "line": 22,
+          "location": "vignette netcdf-with-tidync.Rmd:22 (never restored)",
+          "message": "Example state check"
+        }
+      ],
+      "count": 1
+    }
+  }
+}

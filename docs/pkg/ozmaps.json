@@ -1,0 +1,57 @@
+{
+  "package": "ozmaps",
+  "version": "0.4.5",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "5 opinion",
+      "problems": [
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "oz.Rd",
+          "location": "oz.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://badges.herokuapp.com/travis/mdsumner/ozmaps?branch=master&env=BUILD_NAME=trusty_release&label=ubuntu (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://badges.herokuapp.com/travis/mdsumner/ozmaps?branch=master&env=BUILD_NAME=osx_release&label=osx (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://www.r-pkg.org/badges/version/ozmaps (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://cranlogs.r-pkg.org./badges/ozmaps (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 0
+    }
+  }
+}

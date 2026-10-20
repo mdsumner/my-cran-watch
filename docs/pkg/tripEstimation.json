@@ -1,0 +1,360 @@
+{
+  "package": "tripEstimation",
+  "version": "0.0-46",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "16 opinion, 24 policy",
+      "problems": [
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "chunk.bin.R",
+          "line": 8,
+          "location": "chunk.bin.R:8",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "chunk.bin.R",
+          "line": 18,
+          "location": "chunk.bin.R:18",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "chunk.bin.R",
+          "line": 21,
+          "location": "chunk.bin.R:21",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "initialize.x.R",
+          "line": 14,
+          "location": "initialize.x.R:14",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "initialize.x.R",
+          "line": 19,
+          "location": "initialize.x.R:19",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "initialize.x.R",
+          "line": 108,
+          "location": "initialize.x.R:108",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "initialize.x.R",
+          "line": 110,
+          "location": "initialize.x.R:110",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "metropolis.R",
+          "line": 35,
+          "location": "metropolis.R:35",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "metropolis.R",
+          "line": 38,
+          "location": "metropolis.R:38",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "metropolis0.R",
+          "line": 118,
+          "location": "metropolis0.R:118",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "metropolis0.R",
+          "line": 118,
+          "location": "metropolis0.R:118",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "metropolis0.R",
+          "line": 118,
+          "location": "metropolis0.R:118",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "metropolis0.R",
+          "line": 119,
+          "location": "metropolis0.R:119",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "metropolis0.R",
+          "line": 119,
+          "location": "metropolis0.R:119",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "metropolis0.R",
+          "line": 119,
+          "location": "metropolis0.R:119",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "mkCalibration.R",
+          "line": 20,
+          "location": "mkCalibration.R:20",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "mkCalibration.R",
+          "line": 22,
+          "location": "mkCalibration.R:22",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "mkCalibration.R",
+          "line": 23,
+          "location": "mkCalibration.R:23",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "mkCalibration.R",
+          "line": 24,
+          "location": "mkCalibration.R:24",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "old.metropolis.R",
+          "line": 179,
+          "location": "old.metropolis.R:179",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "old.metropolis.R",
+          "line": 193,
+          "location": "old.metropolis.R:193",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "old.metropolis.R",
+          "line": 280,
+          "location": "old.metropolis.R:280",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "satellite.model.R",
+          "line": 35,
+          "location": "satellite.model.R:35",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "solar.model.R",
+          "line": 66,
+          "location": "solar.model.R:66",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "description",
+          "check": "title_length",
+          "severity": "opinion",
+          "location": "Title is 113 characters, so a listing that truncates at 65 would cut the last 48 characters",
+          "message": "Title length check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "as.image.pimg.Rd",
+          "location": "as.image.pimg.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "behav.bin.Rd",
+          "location": "behav.bin.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "chain.read.Rd",
+          "location": "chain.read.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "elevation.Rd",
+          "location": "elevation.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "initialize.x.Rd",
+          "location": "initialize.x.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "julday.Rd",
+          "location": "julday.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "metropolis.Rd",
+          "location": "metropolis.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "mkCalibration.Rd",
+          "location": "mkCalibration.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "mkLookup.Rd",
+          "location": "mkLookup.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "norm.proposal.Rd",
+          "location": "norm.proposal.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "old.metropolis.Rd",
+          "location": "old.metropolis.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "pimg.list.Rd",
+          "location": "pimg.list.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "satellite.model.Rd",
+          "location": "satellite.model.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "solar.model.Rd",
+          "location": "solar.model.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "solar.Rd",
+          "location": "solar.Rd",
+          "message": "Missing examples check"
+        }
+      ],
+      "count": 24
+    }
+  }
+}

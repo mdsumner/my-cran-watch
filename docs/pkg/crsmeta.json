@@ -1,0 +1,95 @@
+{
+  "package": "crsmeta",
+  "version": "0.3.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "10 opinion",
+      "problems": [
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "location": "DESCRIPTION: http://www.epsg.org/ (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "location": "DESCRIPTION: http://docs.opengeospatial.org/is/12-063r5/12-063r5.html (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://cranlogs.r-pkg.org/badges/crsmeta (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "crs_epsg.Rd",
+          "location": "crs_epsg.Rd: http://www.epsg.org/EPSG (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "crs_input.Rd",
+          "location": "crs_input.Rd: http://r-spatial.github.io/sf/sf (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "crs_wkt2.Rd",
+          "location": "crs_wkt2.Rd: http://docs.opengeospatial.org/is/12-063r5/12-063r5.htmlWKT2 (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "crsmeta-package.Rd",
+          "location": "crsmeta-package.Rd: http://www.epsg.org/ (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "crsmeta-package.Rd",
+          "location": "crsmeta-package.Rd: http://docs.opengeospatial.org/is/12-063r5/12-063r5.html (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "crsmeta-package.Rd",
+          "location": "crsmeta-package.Rd: http://www.epsg.org/. (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "crsmeta-package.Rd",
+          "location": "crsmeta-package.Rd: http://docs.opengeospatial.org/is/12-063r5/12-063r5.html. (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 0
+    }
+  }
+}

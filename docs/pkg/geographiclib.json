@@ -1,0 +1,45 @@
+{
+  "package": "geographiclib",
+  "version": "0.4.2",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "4 opinion",
+      "problems": [
+        {
+          "category": "description",
+          "check": "acronyms",
+          "severity": "opinion",
+          "location": "UTM",
+          "message": "Acronyms check"
+        },
+        {
+          "category": "description",
+          "check": "acronyms",
+          "severity": "opinion",
+          "location": "UPS",
+          "message": "Acronyms check"
+        },
+        {
+          "category": "description",
+          "check": "acronyms",
+          "severity": "opinion",
+          "location": "MGRS",
+          "message": "Acronyms check"
+        },
+        {
+          "category": "description",
+          "check": "acronyms",
+          "severity": "opinion",
+          "location": "GARS",
+          "message": "Acronyms check"
+        }
+      ],
+      "count": 0
+    }
+  }
+}

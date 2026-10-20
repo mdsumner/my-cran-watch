@@ -1,0 +1,35 @@
+{
+  "package": "PROJ",
+  "version": "0.7.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "2 policy",
+      "problems": [
+        {
+          "category": "code",
+          "check": "sys_setenv",
+          "severity": "policy",
+          "file": "zzz.R",
+          "line": 26,
+          "location": "zzz.R:26",
+          "message": "Sys.setenv reset check"
+        },
+        {
+          "category": "code",
+          "check": "sys_setenv",
+          "severity": "policy",
+          "file": "zzz.R",
+          "line": 34,
+          "location": "zzz.R:34",
+          "message": "Sys.setenv reset check"
+        }
+      ],
+      "count": 2
+    }
+  }
+}

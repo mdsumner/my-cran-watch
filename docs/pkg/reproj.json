@@ -1,0 +1,25 @@
+{
+  "package": "reproj",
+  "version": "0.8.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "1 opinion",
+      "problems": [
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://cranlogs.r-pkg.org/badges/reproj (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 0
+    }
+  }
+}

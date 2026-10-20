@@ -1,0 +1,32 @@
+{
+  "package": "traipse",
+  "version": "0.4.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "2 opinion",
+      "problems": [
+        {
+          "category": "description",
+          "check": "title_redundant_phrases",
+          "severity": "opinion",
+          "location": "Title contains redundant phrase: 'Tools for'",
+          "message": "Title redundant-phrases check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://cranlogs.r-pkg.org/badges/traipse (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 0
+    }
+  }
+}

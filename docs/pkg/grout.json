@@ -1,0 +1,24 @@
+{
+  "package": "grout",
+  "version": "0.1.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "1 opinion",
+      "problems": [
+        {
+          "category": "description",
+          "check": "acronyms",
+          "severity": "opinion",
+          "location": "ISBN",
+          "message": "Acronyms check"
+        }
+      ],
+      "count": 0
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "package": "bgmfiles",
+  "version": "0.1.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "2 opinion",
+      "problems": [
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "location": "DESCRIPTION: http://atlantis.cmar.csiro.au/ (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://atlantis.cmar.csiro.au/ (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 0
+    }
+  }
+}

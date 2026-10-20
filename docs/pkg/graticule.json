@@ -1,0 +1,74 @@
+{
+  "package": "graticule",
+  "version": "0.4.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "1 policy, 6 robustness",
+      "problems": [
+        {
+          "category": "code",
+          "check": "warn_option",
+          "severity": "policy",
+          "file": "graticule.R",
+          "line": 22,
+          "location": "graticule.R:22",
+          "message": "Warn option check"
+        },
+        {
+          "category": "general",
+          "check": "readme_links",
+          "severity": "robustness",
+          "file": "README.md",
+          "location": "README.md: relative link to missing file 'man/figures/README-example-1.png'",
+          "message": "README relative-links check"
+        },
+        {
+          "category": "general",
+          "check": "readme_links",
+          "severity": "robustness",
+          "file": "README.md",
+          "location": "README.md: relative link to missing file 'man/figures/README-rhumb-points-1.png'",
+          "message": "README relative-links check"
+        },
+        {
+          "category": "general",
+          "check": "readme_links",
+          "severity": "robustness",
+          "file": "README.md",
+          "location": "README.md: relative link to missing file 'man/figures/README-wedge-1.png'",
+          "message": "README relative-links check"
+        },
+        {
+          "category": "general",
+          "check": "readme_links",
+          "severity": "robustness",
+          "file": "README.md",
+          "location": "README.md: relative link to missing file 'man/figures/README-lonlat-1.png'",
+          "message": "README relative-links check"
+        },
+        {
+          "category": "general",
+          "check": "readme_links",
+          "severity": "robustness",
+          "file": "README.md",
+          "location": "README.md: relative link to missing file 'man/figures/README-lonlat-2.png'",
+          "message": "README relative-links check"
+        },
+        {
+          "category": "general",
+          "check": "readme_links",
+          "severity": "robustness",
+          "file": "README.md",
+          "location": "README.md: relative link to missing file 'man/figures/README-lonlat-3.png'",
+          "message": "README relative-links check"
+        }
+      ],
+      "count": 7
+    }
+  }
+}

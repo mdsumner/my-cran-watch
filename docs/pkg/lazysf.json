@@ -1,0 +1,41 @@
+{
+  "package": "lazysf",
+  "version": "0.4.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "3 opinion",
+      "problems": [
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "dbConnect-GDALVectorDriver-method.Rd",
+          "location": "dbConnect-GDALVectorDriver-method.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "GDALSQL.Rd",
+          "location": "GDALSQL.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://cranlogs.r-pkg.org/badges/last-month/lazysf?color=green (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 0
+    }
+  }
+}

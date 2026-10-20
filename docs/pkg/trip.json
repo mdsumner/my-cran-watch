@@ -1,0 +1,254 @@
+{
+  "package": "trip",
+  "version": "1.10.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "14 opinion, 13 policy, 1 robustness",
+      "problems": [
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "AllMethod.R",
+          "line": 542,
+          "location": "AllMethod.R:542",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "AllMethod.R",
+          "line": 229,
+          "location": "AllMethod.R:229",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "AllMethod.R",
+          "line": 531,
+          "location": "AllMethod.R:531",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "AllMethod.R",
+          "line": 539,
+          "location": "AllMethod.R:539",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "as.trip.R",
+          "line": 62,
+          "location": "as.trip.R:62",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "filter.R",
+          "line": 60,
+          "location": "filter.R:60",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "grid.R",
+          "line": 293,
+          "location": "grid.R:293",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "read.R",
+          "line": 43,
+          "location": "read.R:43",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "read.R",
+          "line": 54,
+          "location": "read.R:54",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "read.R",
+          "line": 221,
+          "location": "read.R:221",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "read.R",
+          "line": 234,
+          "location": "read.R:234",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "read.R",
+          "line": 239,
+          "location": "read.R:239",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "code",
+          "check": "print_cat_usage",
+          "severity": "policy",
+          "file": "read.R",
+          "line": 244,
+          "location": "read.R:244",
+          "message": "Print/cat usage check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "trip.split.exact.Rd",
+          "location": "trip.split.exact.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "forceCompliance.Rd",
+          "location": "forceCompliance.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "homedist.Rd",
+          "location": "homedist.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "makeGridTopology.Rd",
+          "location": "makeGridTopology.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "reproj.Rd",
+          "location": "reproj.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "sda.Rd",
+          "location": "sda.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "speedfilter.Rd",
+          "location": "speedfilter.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "trackAngle.Rd",
+          "location": "trackAngle.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "trip.split.exact.Rd",
+          "location": "trip.split.exact.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "tripGrid.interp.Rd",
+          "location": "tripGrid.interp.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "tripGrid.Rd",
+          "location": "tripGrid.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "suggested_in_examples",
+          "severity": "policy",
+          "file": "cut.trip.Rd",
+          "location": "cut.trip.Rd: uses Suggested package 'lubridate' in \\examples without a guard",
+          "message": "Suggested-package examples check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "README.md",
+          "location": "README.md: http://cranlogs.r-pkg.org/badges/trip (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "readArgos.Rd",
+          "location": "readArgos.Rd: http://www.argos-system.org/manual. (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "readArgos.Rd",
+          "location": "readArgos.Rd: http://www.cls.fr/manuel/html/chap4/chap4_4_8.htm (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 14
+    }
+  }
+}

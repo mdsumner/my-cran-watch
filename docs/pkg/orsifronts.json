@@ -1,0 +1,60 @@
+{
+  "package": "orsifronts",
+  "version": "0.2.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "1 opinion, 4 policy",
+      "problems": [
+        {
+          "category": "general",
+          "check": "news_file",
+          "severity": "opinion",
+          "location": "No NEWS file found (add NEWS.md to document user-facing changes)",
+          "message": "NEWS file check"
+        },
+        {
+          "category": "general",
+          "check": "citation_file",
+          "severity": "policy",
+          "file": "inst/CITATION",
+          "line": 3,
+          "location": "inst/CITATION:3 (citEntry() is old-style; use bibentry())",
+          "message": "CITATION file check"
+        },
+        {
+          "category": "general",
+          "check": "citation_file",
+          "severity": "policy",
+          "file": "inst/CITATION",
+          "line": 5,
+          "location": "inst/CITATION:5 (personList() is old-style; use c() on person objects)",
+          "message": "CITATION file check"
+        },
+        {
+          "category": "general",
+          "check": "citation_file",
+          "severity": "policy",
+          "file": "inst/CITATION",
+          "line": 17,
+          "location": "inst/CITATION:17 (citEntry() is old-style; use bibentry())",
+          "message": "CITATION file check"
+        },
+        {
+          "category": "general",
+          "check": "citation_file",
+          "severity": "policy",
+          "file": "inst/CITATION",
+          "line": 19,
+          "location": "inst/CITATION:19 (personList() is old-style; use c() on person objects)",
+          "message": "CITATION file check"
+        }
+      ],
+      "count": 4
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "package": "quadmesh",
+  "version": "0.6.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "5 opinion, 2 policy",
+      "problems": [
+        {
+          "category": "code",
+          "check": "option_changes",
+          "severity": "policy",
+          "file": "use_crs.R",
+          "line": 16,
+          "location": "use_crs.R:16",
+          "message": "Option changes check"
+        },
+        {
+          "category": "code",
+          "check": "temp_cleanup",
+          "severity": "opinion",
+          "file": "quadmesh.R",
+          "line": 161,
+          "location": "quadmesh.R:161",
+          "message": "Temp cleanup check"
+        },
+        {
+          "category": "code",
+          "check": "temp_cleanup",
+          "severity": "opinion",
+          "file": "triangmesh.R",
+          "line": 97,
+          "location": "triangmesh.R:97",
+          "message": "Temp cleanup check"
+        },
+        {
+          "category": "code",
+          "check": "warn_option",
+          "severity": "policy",
+          "file": "quadmesh.R",
+          "line": 124,
+          "location": "quadmesh.R:124",
+          "message": "Warn option check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "use_crs.Rd",
+          "location": "use_crs.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "llh2xyz.Rd",
+          "location": "llh2xyz.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_structure",
+          "severity": "opinion",
+          "file": "use_crs.Rd",
+          "location": "use_crs.Rd: potential unnecessary \\dontrun{}",
+          "message": "Example structure check"
+        }
+      ],
+      "count": 2
+    }
+  }
+}

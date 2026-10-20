@@ -1,0 +1,50 @@
+{
+  "package": "palr",
+  "version": "0.5.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "3 opinion, 1 policy",
+      "problems": [
+        {
+          "category": "documentation",
+          "check": "example_state",
+          "severity": "policy",
+          "file": "mk_timePal.Rd",
+          "line": 24,
+          "location": "example mk_timePal.Rd:24 (never restored)",
+          "message": "Example state check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "chl_pal.Rd",
+          "location": "chl_pal.Rd: http://oceancolor.gsfc.nasa.gov/DOCS/palette_chl_etc.txt (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "ice_pal.Rd",
+          "location": "ice_pal.Rd: http://www.iup.uni-bremen.de/seaice/amsr/ (use https://)",
+          "message": "URLs check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "sst_pal.Rd",
+          "location": "sst_pal.Rd: http://oceancolor.gsfc.nasa.gov/DOCS/palette_sst.txt (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 1
+    }
+  }
+}

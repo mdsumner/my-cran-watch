@@ -1,1 +1,178 @@
-[]
+{
+  "affinity": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "angstroms": {
+    "urlchecker": 0,
+    "checktor": 2
+  },
+  "area": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "basf": {
+    "urlchecker": 0,
+    "checktor": 1
+  },
+  "bgmfiles": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "ceramic": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "crsmeta": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "decido": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "dsn": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "fasterize": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "geographiclib": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "geojson": {
+    "urlchecker": 0,
+    "checktor": 8
+  },
+  "ggpolypath": {
+    "urlchecker": 0,
+    "checktor": 2
+  },
+  "gibble": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "graticule": {
+    "urlchecker": 0,
+    "checktor": 7
+  },
+  "grout": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "lazysf": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "ncmeta": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "orsifronts": {
+    "urlchecker": 0,
+    "checktor": 4
+  },
+  "ozmaps": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "palr": {
+    "urlchecker": 0,
+    "checktor": 1
+  },
+  "PROJ": {
+    "urlchecker": 0,
+    "checktor": 2
+  },
+  "quadmesh": {
+    "urlchecker": 0,
+    "checktor": 2
+  },
+  "rbgm": {
+    "urlchecker": 0,
+    "checktor": 5
+  },
+  "reproj": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "sds": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "sfdct": {
+    "urlchecker": 0,
+    "checktor": 1
+  },
+  "silicate": {
+    "urlchecker": 0,
+    "checktor": 1
+  },
+  "sooty": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "spbabel": {
+    "urlchecker": 0,
+    "checktor": 12
+  },
+  "spex": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "tabularaster": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "textures": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "tidync": {
+    "urlchecker": 0,
+    "checktor": 1
+  },
+  "tissot": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "traipse": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "trip": {
+    "urlchecker": 0,
+    "checktor": 14
+  },
+  "tripEstimation": {
+    "urlchecker": 0,
+    "checktor": 24
+  },
+  "unjoin": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "vapour": {
+    "urlchecker": 0,
+    "checktor": 2
+  },
+  "vaster": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "wkpool": {
+    "urlchecker": 0,
+    "checktor": 2
+  },
+  "ximage": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "xyt": {
+    "urlchecker": 0,
+    "checktor": 0
+  }
+}

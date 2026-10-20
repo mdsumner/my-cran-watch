@@ -1,0 +1,42 @@
+{
+  "package": "basf",
+  "version": "0.2.0",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "2 opinion, 1 robustness",
+      "problems": [
+        {
+          "category": "documentation",
+          "check": "example_structure",
+          "severity": "opinion",
+          "file": "read_ext.Rd",
+          "location": "read_ext.Rd: potential unnecessary \\dontrun{}",
+          "message": "Example structure check"
+        },
+        {
+          "category": "documentation",
+          "check": "commented_examples",
+          "severity": "opinion",
+          "file": "read_ext.Rd",
+          "location": "read_ext.Rd: \\examples{} contains only commented-out code, so it runs nothing",
+          "message": "Commented-out examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_unparseable",
+          "severity": "robustness",
+          "file": "read_ext.Rd",
+          "line": 30,
+          "location": "example read_ext.Rd:30 (unexpected symbol)",
+          "message": "Example parse check"
+        }
+      ],
+      "count": 1
+    }
+  }
+}

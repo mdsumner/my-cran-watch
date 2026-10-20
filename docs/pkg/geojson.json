@@ -1,0 +1,234 @@
+{
+  "package": "geojson",
+  "version": "0.3.5",
+  "updated": "2026-10-20",
+  "sections": {
+    "urlchecker": {
+      "summary": "failed: pandoc is not installed and on the PATH.",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "19 opinion, 8 policy",
+      "problems": [
+        {
+          "category": "code",
+          "check": "temp_cleanup",
+          "severity": "opinion",
+          "file": "ndgeojson.R",
+          "line": 142,
+          "location": "ndgeojson.R:142",
+          "message": "Temp cleanup check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "crs.Rd",
+          "location": "crs.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "feature.Rd",
+          "location": "feature.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "featurecollection.Rd",
+          "location": "featurecollection.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "geo_pretty.Rd",
+          "location": "geo_pretty.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "geo_type.Rd",
+          "location": "geo_type.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "geo_write.Rd",
+          "location": "geo_write.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "geometrycollection.Rd",
+          "location": "geometrycollection.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "linestring.Rd",
+          "location": "linestring.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "linting_opts.Rd",
+          "location": "linting_opts.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "multilinestring.Rd",
+          "location": "multilinestring.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "multipoint.Rd",
+          "location": "multipoint.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "multipolygon.Rd",
+          "location": "multipolygon.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "point.Rd",
+          "location": "point.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "polygon.Rd",
+          "location": "polygon.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "properties.Rd",
+          "location": "properties.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "value_tags",
+          "severity": "opinion",
+          "file": "to_geojson.Rd",
+          "location": "to_geojson.Rd",
+          "message": "Value tags check"
+        },
+        {
+          "category": "documentation",
+          "check": "missing_examples",
+          "severity": "opinion",
+          "file": "linting_opts.Rd",
+          "location": "linting_opts.Rd",
+          "message": "Missing examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "suggested_in_examples",
+          "severity": "policy",
+          "file": "feature.Rd",
+          "location": "feature.Rd: uses Suggested package 'tibble' in \\examples without a guard",
+          "message": "Suggested-package examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "suggested_in_examples",
+          "severity": "policy",
+          "file": "featurecollection.Rd",
+          "location": "featurecollection.Rd: uses Suggested package 'tibble' in \\examples without a guard",
+          "message": "Suggested-package examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "suggested_in_examples",
+          "severity": "policy",
+          "file": "linestring.Rd",
+          "location": "linestring.Rd: uses Suggested package 'tibble' in \\examples without a guard",
+          "message": "Suggested-package examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "suggested_in_examples",
+          "severity": "policy",
+          "file": "multilinestring.Rd",
+          "location": "multilinestring.Rd: uses Suggested package 'tibble' in \\examples without a guard",
+          "message": "Suggested-package examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "suggested_in_examples",
+          "severity": "policy",
+          "file": "multipoint.Rd",
+          "location": "multipoint.Rd: uses Suggested package 'tibble' in \\examples without a guard",
+          "message": "Suggested-package examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "suggested_in_examples",
+          "severity": "policy",
+          "file": "multipolygon.Rd",
+          "location": "multipolygon.Rd: uses Suggested package 'tibble' in \\examples without a guard",
+          "message": "Suggested-package examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "suggested_in_examples",
+          "severity": "policy",
+          "file": "point.Rd",
+          "location": "point.Rd: uses Suggested package 'tibble' in \\examples without a guard",
+          "message": "Suggested-package examples check"
+        },
+        {
+          "category": "documentation",
+          "check": "suggested_in_examples",
+          "severity": "policy",
+          "file": "polygon.Rd",
+          "location": "polygon.Rd: uses Suggested package 'tibble' in \\examples without a guard",
+          "message": "Suggested-package examples check"
+        },
+        {
+          "category": "general",
+          "check": "urls",
+          "severity": "opinion",
+          "file": "ndgeo.Rd",
+          "location": "ndgeo.Rd: http://ndjson.org/ (use https://)",
+          "message": "URLs check"
+        }
+      ],
+      "count": 8
+    }
+  }
+}
