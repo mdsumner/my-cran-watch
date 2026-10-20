@@ -1,14 +1,23 @@
 {
-  "changed": "2026-10-20 10:36 UTC",
+  "changed": "2026-10-20 11:21 UTC",
   "source": "https://cran.r-project.org/incoming/",
   "entries": [
     {
-      "package": "controlledburn",
-      "version": "0.3.0",
-      "folder": "archive",
+      "package": "cdtr",
+      "version": "0.1.0",
+      "folder": "newbies",
       "subfolder": "",
-      "modified": "2026-10-13 13:36",
-      "url": "https://cran.r-project.org/incoming/archive/",
+      "modified": "2026-10-11 12:58",
+      "url": "https://cran.r-project.org/incoming/newbies/",
+      "new": true
+    },
+    {
+      "package": "controlledburn",
+      "version": "0.3.1",
+      "folder": "newbies",
+      "subfolder": "",
+      "modified": "2026-10-15 06:19",
+      "url": "https://cran.r-project.org/incoming/newbies/",
       "new": true
     }
   ]
