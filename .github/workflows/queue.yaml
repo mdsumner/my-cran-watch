@@ -2,8 +2,9 @@ name: queue
 
 on:
   schedule:
-    # hourly: submissions move through the CRAN incoming folders in hours
-    - cron: "23 * * * *"
+    # twice daily, Hobart morning and lunch: 08:23 and 12:23 AEDT (an hour
+    # earlier in AEST). Cron is UTC.
+    - cron: "23 21,1 * * *"
   workflow_dispatch:
 
 permissions:

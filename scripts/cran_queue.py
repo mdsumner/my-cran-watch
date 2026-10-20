@@ -6,7 +6,7 @@ reads), keeps submissions of packages in docs/status.json, and writes
 docs/queue.json.  Submissions of packages not yet on the dashboard (new
 packages) are matched by the Maintainer email in their DESCRIPTION
 against maintainer_emails in config.yml; each tarball is read once and
-the answer cached in .cache/ (kept between runs by actions/cache).  Standard library only, so the hourly workflow needs no
+the answer cached in .cache/ (kept between runs by actions/cache).  Standard library only, so the queue workflow needs no
 R setup.  The file is rewritten only when the entries change, so an
 unchanged queue makes no commit.
 """
