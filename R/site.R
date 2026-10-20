@@ -32,7 +32,8 @@ write_site <- function(state, mine, checks_all, uni, cfg, path = "docs/status.js
     ch <- checks_all[checks_all$package == pkg, , drop = FALSE]
     u <- if (is.null(uni)) data.frame(ok = logical()) else uni[uni$package == pkg, , drop = FALSE]
     list(package = pkg, role = mine$role[i], version = mine$version[i],
-         published = mine$published[i], repo = cfg$repo_map[[pkg]],
+         published = mine$published[i],
+         repo = cfg$repo_map[[pkg]] %||% github_repo(mine$url[i], mine$bugreports[i]),
          worst = worst_status(ch$status),
          flavors = as.list(stats::setNames(ch$status, ch$flavor)),
          universe = if (mine$role[i] != "maintainer") NULL
@@ -45,4 +46,13 @@ write_site <- function(state, mine, checks_all, uni, cfg, path = "docs/status.js
                             repo = repo, packages = pkg_rows, other = other),
                        path, auto_unbox = TRUE, pretty = TRUE, null = "null")
   invisible(path)
+}
+
+# owner/name of the first github.com repo in a package's URL or BugReports
+# field (URL often lists several sites, comma separated); NULL if none
+github_repo <- function(url, bugreports = NA) {
+  txt <- paste(c(url, bugreports)[!is.na(c(url, bugreports))], collapse = " ")
+  m <- regmatches(txt, regexpr("github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", txt))
+  if (!length(m)) return(NULL)
+  sub("\\.git$", "", sub("^github\\.com/", "", m))
 }
