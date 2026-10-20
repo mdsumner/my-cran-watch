@@ -74,8 +74,11 @@ for (pkg in pkgs) {
               version = mine$version[match(pkg, mine$package)],
               updated = today(), sections = prev[setdiff(names(prev), names(sections))])
   for (s in names(sections)) {
-    rec$sections[[s]] <- tryCatch(sections[[s]](src), error = function(e)
-      list(summary = sprintf("failed: %s", conditionMessage(e)), problems = data.frame()))
+    rec$sections[[s]] <- tryCatch(sections[[s]](src), error = function(e) {
+      # a failed section must not read as clean: warn on the run page
+      msg("::warning::details: %s %s failed: %s", pkg, s, conditionMessage(e))
+      list(summary = sprintf("failed: %s", conditionMessage(e)), problems = data.frame())
+    })
     index[[pkg]][[s]] <- rec$sections[[s]]$count %||% nrow(rec$sections[[s]]$problems)
   }
   jsonlite::write_json(rec, path,
