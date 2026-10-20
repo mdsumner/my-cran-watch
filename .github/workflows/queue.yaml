@@ -12,7 +12,7 @@ permissions:
 jobs:
   queue:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
 
@@ -27,6 +27,7 @@ jobs:
         run: python3 scripts/cran_queue.py
 
       - name: Commit queue
+        if: github.ref == 'refs/heads/main'   # a run on another branch is a dry run
         run: |
           git config user.name "my-cran-watch"
           git config user.email "actions@users.noreply.github.com"
