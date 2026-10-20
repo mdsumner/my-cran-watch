@@ -52,6 +52,24 @@ watch:
 #    role: interest
 #  - gdalraster
 
+# rOpenSci pkgcheck (https://docs.ropensci.org/pkgcheck/), opt-in per
+# package and run by hand: Actions > pkgcheck > Run workflow. Checks the
+# GitHub default branch (not the CRAN release), so it is a heads-up for the
+# next submission. Results go on each package's details page. Each entry
+# is a bare name (repo from repo_map) or {package, repo, goodpractice}.
+# goodpractice adds a full R CMD check + covr: slow, off unless asked.
+# ignore drops checks by name, e.g. rOpenSci-specific ones: has_orcid,
+# has_ror, has_contrib, pkgdown, repo_has_website, left_assign, num_imports.
+pkgcheck:
+  goodpractice: false
+  ignore: []
+  packages:
+    - vapour
+    - tidync
+#    - package: gdalraster
+#      repo: firelab/gdalraster
+#      goodpractice: true
+
 # Map of CRAN package name -> GitHub repo (owner/name).
 # Run scripts/init_repo_map.R to generate a draft of this from the URL and
 # BugReports fields in the CRAN db, then review by hand. Packages absent

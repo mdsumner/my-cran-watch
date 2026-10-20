@@ -1,0 +1,53 @@
+name: pkgcheck
+
+# rOpenSci pkgcheck on the packages opted in via config `pkgcheck:`.
+# Manual only for now: Actions > pkgcheck > Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: "Space-separated packages (blank = all in config pkgcheck.packages)"
+        type: string
+        default: ""
+      goodpractice:
+        description: "Also run goodpractice (full R CMD check + covr; slow)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # commit docs/pkg back to this repo
+
+jobs:
+  pkgcheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    # pkgcheck, ctags, remotes, and GDAL/GEOS/PROJ; CRAN packages install
+    # as apt binaries (r2u)
+    container: ghcr.io/ropensci-review-tools/pkgcheck:latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      NOT_CRAN: "true"
+      CI: "true"
+      ROPENSCI: "true"
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Run pkgcheck
+        env:
+          PKGS: ${{ inputs.packages }}
+          GP: ${{ inputs.goodpractice && '--goodpractice' || '' }}
+        run: |
+          Rscript -e 'for (p in c("jsonlite", "yaml")) if (!requireNamespace(p, quietly = TRUE)) install.packages(p)'
+          Rscript scripts/pkgcheck.R $GP $PKGS
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name "my-cran-watch"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/pkg/
+          git diff --cached --quiet || git commit -m "pkgcheck: $(date -u +%F)"
+          git pull --rebase origin main
+          git push

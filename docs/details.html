@@ -48,13 +48,15 @@ fetch("pkg/" + encodeURIComponent(pkg) + ".json", { cache: "no-store" })
   .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
   .then(function (d) {
     var meta = document.getElementById("meta");
-    meta.appendChild(document.createTextNode("Version " + d.version + ", checked " + d.updated + " | "));
+    meta.appendChild(document.createTextNode("Version " + (d.version || "?") + ", checked " + d.updated + " | "));
     meta.appendChild(el("a", { href: "https://cran.r-project.org/web/checks/check_results_" + pkg + ".html" }, "CRAN check results"));
     var box = document.getElementById("sections");
     Object.keys(d.sections || {}).forEach(function (name) {
       var s = d.sections[name], rows = s.problems || [];
       box.appendChild(el("h2", {}, name));
-      box.appendChild(el("div", { "class": rows.length ? "warn" : "ok" }, s.summary));
+      var sm = el("div", { "class": rows.length ? "warn" : "ok" }, s.summary);
+      if (s.report) { sm.appendChild(document.createTextNode(" | ")); sm.appendChild(el("a", { href: "pkg/" + s.report }, "full report")); }
+      box.appendChild(sm);
       if (!rows.length) return;
       var cols = Object.keys(rows[0]);
       var t = el("table"), hr = el("tr");
