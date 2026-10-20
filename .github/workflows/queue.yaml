@@ -1,0 +1,30 @@
+name: queue
+
+on:
+  schedule:
+    # hourly: submissions move through the CRAN incoming folders in hours
+    - cron: "23 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit docs/queue.json back to this repo
+
+jobs:
+  queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Snapshot CRAN incoming queue
+        run: python3 scripts/cran_queue.py
+
+      - name: Commit queue
+        run: |
+          git config user.name "my-cran-watch"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/queue.json
+          git diff --cached --quiet && exit 0
+          git commit -m "queue: $(date -u '+%F %H:%M')"
+          git pull --rebase origin main
+          git push
