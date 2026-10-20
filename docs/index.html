@@ -21,6 +21,8 @@ h2 { font-size: 16px; margin: 32px 0 8px; }
 .tiles { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .tile { background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
         padding: 8px 12px; min-width: 110px; }
+button.tile { font: inherit; color: inherit; text-align: left; cursor: pointer; }
+button.tile[aria-pressed="true"] { border-color: var(--fg); }
 .tile b { display: block; font-size: 20px; }
 .tile span { color: var(--muted); font-size: 12px; }
 .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
@@ -30,13 +32,18 @@ h2 { font-size: 16px; margin: 32px 0 8px; }
 .wrap { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; }
 th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
-th { color: var(--muted); font-weight: 500; font-size: 12px; }
+th { color: var(--muted); font-weight: 500; font-size: 12px; white-space: nowrap; }
+th[data-sort] { cursor: pointer; user-select: none; }
+th[data-sort]:hover { color: var(--fg); }
+th .arrow { display: inline-block; width: 1em; }
 a { color: var(--link); }
 .s-OK { color: var(--ok); } .s-NOTE { color: var(--note); }
 .s-WARN, .s-WARNING { color: var(--warn); } .s-ERROR, .s-FAIL { color: var(--err); }
 .role { font-size: 12px; color: var(--muted); white-space: nowrap; }
 .cond { display: inline-block; margin: 0 6px 2px 0; font-size: 12px; }
 .muted { color: var(--muted); }
+.queue { display: inline-block; margin-top: 2px; font-size: 12px; padding: 0 6px; border-radius: 999px;
+         border: 1px solid var(--link); color: var(--link); text-decoration: none; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -46,7 +53,7 @@ a { color: var(--link); }
   <div class="tiles" id="tiles"></div>
   <div class="filters" id="filters"></div>
   <div class="wrap"><table>
-    <thead><tr><th>Package</th><th>Version</th><th>CRAN checks</th><th>r-universe</th><th>Other alerts</th></tr></thead>
+    <thead><tr><th data-sort="package">Package</th><th data-sort="published">Version</th><th data-sort="checks">CRAN checks</th><th data-sort="universe">r-universe</th><th data-sort="alerts">Other alerts</th></tr></thead>
     <tbody id="rows"></tbody>
   </table></div>
   <h2>Other signals</h2>
@@ -54,8 +61,36 @@ a { color: var(--link); }
 </main>
 <script>
 var ROLES = { all: "All", maintainer: "Mine", contribute: "Contribute", interest: "Interest" };
-var role = "all";
-try { role = localStorage.getItem("role") || "all"; } catch (e) {}
+// status filters double as the summary tiles; a package matches on its worst flavor
+var RANK = { ERROR: 4, FAIL: 4, WARN: 3, WARNING: 3, NOTE: 2, OK: 1 };
+var STATUS = {
+  all:    ["Packages",     function () { return true; }],
+  err:    ["ERROR / FAIL", function (p) { return RANK[p.worst] === 4; }],
+  warn:   ["WARN",         function (p) { return RANK[p.worst] === 3; }],
+  note:   ["NOTE",         function (p) { return RANK[p.worst] === 2; }],
+  issues: ["Open issues",  function (p) { return openIssues(p) > 0; }],
+  queue:  ["In CRAN queue", function (p) { return !!QUEUE[p.package]; }]
+};
+var role = "all", status = "all", sort = { key: "package", dir: 1 };
+try {
+  role = localStorage.getItem("role") || "all";
+  status = localStorage.getItem("status") || "all";
+  sort = JSON.parse(localStorage.getItem("sort")) || sort;
+} catch (e) {}
+if (!STATUS[status]) status = "all";
+function save(k, v) { try { localStorage.setItem(k, typeof v === "string" ? v : JSON.stringify(v)); } catch (e) {} }
+function openIssues(p) { return (p.conditions || []).filter(function (c) { return c.issue; }).length; }
+var KINDS = ["universe", "metadata", "deadline", "archived", "revdeps", "canary"];
+function alerts(p) { return (p.conditions || []).filter(function (c) { return KINDS.indexOf(c.kind) >= 0; }); }
+function badFlavors(p) { var fl = p.flavors || {}; return Object.keys(fl).filter(function (k) { return fl[k] !== "OK"; }).length; }
+// sort keys; ties fall back to package name
+var SORTS = {
+  package:   function (p) { return p.package.toLowerCase(); },
+  published: function (p) { return p.published || ""; },
+  checks:    function (p) { return (RANK[p.worst] || 0) * 100 + badFlavors(p); },
+  universe:  function (p) { return p.universe === "ok" ? 1 : (p.universe ? 2 : 0); },
+  alerts:    function (p) { return alerts(p).length * 100 + openIssues(p); }
+};
 function el(tag, attrs, text) {
   var e = document.createElement(tag);
   for (var k in attrs || {}) e.setAttribute(k, attrs[k]);
@@ -69,28 +104,56 @@ function condLink(c) {
   return e;
 }
 function render(d) {
-  document.getElementById("gen").textContent = "Updated " + d.generated + " from " + d.repo;
-  var pk = d.packages.filter(function (p) { return role === "all" || p.role === role; });
-  pk.sort(function (a, b) { return a.package.localeCompare(b.package); });
-  var count = function (f) { return pk.filter(f).length; };
+  document.getElementById("gen").textContent = "Updated " + d.generated + " from " + d.repo +
+    (QUEUE_AT ? "; CRAN queue checked hourly, last changed " + QUEUE_AT : "");
+  var byRole = d.packages.filter(function (p) { return role === "all" || p.role === role; });
   var tiles = document.getElementById("tiles"); tiles.innerHTML = "";
-  [["Packages", pk.length],
-   ["ERROR / FAIL", count(function (p) { return p.worst === "ERROR" || p.worst === "FAIL"; })],
-   ["WARN", count(function (p) { return p.worst === "WARN" || p.worst === "WARNING"; })],
-   ["Open issues", pk.reduce(function (n, p) { return n + p.conditions.filter(function (c) { return c.issue; }).length; }, 0)]
-  ].forEach(function (t) { var e = el("div", { "class": "tile" }); e.appendChild(el("b", {}, t[1])); e.appendChild(el("span", {}, t[0])); tiles.appendChild(e); });
+  Object.keys(STATUS).forEach(function (s) {
+    var e = el("button", { "class": "tile", "aria-pressed": String(s === status),
+                           title: s === "all" ? "Show all packages" : "Show only these packages" });
+    e.appendChild(el("b", {}, byRole.filter(STATUS[s][1]).length));
+    e.appendChild(el("span", {}, STATUS[s][0]));
+    e.onclick = function () { status = (s === status ? "all" : s); save("status", status); render(d); };
+    tiles.appendChild(e);
+  });
+  var pk = byRole.filter(STATUS[status][1]), key = SORTS[sort.key] || SORTS.package;
+  pk.sort(function (a, b) {
+    var x = key(a), y = key(b);
+    return (x < y ? -1 : x > y ? 1 : 0) * sort.dir || a.package.localeCompare(b.package);
+  });
+  document.querySelectorAll("th[data-sort]").forEach(function (th) {
+    var k = th.getAttribute("data-sort"), on = k === sort.key;
+    th.setAttribute("aria-sort", on ? (sort.dir > 0 ? "ascending" : "descending") : "none");
+    if (!th.querySelector(".arrow")) th.appendChild(el("span", { "class": "arrow" }));
+    th.querySelector(".arrow").textContent = on ? (sort.dir > 0 ? " \u25B4" : " \u25BE") : "";
+    th.onclick = function () {
+      // text columns start A-Z; severity, dates and counts start worst/newest first
+      sort = on ? { key: k, dir: -sort.dir } : { key: k, dir: k === "package" ? 1 : -1 };
+      save("sort", sort); render(d);
+    };
+  });
   var f = document.getElementById("filters"); f.innerHTML = "";
   Object.keys(ROLES).forEach(function (r) {
     var b = el("button", { "aria-pressed": String(r === role) }, ROLES[r]);
-    b.onclick = function () { role = r; try { localStorage.setItem("role", r); } catch (e) {} render(d); };
+    b.onclick = function () { role = r; save("role", r); render(d); };
     f.appendChild(b);
   });
   var tb = document.getElementById("rows"); tb.innerHTML = "";
+  if (!pk.length) {
+    var none = el("tr"); none.appendChild(el("td", { colspan: "5", "class": "muted" }, "No packages match."));
+    tb.appendChild(none);
+  }
   pk.forEach(function (p) {
     var tr = el("tr");
     var td = el("td");
     td.appendChild(p.repo ? el("a", { href: "https://github.com/" + p.repo }, p.package) : el("span", {}, p.package));
     td.appendChild(el("div", { "class": "role" }, ROLES[p.role] || p.role));
+    (QUEUE[p.package] || []).forEach(function (q) {
+      var where = q.folder + (q.subfolder ? "/" + q.subfolder : "");
+      td.appendChild(el("a", { href: q.url, "class": "queue",
+                               title: q.package + " " + q.version + " in CRAN incoming since " + q.modified },
+                        "queue: " + where + " " + q.version));
+    });
     tr.appendChild(td);
     var v = el("td"); v.appendChild(el("a", { href: "https://cran.r-project.org/package=" + p.package }, p.version));
     v.appendChild(el("div", { "class": "role" }, (p.published || "").slice(0, 10))); tr.appendChild(v);
@@ -109,8 +172,7 @@ function render(d) {
     tr.appendChild(ct);
     tr.appendChild(el("td", { "class": p.universe === "ok" ? "s-OK" : (p.universe ? "s-WARN" : "muted") }, p.universe || "-"));
     // check results live in the CRAN checks column; list the other kinds here
-    var KINDS = ["universe", "metadata", "deadline", "archived", "revdeps", "canary"];
-    var cs = (p.conditions || []).filter(function (c) { return KINDS.indexOf(c.kind) >= 0; }), live = cs.filter(function (c) { return c.lifecycle !== "observed"; });
+    var cs = alerts(p), live = cs.filter(function (c) { return c.lifecycle !== "observed"; });
     var cd = el("td"); live.forEach(function (c) { cd.appendChild(condLink(c)); });
     if (cs.length > live.length) cd.appendChild(el("span", { "class": "cond muted", title: "seen once, waiting to repeat before an issue opens" }, "+" + (cs.length - live.length) + " pending"));
     if (!cs.length) cd.appendChild(el("span", { "class": "muted" }, "none"));
@@ -121,10 +183,20 @@ function render(d) {
   if (!(d.other || []).length) o.textContent = "None.";
   (d.other || []).forEach(function (c) { var line = el("div"); line.appendChild(el("span", {}, c.package + " ")); line.appendChild(condLink(c)); o.appendChild(line); });
 }
-var DETAILS = {};
-fetch("pkg/index.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; })
-  .catch(function () { return {}; })
-  .then(function (d) { DETAILS = d || {}; return fetch("status.json", { cache: "no-store" }); })
+var DETAILS = {}, QUEUE = {}, QUEUE_AT = "";
+function optional(url) {
+  return fetch(url, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; })
+    .catch(function () { return null; });
+}
+Promise.all([optional("pkg/index.json"), optional("queue.json")])
+  .then(function (x) {
+    DETAILS = x[0] || {};
+    if (x[1]) {
+      QUEUE_AT = x[1].changed || "";
+      (x[1].entries || []).forEach(function (e) { (QUEUE[e.package] = QUEUE[e.package] || []).push(e); });
+    }
+    return fetch("status.json", { cache: "no-store" });
+  })
   .then(function (r) { return r.json(); }).then(render)
   .catch(function () { document.getElementById("gen").textContent = "No status.json yet: it appears after the next watcher run."; });
 </script>
