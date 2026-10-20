@@ -57,6 +57,17 @@ CRAN check status, r-universe, open conditions with issue links), and
 `docs/index.html` renders it with a Mine / Contribute / Interest filter.
 Turn it on once: Settings > Pages > Deploy from a branch > `main` `/docs`.
 
+## pkgcheck (opt-in, manual)
+
+rOpenSci's [pkgcheck](https://docs.ropensci.org/pkgcheck/) runs only on the
+packages listed under `pkgcheck.packages` in `config.yml`, and only when
+triggered: Actions > pkgcheck > Run workflow (optionally a subset of
+packages, optionally with goodpractice). It clones each package's GitHub
+repo inside rOpenSci's own Docker image, runs `pkgcheck()`, and writes a
+`pkgcheck` section into `docs/pkg/<pkg>.json` (failing checks counted,
+"watch" items listed) plus the full report `docs/pkg/<pkg>.pkgcheck.md`,
+both shown on the package's details page. It never opens issues.
+
 ## Design points
 
 **State is committed back to the repo** (`state/state.json`), so the diff

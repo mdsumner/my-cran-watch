@@ -64,15 +64,18 @@ for (pkg in pkgs) {
     file.path(work, pkg)
   }, error = function(e) { msg("  download failed: %s", conditionMessage(e)); NULL })
   if (is.null(src)) next
+  # keep sections written by other workflows (pkgcheck)
+  path <- file.path(out_dir, paste0(pkg, ".json"))
+  prev <- if (file.exists(path)) jsonlite::read_json(path)$sections else NULL
   rec <- list(package = pkg,
               version = mine$version[match(pkg, mine$package)],
-              updated = today(), sections = list())
+              updated = today(), sections = prev[setdiff(names(prev), names(sections))])
   for (s in names(sections)) {
     rec$sections[[s]] <- tryCatch(sections[[s]](src), error = function(e)
       list(summary = sprintf("failed: %s", conditionMessage(e)), problems = data.frame()))
     index[[pkg]][[s]] <- rec$sections[[s]]$count %||% nrow(rec$sections[[s]]$problems)
   }
-  jsonlite::write_json(rec, file.path(out_dir, paste0(pkg, ".json")),
+  jsonlite::write_json(rec, path,
                        auto_unbox = TRUE, pretty = TRUE, dataframe = "rows")
   unlink(src, recursive = TRUE)
 }
