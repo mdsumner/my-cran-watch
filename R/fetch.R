@@ -35,6 +35,18 @@ fetch_my_packages <- function(cfg, db = tools::CRAN_package_db()) {
     mine <- rbind(mine, add)
     role <- c(role, nom$role[match(add$Package, nom$package)])
   }
+  # packages that list me as an author (not maintainer): "contribute".
+  # Matched on my emails in Authors@R and on author_names in Author, the
+  # plain-text field CRAN derives from Authors@R.
+  if (length(cfg$author_names) || length(cfg$maintainer_emails)) {
+    hit <- authored_packages(db, cfg)
+    hit <- setdiff(hit, c(mine$Package, cfg$author_exclude %||% character()))
+    if (length(hit)) {
+      msg("authored packages (contribute): %s", paste(sort(hit), collapse = ", "))
+      mine <- rbind(mine, db[db$Package %in% hit, , drop = FALSE])
+      role <- c(role, rep("contribute", sum(db$Package %in% hit)))
+    }
+  }
   data.frame(
     package   = mine$Package,
     role      = role,
@@ -105,4 +117,18 @@ fetch_incoming <- function(cfg) {
   if (!requireNamespace("foghorn", quietly = TRUE)) return(NULL)
   tryCatch(foghorn::cran_incoming(),
            error = function(e) NULL)
+}
+
+# Package names whose Authors@R carries one of maintainer_emails or whose
+# Author field names one of author_names (case-insensitive, whole words).
+authored_packages <- function(db, cfg) {
+  hit <- rep(FALSE, nrow(db))
+  ar <- tolower(db[["Authors@R"]] %||% rep(NA_character_, nrow(db)))
+  for (e in tolower(cfg$maintainer_emails)) hit <- hit | grepl(e, ar, fixed = TRUE)
+  au <- tolower(gsub("\\s+", " ", db$Author %||% rep(NA_character_, nrow(db))))
+  for (n in tolower(cfg$author_names %||% character())) {
+    pat <- paste0("(^|[^a-z])", gsub(".", "\\.", n, fixed = TRUE), "($|[^a-z])")
+    hit <- hit | grepl(pat, au)
+  }
+  unique(db$Package[hit %in% TRUE])
 }

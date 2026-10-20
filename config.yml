@@ -9,6 +9,17 @@ maintainer_emails:
   - mdsumner@gmail.com
   - michael.sumner@aad.gov.au
 
+# Packages listing you as an author but maintained by someone else are
+# watched with role "contribute". Matched on maintainer_emails in
+# Authors@R and on these names in the Author field (whole words, any
+# case). author_exclude drops packages you do not want to see.
+author_names:
+  - Michael Sumner
+  - Michael D. Sumner
+  - Michael D Sumner
+  - Michael David Sumner
+author_exclude: []
+
 # GitHub identity used in commit messages and issue assignment.
 github_user: mdsumner
 
