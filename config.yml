@@ -28,6 +28,7 @@ universes:
   - hypertidy
   - mdsumner
   - Trackage
+  - australianantarcticdivision
 
 # Packages to watch regardless of the CRAN Maintainer field. Needed when
 # maintainership has changed in reality but not yet on CRAN (the field
