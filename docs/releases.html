@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Releases</title>
+<style>
+:root { --bg: #fff; --fg: #1d1d1f; --muted: #6b6b70; --line: #e3e3e6; --panel: #f6f6f8;
+        --ok: #2e7d32; --note: #8a6d00; --warn: #c45500; --err: #c62828; --link: #1a5fb4; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #151517; --fg: #ececee; --muted: #9a9aa2; --line: #2c2c31; --panel: #1d1d21;
+          --ok: #81c784; --note: #e0c050; --warn: #ffab60; --err: #ef7a7a; --link: #8ab4f8; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+       font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.nav { border-bottom: 1px solid var(--line); }
+.nav div { max-width: 1100px; margin: 0 auto; padding: 10px 16px; display: flex; gap: 18px;
+           align-items: baseline; flex-wrap: wrap; }
+.nav b { margin-right: auto; }
+.nav a { text-decoration: none; }
+.nav a[aria-current="page"] { color: var(--fg); font-weight: 600; }
+main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 22px; margin: 0 0 4px; }
+.sub, .muted { color: var(--muted); }
+.sub { margin: 0 0 16px; }
+a { color: var(--link); }
+.wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 500; font-size: 12px; white-space: nowrap; }
+td small { display: block; color: var(--muted); font-size: 12px; }
+.ok { color: var(--ok); } .note { color: var(--note); } .bad { color: var(--err); }
+.wait { color: var(--muted); }
+.stage { display: inline-block; font-size: 12px; padding: 0 8px; border-radius: 999px;
+         border: 1px solid var(--muted); color: var(--muted); white-space: nowrap; }
+.stage.ready { border-color: var(--ok); color: var(--ok); }
+.stage.submitted { border-color: var(--link); color: var(--link); }
+.stage.published { border-color: var(--ok); color: var(--ok); background: var(--panel); }
+.empty { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+code { font-size: 13px; }
+</style>
+</head>
+<body>
+<nav class="nav"><div>
+  <b>CRAN watch</b>
+  <a href="./">Dashboard</a>
+  <a href="releases.html" aria-current="page">Releases</a>
+  <a href="about.html">About</a>
+  <a id="repo" href="https://github.com/mdsumner/my-cran-watch">Repository</a>
+</div></nav>
+<main>
+  <h1>Releases</h1>
+  <p class="sub" id="gen">Loading...</p>
+  <div id="board"></div>
+</main>
+<script>
+function el(tag, attrs, text) {
+  var e = document.createElement(tag);
+  for (var k in attrs || {}) e.setAttribute(k, attrs[k]);
+  if (text != null) e.textContent = text;
+  return e;
+}
+var REPO = "mdsumner/my-cran-watch";
+var STAGES = { preparing: 0, ready: 1, submitted: 2, published: 3 };
+
+// a table cell: one line of result, coloured, with an optional second line
+function cell(text, cls, small, href) {
+  var td = el("td");
+  var main = href ? el("a", { href: href, "class": cls || "" }, text) : el("span", { "class": cls || "" }, text);
+  td.appendChild(main);
+  if (small) td.appendChild(el("small", {}, small));
+  return td;
+}
+function ciClass(s) { return s === "pass" ? "ok" : s === "fail" ? "bad" : "wait"; }
+function countClass(c, summary) {
+  if (summary && /^failed/.test(summary)) return "bad";
+  return c === 0 ? "ok" : c == null ? "wait" : "note";
+}
+function builderCell(p, name) {
+  var hits = (p.builders || []).filter(function (b) { return b.builder === name; });
+  if (!hits.length) return cell("no result yet", "wait", null, p.issue ? issueUrl(p.issue) : null);
+  var b = hits[hits.length - 1];
+  var cls = b.status === "OK" ? "ok" : b.status === "NOTE" ? "note" : b.status ? "bad" : "wait";
+  var small = [b.r, b.version && b.version !== p.version ? "checked " + b.version : null]
+    .filter(Boolean).join(", ");
+  return cell(b.summary || "waiting for results", cls, small || null, b.log_url || b.url);
+}
+function issueUrl(n) { return "https://github.com/" + REPO + "/issues/" + n; }
+
+fetch("release.json", { cache: "no-store" })
+  .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+  .then(function (d) {
+    REPO = d.repo || REPO;
+    document.getElementById("gen").textContent = "Updated " + d.generated +
+      ". Packages leave the board two weeks after CRAN publishes them.";
+    var pkgs = (d.packages || []).slice().sort(function (a, b) {
+      return (STAGES[a.stage] || 0) - (STAGES[b.stage] || 0) || a.package.localeCompare(b.package);
+    });
+    var box = document.getElementById("board");
+    if (!pkgs.length) { showEmpty(box); return; }
+    var t = el("table"), hr = el("tr");
+    ["Package", "Stage", "GitHub CI", "checktor", "urlchecker", "win-builder", "mac-builder", "CRAN"]
+      .forEach(function (h) { hr.appendChild(el("th", {}, h)); });
+    var th = el("thead"); th.appendChild(hr); t.appendChild(th);
+    var tb = el("tbody");
+    pkgs.forEach(function (p) {
+      var tr = el("tr");
+      var pc = el("td");
+      pc.appendChild(p.issue ? el("a", { href: issueUrl(p.issue) }, p.package) : document.createTextNode(p.package));
+      pc.appendChild(el("small", {}, (p.version || "?") + " from " + (p.repo || "?") + "@" + (p.ref || "?") +
+        (p.sha ? " (" + p.sha.slice(0, 7) + ")" : "")));
+      tr.appendChild(pc);
+      if (p.error) {
+        var e = cell(p.error, "bad"); e.setAttribute("colspan", "7"); tr.appendChild(e);
+        tb.appendChild(tr); return;
+      }
+      var st = el("td"); st.appendChild(el("span", { "class": "stage " + p.stage }, p.stage)); tr.appendChild(st);
+      var ci = p.ci || {};
+      tr.appendChild(cell(ci.status || "unknown", ciClass(ci.status), ci.summary,
+        p.repo && p.sha ? "https://github.com/" + p.repo + "/commit/" + p.sha : null));
+      ["checktor", "urlchecker"].forEach(function (s) {
+        var c = (p.checks || {})[s] || {};
+        tr.appendChild(cell(c.summary || "not run", countClass(c.count, c.summary)));
+      });
+      tr.appendChild(builderCell(p, "win-builder"));
+      tr.appendChild(builderCell(p, "mac-builder"));
+      var cran = p.published ? cell("published " + p.cran_version, "ok", p.published_on)
+        : p.queue ? cell("in " + p.queue.folder, "note", "since " + p.queue.first_seen,
+                         "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(p.package))
+        : cell("not submitted", "wait", p.cran_version ? "CRAN has " + p.cran_version : "new package");
+      tr.appendChild(cran);
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);
+    var w = el("div", { "class": "wrap" }); w.appendChild(t); box.appendChild(w);
+  })
+  .catch(function () {
+    document.getElementById("gen").textContent = "";
+    showEmpty(document.getElementById("board"));
+  });
+
+function showEmpty(box) {
+  var p = el("div", { "class": "empty" });
+  p.appendChild(document.createTextNode("Nothing on its way to CRAN. Add a package under "));
+  p.appendChild(el("code", {}, "releasing:"));
+  p.appendChild(document.createTextNode(" in config.yml, or open an issue titled "));
+  p.appendChild(el("code", {}, "release: <pkg>"));
+  p.appendChild(document.createTextNode(", then paste win-builder and mac-builder results links into that issue."));
+  box.appendChild(p);
+}
+</script>
+<script>
+// point the repo link at whichever fork is serving this page
+(function () {
+  var m = location.hostname.match(/^([^.]+)\.github\.io$/), p = location.pathname.split("/")[1];
+  if (m && p) document.getElementById("repo").href = "https://github.com/" + m[1] + "/" + p;
+})();
+</script>
+</body>
+</html>
