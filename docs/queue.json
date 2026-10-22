@@ -1,5 +1,5 @@
 {
-  "changed": "2026-10-21 21:33 UTC",
+  "changed": "2026-10-22 21:32 UTC",
   "source": "https://cran.r-project.org/incoming/",
   "entries": [
     {
@@ -20,7 +20,7 @@
       "folder": "newbies",
       "first_seen": "2026-10-11 12:58",
       "left": "2026-10-21 21:33 UTC",
-      "outcome": "left"
+      "outcome": "published"
     }
   ]
 }
