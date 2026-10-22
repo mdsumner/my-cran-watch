@@ -1,15 +1,63 @@
 {
-  "generated": "2026-10-22 07:05 UTC",
+  "generated": "2026-10-22 07:25 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
+      "package": "cdtr",
+      "repo": "hypertidy/cdtr",
+      "ref": "main",
+      "issue": 117,
+      "cran_version": "0.1.0",
+      "updated": "2026-10-22 07:25 UTC",
+      "sha": "3a4bd2ee89e946a37745bfc01dc08120910c7afd",
+      "version": "0.1.0",
+      "published": true,
+      "published_on": "2026-10-22",
+      "ci": {
+        "status": "pass",
+        "summary": "6 checks passed"
+      },
+      "checks": {
+        "checktor": {
+          "summary": "12 robustness",
+          "count": 12
+        },
+        "urlchecker": {
+          "summary": "all URLs ok",
+          "count": 0
+        }
+      },
+      "builders": [],
+      "stage": "published",
+      "comment": "<!-- my-cran-watch:release-status -->\n**cdtr 0.1.0** from `hypertidy/cdtr@main` (3a4bd2e), CRAN has 0.1.0. Stage: **published**.\n\n| step | result |\n|---|---|\n| GitHub CI | 6 checks passed |\n| checktor | 12 robustness |\n| urlchecker | all URLs ok |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | published 0.1.0 |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-10-22 07:25 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
+    },
+    {
       "package": "bigcurve",
-      "repo": null,
-      "ref": null,
-      "issue": 112,
+      "repo": "hypertidy/bigcurve",
+      "ref": "main",
+      "issue": 113,
       "cran_version": null,
-      "updated": "2026-10-22 07:05 UTC",
-      "error": "no GitHub repo known"
+      "updated": "2026-10-22 07:25 UTC",
+      "sha": "402da30e16423f551b539f7db527d3ba4c558d0a",
+      "version": "0.6.0",
+      "published": false,
+      "ci": {
+        "status": "pass",
+        "summary": "6 checks passed"
+      },
+      "checks": {
+        "checktor": {
+          "summary": "no findings",
+          "count": 0
+        },
+        "urlchecker": {
+          "summary": "all URLs ok",
+          "count": 0
+        }
+      },
+      "builders": [],
+      "stage": "preparing",
+      "comment": "<!-- my-cran-watch:release-status -->\n**bigcurve 0.6.0** from `hypertidy/bigcurve@main` (402da30), CRAN has nothing yet. Stage: **preparing**.\n\n| step | result |\n|---|---|\n| GitHub CI | 6 checks passed |\n| checktor | no findings |\n| urlchecker | all URLs ok |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | not submitted |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-10-22 07:25 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
     }
   ]
 }
