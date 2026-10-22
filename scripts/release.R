@@ -118,7 +118,8 @@ queue_entry <- function(pkg) {
   if (!length(hit)) return(NULL)
   list(folder = paste(c(hit[[1]]$folder, if (nzchar(hit[[1]]$subfolder %||% "")) hit[[1]]$subfolder),
                       collapse = "/"),
-       version = hit[[1]]$version, first_seen = hit[[1]]$first_seen %||% hit[[1]]$modified)
+       version = hit[[1]]$version, first_seen = hit[[1]]$first_seen %||% hit[[1]]$modified,
+       in_folder = hit[[1]]$modified)
 }
 
 # a target that cannot be read still answers on its issue, once per message

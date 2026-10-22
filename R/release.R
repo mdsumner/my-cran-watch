@@ -218,7 +218,9 @@ release_comment <- function(rec, board_url) {
     sprintf("%s [results](%s)", txt, r$log_url %||% r$url)
   }
   queue <- if (isTRUE(rec$published)) sprintf("published %s", rec$cran_version)
-           else if (!is.null(rec$queue)) sprintf("in %s since %s", rec$queue$folder, rec$queue$first_seen)
+           else if (!is.null(rec$queue)) sprintf("in %s since %s (submitted %s)", rec$queue$folder,
+                                                 rec$queue$in_folder %||% rec$queue$first_seen,
+                                                 rec$queue$first_seen)
            else "not submitted"
   paste(c(
     release_marker,

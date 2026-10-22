@@ -86,6 +86,15 @@ function builderCell(p, name) {
     .filter(Boolean).join(", ");
   return cell(b.summary || "waiting for results", cls, small || null, b.log_url || b.url);
 }
+// queue age (since first seen) in the cell, the folder date on hover
+function queueCell(p) {
+  var q = p.queue, t = q.first_seen || "";
+  var n = Math.floor((Date.now() - Date.parse(t.slice(0, 10) + "T" + t.slice(11, 16) + "Z")) / 864e5);
+  var td = cell("in " + q.folder, "note", isNaN(n) ? "since " + t : n + (n === 1 ? " day" : " days") + " in queue",
+                "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(p.package));
+  td.title = "in incoming/" + q.folder + " since " + (q.in_folder || t) + "; first seen " + t;
+  return td;
+}
 function issueUrl(n) { return "https://github.com/" + REPO + "/issues/" + n; }
 
 fetch("release.json", { cache: "no-store" })
@@ -126,8 +135,7 @@ fetch("release.json", { cache: "no-store" })
       tr.appendChild(builderCell(p, "win-builder"));
       tr.appendChild(builderCell(p, "mac-builder"));
       var cran = p.published ? cell("published " + p.cran_version, "ok", p.published_on)
-        : p.queue ? cell("in " + p.queue.folder, "note", "since " + p.queue.first_seen,
-                         "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(p.package))
+        : p.queue ? queueCell(p)
         : cell("not submitted", "wait", p.cran_version ? "CRAN has " + p.cran_version : "new package");
       tr.appendChild(cran);
       tb.appendChild(tr);
