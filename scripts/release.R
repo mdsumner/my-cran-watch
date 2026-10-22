@@ -240,8 +240,11 @@ jsonlite::write_json(list(generated = format(Sys.time(), "%Y-%m-%d %H:%M UTC", t
                           repo = self, packages = unname(board)),
                      board_path, auto_unbox = TRUE, pretty = TRUE, null = "null")
 msg("::notice::release: %d package(s) on the board: %s", length(board),
-    paste(vapply(board, function(r) sprintf("%s %s (%s)", r$package, r$version %||% "?",
-                                            r$stage %||% r$error %||% "?"), character(1)),
+    paste(vapply(board, function(r) sprintf("%s %s (%s; CI %s; checktor %s; urlchecker %s; %d builder link(s))",
+                                            r$package, r$version %||% "?", r$stage %||% r$error %||% "?",
+                                            r$ci$status %||% "?", r$checks$checktor$summary %||% "?",
+                                            r$checks$urlchecker$summary %||% "?", length(r$builders)),
+                 character(1)),
           collapse = "; "))
 if (.gh_failures$n > 0) {
   msg("::error::release: %d gh call(s) failed; see the log", .gh_failures$n)

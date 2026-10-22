@@ -47,11 +47,13 @@ jobs:
         with:
           use-public-rspm: true
 
-      # urlchecker renders the README with pandoc to find its URLs
+      # urlchecker renders the README with pandoc to find its URLs, and wants
+      # the VignetteBuilder (knitr) installed, since the GitHub source has no
+      # built vignettes
       - uses: r-lib/actions/setup-pandoc@v2
 
       - name: Install dependencies
-        run: Rscript -e 'install.packages(c("jsonlite", "yaml", "urlchecker", "checktor"))'
+        run: Rscript -e 'install.packages(c("jsonlite", "yaml", "urlchecker", "checktor", "knitr", "rmarkdown"))'
 
       - name: Update release board
         env:
