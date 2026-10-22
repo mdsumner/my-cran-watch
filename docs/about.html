@@ -65,6 +65,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <nav class="nav"><div>
   <b>CRAN watch</b>
   <a href="./">Dashboard</a>
+  <a href="releases.html">Releases</a>
   <a href="about.html" aria-current="page">About</a>
   <a id="repo" href="https://github.com/mdsumner/my-cran-watch">Repository</a>
 </div></nav>
@@ -88,6 +89,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <div class="card"><h3>Reverse dependencies</h3><p>Packages that depend on yours and are failing on CRAN, which is often the first sign a release broke someone.</p></div>
   <div class="card"><h3>r-universe</h3><p>Whether each package is present in your r-universe and whether the CRAN metadata points back to your repository.</p></div>
   <div class="card"><h3>Package details</h3><p>A weekly per-package page with URL checks (urlchecker), CRAN policy checks (checktor) and, on request, rOpenSci pkgcheck.</p></div>
+  <div class="card"><h3>Releases</h3><p>A board for packages on their way to CRAN: GitHub CI, checktor and urlchecker on the GitHub source, win-builder and mac-builder results, then the incoming queue until CRAN publishes.</p></div>
 </div>
 
 <h2>How it works</h2>
@@ -105,6 +107,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
     <tr><td><code>watch</code></td><td>every 6 days, or by hand</td><td>checks, deadlines, revdeps, r-universe; <code>docs/status.json</code>; issues</td></tr>
     <tr><td><code>queue</code></td><td>twice a day, or by hand</td><td>CRAN incoming snapshot; <code>docs/queue.json</code></td></tr>
     <tr><td><code>details</code></td><td>weekly, or by hand</td><td>urlchecker and checktor; <code>docs/pkg/</code></td></tr>
+    <tr><td><code>release</code></td><td>on release issues and comments, after each queue run, or by hand</td><td>release board; <code>docs/release.json</code>; one status comment per release issue</td></tr>
     <tr><td><code>pkgcheck</code></td><td>by hand only</td><td>rOpenSci pkgcheck for listed packages; <code>docs/pkg/</code></td></tr>
   </tbody>
 </table></div>
@@ -113,6 +116,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <div class="grid two">
   <div class="card"><h3>Hear before CRAN emails</h3><p>A new NOTE or ERROR shows on the dashboard days before the "please correct" message arrives.</p></div>
   <div class="card"><h3>Follow a submission</h3><p>See which folder each submission is in, without remembering to check.</p></div>
+  <div class="card"><h3>Coordinate several releases</h3><p>One board shows which packages are ready to submit, which are waiting on win-builder or mac-builder, and which are in the queue.</p></div>
   <div class="card"><h3>Watch your ecosystem</h3><p>Track packages you contribute to (found automatically from author lists) or depend on, without opening issues for them.</p></div>
   <div class="card"><h3>Triage in one place</h3><p>Filter by severity, open issues or queue, and sort by status, date or alerts.</p></div>
 </div>

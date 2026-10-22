@@ -82,6 +82,19 @@ pkgcheck:
 #      repo: firelab/gdalraster
 #      goodpractice: true
 
+# Packages on their way to CRAN, shown on the release board
+# (releases.html). Each is a bare name (repo from repo_map) or
+# {package, repo, ref}; ref is a branch, tag or sha, default the repo's
+# default branch. Listing one opens a "release: <pkg>" issue; paste the
+# win-builder and mac-builder results links there. You can also skip
+# this list and open such an issue yourself ("release: pkg@ref" for a
+# branch). The issue closes when CRAN publishes the version; remove the
+# entry then (it drops off the board two weeks after publication).
+releasing: []
+#  - vapour
+#  - package: ximage
+#    ref: release-0.1
+
 # Map of CRAN package name -> GitHub repo (owner/name).
 # Run scripts/init_repo_map.R to generate a draft of this from the URL and
 # BugReports fields in the CRAN db, then review by hand. Packages absent

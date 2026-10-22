@@ -57,6 +57,28 @@ CRAN check status, r-universe, open conditions with issue links), and
 `docs/index.html` renders it with a Mine / Contribute / Interest filter.
 Turn it on once: Settings > Pages > Deploy from a branch > `main` `/docs`.
 
+## Release board
+
+For packages on their way to CRAN. List a package under `releasing:` in
+`config.yml` (or open an issue titled `release: <pkg>`, or
+`release: <pkg>@<ref>` for a branch or tag) and the `release` workflow
+tracks it at the GitHub ref until CRAN publishes that version:
+
+- GitHub CI: the check runs on the ref's head commit, read, not rerun.
+- checktor and urlchecker, run on a clone of that commit (only when it
+  changes).
+- win-builder and mac-builder: paste the results links into the release
+  issue; the workflow finds `00check.log` behind each link and parses its
+  status. `scripts/prep_release.R` is a local helper that uploads to both
+  builders and posts the mac-builder link for you.
+- CRAN: the incoming folder from `docs/queue.json`, then published.
+
+Each release issue gets one status comment, edited in place, and is closed
+when CRAN publishes the version. `docs/release.json` drives
+`docs/releases.html`. The workflow runs on release issue events (yours
+only), on config changes, after every `queue` run, and by hand; a run on a
+branch other than main is a dry run.
+
 ## pkgcheck (opt-in, manual)
 
 rOpenSci's [pkgcheck](https://docs.ropensci.org/pkgcheck/) runs only on the
