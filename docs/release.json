@@ -1,5 +1,15 @@
 {
-  "generated": "2026-10-22 06:53 UTC",
+  "generated": "2026-10-22 06:59 UTC",
   "repo": "mdsumner/my-cran-watch",
-  "packages": []
+  "packages": [
+    {
+      "package": "bigcurve",
+      "repo": null,
+      "ref": null,
+      "issue": 112,
+      "cran_version": null,
+      "updated": "2026-10-22 06:59 UTC",
+      "error": "no GitHub repo known"
+    }
+  ]
 }
