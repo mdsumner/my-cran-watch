@@ -32,11 +32,16 @@ normalize_releasing <- function(x) {
   out[!duplicated(out$package), , drop = FALSE]
 }
 
-# "release: vapour" or "release: vapour@fix-branch" -> list(package, ref)
+# "release: vapour", "release: vapour@fix-branch" or, for a package with
+# no repo_map entry or CRAN URL yet, "release: hypertidy/bigcurve[@ref]"
+# (package named after the repo) -> list(package, repo, ref)
 parse_release_title <- function(title) {
-  m <- regmatches(title, regexec("^\\s*release:\\s*([A-Za-z0-9.]+)(@(\\S+))?\\s*$", title))[[1]]
+  rx <- "^\\s*release:\\s*(([A-Za-z0-9_.-]+)/)?([A-Za-z0-9_.-]+)(@(\\S+))?\\s*$"
+  m <- regmatches(title, regexec(rx, title))[[1]]
   if (!length(m)) return(NULL)
-  list(package = m[2], ref = if (nzchar(m[4])) m[4] else NA_character_)
+  list(package = m[4],
+       repo = if (nzchar(m[3])) paste0(m[3], "/", m[4]) else NA_character_,
+       ref = if (nzchar(m[6])) m[6] else NA_character_)
 }
 
 # builder result links in issue text.  win-builder mails a link to a

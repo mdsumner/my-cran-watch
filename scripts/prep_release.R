@@ -15,8 +15,15 @@
 
 prep_release <- function(path = ".", watch_repo = "mdsumner/my-cran-watch",
                          win = TRUE, mac = TRUE) {
-  pkg <- unname(read.dcf(file.path(path, "DESCRIPTION"), fields = "Package")[1, 1])
-  issue <- release_issue(pkg, watch_repo)
+  desc <- read.dcf(file.path(path, "DESCRIPTION"), fields = c("Package", "URL", "BugReports"))
+  pkg <- unname(desc[1, "Package"])
+  # a new package has no repo_map entry or CRAN URL yet: name its repo in
+  # the issue title when DESCRIPTION gives one
+  urls <- paste(desc[1, -1], collapse = " ")
+  gh_url <- regmatches(urls, regexpr("github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", urls))
+  repo <- if (length(gh_url)) sub("\\.git$", "", sub("^github\\.com/", "", gh_url)) else NULL
+  if (!is.null(repo) && basename(repo) != pkg) repo <- NULL
+  issue <- release_issue(pkg, watch_repo, repo)
   if (win) devtools::check_win_devel(path, quiet = TRUE)
   if (mac) {
     fun <- if (exists("check_mac_devel", envir = asNamespace("devtools"))) devtools::check_mac_devel
@@ -34,21 +41,24 @@ prep_release <- function(path = ".", watch_repo = "mdsumner/my-cran-watch",
   invisible(issue)
 }
 
-# number of the open "release: <pkg>" issue, opened if missing
-release_issue <- function(pkg, watch_repo) {
+# number of the open "release: <pkg>" (or "release: <owner>/<pkg>")
+# issue, opened if missing
+release_issue <- function(pkg, watch_repo, repo = NULL) {
   out <- gh_cli(c("issue", "list", "--repo", watch_repo, "--state", "open",
                   "--search", shQuote(sprintf("\"release: %s\" in:title", pkg)),
                   "--json", "number,title"))
   hits <- jsonlite::fromJSON(paste(out, collapse = "\n"))
   if (NROW(hits)) {
-    keep <- grepl(sprintf("^release:\\s*%s(@\\S+)?\\s*$", pkg), hits$title)
+    keep <- grepl(sprintf("^release:\\s*([A-Za-z0-9_.-]+/)?%s(@\\S+)?\\s*$", pkg), hits$title)
     if (any(keep)) return(hits$number[keep][1])
   }
   out <- gh_cli(c("issue", "create", "--repo", watch_repo,
-                  "--title", shQuote(sprintf("release: %s", pkg)),
+                  "--title", shQuote(sprintf("release: %s", repo %||% pkg)),
                   "--body", shQuote("Opened by prep_release().")))
   as.integer(sub(".*/", "", utils::tail(out, 1)))
 }
+
+`%||%` <- function(a, b) if (is.null(a)) b else a
 
 gh_cli <- function(args) {
   out <- suppressWarnings(system2("gh", args, stdout = TRUE, stderr = TRUE))
