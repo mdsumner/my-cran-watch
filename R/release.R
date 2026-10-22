@@ -224,7 +224,7 @@ release_comment <- function(rec, board_url) {
     release_marker,
     sprintf("**%s %s** from `%s@%s` (%s), CRAN has %s. Stage: **%s**.",
             rec$package, rec$version %||% "?", rec$repo, rec$ref, substr(rec$sha, 1, 7),
-            rec$cran_version %||% "nothing yet", rec$stage),
+            if (is.na(rec$cran_version %||% NA)) "nothing yet" else rec$cran_version, rec$stage),
     "",
     "| step | result |",
     "|---|---|",

@@ -121,6 +121,15 @@ queue_entry <- function(pkg) {
        version = hit[[1]]$version, first_seen = hit[[1]]$first_seen %||% hit[[1]]$modified)
 }
 
+# a target that cannot be read still answers on its issue, once per message
+report_error <- function(t, rec, old, text) {
+  body <- paste(c(release_marker, text, "",
+                  sprintf("Updated %s. [Release board](%s)", rec$updated, board_url)), collapse = "\n")
+  if (!is.null(t$issue) && !dry && !identical(old$error, rec$error)) {
+    upsert_status(t$issue, issue_texts(t$issue)$status_id, body)
+  }
+}
+
 one_package <- function(t, old) {
   # rec$issue links the issue; t$issue (open issues only) is what gets
   # comments, so a closed issue is never touched again
@@ -129,6 +138,9 @@ one_package <- function(t, old) {
   if (is.null(t$repo)) {
     msg("::warning::release: %s has no GitHub repo (add it to repo_map or releasing:)", t$package)
     rec$error <- "no GitHub repo known"
+    report_error(t, rec, old,
+      sprintf("No GitHub repo known for %s. Retitle this issue `release: <owner>/%s`, or add it to `repo_map` in config.yml.",
+              t$package, t$package))
     return(rec)
   }
   if (is.na(rec$ref)) rec$ref <- default_branch(t$repo)
@@ -136,6 +148,8 @@ one_package <- function(t, old) {
   if (is.null(info)) {
     msg("::warning::release: %s could not read %s@%s", t$package, t$repo, rec$ref)
     rec$error <- sprintf("could not read %s@%s", t$repo, rec$ref)
+    report_error(t, rec, old, sprintf("Could not read `%s@%s` (no such repo or ref, or not public?).",
+                                      t$repo, rec$ref))
     return(rec)
   }
   rec$sha <- info$sha
