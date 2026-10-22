@@ -10,7 +10,7 @@ on:
   issue_comment:
     types: [created, edited]
   push:
-    branches: [main, "claude/**"]   # TEMP: branch dry run
+    branches: [main]
     paths: [config.yml]
   workflow_run:
     workflows: [queue]

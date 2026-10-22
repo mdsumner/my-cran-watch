@@ -142,7 +142,11 @@ one_package <- function(t, old) {
 
   # a configured package that is already on CRAN at this version, with
   # nothing tracked before: a leftover config entry, not a release
-  if (rec$published && is.null(old) && is.null(t$issue)) return(NULL)
+  if (rec$published && is.null(old) && is.null(t$issue)) {
+    msg("::notice::release: %s %s at %s@%s is already on CRAN; nothing to track",
+        t$package, info$version, t$repo, rec$ref)
+    return(NULL)
+  }
   if (rec$published && Sys.Date() - as.Date(rec$published_on) > keep_published_days) return(NULL)
 
   live <- t$issue
