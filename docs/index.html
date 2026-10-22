@@ -50,6 +50,9 @@ a { color: var(--link); }
 .muted { color: var(--muted); }
 .queue { display: inline-block; margin-top: 2px; font-size: 12px; padding: 0 6px; border-radius: 999px;
          border: 1px solid var(--link); color: var(--link); text-decoration: none; white-space: nowrap; }
+.queue.published { border-color: var(--ok); color: var(--ok); }
+.queue.archived { border-color: var(--warn); color: var(--warn); }
+.queue.left { border-color: var(--muted); color: var(--muted); }
 </style>
 </head>
 <body>
@@ -66,7 +69,7 @@ a { color: var(--link); }
   <p id="newsubs" hidden></p>
   <div class="filters" id="filters"></div>
   <div class="wrap"><table>
-    <thead><tr><th data-sort="package">Package</th><th data-sort="published">Version</th><th data-sort="checks">CRAN checks</th><th data-sort="universe">r-universe</th><th data-sort="alerts">Other alerts</th></tr></thead>
+    <thead><tr><th data-sort="package">Package</th><th data-sort="published">Version</th><th data-sort="queue">In queue</th><th data-sort="checks">CRAN checks</th><th data-sort="universe">r-universe</th><th data-sort="alerts">Other alerts</th></tr></thead>
     <tbody id="rows"></tbody>
   </table></div>
   <h2>Other signals</h2>
@@ -82,7 +85,7 @@ var STATUS = {
   warn:   ["WARN",         function (p) { return RANK[p.worst] === 3; }],
   note:   ["NOTE",         function (p) { return RANK[p.worst] === 2; }],
   issues: ["Open issues",  function (p) { return openIssues(p) > 0; }],
-  queue:  ["In CRAN queue", function (p) { return !!QUEUE[p.package]; }]
+  queue:  ["CRAN queue",   function (p) { return !!(QUEUE[p.package] || EXITS[p.package]); }]
 };
 var role = "all", status = "all", sort = { key: "package", dir: 1 };
 try {
@@ -102,8 +105,43 @@ var SORTS = {
   published: function (p) { return p.published || ""; },
   checks:    function (p) { return (RANK[p.worst] || 0) * 100 + badFlavors(p); },
   universe:  function (p) { return p.universe === "ok" ? 1 : (p.universe ? 2 : 0); },
-  alerts:    function (p) { return alerts(p).length * 100 + openIssues(p); }
+  alerts:    function (p) { return alerts(p).length * 100 + openIssues(p); },
+  // longest in the queue first, then those that just left
+  queue:     function (p) { var q = QUEUE[p.package]; return q ? days(q[0].first_seen) : EXITS[p.package] ? -0.5 : -1; }
 };
+// whole days since a "YYYY-MM-DD HH:MM" stamp (UTC)
+function days(t) { return Math.floor((Date.now() - Date.parse(t.slice(0, 10) + "T" + t.slice(11, 16) + "Z")) / 864e5); }
+function cransubs(pkg) { return "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(pkg); }
+var OUTCOME = { published: "published", archived: "archived", left: "left queue" };
+// a badge per submission, in the queue or just out of it, linked to cransubs
+function badges(pkg, withName) {
+  var name = withName ? pkg + " " : "", out = [];
+  (QUEUE[pkg] || []).forEach(function (q) {
+    var where = q.folder + (q.subfolder ? "/" + q.subfolder : "");
+    out.push(el("a", { href: cransubs(pkg), "class": "queue",
+                       title: pkg + " " + q.version + " in incoming/" + where + " since " + q.modified + "; first seen " + q.first_seen },
+                name + q.version + ": " + where));
+  });
+  (EXITS[pkg] || []).forEach(function (x) {
+    out.push(el("a", { href: cransubs(pkg), "class": "queue " + x.outcome,
+                       title: pkg + " " + x.version + " left incoming/" + x.folder + " by " + x.left +
+                              (x.outcome === "left" ? "; not on CRAN or in incoming/archive yet" : "") },
+                name + x.version + ": " + OUTCOME[x.outcome]));
+  });
+  return out;
+}
+function queueCell(pkg) {
+  var td = el("td"), q = QUEUE[pkg], x = EXITS[pkg];
+  if (q) {
+    var n = days(q[0].first_seen);
+    td.appendChild(el("span", { title: "first seen in incoming " + q[0].first_seen }, n + (n === 1 ? " day" : " days")));
+    td.appendChild(el("div", { "class": "role" }, "since " + q[0].first_seen.slice(0, 10)));
+  } else if (x) {
+    td.appendChild(el("span", { "class": "muted" }, OUTCOME[x[0].outcome]));
+    td.appendChild(el("div", { "class": "role" }, x[0].left.slice(0, 10) + ", after " + days(x[0].first_seen) + "d"));
+  } else { td.className = "muted"; td.textContent = "-"; }
+  return td;
+}
 function el(tag, attrs, text) {
   var e = document.createElement(tag);
   for (var k in attrs || {}) e.setAttribute(k, attrs[k]);
@@ -125,19 +163,16 @@ function render(d) {
   // they join the table as rows of mine that only the queue filter shows
   var ns = document.getElementById("newsubs"), known = {};
   d.packages.forEach(function (p) { known[p.package] = true; });
-  var fresh = Object.keys(QUEUE).filter(function (k) { return !known[k]; }).sort();
+  var fresh = Object.keys(QUEUE).concat(Object.keys(EXITS).filter(function (k) { return !QUEUE[k]; }))
+    .filter(function (k) { return !known[k]; }).sort();
   var rows = d.packages.concat(fresh.map(function (k) {
-    return { package: k, role: "maintainer", fresh: true, version: QUEUE[k][0].version, conditions: [] };
+    return { package: k, role: "maintainer", fresh: true, version: (QUEUE[k] || EXITS[k])[0].version, conditions: [] };
   }));
   var byRole = rows.filter(function (p) { return role === "all" || p.role === role; });
   ns.innerHTML = ""; ns.hidden = !fresh.length;
   if (fresh.length) ns.appendChild(el("span", { "class": "muted" }, "New packages in the CRAN queue: "));
   fresh.forEach(function (k) {
-    QUEUE[k].forEach(function (q) {
-      ns.appendChild(el("a", { href: q.url, "class": "queue", title: "in CRAN incoming since " + q.modified },
-                        k + " " + q.version + ": " + q.folder + (q.subfolder ? "/" + q.subfolder : "")));
-      ns.appendChild(document.createTextNode(" "));
-    });
+    badges(k, true).forEach(function (b) { ns.appendChild(b); ns.appendChild(document.createTextNode(" ")); });
   });
   var tiles = document.getElementById("tiles"); tiles.innerHTML = "";
   Object.keys(STATUS).forEach(function (s) {
@@ -172,7 +207,7 @@ function render(d) {
   });
   var tb = document.getElementById("rows"); tb.innerHTML = "";
   if (!pk.length) {
-    var none = el("tr"); none.appendChild(el("td", { colspan: "5", "class": "muted" }, "No packages match."));
+    var none = el("tr"); none.appendChild(el("td", { colspan: "6", "class": "muted" }, "No packages match."));
     tb.appendChild(none);
   }
   pk.forEach(function (p) {
@@ -180,23 +215,20 @@ function render(d) {
     var td = el("td");
     td.appendChild(p.repo ? el("a", { href: "https://github.com/" + p.repo }, p.package) : el("span", {}, p.package));
     td.appendChild(el("div", { "class": "role" }, ROLES[p.role] || p.role));
-    (QUEUE[p.package] || []).forEach(function (q) {
-      var where = q.folder + (q.subfolder ? "/" + q.subfolder : "");
-      td.appendChild(el("a", { href: q.url, "class": "queue",
-                               title: q.package + " " + q.version + " in CRAN incoming since " + q.modified },
-                        "queue: " + where + " " + q.version));
-    });
+    badges(p.package).forEach(function (b) { td.appendChild(document.createTextNode(" ")); td.appendChild(b); });
     tr.appendChild(td);
     var v = el("td");
     if (p.fresh) {
       v.appendChild(el("span", {}, p.version));
       v.appendChild(el("div", { "class": "role" }, "not on CRAN yet")); tr.appendChild(v);
+      tr.appendChild(queueCell(p.package));
       ["-", "-", "-"].forEach(function (x) { tr.appendChild(el("td", { "class": "muted" }, x)); });
       tb.appendChild(tr);
       return;
     }
     v.appendChild(el("a", { href: "https://cran.r-project.org/package=" + p.package }, p.version));
     v.appendChild(el("div", { "class": "role" }, (p.published || "").slice(0, 10))); tr.appendChild(v);
+    tr.appendChild(queueCell(p.package));
     var fl = p.flavors || {}, bad = Object.keys(fl).filter(function (k) { return fl[k] !== "OK"; });
     var ct = el("td"), worst = p.worst || "-", det = DETAILS[p.package];
     if (det) {
@@ -223,7 +255,7 @@ function render(d) {
   if (!(d.other || []).length) o.textContent = "None.";
   (d.other || []).forEach(function (c) { var line = el("div"); line.appendChild(el("span", {}, c.package + " ")); line.appendChild(condLink(c)); o.appendChild(line); });
 }
-var DETAILS = {}, QUEUE = {}, QUEUE_AT = "";
+var DETAILS = {}, QUEUE = {}, EXITS = {}, QUEUE_AT = "";
 function optional(url) {
   return fetch(url, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; })
     .catch(function () { return null; });
@@ -233,7 +265,11 @@ Promise.all([optional("pkg/index.json"), optional("queue.json")])
     DETAILS = x[0] || {};
     if (x[1]) {
       QUEUE_AT = x[1].changed || "";
-      (x[1].entries || []).forEach(function (e) { (QUEUE[e.package] = QUEUE[e.package] || []).push(e); });
+      (x[1].entries || []).forEach(function (e) {
+        if (!e.first_seen) e.first_seen = e.modified;   // queue.json from before first_seen
+        (QUEUE[e.package] = QUEUE[e.package] || []).push(e);
+      });
+      (x[1].exits || []).forEach(function (e) { (EXITS[e.package] = EXITS[e.package] || []).push(e); });
     }
     return fetch("status.json", { cache: "no-store" });
   })
