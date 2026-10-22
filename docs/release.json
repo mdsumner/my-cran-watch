@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-22 06:59 UTC",
+  "generated": "2026-10-22 07:05 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -8,7 +8,7 @@
       "ref": null,
       "issue": 112,
       "cran_version": null,
-      "updated": "2026-10-22 06:59 UTC",
+      "updated": "2026-10-22 07:05 UTC",
       "error": "no GitHub repo known"
     }
   ]
