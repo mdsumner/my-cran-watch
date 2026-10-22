@@ -39,6 +39,9 @@ td small { display: block; color: var(--muted); font-size: 12px; }
 .stage.published { border-color: var(--ok); color: var(--ok); background: var(--panel); }
 .empty { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
 code { font-size: 13px; }
+h2 { font-size: 16px; margin: 28px 0 8px; }
+.badge { font-size: 11px; padding: 0 6px; border-radius: 999px; border: 1px solid var(--link);
+         color: var(--link); margin-left: 6px; }
 </style>
 </head>
 <body>
@@ -52,7 +55,11 @@ code { font-size: 13px; }
 <main>
   <h1>Releases</h1>
   <p class="sub" id="gen">Loading...</p>
+  <h2>Getting ready</h2>
   <div id="board"></div>
+  <h2>CRAN incoming</h2>
+  <p class="sub" id="qgen"></p>
+  <div id="incoming"></div>
 </main>
 <script>
 function el(tag, attrs, text) {
@@ -147,6 +154,47 @@ fetch("release.json", { cache: "no-store" })
     document.getElementById("gen").textContent = "";
     showEmpty(document.getElementById("board"));
   });
+
+// the CRAN incoming queue (docs/queue.json, from the queue workflow):
+// every submission of yours, tracked on the board or not, and those that
+// left in the last week
+function days(t) { return Math.floor((Date.now() - Date.parse(t.slice(0, 10) + "T" + t.slice(11, 16) + "Z")) / 864e5); }
+var OUTCOME = { published: ["published", "ok"], archived: ["archived", "bad"], left: ["left queue", "wait"] };
+fetch("queue.json", { cache: "no-store" })
+  .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+  .then(function (q) {
+    document.getElementById("qgen").textContent = "Checked twice daily, last changed " + (q.changed || "?") +
+      ". Days in queue count from when a version was first seen; hover for when it entered its current folder.";
+    var rows = (q.entries || []).map(function (e) { return { e: e, left: false }; })
+      .concat((q.exits || []).map(function (e) { return { e: e, left: true }; }));
+    var box = document.getElementById("incoming");
+    if (!rows.length) { box.appendChild(el("div", { "class": "empty" }, "Nothing of yours in CRAN incoming.")); return; }
+    var t = el("table"), hr = el("tr");
+    ["Package", "Folder", "In queue", "Status"].forEach(function (h) { hr.appendChild(el("th", {}, h)); });
+    var th = el("thead"); th.appendChild(hr); t.appendChild(th);
+    var tb = el("tbody");
+    rows.forEach(function (r) {
+      var e = r.e, tr = el("tr"), first = e.first_seen || e.modified || "";
+      var pc = el("td");
+      pc.appendChild(el("a", { href: "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(e.package) }, e.package));
+      if (e["new"]) pc.appendChild(el("span", { "class": "badge" }, "new"));
+      pc.appendChild(el("small", {}, e.version));
+      tr.appendChild(pc);
+      var folder = e.folder + (e.subfolder ? "/" + e.subfolder : "");
+      tr.appendChild(r.left ? cell(folder, "wait", "last folder")
+                            : cell(folder, "note", null, e.url));
+      var n = days(first), age = cell(n + (n === 1 ? " day" : " days"), null, "since " + first.slice(0, 10));
+      if (!r.left) age.title = "in incoming/" + folder + " since " + e.modified + "; first seen " + first;
+      else age.firstChild.textContent = "after " + days(first) + "d";
+      tr.appendChild(age);
+      var o = r.left ? OUTCOME[e.outcome] || [e.outcome, "wait"] : ["in queue", "note"];
+      tr.appendChild(cell(o[0], o[1], r.left ? (e.left || "").slice(0, 10) : null));
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);
+    var w = el("div", { "class": "wrap" }); w.appendChild(t); box.appendChild(w);
+  })
+  .catch(function () { document.getElementById("qgen").textContent = "No queue snapshot yet."; });
 
 function showEmpty(box) {
   var p = el("div", { "class": "empty" });
