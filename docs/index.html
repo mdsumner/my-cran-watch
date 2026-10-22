@@ -135,7 +135,11 @@ function queueCell(pkg) {
   var td = el("td"), q = QUEUE[pkg], x = EXITS[pkg];
   if (q) {
     var n = days(q[0].first_seen);
-    td.appendChild(el("span", { title: "first seen in incoming " + q[0].first_seen }, n + (n === 1 ? " day" : " days")));
+    // queue age in the cell; the folder date (CRAN's file timestamp, which
+    // changes when the submission moves) on hover
+    var where = q[0].folder + (q[0].subfolder ? "/" + q[0].subfolder : "");
+    td.appendChild(el("span", { title: "in incoming/" + where + " since " + q[0].modified +
+                                        "; first seen " + q[0].first_seen }, n + (n === 1 ? " day" : " days")));
     td.appendChild(el("div", { "class": "role" }, "since " + q[0].first_seen.slice(0, 10)));
   } else if (x) {
     td.appendChild(el("span", { "class": "muted" }, OUTCOME[x[0].outcome]));
