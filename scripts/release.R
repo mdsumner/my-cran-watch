@@ -33,7 +33,8 @@ open_release_issues <- function() {
   res <- gh_json(c("issue", "list", "--state", "open", "--json", "number,title,author",
                    "--limit", "200"))
   if (is.null(res) || !NROW(res)) return(data.frame(number = integer(), package = character(),
-                                                    ref = character(), stringsAsFactors = FALSE))
+                                                    repo = character(), ref = character(),
+                                                    stringsAsFactors = FALSE))
   login <- res$author$login
   rows <- lapply(seq_len(nrow(res)), function(i) {
     t <- parse_release_title(res$title[i])
@@ -41,11 +42,13 @@ open_release_issues <- function() {
     if (is.null(t) || !(identical(login[i], cfg$github_user) || grepl("github-actions", login[i]))) {
       return(NULL)
     }
-    data.frame(number = res$number[i], package = t$package, ref = t$ref, stringsAsFactors = FALSE)
+    data.frame(number = res$number[i], package = t$package, repo = t$repo, ref = t$ref,
+               stringsAsFactors = FALSE)
   })
   out <- do.call(rbind, rows)
   if (is.null(out)) return(data.frame(number = integer(), package = character(),
-                                      ref = character(), stringsAsFactors = FALSE))
+                                      repo = character(), ref = character(),
+                                      stringsAsFactors = FALSE))
   out[!duplicated(out$package), , drop = FALSE]
 }
 
@@ -98,6 +101,7 @@ targets <- function(issues) {
     i_row <- issues[issues$package == p, , drop = FALSE]
     cran <- db[db$Package == p, , drop = FALSE]
     repo <- if (nrow(c_row) && !is.na(c_row$repo)) c_row$repo
+            else if (nrow(i_row) && !is.na(i_row$repo)) i_row$repo
             else cfg$repo_map[[p]] %||%
               (if (nrow(cran)) github_repo(cran$URL[1], cran$BugReports[1]))
     list(package = p, repo = repo,

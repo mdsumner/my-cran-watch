@@ -61,7 +61,9 @@ Turn it on once: Settings > Pages > Deploy from a branch > `main` `/docs`.
 
 For packages on their way to CRAN. List a package under `releasing:` in
 `config.yml` (or open an issue titled `release: <pkg>`, or
-`release: <pkg>@<ref>` for a branch or tag) and the `release` workflow
+`release: <pkg>@<ref>` for a branch or tag; for a package not on CRAN
+yet and not in `repo_map`, name the repo: `release: <owner>/<pkg>`) and
+the `release` workflow
 tracks it at the GitHub ref until CRAN publishes that version:
 
 - GitHub CI: the check runs on the ref's head commit, read, not rerun.

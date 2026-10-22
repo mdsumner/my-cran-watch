@@ -88,7 +88,7 @@ pkgcheck:
 # default branch. Listing one opens a "release: <pkg>" issue; paste the
 # win-builder and mac-builder results links there. You can also skip
 # this list and open such an issue yourself ("release: pkg@ref" for a
-# branch). The issue closes when CRAN publishes the version; remove the
+# branch, "release: owner/pkg" for a new package not in repo_map). The issue closes when CRAN publishes the version; remove the
 # entry then (it drops off the board two weeks after publication).
 releasing: []
 #  - vapour
