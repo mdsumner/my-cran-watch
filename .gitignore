@@ -6,3 +6,4 @@
 .quarto
 .positai
 .cache/
+__pycache__/

@@ -9,7 +9,18 @@
       "subfolder": "",
       "modified": "2026-10-15 06:19",
       "url": "https://cran.r-project.org/incoming/newbies/",
-      "new": true
+      "new": true,
+      "first_seen": "2026-10-15 06:19"
+    }
+  ],
+  "exits": [
+    {
+      "package": "cdtr",
+      "version": "0.1.0",
+      "folder": "newbies",
+      "first_seen": "2026-10-11 12:58",
+      "left": "2026-10-21 21:33 UTC",
+      "outcome": "left"
     }
   ]
 }
