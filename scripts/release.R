@@ -109,7 +109,8 @@ targets <- function(issues) {
                else if (nrow(c_row) && !is.na(c_row$ref)) c_row$ref else NA_character_,
          issue = if (nrow(i_row)) i_row$number else NULL,
          configured = nrow(c_row) > 0,
-         cran_version = if (nrow(cran)) cran$Version[1] else NA_character_)
+         cran_version = if (nrow(cran)) cran$Version[1] else NA_character_,
+         cran_published = if (nrow(cran) && "Published" %in% names(cran)) cran$Published[1] else NA_character_)
   })
 }
 
@@ -156,7 +157,10 @@ one_package <- function(t, old) {
   rec$sha <- info$sha
   rec$version <- info$version
   rec$published <- !is.na(t$cran_version) && !version_newer(info$version, t$cran_version)
-  rec$published_on <- if (rec$published) old$published_on %||% today()
+  # CRAN's own publication date when it has one, not the day we noticed
+  rec$published_on <- if (rec$published) {
+    if (!is.na(t$cran_published)) t$cran_published else old$published_on %||% today()
+  }
   rec$queue <- if (!rec$published) queue_entry(t$package)
 
   # a configured package that is already on CRAN at this version, with
