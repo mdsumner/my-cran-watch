@@ -1,5 +1,5 @@
 {
-  "changed": "2026-10-23 01:43 UTC",
+  "changed": "2026-10-23 02:12 UTC",
   "source": "https://cran.r-project.org/incoming/",
   "entries": [
     {
@@ -21,6 +21,16 @@
       "url": "https://cran.r-project.org/incoming/newbies/",
       "new": true,
       "first_seen": "2026-10-15 06:19"
+    },
+    {
+      "package": "laridae",
+      "version": "0.1.0",
+      "folder": "pretest",
+      "subfolder": "",
+      "modified": "2026-10-23 04:00",
+      "url": "https://cran.r-project.org/incoming/pretest/",
+      "new": true,
+      "first_seen": "2026-10-23 04:00"
     }
   ],
   "exits": [

@@ -1,0 +1,274 @@
+{
+  "checked": "2026-10-23 02:12 UTC",
+  "source": "https://cran.r-project.org/src/contrib/",
+  "packages": {
+    "CCAMLRGIS": {
+      "version": "4.3.1",
+      "published": "2026-03-03 08:40"
+    },
+    "PROJ": {
+      "version": "0.7.0",
+      "published": "2026-07-10 09:10"
+    },
+    "RTriangle": {
+      "version": "1.6-0.15",
+      "published": "2025-04-14 10:50"
+    },
+    "affinity": {
+      "version": "0.2.5",
+      "published": "2021-06-02 09:50"
+    },
+    "angstroms": {
+      "version": "0.0.1",
+      "published": "2017-05-01 12:35"
+    },
+    "area": {
+      "version": "0.2.0",
+      "published": "2023-12-21 12:20"
+    },
+    "basf": {
+      "version": "0.2.0",
+      "published": "2020-12-09 09:30"
+    },
+    "bgmfiles": {
+      "version": "0.1.0",
+      "published": "2025-09-30 00:50"
+    },
+    "ceramic": {
+      "version": "0.9.5",
+      "published": "2024-02-27 07:30"
+    },
+    "crsmeta": {
+      "version": "0.3.0",
+      "published": "2020-03-29 12:10"
+    },
+    "decido": {
+      "version": "0.4.0",
+      "published": "2025-11-28 07:21"
+    },
+    "dsn": {
+      "version": "0.1.0",
+      "published": "2026-07-17 14:50"
+    },
+    "duckdbfs": {
+      "version": "0.1.2",
+      "published": "2025-10-12 08:20"
+    },
+    "fasterize": {
+      "version": "1.1.0",
+      "published": "2024-10-01 15:30"
+    },
+    "fortunes": {
+      "version": "1.5-5",
+      "published": "2026-06-26 11:00"
+    },
+    "gdalraster": {
+      "version": "2.7.0",
+      "published": "2026-09-22 21:00"
+    },
+    "geodist": {
+      "version": "0.1.1",
+      "published": "2025-03-24 17:40"
+    },
+    "geographiclib": {
+      "version": "0.4.2",
+      "published": "2026-03-04 07:30"
+    },
+    "geojson": {
+      "version": "0.3.5",
+      "published": "2023-08-08 14:40"
+    },
+    "ggpolypath": {
+      "version": "0.4.0",
+      "published": "2025-07-24 07:50"
+    },
+    "ggsql": {
+      "version": "0.5.2",
+      "published": "2026-10-08 11:10"
+    },
+    "gibble": {
+      "version": "0.4.0",
+      "published": "2020-05-09 07:40"
+    },
+    "graticule": {
+      "version": "0.4.0",
+      "published": "2023-09-25 12:00"
+    },
+    "grout": {
+      "version": "0.1.0",
+      "published": "2026-08-20 16:30"
+    },
+    "lazysf": {
+      "version": "0.4.0",
+      "published": "2026-07-13 07:10"
+    },
+    "mapscanner": {
+      "version": "0.1.1",
+      "published": "2024-07-18 18:30"
+    },
+    "mapview": {
+      "version": "2.11.4",
+      "published": "2025-09-08 09:00"
+    },
+    "ncmeta": {
+      "version": "0.5.0",
+      "published": "2026-07-29 19:10"
+    },
+    "orsifronts": {
+      "version": "0.2.0",
+      "published": "2021-05-05 00:00"
+    },
+    "ozmaps": {
+      "version": "0.4.5",
+      "published": "2021-08-03 06:10"
+    },
+    "palr": {
+      "version": "0.5.0",
+      "published": "2026-08-05 07:30"
+    },
+    "pkgstats": {
+      "version": "0.2.5",
+      "published": "2026-10-11 13:20"
+    },
+    "quadmesh": {
+      "version": "0.6.0",
+      "published": "2026-07-11 04:20"
+    },
+    "raster": {
+      "version": "3.6-32",
+      "published": "2025-03-28 09:10"
+    },
+    "rbgm": {
+      "version": "0.2.0",
+      "published": "2025-04-03 04:40"
+    },
+    "reproj": {
+      "version": "0.8.0",
+      "published": "2026-07-10 14:00"
+    },
+    "rgl": {
+      "version": "1.3.36",
+      "published": "2026-03-06 06:00"
+    },
+    "rsi": {
+      "version": "0.3.3",
+      "published": "2026-04-09 11:50"
+    },
+    "sds": {
+      "version": "0.3.0",
+      "published": "2026-10-13 16:50"
+    },
+    "sf": {
+      "version": "1.1-3",
+      "published": "2026-09-11 08:40"
+    },
+    "sfdct": {
+      "version": "0.3.0",
+      "published": "2024-01-09 03:20"
+    },
+    "sfheaders": {
+      "version": "0.4.5",
+      "published": "2025-11-25 20:20"
+    },
+    "silicate": {
+      "version": "0.7.2",
+      "published": "2026-10-11 04:40"
+    },
+    "slippymath": {
+      "version": "0.3.1",
+      "published": "2019-06-28 18:20"
+    },
+    "sooty": {
+      "version": "0.6.1",
+      "published": "2026-03-10 07:10"
+    },
+    "sp": {
+      "version": "2.2-4",
+      "published": "2026-10-12 00:30"
+    },
+    "spatstat.convert": {
+      "version": "1.0-1",
+      "published": "2026-09-17 16:40"
+    },
+    "spbabel": {
+      "version": "0.6.0",
+      "published": "2023-03-12 11:20"
+    },
+    "spex": {
+      "version": "0.7.1",
+      "published": "2020-06-20 11:50"
+    },
+    "stars": {
+      "version": "0.7-3",
+      "published": "2026-07-20 23:00"
+    },
+    "tabularaster": {
+      "version": "0.7.2",
+      "published": "2023-11-01 07:10"
+    },
+    "terra": {
+      "version": "1.9-50",
+      "published": "2026-09-08 17:50"
+    },
+    "textures": {
+      "version": "0.1.0",
+      "published": "2026-07-21 11:30"
+    },
+    "tidync": {
+      "version": "0.5.0",
+      "published": "2026-07-31 15:00"
+    },
+    "tidytransit": {
+      "version": "1.8.0",
+      "published": "2026-01-26 17:20"
+    },
+    "tissot": {
+      "version": "0.3.0",
+      "published": "2026-07-12 17:50"
+    },
+    "tmap": {
+      "version": "4.4-1",
+      "published": "2026-06-26 14:30"
+    },
+    "traipse": {
+      "version": "0.4.0",
+      "published": "2026-02-27 14:00"
+    },
+    "trip": {
+      "version": "1.10.0",
+      "published": "2023-06-29 16:30"
+    },
+    "tripEstimation": {
+      "version": "0.0-46",
+      "published": "2023-04-22 01:40"
+    },
+    "unjoin": {
+      "version": "0.1.0",
+      "published": "2020-05-13 07:20"
+    },
+    "vapour": {
+      "version": "0.16.0",
+      "published": "2026-03-14 07:10"
+    },
+    "vaster": {
+      "version": "0.6.0",
+      "published": "2026-03-10 12:50"
+    },
+    "wk": {
+      "version": "0.9.5",
+      "published": "2025-12-18 07:10"
+    },
+    "wkpool": {
+      "version": "0.4.0",
+      "published": "2026-10-12 13:00"
+    },
+    "ximage": {
+      "version": "0.1.0",
+      "published": "2026-07-21 12:40"
+    },
+    "xyt": {
+      "version": "0.1.0",
+      "published": "2026-10-05 18:00"
+    }
+  }
+}
