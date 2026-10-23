@@ -114,6 +114,9 @@ var SORTS = {
 // CRAN's listing times are its server clock (Vienna, ahead of UTC), read
 // here as UTC, so a fresh submission can look slightly in the future
 function days(t) { return Math.max(0, Math.floor((Date.now() - Date.parse(t.slice(0, 10) + "T" + t.slice(11, 16) + "Z")) / 864e5)); }
+// every link goes to where its cell's data comes from: the name to the
+// repo (else the CRAN page), the version to CRAN, each status to its source
+function cranPage(pkg) { return "https://cran.r-project.org/package=" + pkg; }
 function cransubs(pkg) { return "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(pkg); }
 var OUTCOME = { published: "published", archived: "archived", left: "left queue" };
 // a badge per submission, in the queue or just out of it, linked to cransubs
@@ -151,11 +154,11 @@ function queueCell(pkg) {
     // queue age in the cell; the folder date (CRAN's file timestamp, which
     // changes when the submission moves) on hover
     var where = q[0].folder + (q[0].subfolder ? "/" + q[0].subfolder : "");
-    td.appendChild(el("span", { title: "in incoming/" + where + " since " + q[0].modified +
+    td.appendChild(el("a", { href: cransubs(pkg), title: "in incoming/" + where + " since " + q[0].modified +
                                         "; first seen " + q[0].first_seen }, n + (n === 1 ? " day" : " days")));
     td.appendChild(el("div", { "class": "role" }, "since " + q[0].first_seen.slice(0, 10)));
   } else if (x) {
-    td.appendChild(el("span", { "class": "muted" }, OUTCOME[x[0].outcome]));
+    td.appendChild(el("a", { href: cransubs(pkg), "class": "muted" }, OUTCOME[x[0].outcome]));
     td.appendChild(el("div", { "class": "role" }, x[0].left.slice(0, 10) + ", after " + days(x[0].first_seen) + "d"));
   } else { td.className = "muted"; td.textContent = "-"; }
   return td;
@@ -231,7 +234,8 @@ function render(d) {
   pk.forEach(function (p) {
     var tr = el("tr");
     var td = el("td");
-    td.appendChild(p.repo ? el("a", { href: "https://github.com/" + p.repo }, p.package) : el("span", {}, p.package));
+    td.appendChild(p.repo ? el("a", { href: "https://github.com/" + p.repo }, p.package)
+                   : p.fresh ? el("span", {}, p.package) : el("a", { href: cranPage(p.package) }, p.package));
     td.appendChild(el("div", { "class": "role" }, ROLES[p.role] || p.role));
     badges(p.package).forEach(function (b) { td.appendChild(document.createTextNode(" ")); td.appendChild(b); });
     tr.appendChild(td);
@@ -245,7 +249,7 @@ function render(d) {
       tb.appendChild(tr);
       return;
     }
-    v.appendChild(el("a", { href: "https://cran.r-project.org/package=" + p.package }, p.version));
+    v.appendChild(el("a", { href: cranPage(p.package) }, p.version));
     tr.appendChild(v);
     tr.appendChild(publishedCell(p.published));
     tr.appendChild(queueCell(p.package));
@@ -262,7 +266,10 @@ function render(d) {
     ct.appendChild(el("a", { href: "https://cran.r-project.org/web/checks/check_results_" + p.package + ".html",
                              "class": "s-" + worst, title: "CRAN check results" }, label));
     tr.appendChild(ct);
-    tr.appendChild(el("td", { "class": p.universe === "ok" ? "s-OK" : (p.universe ? "s-WARN" : "muted") }, p.universe || "-"));
+    var uc = p.universe === "ok" ? "s-OK" : (p.universe ? "s-WARN" : "muted"), ut = el("td");
+    ut.appendChild(p.universe_url ? el("a", { href: p.universe_url, "class": uc }, p.universe)
+                                  : el("span", { "class": uc }, p.universe || "-"));
+    tr.appendChild(ut);
     // check results live in the CRAN checks column; list the other kinds here
     var cs = alerts(p), live = cs.filter(function (c) { return c.lifecycle !== "observed"; });
     var cd = el("td"); live.forEach(function (c) { cd.appendChild(condLink(c)); });

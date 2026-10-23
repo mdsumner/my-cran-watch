@@ -38,6 +38,8 @@ write_site <- function(state, mine, checks_all, uni, cfg, path = "docs/status.js
          flavors = as.list(stats::setNames(ch$status, ch$flavor)),
          universe = if (mine$role[i] != "maintainer") NULL
                     else if (!nrow(u)) "absent" else if (any(u$ok)) "ok" else "failing",
+         universe_url = if (mine$role[i] == "maintainer" && nrow(u))
+           sprintf("https://%s.r-universe.dev/%s", u$universe[which.max(u$ok)], pkg),
          conditions = Filter(function(r) identical(r$package, pkg), cond_rows))
   })
   other <- Filter(function(r) !r$package %in% mine$package, cond_rows)
