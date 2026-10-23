@@ -70,7 +70,7 @@ a { color: var(--link); }
   <p id="newsubs" hidden></p>
   <div class="filters" id="filters"></div>
   <div class="wrap"><table>
-    <thead><tr><th data-sort="package">Package</th><th data-sort="published">Version</th><th data-sort="queue">In queue</th><th data-sort="checks">CRAN checks</th><th data-sort="universe">r-universe</th><th data-sort="alerts">Other alerts</th></tr></thead>
+    <thead><tr><th data-sort="package">Package</th><th>Version</th><th data-sort="published">Published</th><th data-sort="queue">In queue</th><th data-sort="checks">CRAN checks</th><th data-sort="universe">r-universe</th><th data-sort="alerts">Other alerts</th></tr></thead>
     <tbody id="rows"></tbody>
   </table></div>
   <h2>Other signals</h2>
@@ -130,6 +130,17 @@ function badges(pkg, withName) {
                 name + x.version + ": " + OUTCOME[x.outcome]));
   });
   return out;
+}
+// date of the current CRAN release, with how long ago underneath
+function publishedCell(t) {
+  var td = el("td");
+  if (!t) { td.className = "muted"; td.textContent = "-"; return td; }
+  td.appendChild(el("span", {}, t.slice(0, 10)));
+  var n = days(t.length > 10 ? t : t + " 00:00");
+  td.appendChild(el("div", { "class": "role" },
+    n < 60 ? n + (n === 1 ? " day ago" : " days ago")
+    : n < 730 ? Math.round(n / 30.4) + " months ago" : (n / 365.25).toFixed(1) + " years ago"));
+  return td;
 }
 function queueCell(pkg) {
   var td = el("td"), q = QUEUE[pkg], x = EXITS[pkg];
@@ -212,7 +223,7 @@ function render(d) {
   });
   var tb = document.getElementById("rows"); tb.innerHTML = "";
   if (!pk.length) {
-    var none = el("tr"); none.appendChild(el("td", { colspan: "6", "class": "muted" }, "No packages match."));
+    var none = el("tr"); none.appendChild(el("td", { colspan: "7", "class": "muted" }, "No packages match."));
     tb.appendChild(none);
   }
   pk.forEach(function (p) {
@@ -226,13 +237,15 @@ function render(d) {
     if (p.fresh) {
       v.appendChild(el("span", {}, p.version));
       v.appendChild(el("div", { "class": "role" }, "not on CRAN yet")); tr.appendChild(v);
+      tr.appendChild(el("td", { "class": "muted" }, "-"));
       tr.appendChild(queueCell(p.package));
       ["-", "-", "-"].forEach(function (x) { tr.appendChild(el("td", { "class": "muted" }, x)); });
       tb.appendChild(tr);
       return;
     }
     v.appendChild(el("a", { href: "https://cran.r-project.org/package=" + p.package }, p.version));
-    v.appendChild(el("div", { "class": "role" }, (p.published || "").slice(0, 10))); tr.appendChild(v);
+    tr.appendChild(v);
+    tr.appendChild(publishedCell(p.published));
     tr.appendChild(queueCell(p.package));
     var fl = p.flavors || {}, bad = Object.keys(fl).filter(function (k) { return fl[k] !== "OK"; });
     var ct = el("td"), worst = p.worst || "-", det = DETAILS[p.package];
