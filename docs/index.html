@@ -111,7 +111,9 @@ var SORTS = {
   queue:     function (p) { var q = QUEUE[p.package]; return q ? days(q[0].first_seen) : EXITS[p.package] ? -0.5 : -1; }
 };
 // whole days since a "YYYY-MM-DD HH:MM" stamp (UTC)
-function days(t) { return Math.floor((Date.now() - Date.parse(t.slice(0, 10) + "T" + t.slice(11, 16) + "Z")) / 864e5); }
+// CRAN's listing times are its server clock (Vienna, ahead of UTC), read
+// here as UTC, so a fresh submission can look slightly in the future
+function days(t) { return Math.max(0, Math.floor((Date.now() - Date.parse(t.slice(0, 10) + "T" + t.slice(11, 16) + "Z")) / 864e5)); }
 function cransubs(pkg) { return "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(pkg); }
 var OUTCOME = { published: "published", archived: "archived", left: "left queue" };
 // a badge per submission, in the queue or just out of it, linked to cransubs

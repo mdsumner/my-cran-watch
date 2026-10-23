@@ -96,7 +96,7 @@ function builderCell(p, name) {
 // queue age (since first seen) in the cell, the folder date on hover
 function queueCell(p) {
   var q = p.queue, t = q.first_seen || "";
-  var n = Math.floor((Date.now() - Date.parse(t.slice(0, 10) + "T" + t.slice(11, 16) + "Z")) / 864e5);
+  var n = days(t);
   var td = cell("in " + q.folder, "note", isNaN(n) ? "since " + t : n + (n === 1 ? " day" : " days") + " in queue",
                 "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(p.package));
   td.title = "in incoming/" + q.folder + " since " + (q.in_folder || t) + "; first seen " + t;
@@ -158,7 +158,9 @@ fetch("release.json", { cache: "no-store" })
 // the CRAN incoming queue (docs/queue.json, from the queue workflow):
 // every submission of yours, tracked on the board or not, and those that
 // left in the last week
-function days(t) { return Math.floor((Date.now() - Date.parse(t.slice(0, 10) + "T" + t.slice(11, 16) + "Z")) / 864e5); }
+// CRAN's listing times are its server clock (Vienna, ahead of UTC), read
+// here as UTC, so a fresh submission can look slightly in the future
+function days(t) { return Math.max(0, Math.floor((Date.now() - Date.parse(t.slice(0, 10) + "T" + t.slice(11, 16) + "Z")) / 864e5)); }
 var OUTCOME = { published: ["published", "ok"], archived: ["archived", "bad"], left: ["left queue", "wait"] };
 fetch("queue.json", { cache: "no-store" })
   .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
