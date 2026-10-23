@@ -34,6 +34,7 @@ td small { display: block; color: var(--muted); font-size: 12px; }
 .wait { color: var(--muted); }
 .stage { display: inline-block; font-size: 12px; padding: 0 8px; border-radius: 999px;
          border: 1px solid var(--muted); color: var(--muted); white-space: nowrap; }
+a.stage { text-decoration: none; }
 .stage.ready { border-color: var(--ok); color: var(--ok); }
 .stage.submitted { border-color: var(--link); color: var(--link); }
 .stage.published { border-color: var(--ok); color: var(--ok); background: var(--panel); }
@@ -98,10 +99,17 @@ function queueCell(p) {
   var q = p.queue, t = q.first_seen || "";
   var n = days(t);
   var td = cell("in " + q.folder, "note", isNaN(n) ? "since " + t : n + (n === 1 ? " day" : " days") + " in queue",
-                "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(p.package));
+                cransubs(p.package));
   td.title = "in incoming/" + q.folder + " since " + (q.in_folder || t) + "; first seen " + t;
   return td;
 }
+// every link goes to where its cell's data comes from: the name to the
+// repo (else the CRAN page), each status to its source
+function pkgLink(pkg, repo, isNew) {
+  return repo ? el("a", { href: "https://github.com/" + repo }, pkg)
+    : isNew ? document.createTextNode(pkg) : el("a", { href: "https://cran.r-project.org/package=" + pkg }, pkg);
+}
+function cransubs(pkg) { return "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(pkg); }
 function issueUrl(n) { return "https://github.com/" + REPO + "/issues/" + n; }
 
 fetch("release.json", { cache: "no-store" })
@@ -123,7 +131,7 @@ fetch("release.json", { cache: "no-store" })
     pkgs.forEach(function (p) {
       var tr = el("tr");
       var pc = el("td");
-      pc.appendChild(p.issue ? el("a", { href: issueUrl(p.issue) }, p.package) : document.createTextNode(p.package));
+      pc.appendChild(pkgLink(p.package, p.repo, !p.cran_version));
       pc.appendChild(el("small", {}, (p.version || "?") + " from " + (p.repo || "?") + "@" + (p.ref || "?") +
         (p.sha ? " (" + p.sha.slice(0, 7) + ")" : "")));
       tr.appendChild(pc);
@@ -131,7 +139,11 @@ fetch("release.json", { cache: "no-store" })
         var e = cell(p.error, "bad"); e.setAttribute("colspan", "7"); tr.appendChild(e);
         tb.appendChild(tr); return;
       }
-      var st = el("td"); st.appendChild(el("span", { "class": "stage " + p.stage }, p.stage)); tr.appendChild(st);
+      var st = el("td");
+      var sa = { "class": "stage " + p.stage };
+      if (p.issue) { sa.href = issueUrl(p.issue); sa.title = "release issue #" + p.issue; }
+      st.appendChild(el(p.issue ? "a" : "span", sa, p.stage));
+      tr.appendChild(st);
       var ci = p.ci || {};
       tr.appendChild(cell(ci.status || "unknown", ciClass(ci.status), ci.summary,
         p.repo && p.sha ? "https://github.com/" + p.repo + "/commit/" + p.sha : null));
@@ -162,8 +174,16 @@ fetch("release.json", { cache: "no-store" })
 // here as UTC, so a fresh submission can look slightly in the future
 function days(t) { return Math.max(0, Math.floor((Date.now() - Date.parse(t.slice(0, 10) + "T" + t.slice(11, 16) + "Z")) / 864e5)); }
 var OUTCOME = { published: ["published", "ok"], archived: ["archived", "bad"], left: ["left queue", "wait"] };
-fetch("queue.json", { cache: "no-store" })
-  .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+// status.json gives each known package's repo; a package missing from it
+// is new to CRAN
+var REPOS = null;
+Promise.all([fetch("queue.json", { cache: "no-store" }),
+             fetch("status.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; })
+               .catch(function () { return null; })])
+  .then(function (x) {
+    if (x[1]) { REPOS = {}; x[1].packages.forEach(function (p) { REPOS[p.package] = p.repo || ""; }); }
+    if (!x[0].ok) throw new Error(); return x[0].json();
+  })
   .then(function (q) {
     document.getElementById("qgen").textContent = "Checked twice daily, last changed " + (q.changed || "?") +
       ". Days in queue count from when a version was first seen; hover for when it entered its current folder.";
@@ -178,7 +198,7 @@ fetch("queue.json", { cache: "no-store" })
     rows.forEach(function (r) {
       var e = r.e, tr = el("tr"), first = e.first_seen || e.modified || "";
       var pc = el("td");
-      pc.appendChild(el("a", { href: "https://nx10.github.io/cransubs/pkg#" + encodeURIComponent(e.package) }, e.package));
+      pc.appendChild(pkgLink(e.package, REPOS && REPOS[e.package], e["new"] || (REPOS && !(e.package in REPOS))));
       if (e["new"]) pc.appendChild(el("span", { "class": "badge" }, "new"));
       pc.appendChild(el("small", {}, e.version));
       tr.appendChild(pc);
@@ -190,7 +210,7 @@ fetch("queue.json", { cache: "no-store" })
       else age.firstChild.textContent = "after " + days(first) + "d";
       tr.appendChild(age);
       var o = r.left ? OUTCOME[e.outcome] || [e.outcome, "wait"] : ["in queue", "note"];
-      tr.appendChild(cell(o[0], o[1], r.left ? (e.left || "").slice(0, 10) : null));
+      tr.appendChild(cell(o[0], o[1], r.left ? (e.left || "").slice(0, 10) : null, cransubs(e.package)));
       tb.appendChild(tr);
     });
     t.appendChild(tb);

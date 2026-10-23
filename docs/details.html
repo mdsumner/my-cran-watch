@@ -60,8 +60,17 @@ fetch("pkg/" + encodeURIComponent(pkg) + ".json", { cache: "no-store" })
   .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
   .then(function (d) {
     var meta = document.getElementById("meta");
-    meta.appendChild(document.createTextNode("Version " + (d.version || "?") + ", checked " + d.updated + " | "));
+    // same links as the dashboard row: repo, CRAN page, CRAN checks
+    meta.appendChild(document.createTextNode("Version "));
+    meta.appendChild(el("a", { href: "https://cran.r-project.org/package=" + pkg }, d.version || "?"));
+    meta.appendChild(document.createTextNode(", checked " + d.updated + " | "));
     meta.appendChild(el("a", { href: "https://cran.r-project.org/web/checks/check_results_" + pkg + ".html" }, "CRAN check results"));
+    fetch("status.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (s) {
+      var p = s.packages.filter(function (x) { return x.package === pkg; })[0];
+      if (!p || !p.repo) return;
+      meta.appendChild(document.createTextNode(" | "));
+      meta.appendChild(el("a", { href: "https://github.com/" + p.repo }, p.repo));
+    }).catch(function () {});
     var box = document.getElementById("sections");
     Object.keys(d.sections || {}).forEach(function (name) {
       var s = d.sections[name], rows = s.problems || [];
