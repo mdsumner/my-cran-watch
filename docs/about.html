@@ -37,6 +37,8 @@ main { max-width: 920px; margin: 0 auto; padding: 8px 16px 64px; }
        border: 1px solid var(--line); background: var(--panel); color: var(--fg); font-weight: 500; }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
 h2 { font-size: 20px; margin: 44px 0 6px; }
+h2 .anchor { color: var(--muted); text-decoration: none; font-weight: 400; margin-left: 4px; opacity: 0.5; }
+h2:hover .anchor, h2 .anchor:focus { opacity: 1; color: var(--link); }
 h2 + p.lead { color: var(--muted); margin: 0 0 16px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
 .grid.two { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
@@ -76,11 +78,11 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <p>CRAN watch is a small repository that keeps an eye on the R packages you maintain, contribute to or depend on. It runs on GitHub Actions, writes a dashboard to GitHub Pages and opens an issue only when something needs you.</p>
   <div class="cta">
     <a class="btn primary" href="./">Open the dashboard</a>
-    <a class="btn" href="#fork">Make your own</a>
+    <a class="btn" href="#make-your-own">Make your own</a>
   </div>
 </section>
 
-<h2 id="schedule">Schedule</h2>
+<h2 id="schedule">Schedule <a class="anchor" href="#schedule" aria-label="Link to this section">#</a></h2>
 <p class="lead">Each job runs on GitHub Actions and commits what it found; the dashboard shows the result straight away. Times are Hobart (AEDT; an hour earlier in AEST).</p>
 <div class="wrap"><table>
   <thead><tr><th>Job</th><th>When</th><th>What it updates</th></tr></thead>
@@ -124,7 +126,8 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <div class="card"><h3>Triage in one place</h3><p>Filter by severity, open issues or queue, and sort by status, date or alerts.</p></div>
 </div>
 
-<h2 id="fork">Make your own</h2>
+<span id="fork"></span>
+<h2 id="make-your-own">Make your own <a class="anchor" href="#make-your-own" aria-label="Link to this section">#</a></h2>
 <p class="lead">Everything specific to one person lives in <code>config.yml</code>. Fork, edit that file, and turn on Pages.</p>
 <ol class="steps">
   <li><b>Fork the repository</b>
