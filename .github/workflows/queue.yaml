@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # commit docs/queue.json back to this repo
+  contents: write   # commit docs/queue.json and docs/published.json back to this repo
 
 jobs:
   queue:
@@ -32,7 +32,7 @@ jobs:
         run: |
           git config user.name "my-cran-watch"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/queue.json
+          git add docs/queue.json docs/published.json
           git diff --cached --quiet && exit 0
           git commit -m "queue: $(date -u '+%F %H:%M')"
           git pull --rebase origin main

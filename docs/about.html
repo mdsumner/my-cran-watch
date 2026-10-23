@@ -80,6 +80,20 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   </div>
 </section>
 
+<h2 id="schedule">Schedule</h2>
+<p class="lead">Each job runs on GitHub Actions and commits what it found; the dashboard shows the result straight away. Times are Hobart (AEDT; an hour earlier in AEST).</p>
+<div class="wrap"><table>
+  <thead><tr><th>Job</th><th>When</th><th>What it updates</th></tr></thead>
+  <tbody>
+    <tr><td><code>queue</code></td><td>twice a day, 08:23 and 12:23</td><td>CRAN incoming queue; current CRAN versions and publish dates (the Published column)</td></tr>
+    <tr><td><code>release</code></td><td>after every <code>queue</code> run, and whenever you open or comment on a release issue or change config</td><td>the release board and each release issue's status comment</td></tr>
+    <tr><td><code>watch</code></td><td>every 6 days, about 06:17</td><td>CRAN check results, deadlines, archival, reverse dependencies, r-universe; issues and the weekly summary</td></tr>
+    <tr><td><code>details</code></td><td>weekly, Monday about 09:41</td><td>urlchecker and checktor on each CRAN release (the details pages)</td></tr>
+    <tr><td><code>pkgcheck</code></td><td>by hand only</td><td>rOpenSci pkgcheck for the packages listed in config</td></tr>
+  </tbody>
+</table></div>
+<p>Any job can also be run by hand: Actions, pick the job, Run workflow.</p>
+
 <h2>What it watches</h2>
 <p class="lead">Each watcher reads a public source, compares it with what it saw last time, and records what changed.</p>
 <div class="grid">
@@ -101,17 +115,6 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <span class="step">Publish the dashboard</span>
 </div>
 <p>State lives in <code>state/state.json</code>, so each run knows what it saw last time and git history doubles as an audit log. CRAN flavors flake, so a problem must persist across runs before it counts, and an issue can be <em>snoozed</em> with a label until the problem changes character. Most changes go into one summary issue every few days that links here; only deadlines and archival get an issue of their own.</p>
-<div class="wrap"><table>
-  <thead><tr><th>Workflow</th><th>Runs</th><th>Writes</th></tr></thead>
-  <tbody>
-    <tr><td><code>watch</code></td><td>every 6 days, or by hand</td><td>checks, deadlines, revdeps, r-universe; <code>docs/status.json</code>; issues</td></tr>
-    <tr><td><code>queue</code></td><td>twice a day, or by hand</td><td>CRAN incoming snapshot; <code>docs/queue.json</code></td></tr>
-    <tr><td><code>details</code></td><td>weekly, or by hand</td><td>urlchecker and checktor; <code>docs/pkg/</code></td></tr>
-    <tr><td><code>release</code></td><td>on release issues and comments, after each queue run, or by hand</td><td>release board; <code>docs/release.json</code>; one status comment per release issue</td></tr>
-    <tr><td><code>pkgcheck</code></td><td>by hand only</td><td>rOpenSci pkgcheck for listed packages; <code>docs/pkg/</code></td></tr>
-  </tbody>
-</table></div>
-
 <h2>What you can use it for</h2>
 <div class="grid two">
   <div class="card"><h3>Hear before CRAN emails</h3><p>A new NOTE or ERROR shows on the dashboard days before the "please correct" message arrives.</p></div>
