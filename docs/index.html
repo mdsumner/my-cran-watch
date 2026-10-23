@@ -273,14 +273,15 @@ function render(d) {
   if (!(d.other || []).length) o.textContent = "None.";
   (d.other || []).forEach(function (c) { var line = el("div"); line.appendChild(el("span", {}, c.package + " ")); line.appendChild(condLink(c)); o.appendChild(line); });
 }
-var DETAILS = {}, QUEUE = {}, EXITS = {}, QUEUE_AT = "";
+var DETAILS = {}, QUEUE = {}, EXITS = {}, QUEUE_AT = "", PUBLISHED = {};
 function optional(url) {
   return fetch(url, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; })
     .catch(function () { return null; });
 }
-Promise.all([optional("pkg/index.json"), optional("queue.json")])
+Promise.all([optional("pkg/index.json"), optional("queue.json"), optional("published.json")])
   .then(function (x) {
     DETAILS = x[0] || {};
+    PUBLISHED = (x[2] || {}).packages || {};
     if (x[1]) {
       QUEUE_AT = x[1].changed || "";
       (x[1].entries || []).forEach(function (e) {
@@ -291,7 +292,16 @@ Promise.all([optional("pkg/index.json"), optional("queue.json")])
     }
     return fetch("status.json", { cache: "no-store" });
   })
-  .then(function (r) { return r.json(); }).then(render)
+  .then(function (r) { return r.json(); })
+  .then(function (d) {
+    // the queue job reads CRAN's current releases twice a day; the watcher
+    // only every few days, so its version and date may be behind
+    (d.packages || []).forEach(function (p) {
+      var c = PUBLISHED[p.package];
+      if (c && c.published > (p.published || "")) { p.version = c.version; p.published = c.published; }
+    });
+    render(d);
+  })
   .catch(function () { document.getElementById("gen").textContent = "No status.json yet: it appears after the next watcher run."; });
 </script>
 <script>

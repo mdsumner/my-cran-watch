@@ -5,15 +5,21 @@ Crawls https://cran.r-project.org/incoming/ (the same listing cransays
 reads), keeps submissions of packages in docs/status.json, and writes
 docs/queue.json.  Each submission keeps the date it was first seen, and
 one that leaves the queue is kept for EXIT_DAYS as an exit: archived when
-its tarball is in incoming/archive, published when CRAN's PACKAGES lists
-that version, otherwise "left" until one of those shows up.  Submissions of packages not yet on the dashboard (new
+its tarball is in incoming/archive, published when CRAN's src/contrib
+lists that version, otherwise "left" until one of those shows up.  Submissions of packages not yet on the dashboard (new
 packages) are matched by the Maintainer email in their DESCRIPTION
 against maintainer_emails in config.yml; each tarball is read once and
 the answer cached in .cache/ (kept between runs by actions/cache).  Standard library only, so the queue workflow needs no
 R setup.  The file is rewritten only when the entries change, so an
 unchanged queue makes no commit.
+
+It also writes docs/published.json, the current CRAN version and its
+publication time (the tarball's timestamp in src/contrib) for each
+package on the dashboard, so the dashboard's Published column is at most
+half a day old rather than waiting for the watcher.
 """
 
+import functools
 import json
 import os
 import re
@@ -27,7 +33,8 @@ STATUS = "docs/status.json"
 OUT = "docs/queue.json"
 CONFIG = "config.yml"
 CACHE = ".cache/queue_maintainers.json"
-PACKAGES = "https://cran.r-project.org/src/contrib/PACKAGES"
+CONTRIB = "https://cran.r-project.org/src/contrib/"
+PUBLISHED = "docs/published.json"
 SKIP = {"archive"}
 EXIT_DAYS = 7
 MAX_READS = 600   # tarballs opened per run; the rest wait for the next run
@@ -105,9 +112,21 @@ def by_maintainer(entries, emails, cache, read=maintainer):
     return out
 
 
+@functools.lru_cache(maxsize=None)
+def cran_releases(get=fetch):
+    """{package: (version, published)} from the src/contrib listing, where
+    each current release is a tarball stamped with when CRAN wrote it."""
+    out = {}
+    for name, modified in parse(get(CONTRIB)):
+        m = TARBALL.match(name)
+        if m:
+            out[m.group(1)] = (m.group(2), modified)
+    return out
+
+
 def cran_versions(get=fetch):
-    """{package: version} from CRAN's PACKAGES file."""
-    return dict(re.findall(r"^Package: (\S+)\nVersion: (\S+)", get(PACKAGES), re.M))
+    """{package: version} of current CRAN releases."""
+    return {k: v[0] for k, v in cran_releases(get).items()}
 
 
 def exits(old, current, archive, now, versions=cran_versions):
@@ -136,12 +155,41 @@ def exits(old, current, archive, now, versions=cran_versions):
                     try:
                         cran = versions()
                     except Exception as err:
-                        print("::warning::could not read CRAN PACKAGES: %s" % err)
+                        print("::warning::could not read the CRAN src/contrib listing: %s" % err)
                         cran = {}
                 if cran.get(x["package"]) == x["version"]:
                     x = dict(x, outcome="published")
         out.append(x)
     return sorted(out, key=lambda x: (x["package"], x["version"]))
+
+
+def write_published(mine, now, releases=cran_releases):
+    """docs/published.json for the dashboard's packages; rewritten only
+    when a version or date changes, so a quiet day makes no commit."""
+    try:
+        cran = releases()
+    except Exception as err:
+        print("::warning::could not read the CRAN src/contrib listing: %s" % err)
+        return
+    # listing times are CRAN's server clock (Vienna), close enough for a date
+    pkgs = {k: {"version": v, "published": d}
+            for k, (v, d) in sorted(cran.items()) if k in mine}
+    latest = sorted(pkgs, key=lambda k: pkgs[k]["published"])[-3:]
+    print("::notice::published: %d of %d packages on CRAN; latest %s" % (
+        len(pkgs), len(mine), ", ".join("%s %s (%s)" % (k, pkgs[k]["version"], pkgs[k]["published"])
+                                        for k in reversed(latest))))
+    old = {}
+    if os.path.exists(PUBLISHED):
+        with open(PUBLISHED) as f:
+            old = json.load(f).get("packages", {})
+    if pkgs == old:
+        return
+    new = sorted(k for k in pkgs if old.get(k, {}).get("version") != pkgs[k]["version"])
+    if old and new:
+        print("::notice::published: %s" % ", ".join("%s %s" % (k, pkgs[k]["version"]) for k in new))
+    with open(PUBLISHED, "w") as f:
+        json.dump({"checked": now, "source": CONTRIB, "packages": pkgs}, f, indent=2)
+        f.write("\n")
 
 
 def days_ago(now, n):
@@ -196,6 +244,7 @@ def main():
     if left:
         print("::notice::queue: left the queue: %s" % ", ".join(
             "%s %s (%s)" % (x["package"], x["version"], x["outcome"]) for x in left))
+    write_published(mine, now)
     if entries == old.get("entries") and left == old.get("exits", []):
         print("queue unchanged (%d entries)" % len(entries))
         return
