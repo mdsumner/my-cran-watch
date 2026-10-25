@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-23 02:12 UTC",
+  "checked": "2026-10-25 21:31 UTC",
   "source": "https://cran.r-project.org/src/contrib/",
   "packages": {
     "CCAMLRGIS": {
@@ -34,9 +34,17 @@
       "version": "0.1.0",
       "published": "2025-09-30 00:50"
     },
+    "cdtr": {
+      "version": "0.1.0",
+      "published": "2026-10-21 17:20"
+    },
     "ceramic": {
       "version": "0.9.5",
       "published": "2024-02-27 07:30"
+    },
+    "controlledburn": {
+      "version": "0.3.1",
+      "published": "2026-10-24 13:00"
     },
     "crsmeta": {
       "version": "0.3.0",
