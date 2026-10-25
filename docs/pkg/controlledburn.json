@@ -1,0 +1,16 @@
+{
+  "package": "controlledburn",
+  "version": "0.3.1",
+  "updated": "2026-10-25",
+  "sections": {
+    "urlchecker": {
+      "summary": "all URLs ok",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "no findings",
+      "problems": [],
+      "count": 0
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "package": "tissot",
   "version": "0.3.0",
-  "updated": "2026-10-20",
+  "updated": "2026-10-25",
   "sections": {
     "urlchecker": {
       "summary": "all URLs ok",

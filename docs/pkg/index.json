@@ -56,7 +56,7 @@
     "checktor": 0
   },
   "graticule": {
-    "urlchecker": 1,
+    "urlchecker": 2,
     "checktor": 7
   },
   "grout": {
@@ -172,6 +172,14 @@
     "checktor": 0
   },
   "xyt": {
+    "urlchecker": 0,
+    "checktor": 0
+  },
+  "cdtr": {
+    "urlchecker": 0,
+    "checktor": 12
+  },
+  "controlledburn": {
     "urlchecker": 0,
     "checktor": 0
   }

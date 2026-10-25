@@ -1,0 +1,125 @@
+{
+  "package": "cdtr",
+  "version": "0.1.0",
+  "updated": "2026-10-25",
+  "sections": {
+    "urlchecker": {
+      "summary": "all URLs ok",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "12 robustness",
+      "problems": [
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 194,
+          "location": "cdt.R:194",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 195,
+          "location": "cdt.R:195",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 195,
+          "location": "cdt.R:195",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 195,
+          "location": "cdt.R:195",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 223,
+          "location": "cdt.R:223",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 223,
+          "location": "cdt.R:223",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 223,
+          "location": "cdt.R:223",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 224,
+          "location": "cdt.R:224",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 225,
+          "location": "cdt.R:225",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cpp11.R",
+          "line": 8,
+          "location": "cpp11.R:8",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_tf_usage",
+          "severity": "robustness",
+          "file": "cdt_interpolate.Rd",
+          "line": 30,
+          "location": "example cdt_interpolate.Rd:30",
+          "message": "Example T/F usage check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_tf_usage",
+          "severity": "robustness",
+          "file": "cdt_interpolate.Rd",
+          "line": 33,
+          "location": "example cdt_interpolate.Rd:33",
+          "message": "Example T/F usage check"
+        }
+      ],
+      "count": 12
+    }
+  }
+}

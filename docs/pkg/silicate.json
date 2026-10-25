@@ -1,7 +1,7 @@
 {
   "package": "silicate",
   "version": "0.7.2",
-  "updated": "2026-10-20",
+  "updated": "2026-10-25",
   "sections": {
     "urlchecker": {
       "summary": "all URLs ok",

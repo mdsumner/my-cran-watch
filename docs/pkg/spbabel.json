@@ -1,7 +1,7 @@
 {
   "package": "spbabel",
   "version": "0.6.0",
-  "updated": "2026-10-20",
+  "updated": "2026-10-25",
   "sections": {
     "urlchecker": {
       "summary": "1 URL problem(s)",

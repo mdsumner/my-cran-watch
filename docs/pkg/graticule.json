@@ -1,10 +1,10 @@
 {
   "package": "graticule",
   "version": "0.4.0",
-  "updated": "2026-10-20",
+  "updated": "2026-10-25",
   "sections": {
     "urlchecker": {
-      "summary": "1 URL problem(s)",
+      "summary": "2 URL problem(s)",
       "problems": [
         {
           "url": "https://manifold.net/",
@@ -13,6 +13,14 @@
           "new": "",
           "from": "inst/doc/graticule.html",
           "_row": "https://manifold.net/"
+        },
+        {
+          "url": "https://pubs.usgs.gov/publication/pp1395",
+          "status": "Error",
+          "message": "Timeout was reached [pubs.usgs.gov]:\nOperation timed out after 5002 milliseconds with 0 bytes received",
+          "new": "",
+          "from": "inst/doc/graticule.html",
+          "_row": "https://pubs.usgs.gov/publication/pp1395"
         }
       ]
     },
