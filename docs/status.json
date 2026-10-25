@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 12:26 UTC",
+  "generated": "2026-10-25 19:20 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -25,6 +25,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/affinity",
       "conditions": []
     },
     {
@@ -50,6 +51,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "angstroms|universe",
@@ -103,6 +105,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/area",
       "conditions": []
     },
     {
@@ -128,6 +131,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "basf|universe",
@@ -163,6 +167,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "bgmfiles|universe",
@@ -174,6 +179,30 @@
           "first_seen": "2026-07-27"
         }
       ]
+    },
+    {
+      "package": "cdtr",
+      "role": "maintainer",
+      "version": "0.1.0",
+      "published": "2026-10-21 15:20:09 UTC",
+      "repo": "hypertidy/cdtr",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/cdtr",
+      "conditions": []
     },
     {
       "package": "ceramic",
@@ -198,7 +227,38 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/ceramic",
       "conditions": []
+    },
+    {
+      "package": "controlledburn",
+      "role": "maintainer",
+      "version": "0.3.1",
+      "published": "2026-10-24 11:00:21 UTC",
+      "repo": "hypertidy/controlledburn",
+      "worst": "WARNING",
+      "flavors": {
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "WARNING",
+        "r-devel-windows-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK"
+      },
+      "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/controlledburn",
+      "conditions": [
+        {
+          "key": "controlledburn|checks",
+          "package": "controlledburn",
+          "kind": "checks",
+          "status": "WARNING",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-10-25"
+        }
+      ]
     },
     {
       "package": "crsmeta",
@@ -223,6 +283,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/crsmeta",
       "conditions": []
     },
     {
@@ -248,6 +309,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/decido",
       "conditions": [
         {
           "key": "decido|checks",
@@ -283,6 +345,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/dsn",
       "conditions": []
     },
     {
@@ -308,6 +371,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/fasterize",
       "conditions": []
     },
     {
@@ -333,6 +397,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/geographiclib",
       "conditions": [
         {
           "key": "geographiclib|checks",
@@ -368,6 +433,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "geojson|universe",
@@ -403,6 +469,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "ggpolypath|universe",
@@ -447,6 +514,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "gibble|universe",
@@ -482,6 +550,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/graticule",
       "conditions": []
     },
     {
@@ -507,6 +576,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/grout",
       "conditions": []
     },
     {
@@ -532,6 +602,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/lazysf",
       "conditions": []
     },
     {
@@ -557,6 +628,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/ncmeta",
       "conditions": []
     },
     {
@@ -582,6 +654,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "orsifronts|universe",
@@ -626,6 +699,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "ozmaps|universe",
@@ -660,18 +734,9 @@
         "r-oldrel-macos-x86_64": "OK",
         "r-oldrel-windows-x86_64": "OK"
       },
-      "universe": "absent",
-      "conditions": [
-        {
-          "key": "palr|universe",
-          "package": "palr",
-          "kind": "universe",
-          "status": "GAP",
-          "lifecycle": "active",
-          "issue": null,
-          "first_seen": "2026-07-27"
-        }
-      ]
+      "universe": "ok",
+      "universe_url": "https://australianantarcticdivision.r-universe.dev/palr",
+      "conditions": []
     },
     {
       "package": "PROJ",
@@ -696,6 +761,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/PROJ",
       "conditions": []
     },
     {
@@ -721,6 +787,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/quadmesh",
       "conditions": [
         {
           "key": "quadmesh|checks",
@@ -756,6 +823,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "rbgm|universe",
@@ -791,6 +859,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/reproj",
       "conditions": [
         {
           "key": "reproj|checks",
@@ -826,6 +895,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/sds",
       "conditions": []
     },
     {
@@ -851,6 +921,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/sfdct",
       "conditions": []
     },
     {
@@ -876,6 +947,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/silicate",
       "conditions": []
     },
     {
@@ -901,6 +973,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "sooty|universe",
@@ -936,6 +1009,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "spbabel|universe",
@@ -971,6 +1045,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "spex|universe",
@@ -1006,6 +1081,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/tabularaster",
       "conditions": []
     },
     {
@@ -1031,6 +1107,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/textures",
       "conditions": [
         {
           "key": "textures|checks",
@@ -1066,6 +1143,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "tidync|universe",
@@ -1101,6 +1179,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/tissot",
       "conditions": []
     },
     {
@@ -1126,6 +1205,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://Trackage.r-universe.dev/traipse",
       "conditions": []
     },
     {
@@ -1151,6 +1231,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://Trackage.r-universe.dev/trip",
       "conditions": [
         {
           "key": "trip|checks",
@@ -1186,6 +1267,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://Trackage.r-universe.dev/tripEstimation",
       "conditions": [
         {
           "key": "tripEstimation|checks",
@@ -1221,6 +1303,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/unjoin",
       "conditions": []
     },
     {
@@ -1246,6 +1329,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/vapour",
       "conditions": []
     },
     {
@@ -1271,6 +1355,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "failing",
+      "universe_url": "https://hypertidy.r-universe.dev/vaster",
       "conditions": [
         {
           "key": "vaster|universe",
@@ -1306,6 +1391,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/wkpool",
       "conditions": []
     },
     {
@@ -1331,6 +1417,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/ximage",
       "conditions": []
     },
     {
@@ -1356,6 +1443,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "absent",
+      "universe_url": null,
       "conditions": [
         {
           "key": "xyt|universe",
@@ -1391,6 +1479,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1416,6 +1505,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": [
         {
           "key": "ggsql|checks",
@@ -1451,6 +1541,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1476,6 +1567,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": [
         {
           "key": "wk|checks",
@@ -1511,6 +1603,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1536,6 +1629,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1561,6 +1655,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1586,6 +1681,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1611,6 +1707,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1636,6 +1733,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1661,6 +1759,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1686,6 +1785,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1711,6 +1811,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": [
         {
           "key": "rgl|checks",
@@ -1746,6 +1847,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1771,6 +1873,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1796,6 +1899,7 @@
         "r-oldrel-windows-x86_64": "NOTE"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": [
         {
           "key": "sf|checks",
@@ -1831,6 +1935,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1856,6 +1961,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1881,6 +1987,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1906,6 +2013,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1931,6 +2039,7 @@
         "r-oldrel-windows-x86_64": "NOTE"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": [
         {
           "key": "stars|checks",
@@ -1966,6 +2075,7 @@
         "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": []
     },
     {
@@ -1974,29 +2084,30 @@
       "version": "4.4-1",
       "published": "2026-06-26 12:30:02 UTC",
       "repo": "r-tmap/tmap",
-      "worst": "NOTE",
+      "worst": "ERROR",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
         "r-devel-linux-x86_64-debian-gcc": "NOTE",
         "r-devel-linux-x86_64-fedora-clang": "NOTE",
         "r-devel-linux-x86_64-fedora-gcc": "NOTE",
         "r-devel-windows-x86_64": "NOTE",
-        "r-patched-linux-x86_64": "OK",
+        "r-patched-linux-x86_64": "ERROR",
         "r-release-linux-x86_64": "OK",
         "r-release-macos-arm64": "OK",
         "r-release-macos-x86_64": "OK",
-        "r-release-windows-x86_64": "OK",
+        "r-release-windows-x86_64": "ERROR",
         "r-oldrel-macos-arm64": "OK",
         "r-oldrel-macos-x86_64": "OK",
-        "r-oldrel-windows-x86_64": "OK"
+        "r-oldrel-windows-x86_64": "ERROR"
       },
       "universe": null,
+      "universe_url": null,
       "conditions": [
         {
           "key": "tmap|checks",
           "package": "tmap",
           "kind": "checks",
-          "status": "NOTE",
+          "status": "ERROR",
           "lifecycle": "active",
           "issue": null,
           "first_seen": "2026-10-20"
