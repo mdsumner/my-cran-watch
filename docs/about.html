@@ -87,7 +87,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <div class="wrap"><table>
   <thead><tr><th>Job</th><th>When</th><th>What it updates</th></tr></thead>
   <tbody>
-    <tr><td><code>queue</code></td><td>twice a day, 08:23 and 12:23</td><td>CRAN incoming queue; current CRAN versions and publish dates (the Published column)</td></tr>
+    <tr><td><code>queue</code></td><td>twice a day, 08:23 and 12:23</td><td>CRAN incoming queue; current CRAN versions and publish dates (the Published column); whether each CRAN version has a tag in the package's GitHub repo</td></tr>
     <tr><td><code>release</code></td><td>after every <code>queue</code> run, and whenever you open or comment on a release issue or change config</td><td>the release board and each release issue's status comment</td></tr>
     <tr><td><code>watch</code></td><td>every 6 days, about 06:17</td><td>CRAN check results, deadlines, archival, reverse dependencies, r-universe; issues and the weekly summary</td></tr>
     <tr><td><code>details</code></td><td>weekly, Monday about 09:41</td><td>urlchecker and checktor on each CRAN release (the details pages)</td></tr>
@@ -103,6 +103,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <div class="card"><h3>Deadlines and archival</h3><p>A "fix before" date set by CRAN, or a package removed from CRAN. These open an issue straight away.</p></div>
   <div class="card"><h3>CRAN incoming queue</h3><p>Where your submissions sit (newbies, pretest, pending, a reviewer's folder), including brand-new packages that are not on CRAN yet.</p></div>
   <div class="card"><h3>Reverse dependencies</h3><p>Packages that depend on yours and are failing on CRAN, which is often the first sign a release broke someone.</p></div>
+  <div class="card"><h3>GitHub tags</h3><p>Whether the CRAN version has a matching tag (v1.2.3, 1.2.3 and similar) in the package's repository, linked to its GitHub release when there is one. "No tag" links to the repo's tags; the "No GitHub tag" tile lists them all.</p></div>
   <div class="card"><h3>r-universe</h3><p>Whether each package is present in your r-universe and whether the CRAN metadata points back to your repository.</p></div>
   <div class="card"><h3>Package details</h3><p>A weekly per-package page with URL checks (urlchecker), CRAN policy checks (checktor) and, on request, rOpenSci pkgcheck.</p></div>
   <div class="card"><h3>Releases</h3><p>A board for packages on their way to CRAN: GitHub CI, checktor and urlchecker on the GitHub source, win-builder and mac-builder results, then the incoming queue until CRAN publishes. The same page lists every submission of yours in CRAN incoming.</p></div>
@@ -131,7 +132,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <p class="lead">Everything specific to one person lives in <code>config.yml</code>. Fork, edit that file, and turn on Pages.</p>
 <ol class="steps">
   <li><b>Fork the repository</b>
-    Use the Fork button on GitHub. Then clear the previous owner's data so your first run starts fresh: delete <code>state/state.json</code>, <code>docs/status.json</code>, <code>docs/queue.json</code> and the files in <code>docs/pkg/</code>.</li>
+    Use the Fork button on GitHub. Then clear the previous owner's data so your first run starts fresh: delete <code>state/state.json</code>, <code>docs/status.json</code>, <code>docs/queue.json</code>, <code>docs/published.json</code>, <code>docs/tags.json</code> and the files in <code>docs/pkg/</code>.</li>
   <li><b>Edit <code>config.yml</code></b>
     Set your Maintainer emails and the name forms that appear in author lists, and replace the previous owner's lists (<code>watch</code>, <code>universes</code>, <code>repo_map</code>, <code>extra_packages</code>, <code>pkgcheck</code>) with your own or empty ones.
 <pre><code>maintainer_emails:

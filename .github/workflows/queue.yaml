@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # commit docs/queue.json and docs/published.json back to this repo
+  contents: write   # commit docs/queue.json, published.json and tags.json back to this repo
 
 jobs:
   queue:
@@ -27,12 +27,21 @@ jobs:
       - name: Snapshot CRAN incoming queue
         run: python3 scripts/cran_queue.py
 
+      # after the queue step, so a version published since the last watcher
+      # run (docs/published.json) is the one looked for
+      - name: Match CRAN versions to GitHub tags
+        continue-on-error: true   # a GitHub API hiccup must not hold up the queue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/repo_tags.py
+
       - name: Commit queue
         if: github.ref == 'refs/heads/main'   # a run on another branch is a dry run
         run: |
           git config user.name "my-cran-watch"
           git config user.email "actions@users.noreply.github.com"
           git add docs/queue.json docs/published.json
+          if [ -f docs/tags.json ]; then git add docs/tags.json; fi
           git diff --cached --quiet && exit 0
           git commit -m "queue: $(date -u '+%F %H:%M')"
           git pull --rebase origin main

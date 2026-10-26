@@ -140,6 +140,18 @@ If neither works, it reports and refuses.
    trigger `watch` manually with dry run on, eyeball the log, then run
    for real.
 
+## Tag check (dashboard only)
+
+Twice a day, after the queue snapshot, `scripts/repo_tags.py` lists the
+tags of every dashboard package with a GitHub repo (repo_map, else the
+CRAN URL/BugReports) and looks for one naming the current CRAN version
+(`v1.2.3`, `1.2.3`, `v1_2_3`, `pkg-1.2.3`; `-`, `_` and `.` alike). The answer goes in
+`docs/tags.json` and under the version on the dashboard: the matched tag
+or GitHub release, or "no tag" linked to the repo's tags, with a "No
+GitHub tag" tile to list them. It reads only; tagging is the version
+watcher's job (above, needs `WATCH_PAT`) or `retro_tag.R` (below), and
+"no tag" on one of mine is the sign one of those has not happened.
+
 ## Retro-tagging (one-shot)
 
 `scripts/retro_tag.R` clears historical tag debt: for each package it
