@@ -1,0 +1,522 @@
+{
+  "checked": "2026-10-26 21:33 UTC",
+  "packages": {
+    "CCAMLRGIS": {
+      "repo": "ccamlr/CCAMLRGIS",
+      "version": "4.3.1",
+      "tag": null,
+      "url": "https://github.com/ccamlr/CCAMLRGIS/tags",
+      "tags": 4
+    },
+    "PROJ": {
+      "repo": "hypertidy/PROJ",
+      "version": "0.7.0",
+      "tag": "v0.7.0",
+      "url": "https://github.com/hypertidy/PROJ/tree/v0.7.0",
+      "release": false,
+      "tags": 10
+    },
+    "RTriangle": {
+      "repo": "davidcsterratt/RTriangle",
+      "version": "1.6-0.15",
+      "tag": null,
+      "url": "https://github.com/davidcsterratt/RTriangle/tags",
+      "tags": 1
+    },
+    "affinity": {
+      "repo": "hypertidy/affinity",
+      "version": "0.2.5",
+      "tag": "v0.2.5",
+      "url": "https://github.com/hypertidy/affinity/tree/v0.2.5",
+      "release": false,
+      "tags": 1
+    },
+    "angstroms": {
+      "repo": "AustralianAntarcticDivision/angstroms",
+      "version": "0.0.1",
+      "tag": "v0.0.1",
+      "url": "https://github.com/AustralianAntarcticDivision/angstroms/releases/tag/v0.0.1",
+      "release": true,
+      "tags": 1
+    },
+    "area": {
+      "repo": "hypertidy/area",
+      "version": "0.2.0",
+      "tag": "v0.2.0",
+      "url": "https://github.com/hypertidy/area/tree/v0.2.0",
+      "release": false,
+      "tags": 3
+    },
+    "basf": {
+      "repo": "mdsumner/basf",
+      "version": "0.2.0",
+      "tag": null,
+      "url": "https://github.com/mdsumner/basf/tags",
+      "tags": 1
+    },
+    "bgmfiles": {
+      "repo": "AustralianAntarcticDivision/bgmfiles",
+      "version": "0.1.0",
+      "tag": "v0.1.0",
+      "url": "https://github.com/AustralianAntarcticDivision/bgmfiles/tree/v0.1.0",
+      "release": false,
+      "tags": 3
+    },
+    "cdtr": {
+      "repo": "hypertidy/cdtr",
+      "version": "0.1.0",
+      "tag": "v0.1.0",
+      "url": "https://github.com/hypertidy/cdtr/releases/tag/v0.1.0",
+      "release": true,
+      "tags": 1
+    },
+    "ceramic": {
+      "repo": "hypertidy/ceramic",
+      "version": "0.9.5",
+      "tag": null,
+      "url": "https://github.com/hypertidy/ceramic/tags",
+      "tags": 4
+    },
+    "controlledburn": {
+      "repo": "hypertidy/controlledburn",
+      "version": "0.3.1",
+      "tag": "v0.3.1",
+      "url": "https://github.com/hypertidy/controlledburn/tree/v0.3.1",
+      "release": false,
+      "tags": 3
+    },
+    "crsmeta": {
+      "repo": "hypertidy/crsmeta",
+      "version": "0.3.0",
+      "tag": "v0.3.0",
+      "url": "https://github.com/hypertidy/crsmeta/tree/v0.3.0",
+      "release": false,
+      "tags": 2
+    },
+    "decido": {
+      "repo": "hypertidy/decido",
+      "version": "0.4.0",
+      "tag": "v0.4.0",
+      "url": "https://github.com/hypertidy/decido/tree/v0.4.0",
+      "release": false,
+      "tags": 4
+    },
+    "dsn": {
+      "repo": "hypertidy/dsn",
+      "version": "0.1.0",
+      "tag": null,
+      "url": "https://github.com/hypertidy/dsn/tags",
+      "tags": 0
+    },
+    "duckdbfs": {
+      "repo": "cboettig/duckdbfs",
+      "version": "0.1.2",
+      "tag": null,
+      "url": "https://github.com/cboettig/duckdbfs/tags",
+      "tags": 2
+    },
+    "fasterize": {
+      "repo": "ecohealthalliance/fasterize",
+      "version": "1.1.0",
+      "tag": "v1.1.0",
+      "url": "https://github.com/ecohealthalliance/fasterize/tree/v1.1.0",
+      "release": false,
+      "tags": 3
+    },
+    "gdalraster": {
+      "repo": "firelab/gdalraster",
+      "version": "2.7.0",
+      "tag": "v.2.7.0",
+      "url": "https://github.com/firelab/gdalraster/releases/tag/v.2.7.0",
+      "release": true,
+      "tags": 23
+    },
+    "geodist": {
+      "repo": "hypertidy/geodist",
+      "version": "0.1.1",
+      "tag": "v0.1.1",
+      "url": "https://github.com/hypertidy/geodist/releases/tag/v0.1.1",
+      "release": true,
+      "tags": 7
+    },
+    "geographiclib": {
+      "repo": "hypertidy/geographiclib",
+      "version": "0.4.2",
+      "tag": "v0.4.2",
+      "url": "https://github.com/hypertidy/geographiclib/tree/v0.4.2",
+      "release": false,
+      "tags": 2
+    },
+    "geojson": {
+      "repo": "ropensci/geojson",
+      "version": "0.3.5",
+      "tag": null,
+      "url": "https://github.com/ropensci/geojson/tags",
+      "tags": 7
+    },
+    "ggpolypath": {
+      "repo": "mdsumner/ggpolypath",
+      "version": "0.4.0",
+      "tag": null,
+      "url": "https://github.com/mdsumner/ggpolypath/tags",
+      "tags": 3
+    },
+    "ggsql": {
+      "repo": "posit-dev/ggsql-r",
+      "version": "0.5.2",
+      "tag": "v0.5.2",
+      "url": "https://github.com/posit-dev/ggsql-r/releases/tag/v0.5.2",
+      "release": true,
+      "tags": 4
+    },
+    "gibble": {
+      "repo": "mdsumner/gibble",
+      "version": "0.4.0",
+      "tag": "v0.4.0",
+      "url": "https://github.com/mdsumner/gibble/tree/v0.4.0",
+      "release": false,
+      "tags": 4
+    },
+    "graticule": {
+      "repo": "hypertidy/graticule",
+      "version": "0.4.0",
+      "tag": "v0.4.0",
+      "url": "https://github.com/hypertidy/graticule/tree/v0.4.0",
+      "release": false,
+      "tags": 6
+    },
+    "grout": {
+      "repo": "hypertidy/grout",
+      "version": "0.1.0",
+      "tag": "v0.1.0",
+      "url": "https://github.com/hypertidy/grout/tree/v0.1.0",
+      "release": false,
+      "tags": 1
+    },
+    "lazysf": {
+      "repo": "hypertidy/lazysf",
+      "version": "0.4.0",
+      "tag": null,
+      "url": "https://github.com/hypertidy/lazysf/tags",
+      "tags": 2
+    },
+    "mapscanner": {
+      "repo": "ropensci/mapscanner",
+      "version": "0.1.1",
+      "tag": "v0.1.1",
+      "url": "https://github.com/ropensci/mapscanner/releases/tag/v0.1.1",
+      "release": true,
+      "tags": 4
+    },
+    "mapview": {
+      "repo": "r-spatial/mapview",
+      "version": "2.11.4",
+      "tag": "2.11.4",
+      "url": "https://github.com/r-spatial/mapview/tree/2.11.4",
+      "release": false,
+      "tags": 6
+    },
+    "ncmeta": {
+      "repo": "hypertidy/ncmeta",
+      "version": "0.5.0",
+      "tag": "v0.5.0",
+      "url": "https://github.com/hypertidy/ncmeta/tree/v0.5.0",
+      "release": false,
+      "tags": 10
+    },
+    "orsifronts": {
+      "repo": "AustralianAntarcticDivision/orsifronts",
+      "version": "0.2.0",
+      "tag": "v0.2.0",
+      "url": "https://github.com/AustralianAntarcticDivision/orsifronts/tree/v0.2.0",
+      "release": false,
+      "tags": 1
+    },
+    "ozmaps": {
+      "repo": "mdsumner/ozmaps",
+      "version": "0.4.5",
+      "tag": null,
+      "url": "https://github.com/mdsumner/ozmaps/tags",
+      "tags": 5
+    },
+    "palr": {
+      "repo": "AustralianAntarcticDivision/palr",
+      "version": "0.5.0",
+      "tag": "v.0.5.0",
+      "url": "https://github.com/AustralianAntarcticDivision/palr/tree/v.0.5.0",
+      "release": false,
+      "newer": "v0.6.0",
+      "tags": 5
+    },
+    "pkgstats": {
+      "repo": "ropensci-review-tools/pkgstats",
+      "version": "0.2.5",
+      "tag": "v0.2.5",
+      "url": "https://github.com/ropensci-review-tools/pkgstats/releases/tag/v0.2.5",
+      "release": true,
+      "tags": 14
+    },
+    "quadmesh": {
+      "repo": "hypertidy/quadmesh",
+      "version": "0.6.0",
+      "tag": "v0.6.0",
+      "url": "https://github.com/hypertidy/quadmesh/tree/v0.6.0",
+      "release": false,
+      "tags": 9
+    },
+    "raster": {
+      "repo": "rspatial/raster",
+      "version": "3.6-32",
+      "tag": null,
+      "url": "https://github.com/rspatial/raster/tags",
+      "tags": 1
+    },
+    "rbgm": {
+      "repo": "AustralianAntarcticDivision/rbgm",
+      "version": "0.2.0",
+      "tag": null,
+      "url": "https://github.com/AustralianAntarcticDivision/rbgm/tags",
+      "tags": 2
+    },
+    "reproj": {
+      "repo": "hypertidy/reproj",
+      "version": "0.8.0",
+      "tag": null,
+      "url": "https://github.com/hypertidy/reproj/tags",
+      "tags": 6
+    },
+    "rgl": {
+      "repo": "dmurdoch/rgl",
+      "version": "1.3.36",
+      "tag": "v1.3.36",
+      "url": "https://github.com/dmurdoch/rgl/releases/tag/v1.3.36",
+      "release": true,
+      "tags": 46
+    },
+    "rsi": {
+      "repo": "Permian-Global-Research/rsi",
+      "version": "0.3.3",
+      "tag": "v0.3.3",
+      "url": "https://github.com/Permian-Global-Research/rsi/releases/tag/v0.3.3",
+      "release": true,
+      "tags": 11
+    },
+    "sds": {
+      "repo": "hypertidy/sds",
+      "version": "0.3.0",
+      "tag": "v0.3.0",
+      "url": "https://github.com/hypertidy/sds/tree/v0.3.0",
+      "release": false,
+      "tags": 2
+    },
+    "sf": {
+      "repo": "r-spatial/sf",
+      "version": "1.1-3",
+      "tag": null,
+      "url": "https://github.com/r-spatial/sf/tags",
+      "tags": 15
+    },
+    "sfdct": {
+      "repo": "hypertidy/sfdct",
+      "version": "0.3.0",
+      "tag": "v0.3.0",
+      "url": "https://github.com/hypertidy/sfdct/tree/v0.3.0",
+      "release": false,
+      "tags": 3
+    },
+    "sfheaders": {
+      "repo": "dcooley/sfheaders",
+      "version": "0.4.5",
+      "tag": null,
+      "url": "https://github.com/dcooley/sfheaders/tags",
+      "tags": 7
+    },
+    "silicate": {
+      "repo": "hypertidy/silicate",
+      "version": "0.7.2",
+      "tag": null,
+      "url": "https://github.com/hypertidy/silicate/tags",
+      "tags": 6
+    },
+    "slippymath": {
+      "repo": "milesmcbain/slippymath",
+      "version": "0.3.1",
+      "tag": "0.3.1",
+      "url": "https://github.com/MilesMcBain/slippymath/releases/tag/0.3.1",
+      "release": true,
+      "tags": 2
+    },
+    "sooty": {
+      "repo": "mdsumner/sooty",
+      "version": "0.6.1",
+      "tag": "v0.6.1",
+      "url": "https://github.com/mdsumner/sooty/tree/v0.6.1",
+      "release": false,
+      "tags": 3
+    },
+    "sp": {
+      "repo": "edzer/sp",
+      "version": "2.2-4",
+      "tag": null,
+      "url": "https://github.com/edzer/sp/tags",
+      "tags": 2
+    },
+    "spbabel": {
+      "repo": "mdsumner/spbabel",
+      "version": "0.6.0",
+      "tag": "v0.6.0",
+      "url": "https://github.com/mdsumner/spbabel/tree/v0.6.0",
+      "release": false,
+      "tags": 9
+    },
+    "spex": {
+      "repo": "mdsumner/spex",
+      "version": "0.7.1",
+      "tag": "v0.7.1",
+      "url": "https://github.com/mdsumner/spex/tree/v0.7.1",
+      "release": false,
+      "tags": 4
+    },
+    "stars": {
+      "repo": "r-spatial/stars",
+      "version": "0.7-3",
+      "tag": null,
+      "url": "https://github.com/r-spatial/stars/tags",
+      "tags": 0
+    },
+    "tabularaster": {
+      "repo": "hypertidy/tabularaster",
+      "version": "0.7.2",
+      "tag": null,
+      "url": "https://github.com/hypertidy/tabularaster/tags",
+      "tags": 8
+    },
+    "terra": {
+      "repo": "rspatial/terra",
+      "version": "1.9-50",
+      "tag": "1.9-50",
+      "url": "https://github.com/rspatial/terra/tree/1.9-50",
+      "release": false,
+      "tags": 19
+    },
+    "textures": {
+      "repo": "hypertidy/textures",
+      "version": "0.1.0",
+      "tag": "v0.1.0",
+      "url": "https://github.com/hypertidy/textures/tree/v0.1.0",
+      "release": false,
+      "tags": 1
+    },
+    "tidync": {
+      "repo": "ropensci/tidync",
+      "version": "0.5.0",
+      "tag": "v0.5.0",
+      "url": "https://github.com/ropensci/tidync/tree/v0.5.0",
+      "release": false,
+      "tags": 10
+    },
+    "tidytransit": {
+      "repo": "r-transit/tidytransit",
+      "version": "1.8.0",
+      "tag": "v1.8.0",
+      "url": "https://github.com/r-transit/tidytransit/releases/tag/v1.8.0",
+      "release": true,
+      "tags": 19
+    },
+    "tissot": {
+      "repo": "hypertidy/tissot",
+      "version": "0.3.0",
+      "tag": "v0.3.0",
+      "url": "https://github.com/hypertidy/tissot/tree/v0.3.0",
+      "release": false,
+      "tags": 2
+    },
+    "tmap": {
+      "repo": "r-tmap/tmap",
+      "version": "4.4-1",
+      "tag": "4.4-1",
+      "url": "https://github.com/r-tmap/tmap/releases/tag/4.4-1",
+      "release": true,
+      "tags": 4
+    },
+    "traipse": {
+      "repo": "AustralianAntarcticDivision/traipse",
+      "version": "0.4.0",
+      "tag": "v0.4.0",
+      "url": "https://github.com/AustralianAntarcticDivision/traipse/tree/v0.4.0",
+      "release": false,
+      "tags": 4
+    },
+    "trip": {
+      "repo": "Trackage/trip",
+      "version": "1.10.0",
+      "tag": "v1.10.0",
+      "url": "https://github.com/Trackage/trip/tree/v1.10.0",
+      "release": false,
+      "newer": "v.9.0",
+      "tags": 13
+    },
+    "tripEstimation": {
+      "repo": "Trackage/tripEstimation",
+      "version": "0.0-46",
+      "tag": "v0.0-46",
+      "url": "https://github.com/Trackage/tripEstimation/tree/v0.0-46",
+      "release": false,
+      "tags": 4
+    },
+    "unjoin": {
+      "repo": "hypertidy/unjoin",
+      "version": "0.1.0",
+      "tag": "v0.1.0",
+      "url": "https://github.com/hypertidy/unjoin/tree/v0.1.0",
+      "release": false,
+      "tags": 3
+    },
+    "vapour": {
+      "repo": "hypertidy/vapour",
+      "version": "0.16.0",
+      "tag": "v0.16.0",
+      "url": "https://github.com/hypertidy/vapour/tree/v0.16.0",
+      "release": false,
+      "tags": 24
+    },
+    "vaster": {
+      "repo": "hypertidy/vaster",
+      "version": "0.6.0",
+      "tag": "v0.6.0",
+      "url": "https://github.com/hypertidy/vaster/tree/v0.6.0",
+      "release": false,
+      "tags": 2
+    },
+    "wk": {
+      "repo": "paleolimbot/wk",
+      "version": "0.9.5",
+      "tag": null,
+      "url": "https://github.com/paleolimbot/wk/tags",
+      "tags": 18
+    },
+    "wkpool": {
+      "repo": "hypertidy/wkpool",
+      "version": "0.4.0",
+      "tag": "v0.4.0",
+      "url": "https://github.com/hypertidy/wkpool/tree/v0.4.0",
+      "release": false,
+      "tags": 2
+    },
+    "ximage": {
+      "repo": "hypertidy/ximage",
+      "version": "0.1.0",
+      "tag": "v0.1.0",
+      "url": "https://github.com/hypertidy/ximage/tree/v0.1.0",
+      "release": false,
+      "tags": 1
+    },
+    "xyt": {
+      "repo": "AustralianAntarcticDivision/xyt",
+      "version": "0.1.0",
+      "tag": null,
+      "url": "https://github.com/AustralianAntarcticDivision/xyt/tags",
+      "tags": 0
+    }
+  }
+}
