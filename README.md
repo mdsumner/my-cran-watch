@@ -145,7 +145,7 @@ If neither works, it reports and refuses.
 Twice a day, after the queue snapshot, `scripts/repo_tags.py` lists the
 tags of every dashboard package with a GitHub repo (repo_map, else the
 CRAN URL/BugReports) and looks for one naming the current CRAN version
-(`v1.2.3`, `1.2.3`, `pkg-1.2.3`; `-` and `.` alike). The answer goes in
+(`v1.2.3`, `1.2.3`, `v1_2_3`, `pkg-1.2.3`; `-`, `_` and `.` alike). The answer goes in
 `docs/tags.json` and under the version on the dashboard: the matched tag
 or GitHub release, or "no tag" linked to the repo's tags, with a "No
 GitHub tag" tile to list them. It reads only; tagging is the version

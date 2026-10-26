@@ -4,7 +4,7 @@
 For every package in docs/status.json with a repo (the same repo its name
 links to on the dashboard), lists the repo's tags through the GitHub API
 and looks for one naming the CRAN version: v1.2.3, 1.2.3, pkg-1.2.3 and
-the like, with "-" and "." treated alike (CRAN's 1.2-3 matches v1.2.3).
+the like, with "-", "_" and "." treated alike (CRAN's 1.2-3 matches v1.2.3).
 The version comes from docs/published.json when it is newer than
 status.json, so a release shows up as untagged within half a day.  A
 matched tag links to its GitHub release when there is one.  The newest
@@ -32,8 +32,8 @@ OUT = "docs/tags.json"
 API = "https://api.github.com"
 
 # a tag that is a version, after an optional prefix of letters and
-# separators: v1.2.3, V1.2-3, pkg-1.2.3, pkg_v1.2.3, release/1.2.3
-TAG = re.compile(r"^(?:[A-Za-z][A-Za-z._/@-]*?)?(\d+(?:[.\-]\d+)*)$")
+# separators: v1.2.3, V1.2-3, v1_2_3, pkg-1.2.3, pkg_v1.2.3, release/1.2.3
+TAG = re.compile(r"^(?:[A-Za-z][A-Za-z._/@-]*?)?(\d+(?:[._\-]\d+)*)$")
 
 
 def get(url):
@@ -72,7 +72,7 @@ def release(repo, tag, get=get):
 def version_of(tag):
     """The version a tag names, "." for "-", or None."""
     m = TAG.match(tag)
-    return m.group(1).replace("-", ".") if m else None
+    return re.sub(r"[-_]", ".", m.group(1)) if m else None
 
 
 def key(v):
@@ -81,7 +81,7 @@ def key(v):
 
 def match(version, names):
     """(tag for version or None, newest version-like tag or None)."""
-    want = version.replace("-", ".")
+    want = re.sub(r"[-_]", ".", version)
     hits = [t for t in names if version_of(t) == want]
     # prefer the usual spellings when a repo has more than one
     for t in ("v" + version, version):
