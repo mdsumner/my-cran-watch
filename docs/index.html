@@ -86,7 +86,8 @@ var STATUS = {
   warn:   ["WARN",         function (p) { return RANK[p.worst] === 3; }],
   note:   ["NOTE",         function (p) { return RANK[p.worst] === 2; }],
   issues: ["Open issues",  function (p) { return openIssues(p) > 0; }],
-  queue:  ["CRAN queue",   function (p) { return !!(QUEUE[p.package] || EXITS[p.package]); }]
+  queue:  ["CRAN queue",   function (p) { return !!(QUEUE[p.package] || EXITS[p.package]); }],
+  notag:  ["No GitHub tag", function (p) { var t = tagOf(p); return !!t && !t.error && !t.tag; }]
 };
 var role = "all", status = "all", sort = { key: "package", dir: 1 };
 try {
@@ -135,6 +136,20 @@ function badges(pkg, withName) {
                 name + x.version + ": " + OUTCOME[x.outcome]));
   });
   return out;
+}
+// the repo tag for the CRAN version (docs/tags.json, checked with the
+// queue); none when the package has no repo or the check is behind CRAN
+function tagOf(p) { var t = TAGS[p.package]; return t && t.version === p.version ? t : null; }
+function tagLine(p) {
+  var t = tagOf(p), div = el("div", { "class": "role" });
+  if (!t) return null;
+  var newer = t.newer ? "; newer tag " + t.newer + " is not on CRAN yet" : "";
+  if (t.error) div.appendChild(el("span", { title: t.repo + ": " + t.error }, "tag: " + t.error));
+  else if (t.tag) div.appendChild(el("a", { href: t.url, "class": "muted",
+    title: (t.release ? "GitHub release for " : "tag ") + t.tag + " in " + t.repo + newer }, (t.release ? "release " : "tag ") + t.tag));
+  else div.appendChild(el("a", { href: t.url, "class": "s-NOTE",
+    title: "no tag naming " + t.version + " among " + t.tags + " tags in " + t.repo + newer }, "no tag"));
+  return div;
 }
 // date of the current CRAN release, with how long ago underneath
 function publishedCell(t) {
@@ -250,6 +265,7 @@ function render(d) {
       return;
     }
     v.appendChild(el("a", { href: cranPage(p.package) }, p.version));
+    var tl = tagLine(p); if (tl) v.appendChild(tl);
     tr.appendChild(v);
     tr.appendChild(publishedCell(p.published));
     tr.appendChild(queueCell(p.package));
@@ -282,15 +298,16 @@ function render(d) {
   if (!(d.other || []).length) o.textContent = "None.";
   (d.other || []).forEach(function (c) { var line = el("div"); line.appendChild(el("span", {}, c.package + " ")); line.appendChild(condLink(c)); o.appendChild(line); });
 }
-var DETAILS = {}, QUEUE = {}, EXITS = {}, QUEUE_AT = "", PUBLISHED = {};
+var DETAILS = {}, QUEUE = {}, EXITS = {}, QUEUE_AT = "", PUBLISHED = {}, TAGS = {};
 function optional(url) {
   return fetch(url, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; })
     .catch(function () { return null; });
 }
-Promise.all([optional("pkg/index.json"), optional("queue.json"), optional("published.json")])
+Promise.all([optional("pkg/index.json"), optional("queue.json"), optional("published.json"), optional("tags.json")])
   .then(function (x) {
     DETAILS = x[0] || {};
     PUBLISHED = (x[2] || {}).packages || {};
+    TAGS = (x[3] || {}).packages || {};
     if (x[1]) {
       QUEUE_AT = x[1].changed || "";
       (x[1].entries || []).forEach(function (e) {
