@@ -1,5 +1,5 @@
 {
-  "changed": "2026-10-24 21:31 UTC",
+  "changed": "2026-10-27 21:27 UTC",
   "source": "https://cran.r-project.org/incoming/",
   "entries": [
     {
@@ -11,6 +11,15 @@
       "url": "https://cran.r-project.org/incoming/newbies/",
       "new": true,
       "first_seen": "2026-10-23 02:35"
+    },
+    {
+      "package": "controlledburn",
+      "version": "0.3.2",
+      "folder": "inspect",
+      "subfolder": "",
+      "modified": "2026-10-27 21:47",
+      "url": "https://cran.r-project.org/incoming/inspect/",
+      "first_seen": "2026-10-27 21:47"
     },
     {
       "package": "laridae",
@@ -30,14 +39,6 @@
       "folder": "newbies",
       "first_seen": "2026-10-11 12:58",
       "left": "2026-10-21 21:33 UTC",
-      "outcome": "published"
-    },
-    {
-      "package": "controlledburn",
-      "version": "0.3.1",
-      "folder": "newbies",
-      "first_seen": "2026-10-15 06:19",
-      "left": "2026-10-24 21:31 UTC",
       "outcome": "published"
     }
   ]

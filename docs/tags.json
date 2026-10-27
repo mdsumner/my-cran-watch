@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-26 21:33 UTC",
+  "checked": "2026-10-27 21:27 UTC",
   "packages": {
     "CCAMLRGIS": {
       "repo": "ccamlr/CCAMLRGIS",
@@ -417,11 +417,11 @@
     },
     "tidytransit": {
       "repo": "r-transit/tidytransit",
-      "version": "1.8.0",
-      "tag": "v1.8.0",
-      "url": "https://github.com/r-transit/tidytransit/releases/tag/v1.8.0",
+      "version": "1.8.1",
+      "tag": "v1.8.1",
+      "url": "https://github.com/r-transit/tidytransit/releases/tag/v1.8.1",
       "release": true,
-      "tags": 19
+      "tags": 20
     },
     "tissot": {
       "repo": "hypertidy/tissot",
