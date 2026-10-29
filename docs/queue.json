@@ -1,5 +1,5 @@
 {
-  "changed": "2026-10-28 21:27 UTC",
+  "changed": "2026-10-29 01:28 UTC",
   "source": "https://cran.r-project.org/incoming/",
   "entries": [
     {
@@ -24,14 +24,6 @@
     }
   ],
   "exits": [
-    {
-      "package": "cdtr",
-      "version": "0.1.0",
-      "folder": "newbies",
-      "first_seen": "2026-10-11 12:58",
-      "left": "2026-10-21 21:33 UTC",
-      "outcome": "published"
-    },
     {
       "package": "controlledburn",
       "version": "0.3.2",
