@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-25 19:20 UTC",
+  "generated": "2026-10-31 19:19 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -193,9 +193,11 @@
         "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
         "r-release-linux-x86_64": "OK",
         "r-release-macos-arm64": "OK",
         "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
         "r-oldrel-macos-arm64": "OK",
         "r-oldrel-macos-x86_64": "OK",
         "r-oldrel-windows-x86_64": "OK"
@@ -233,18 +235,23 @@
     {
       "package": "controlledburn",
       "role": "maintainer",
-      "version": "0.3.1",
-      "published": "2026-10-24 11:00:21 UTC",
+      "version": "0.3.2",
+      "published": "2026-10-28 10:20:02 UTC",
       "repo": "hypertidy/controlledburn",
       "worst": "WARNING",
       "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
         "r-devel-linux-x86_64-fedora-clang": "OK",
-        "r-devel-linux-x86_64-fedora-gcc": "WARNING",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "WARNING",
         "r-release-macos-arm64": "OK",
         "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
         "r-oldrel-macos-arm64": "OK",
-        "r-oldrel-macos-x86_64": "OK"
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
       },
       "universe": "ok",
       "universe_url": "https://hypertidy.r-universe.dev/controlledburn",
@@ -479,15 +486,6 @@
           "lifecycle": "active",
           "issue": null,
           "first_seen": "2026-07-27"
-        },
-        {
-          "key": "ggpolypath|revdeps",
-          "package": "ggpolypath",
-          "kind": "revdeps",
-          "status": "REVDEP",
-          "lifecycle": "active",
-          "issue": null,
-          "first_seen": "2026-10-19"
         }
       ]
     },
@@ -2055,8 +2053,8 @@
     {
       "package": "tidytransit",
       "role": "contribute",
-      "version": "1.8.0",
-      "published": "2026-01-26 16:20:02 UTC",
+      "version": "1.8.1",
+      "published": "2026-10-27 13:50:02 UTC",
       "repo": "r-transit/tidytransit",
       "worst": "OK",
       "flavors": {
@@ -2084,21 +2082,21 @@
       "version": "4.4-1",
       "published": "2026-06-26 12:30:02 UTC",
       "repo": "r-tmap/tmap",
-      "worst": "ERROR",
+      "worst": "NOTE",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
         "r-devel-linux-x86_64-debian-gcc": "NOTE",
         "r-devel-linux-x86_64-fedora-clang": "NOTE",
         "r-devel-linux-x86_64-fedora-gcc": "NOTE",
         "r-devel-windows-x86_64": "NOTE",
-        "r-patched-linux-x86_64": "ERROR",
+        "r-patched-linux-x86_64": "OK",
         "r-release-linux-x86_64": "OK",
         "r-release-macos-arm64": "OK",
         "r-release-macos-x86_64": "OK",
-        "r-release-windows-x86_64": "ERROR",
+        "r-release-windows-x86_64": "OK",
         "r-oldrel-macos-arm64": "OK",
         "r-oldrel-macos-x86_64": "OK",
-        "r-oldrel-windows-x86_64": "ERROR"
+        "r-oldrel-windows-x86_64": "OK"
       },
       "universe": null,
       "universe_url": null,
@@ -2107,7 +2105,7 @@
           "key": "tmap|checks",
           "package": "tmap",
           "kind": "checks",
-          "status": "ERROR",
+          "status": "NOTE",
           "lifecycle": "active",
           "issue": null,
           "first_seen": "2026-10-20"
