@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31 19:19 UTC",
+  "generated": "2026-11-01 19:18 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -246,6 +246,7 @@
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "WARNING",
+        "r-release-linux-x86_64": "OK",
         "r-release-macos-arm64": "OK",
         "r-release-macos-x86_64": "OK",
         "r-release-windows-x86_64": "OK",
@@ -261,7 +262,7 @@
           "package": "controlledburn",
           "kind": "checks",
           "status": "WARNING",
-          "lifecycle": "observed",
+          "lifecycle": "active",
           "issue": null,
           "first_seen": "2026-10-25"
         }
@@ -2194,6 +2195,15 @@
       "lifecycle": "active",
       "issue": null,
       "first_seen": "2026-10-19"
+    },
+    {
+      "key": "gdal-r-ci#40|canary",
+      "package": "gdal-r-ci#40",
+      "kind": "canary",
+      "status": "CANARY",
+      "lifecycle": "active",
+      "issue": null,
+      "first_seen": "2026-11-01"
     }
   ]
 }
