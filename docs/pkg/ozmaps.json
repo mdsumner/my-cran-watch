@@ -1,7 +1,7 @@
 {
   "package": "ozmaps",
   "version": "0.4.5",
-  "updated": "2026-10-25",
+  "updated": "2026-11-01",
   "sections": {
     "urlchecker": {
       "summary": "2 URL problem(s)",
@@ -16,9 +16,9 @@
         },
         {
           "url": "https://travis-ci.org/mdsumner/ozmaps",
-          "status": "200",
-          "message": "OK",
-          "new": "https://app.travis-ci.com/mdsumner/ozmaps",
+          "status": "Error",
+          "message": "SSL peer certificate or SSH remote key was not OK [app.travis-ci.com]:\nSSL certificate problem: certificate has expired",
+          "new": "",
           "from": "README.md",
           "_row": "https://travis-ci.org/mdsumner/ozmaps"
         }

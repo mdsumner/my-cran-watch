@@ -1,7 +1,7 @@
 {
   "package": "affinity",
   "version": "0.2.5",
-  "updated": "2026-10-25",
+  "updated": "2026-11-01",
   "sections": {
     "urlchecker": {
       "summary": "3 URL problem(s)",
@@ -24,9 +24,9 @@
         },
         {
           "url": "https://travis-ci.org/hypertidy/affinity",
-          "status": "200",
-          "message": "OK",
-          "new": "https://app.travis-ci.com/hypertidy/affinity",
+          "status": "Error",
+          "message": "SSL peer certificate or SSH remote key was not OK [app.travis-ci.com]:\nSSL certificate problem: certificate has expired",
+          "new": "",
           "from": "README.md",
           "_row": "https://travis-ci.org/hypertidy/affinity"
         }
