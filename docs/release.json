@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06 01:30 UTC",
+  "generated": "2026-11-06 21:30 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -8,16 +8,10 @@
       "ref": "main",
       "issue": 118,
       "cran_version": null,
-      "updated": "2026-11-06 01:30 UTC",
+      "updated": "2026-11-06 21:29 UTC",
       "sha": "ca6770f182045a9b5cb4c649f9be8104f1a2b142",
       "version": "0.1.0",
       "published": false,
-      "queue": {
-        "folder": "newbies",
-        "version": "0.1.0",
-        "first_seen": "2026-10-23 04:00",
-        "in_folder": "2026-10-23 04:00"
-      },
       "ci": {
         "status": "pass",
         "summary": "5 checks passed"
@@ -33,25 +27,20 @@
         }
       },
       "builders": [],
-      "stage": "submitted",
-      "comment": "<!-- my-cran-watch:release-status -->\n**laridae 0.1.0** from `hypertidy/laridae@main` (ca6770f), CRAN has nothing yet. Stage: **submitted**.\n\n| step | result |\n|---|---|\n| GitHub CI | 5 checks passed |\n| checktor | 1 opinion, 5 robustness |\n| urlchecker | all URLs ok |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | in newbies since 2026-10-23 04:00 (submitted 2026-10-23 04:00) |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-11-06 01:30 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
+      "stage": "preparing",
+      "comment": "<!-- my-cran-watch:release-status -->\n**laridae 0.1.0** from `hypertidy/laridae@main` (ca6770f), CRAN has nothing yet. Stage: **preparing**.\n\n| step | result |\n|---|---|\n| GitHub CI | 5 checks passed |\n| checktor | 1 opinion, 5 robustness |\n| urlchecker | all URLs ok |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | not submitted |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-11-06 21:29 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
     },
     {
       "package": "bigcurve",
       "repo": "hypertidy/bigcurve",
       "ref": "main",
       "issue": 113,
-      "cran_version": null,
-      "updated": "2026-11-06 01:30 UTC",
+      "cran_version": "0.6.0",
+      "updated": "2026-11-06 21:29 UTC",
       "sha": "d4ee19a8c3ed82ecc22029dbe4bb9e6959a9cad2",
       "version": "0.6.0",
-      "published": false,
-      "queue": {
-        "folder": "newbies",
-        "version": "0.6.0",
-        "first_seen": "2026-10-23 02:35",
-        "in_folder": "2026-10-23 02:35"
-      },
+      "published": true,
+      "published_on": "2026-11-06 12:40:09 UTC",
       "ci": {
         "status": "pass",
         "summary": "10 checks passed"
@@ -67,8 +56,8 @@
         }
       },
       "builders": [],
-      "stage": "submitted",
-      "comment": "<!-- my-cran-watch:release-status -->\n**bigcurve 0.6.0** from `hypertidy/bigcurve@main` (d4ee19a), CRAN has nothing yet. Stage: **submitted**.\n\n| step | result |\n|---|---|\n| GitHub CI | 10 checks passed |\n| checktor | no findings |\n| urlchecker | 1 URL problem(s) |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | in newbies since 2026-10-23 02:35 (submitted 2026-10-23 02:35) |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-11-06 01:30 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
+      "stage": "published",
+      "comment": "<!-- my-cran-watch:release-status -->\n**bigcurve 0.6.0** from `hypertidy/bigcurve@main` (d4ee19a), CRAN has 0.6.0. Stage: **published**.\n\n| step | result |\n|---|---|\n| GitHub CI | 10 checks passed |\n| checktor | no findings |\n| urlchecker | 1 URL problem(s) |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | published 0.6.0 |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-11-06 21:29 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
     }
   ]
 }
