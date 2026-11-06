@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05 21:47 UTC",
+  "generated": "2026-11-06 01:30 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -8,7 +8,7 @@
       "ref": "main",
       "issue": 118,
       "cran_version": null,
-      "updated": "2026-11-05 21:47 UTC",
+      "updated": "2026-11-06 01:30 UTC",
       "sha": "ca6770f182045a9b5cb4c649f9be8104f1a2b142",
       "version": "0.1.0",
       "published": false,
@@ -34,7 +34,7 @@
       },
       "builders": [],
       "stage": "submitted",
-      "comment": "<!-- my-cran-watch:release-status -->\n**laridae 0.1.0** from `hypertidy/laridae@main` (ca6770f), CRAN has nothing yet. Stage: **submitted**.\n\n| step | result |\n|---|---|\n| GitHub CI | 5 checks passed |\n| checktor | 1 opinion, 5 robustness |\n| urlchecker | all URLs ok |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | in newbies since 2026-10-23 04:00 (submitted 2026-10-23 04:00) |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-11-05 21:47 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
+      "comment": "<!-- my-cran-watch:release-status -->\n**laridae 0.1.0** from `hypertidy/laridae@main` (ca6770f), CRAN has nothing yet. Stage: **submitted**.\n\n| step | result |\n|---|---|\n| GitHub CI | 5 checks passed |\n| checktor | 1 opinion, 5 robustness |\n| urlchecker | all URLs ok |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | in newbies since 2026-10-23 04:00 (submitted 2026-10-23 04:00) |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-11-06 01:30 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
     },
     {
       "package": "bigcurve",
@@ -42,7 +42,7 @@
       "ref": "main",
       "issue": 113,
       "cran_version": null,
-      "updated": "2026-11-05 21:47 UTC",
+      "updated": "2026-11-06 01:30 UTC",
       "sha": "d4ee19a8c3ed82ecc22029dbe4bb9e6959a9cad2",
       "version": "0.6.0",
       "published": false,
@@ -68,65 +68,7 @@
       },
       "builders": [],
       "stage": "submitted",
-      "comment": "<!-- my-cran-watch:release-status -->\n**bigcurve 0.6.0** from `hypertidy/bigcurve@main` (d4ee19a), CRAN has nothing yet. Stage: **submitted**.\n\n| step | result |\n|---|---|\n| GitHub CI | 10 checks passed |\n| checktor | no findings |\n| urlchecker | 1 URL problem(s) |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | in newbies since 2026-10-23 02:35 (submitted 2026-10-23 02:35) |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-11-05 21:47 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
-    },
-    {
-      "package": "sds",
-      "repo": "hypertidy/sds",
-      "ref": "main",
-      "issue": 119,
-      "cran_version": "0.3.0",
-      "updated": "2026-10-22 23:03 UTC",
-      "sha": "e84d0947b5ab0a81c0db483f2870baa77e6c5670",
-      "version": "0.3.0",
-      "published": true,
-      "published_on": "2026-10-22",
-      "ci": {
-        "status": "none",
-        "summary": "no checks on this commit"
-      },
-      "checks": {
-        "checktor": {
-          "summary": "1 opinion",
-          "count": 0
-        },
-        "urlchecker": {
-          "summary": "all URLs ok",
-          "count": 0
-        }
-      },
-      "builders": [],
-      "stage": "published",
-      "comment": "<!-- my-cran-watch:release-status -->\n**sds 0.3.0** from `hypertidy/sds@main` (e84d094), CRAN has 0.3.0. Stage: **published**.\n\n| step | result |\n|---|---|\n| GitHub CI | no checks on this commit |\n| checktor | 1 opinion |\n| urlchecker | all URLs ok |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | published 0.3.0 |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-10-22 23:03 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
-    },
-    {
-      "package": "cdtr",
-      "repo": "hypertidy/cdtr",
-      "ref": "main",
-      "issue": 117,
-      "cran_version": "0.1.0",
-      "updated": "2026-10-22 07:25 UTC",
-      "sha": "3a4bd2ee89e946a37745bfc01dc08120910c7afd",
-      "version": "0.1.0",
-      "published": true,
-      "published_on": "2026-10-22",
-      "ci": {
-        "status": "pass",
-        "summary": "6 checks passed"
-      },
-      "checks": {
-        "checktor": {
-          "summary": "12 robustness",
-          "count": 12
-        },
-        "urlchecker": {
-          "summary": "all URLs ok",
-          "count": 0
-        }
-      },
-      "builders": [],
-      "stage": "published",
-      "comment": "<!-- my-cran-watch:release-status -->\n**cdtr 0.1.0** from `hypertidy/cdtr@main` (3a4bd2e), CRAN has 0.1.0. Stage: **published**.\n\n| step | result |\n|---|---|\n| GitHub CI | 6 checks passed |\n| checktor | 12 robustness |\n| urlchecker | all URLs ok |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | published 0.1.0 |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-10-22 07:25 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
+      "comment": "<!-- my-cran-watch:release-status -->\n**bigcurve 0.6.0** from `hypertidy/bigcurve@main` (d4ee19a), CRAN has nothing yet. Stage: **submitted**.\n\n| step | result |\n|---|---|\n| GitHub CI | 10 checks passed |\n| checktor | no findings |\n| urlchecker | 1 URL problem(s) |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | in newbies since 2026-10-23 02:35 (submitted 2026-10-23 02:35) |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-11-06 01:30 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
     }
   ]
 }
