@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01 19:18 UTC",
+  "generated": "2026-11-07 19:19 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -50,18 +50,9 @@
         "r-oldrel-macos-x86_64": "OK",
         "r-oldrel-windows-x86_64": "OK"
       },
-      "universe": "absent",
-      "universe_url": null,
+      "universe": "ok",
+      "universe_url": "https://australianantarcticdivision.r-universe.dev/angstroms",
       "conditions": [
-        {
-          "key": "angstroms|universe",
-          "package": "angstroms",
-          "kind": "universe",
-          "status": "GAP",
-          "lifecycle": "active",
-          "issue": null,
-          "first_seen": "2026-07-27"
-        },
         {
           "key": "angstroms|metadata",
           "package": "angstroms",
@@ -181,6 +172,26 @@
       ]
     },
     {
+      "package": "bigcurve",
+      "role": "maintainer",
+      "version": "0.6.0",
+      "published": "2026-11-06 12:40:09 UTC",
+      "repo": "hypertidy/bigcurve",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": "ok",
+      "universe_url": "https://hypertidy.r-universe.dev/bigcurve",
+      "conditions": []
+    },
+    {
       "package": "cdtr",
       "role": "maintainer",
       "version": "0.1.0",
@@ -238,14 +249,14 @@
       "version": "0.3.2",
       "published": "2026-10-28 10:20:02 UTC",
       "repo": "hypertidy/controlledburn",
-      "worst": "WARNING",
+      "worst": "OK",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
         "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
-        "r-patched-linux-x86_64": "WARNING",
+        "r-patched-linux-x86_64": "OK",
         "r-release-linux-x86_64": "OK",
         "r-release-macos-arm64": "OK",
         "r-release-macos-x86_64": "OK",
@@ -256,17 +267,7 @@
       },
       "universe": "ok",
       "universe_url": "https://hypertidy.r-universe.dev/controlledburn",
-      "conditions": [
-        {
-          "key": "controlledburn|checks",
-          "package": "controlledburn",
-          "kind": "checks",
-          "status": "WARNING",
-          "lifecycle": "active",
-          "issue": null,
-          "first_seen": "2026-10-25"
-        }
-      ]
+      "conditions": []
     },
     {
       "package": "crsmeta",
@@ -652,18 +653,9 @@
         "r-oldrel-macos-x86_64": "OK",
         "r-oldrel-windows-x86_64": "OK"
       },
-      "universe": "absent",
-      "universe_url": null,
+      "universe": "ok",
+      "universe_url": "https://australianantarcticdivision.r-universe.dev/orsifronts",
       "conditions": [
-        {
-          "key": "orsifronts|universe",
-          "package": "orsifronts",
-          "kind": "universe",
-          "status": "GAP",
-          "lifecycle": "active",
-          "issue": null,
-          "first_seen": "2026-07-27"
-        },
         {
           "key": "orsifronts|checks",
           "package": "orsifronts",
@@ -1441,19 +1433,9 @@
         "r-oldrel-macos-x86_64": "OK",
         "r-oldrel-windows-x86_64": "OK"
       },
-      "universe": "absent",
-      "universe_url": null,
-      "conditions": [
-        {
-          "key": "xyt|universe",
-          "package": "xyt",
-          "kind": "universe",
-          "status": "GAP",
-          "lifecycle": "active",
-          "issue": null,
-          "first_seen": "2026-10-07"
-        }
-      ]
+      "universe": "ok",
+      "universe_url": "https://australianantarcticdivision.r-universe.dev/xyt",
+      "conditions": []
     },
     {
       "package": "gdalraster",
@@ -2050,6 +2032,32 @@
           "first_seen": "2026-10-20"
         }
       ]
+    },
+    {
+      "package": "tidyterra",
+      "role": "contribute",
+      "version": "1.3.1",
+      "published": "2026-11-06 17:50:02 UTC",
+      "repo": "dieghernan/tidyterra",
+      "worst": "OK",
+      "flavors": {
+        "r-devel-linux-x86_64-debian-clang": "OK",
+        "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
+        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-windows-x86_64": "OK",
+        "r-patched-linux-x86_64": "OK",
+        "r-release-linux-x86_64": "OK",
+        "r-release-macos-arm64": "OK",
+        "r-release-macos-x86_64": "OK",
+        "r-release-windows-x86_64": "OK",
+        "r-oldrel-macos-arm64": "OK",
+        "r-oldrel-macos-x86_64": "OK",
+        "r-oldrel-windows-x86_64": "OK"
+      },
+      "universe": null,
+      "universe_url": null,
+      "conditions": []
     },
     {
       "package": "tidytransit",
