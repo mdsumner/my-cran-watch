@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-28 21:27 UTC",
+  "checked": "2026-11-07 21:27 UTC",
   "source": "https://cran.r-project.org/src/contrib/",
   "packages": {
     "CCAMLRGIS": {
@@ -33,6 +33,10 @@
     "bgmfiles": {
       "version": "0.1.0",
       "published": "2025-09-30 00:50"
+    },
+    "bigcurve": {
+      "version": "0.6.0",
+      "published": "2026-11-06 13:40"
     },
     "cdtr": {
       "version": "0.1.0",
@@ -225,6 +229,10 @@
     "tidync": {
       "version": "0.5.0",
       "published": "2026-07-31 15:00"
+    },
+    "tidyterra": {
+      "version": "1.3.1",
+      "published": "2026-11-06 18:50"
     },
     "tidytransit": {
       "version": "1.8.1",
