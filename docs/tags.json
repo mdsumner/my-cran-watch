@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-07 21:27 UTC",
+  "checked": "2026-11-08 21:27 UTC",
   "packages": {
     "CCAMLRGIS": {
       "repo": "ccamlr/CCAMLRGIS",
@@ -88,9 +88,10 @@
     "controlledburn": {
       "repo": "hypertidy/controlledburn",
       "version": "0.3.2",
-      "tag": null,
-      "url": "https://github.com/hypertidy/controlledburn/tags",
-      "tags": 3
+      "tag": "v0.3.2",
+      "url": "https://github.com/hypertidy/controlledburn/tree/v0.3.2",
+      "release": false,
+      "tags": 4
     },
     "crsmeta": {
       "repo": "hypertidy/crsmeta",
