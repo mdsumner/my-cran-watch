@@ -1,0 +1,16 @@
+{
+  "package": "bigcurve",
+  "version": "0.6.0",
+  "updated": "2026-11-08",
+  "sections": {
+    "urlchecker": {
+      "summary": "all URLs ok",
+      "problems": []
+    },
+    "checktor": {
+      "summary": "no findings",
+      "problems": [],
+      "count": 0
+    }
+  }
+}

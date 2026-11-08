@@ -1,7 +1,7 @@
 {
   "package": "unjoin",
   "version": "0.1.0",
-  "updated": "2026-11-01",
+  "updated": "2026-11-08",
   "sections": {
     "urlchecker": {
       "summary": "4 URL problem(s)",
@@ -24,9 +24,9 @@
         },
         {
           "url": "https://travis-ci.org/hypertidy/unjoin",
-          "status": "Error",
-          "message": "SSL peer certificate or SSH remote key was not OK [app.travis-ci.com]:\nSSL certificate problem: certificate has expired",
-          "new": "",
+          "status": "200",
+          "message": "OK",
+          "new": "https://app.travis-ci.com/hypertidy/unjoin",
           "from": "README.md",
           "_row": "https://travis-ci.org/hypertidy/unjoin"
         },
