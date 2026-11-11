@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11 01:29 UTC",
+  "generated": "2026-11-11 21:29 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -8,7 +8,7 @@
       "ref": "main",
       "issue": 118,
       "cran_version": null,
-      "updated": "2026-11-11 01:29 UTC",
+      "updated": "2026-11-11 21:29 UTC",
       "sha": "ca6770f182045a9b5cb4c649f9be8104f1a2b142",
       "version": "0.1.0",
       "published": false,
@@ -28,7 +28,7 @@
       },
       "builders": [],
       "stage": "preparing",
-      "comment": "<!-- my-cran-watch:release-status -->\n**laridae 0.1.0** from `hypertidy/laridae@main` (ca6770f), CRAN has nothing yet. Stage: **preparing**.\n\n| step | result |\n|---|---|\n| GitHub CI | 5 checks passed |\n| checktor | 1 opinion, 5 robustness |\n| urlchecker | all URLs ok |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | not submitted |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-11-11 01:29 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
+      "comment": "<!-- my-cran-watch:release-status -->\n**laridae 0.1.0** from `hypertidy/laridae@main` (ca6770f), CRAN has nothing yet. Stage: **preparing**.\n\n| step | result |\n|---|---|\n| GitHub CI | 5 checks passed |\n| checktor | 1 opinion, 5 robustness |\n| urlchecker | all URLs ok |\n| win-builder | paste the results link here |\n| mac-builder | paste the results link here |\n| CRAN | not submitted |\n\nPaste win-builder or mac-builder results links in a comment and they are picked up.\nUpdated 2026-11-11 21:29 UTC. [Release board](https://mdsumner.github.io/my-cran-watch/releases.html)"
     },
     {
       "package": "bigcurve",
