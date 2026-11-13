@@ -1,7 +1,17 @@
 {
-  "changed": "2026-11-06 21:28 UTC",
+  "changed": "2026-11-13 21:27 UTC",
   "source": "https://cran.r-project.org/incoming/",
   "entries": [
+    {
+      "package": "laridae",
+      "version": "0.1.0",
+      "folder": "newbies",
+      "subfolder": "",
+      "modified": "2026-11-13 19:15",
+      "url": "https://cran.r-project.org/incoming/newbies/",
+      "new": true,
+      "first_seen": "2026-11-13 19:15"
+    },
     {
       "package": "terra",
       "version": "1.9-57",
@@ -20,14 +30,6 @@
       "first_seen": "2026-10-23 02:35",
       "left": "2026-11-06 21:28 UTC",
       "outcome": "published"
-    },
-    {
-      "package": "laridae",
-      "version": "0.1.0",
-      "folder": "newbies",
-      "first_seen": "2026-10-23 04:00",
-      "left": "2026-11-06 21:28 UTC",
-      "outcome": "archived"
     }
   ]
 }
