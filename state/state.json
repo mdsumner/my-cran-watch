@@ -289,370 +289,700 @@
     "basf|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "issue_number": 78,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "bgmfiles|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "issue_number": 79,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "geojson|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "issue_number": 80,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "ggpolypath|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "issue_number": 81,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gibble|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "issue_number": 82,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "ozmaps|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "issue_number": 84,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "rbgm|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "issue_number": 86,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "sooty|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "spbabel|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "spex|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "tidync|universe": {
       "status": "GAP",
       "text_hash": "67503",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "angstroms|metadata": {
       "status": "DRIFT",
       "text_hash": "1564161",
-      "streak": 57,
+      "streak": 58,
       "lifecycle": "active",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "vaster|universe": {
       "status": "GAP",
       "text_hash": "21512",
       "detail": "failing in hypertidy",
-      "streak": 11,
+      "streak": 12,
       "lifecycle": "active",
       "issue_number": 67,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gdal-r-ci#34|canary": {
       "status": "CANARY",
       "text_hash": "488645",
       "detail": "[Canary check failed — 2026-10-15](https://github.com/hypertidy/gdal-r-ci/issues/34)",
-      "streak": 10,
+      "streak": 11,
       "lifecycle": "active",
       "issue_number": 68,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gdal-r-ci#33|canary": {
       "status": "CANARY",
       "text_hash": "488398",
       "detail": "[Canary check failed — 2026-10-01](https://github.com/hypertidy/gdal-r-ci/issues/33)",
-      "streak": 10,
+      "streak": 11,
       "lifecycle": "active",
       "issue_number": 69,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gdal-r-ci#31|canary": {
       "status": "CANARY",
       "text_hash": "488637",
       "detail": "[Canary check failed — 2026-09-15](https://github.com/hypertidy/gdal-r-ci/issues/31)",
-      "streak": 10,
+      "streak": 11,
       "lifecycle": "active",
       "issue_number": 70,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gdal-r-ci#30|canary": {
       "status": "CANARY",
       "text_hash": "488390",
       "detail": "[Canary check failed — 2026-09-01](https://github.com/hypertidy/gdal-r-ci/issues/30)",
-      "streak": 10,
+      "streak": 11,
       "lifecycle": "active",
       "issue_number": 71,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gdal-r-ci#29|canary": {
       "status": "CANARY",
       "text_hash": "489189",
       "detail": "[Canary check failed — 2026-08-15](https://github.com/hypertidy/gdal-r-ci/issues/29)",
-      "streak": 10,
+      "streak": 11,
       "lifecycle": "active",
       "issue_number": 72,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gdal-r-ci#28|canary": {
       "status": "CANARY",
       "text_hash": "488942",
       "detail": "[Canary check failed — 2026-08-01](https://github.com/hypertidy/gdal-r-ci/issues/28)",
-      "streak": 10,
+      "streak": 11,
       "lifecycle": "active",
       "issue_number": 73,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gdal-r-ci#27|canary": {
       "status": "CANARY",
       "text_hash": "488993",
       "detail": "[Canary check failed — 2026-07-15](https://github.com/hypertidy/gdal-r-ci/issues/27)",
-      "streak": 10,
+      "streak": 11,
       "lifecycle": "active",
       "issue_number": 74,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gdal-r-ci#25|canary": {
       "status": "CANARY",
       "text_hash": "488797",
       "detail": "[Canary check failed — 2026-06-15](https://github.com/hypertidy/gdal-r-ci/issues/25)",
-      "streak": 10,
+      "streak": 11,
       "lifecycle": "active",
       "issue_number": 75,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gdal-r-ci#23|canary": {
       "status": "CANARY",
       "text_hash": "488601",
       "detail": "[Canary check failed — 2026-05-15](https://github.com/hypertidy/gdal-r-ci/issues/23)",
-      "streak": 10,
+      "streak": 11,
       "lifecycle": "active",
       "issue_number": 76,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "angstroms|checks": {
-      "status": "NOTE",
-      "text_hash": "4901639",
-      "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n\nCRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nFound the following (possibly) invalid file URI:\n  URI: CONDUCT.md\n    From: README.md",
-      "streak": 9,
+      "status": "ERROR",
+      "text_hash": "35046573",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n- r-devel-linux-x86_64-debian-gcc: NOTE\n\nCRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nFound the following (possibly) invalid file URI:\n  URI: CONDUCT.md\n    From: README.md\n---\npackage dependencies: Package required but not available: 'raster'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.\nCRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nFound the following (possibly) invalid file URI:\n  URI: CONDUCT.md\n    From: README.md",
+      "streak": 1,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "decido|checks": {
       "status": "NOTE",
       "text_hash": "7870905",
       "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\nR code for possible problems: Found calls to structure() using deprecated special names:\n  decido/tests/testthat/test-handle-xy.R (.Dim: 1, .Dimnames: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.",
-      "streak": 9,
+      "streak": 10,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "orsifronts|checks": {
       "status": "NOTE",
       "text_hash": "8891399",
       "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n\nCRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nPackage CITATION file contains call(s) to old-style personList() or\nas.personList().  Please use c() on person objects instead.\nPackage CITATION file contains call(s) to old-style citEntry().  Please\nuse bibentry() instead.",
-      "streak": 9,
+      "streak": 10,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "quadmesh|checks": {
-      "status": "NOTE",
-      "text_hash": "12549623",
-      "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\nR code for possible problems: Found calls to structure() using deprecated special names:\n  quadmesh/tests/testthat/test-barycentric.R (.Dim: 1)\n  quadmesh/tests/testthat/test-reproject.R (.Dim: 2, .Dimnames: 2)\n  quadmesh/tests/testthat/test-tri-quads.R (.Dim: 2)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.",
-      "streak": 9,
+      "status": "ERROR",
+      "text_hash": "30987501",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\npackage dependencies: Packages required but not available: 'raster', 'terra'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.\nR code for possible problems: Found calls to structure() using deprecated special names:\n  quadmesh/tests/testthat/test-barycentric.R (.Dim: 1)\n  quadmesh/tests/testthat/test-reproject.R (.Dim: 2, .Dimnames: 2)\n  quadmesh/tests/testthat/test-tri-quads.R (.Dim: 2)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.",
+      "streak": 1,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "reproj|checks": {
       "status": "NOTE",
       "text_hash": "10613411",
       "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\nR code for possible problems: Found calls to structure() using deprecated special names:\n  reproj/tests/testthat/test-reproj-PROJ.R (.Dim: 2, .Dimnames: 1)\n  reproj/tests/testthat/test-reproj-proj4.R (.Dim: 2, .Dimnames: 1)\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.",
-      "streak": 9,
+      "streak": 10,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "textures|checks": {
       "status": "NOTE",
       "text_hash": "5851626",
       "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\nR code for possible problems: Found calls to structure() using deprecated special names:\n  textures/tests/testthat/test-quads.R (.Dim: 7)\n'.Dim' should be changed to 'dim'.",
-      "streak": 9,
+      "streak": 10,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "trip|checks": {
-      "status": "NOTE",
-      "text_hash": "40561108",
-      "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\nR code for possible problems: Found calls to structure() using deprecated special names:\n  trip/tests/testthat/test-trip.R (.Label: 8, .Dim: 1, .Dimnames: 1)\n'.Label' should be changed to 'levels'.\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.\n---\nRd contents: Rd files without \\usage:\n  ‘rasterize.Rd’\n\\arguments should not be documented without \\usage.\nR code for possible problems: Found calls to structure() using deprecated special names:\n  trip/tests/testthat/test-trip.R (.Label: 8, .Dim: 1, .Dimnames: 1)\n'.Label' should be changed to 'levels'.\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.",
-      "streak": 9,
+      "status": "ERROR",
+      "text_hash": "64314439",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\npackage dependencies: Package required but not available: 'raster'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.\nR code for possible problems: Found calls to structure() using deprecated special names:\n  trip/tests/testthat/test-trip.R (.Label: 8, .Dim: 1, .Dimnames: 1)\n'.Label' should be changed to 'levels'.\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.\n---\nRd contents: Rd files without \\usage:\n  ‘rasterize.Rd’\n\\arguments should not be documented without \\usage.\nR code for possible problems: Found calls to structure() using deprecated special names:\n  trip/tests/testthat/test-trip.R (.Label: 8, .Dim: 1, .Dimnames: 1)\n'.Label' should be changed to 'levels'.\n'.Dim' should be changed to 'dim'.\n'.Dimnames' should be changed to 'dimnames'.",
+      "streak": 1,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "tripEstimation|checks": {
       "status": "NOTE",
       "text_hash": "17828616",
       "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n\nCRAN incoming feasibility: Maintainer: ‘Michael D. Sumner <mdsumner@gmail.com>’\n\nThe BugReports field in DESCRIPTION has\n  https://github.com/Trackage/tripEstimation\nwhich should likely be\n  https://github.com/Trackage/tripEstimation/issues\ninstead.\n---\nRd contents: Rd files without \\usage:\n  ‘satellite.model.Rd’\n\\arguments should not be documented without \\usage.",
-      "streak": 9,
+      "streak": 10,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "wk|checks": {
       "status": "NOTE",
       "text_hash": "9126049",
       "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\nR code for possible problems: Found calls to structure() using deprecated special names:\n  wk/tests/testthat/test-grd-extract.R (.Dim: 1)\n  wk/tests/testthat/test-grd-plot.R (.Dim: 1)\n  wk/tests/testthat/test-grd-subset.R (.Dim: 1)\n'.Dim' should be changed to 'dim'.",
-      "streak": 9,
+      "streak": 10,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "geographiclib|checks": {
       "status": "WARNING",
       "text_hash": "113189592",
       "detail": "- r-release-macos-x86_64: WARNING\n\nwhether package can be installed: Found the following significant warnings:\n  Math.cpp:59:8: warning: compound assignment to object of volatile-qualified type 'volatile float' is deprecated [-Wdeprecated-volatile]\n  Math.cpp:60:9: warning: compound assignment to object of volatile-qualified type 'volatile float' is deprecated [-Wdeprecated-volatile]\n  Math.cpp:59:8: warning: compound assignment to object of volatile-qualified type 'volatile double' is deprecated [-Wdeprecated-volatile]\n  Math.cpp:60:9: warning: compound assignment to object of volatile-qualified type 'volatile double' is deprecated [-Wdeprecated-volatile]\n  Math.cpp:59:8: warning: compound assignment to object of volatile-qualified type 'volatile long double' is deprecated [-Wdeprecated-volatile]\n  Math.cpp:60:9: warning: compound assignment to object of volatile-qualified type 'volatile long double' is deprecated [-Wdeprecated-volatile]\nSee ‘/Volumes/Builds/packages/big-sur-x86_64/results/4.6/geographiclib.Rcheck/00install.out’ for details.\n* used C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’\n* used SDK: ‘MacOSX11.3.1.sdk’",
-      "streak": 9,
+      "streak": 10,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "ggsql|checks": {
       "status": "ERROR",
       "text_hash": "30628780",
       "detail": "- r-oldrel-macos-arm64: ERROR\n- r-oldrel-macos-x86_64: ERROR\n- r-release-macos-x86_64: ERROR\n\nwhether package can be installed: Installation failed.\nSee ‘/Volumes/Builds/packages/big-sur-arm64/results/4.5/ggsql.Rcheck/00install.out’ for details.\nwhether package can be installed: Installation failed.\nSee ‘/Volumes/Builds/packages/big-sur-x86_64/results/4.5/ggsql.Rcheck/00install.out’ for details.\nwhether package can be installed: Installation failed.\nSee ‘/Volumes/Builds/packages/big-sur-x86_64/results/4.6/ggsql.Rcheck/00install.out’ for details.",
-      "streak": 9,
+      "streak": 10,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-19",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "rgl|checks": {
       "status": "NOTE",
       "text_hash": "5506180",
       "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\nR code for possible problems: Found calls to structure() using deprecated special names:\n  rgl/inst/doc/transparency.R (.Dim: 1)\n'.Dim' should be changed to 'dim'.",
-      "streak": 8,
+      "streak": 9,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-20",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "sf|checks": {
       "status": "NOTE",
-      "text_hash": "642767533",
-      "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n- r-oldrel-macos-arm64: NOTE\n- r-oldrel-macos-x86_64: NOTE\n- r-oldrel-windows-x86_64: NOTE\n\ntests:   Running ‘aggregate.R’ [1s/2s]\n  Comparing ‘aggregate.Rout’ to ‘aggregate.Rout.save’ ... OK\n  Running ‘cast.R’ [2s/3s]\n  Comparing ‘cast.Rout’ to ‘cast.Rout.save’ ... OK\n  Running ‘crs.R’ [1s/2s]\n  Comparing ‘crs.Rout’ to ‘crs.Rout.save’ ... OK\n  Running ‘dist.R’ [1s/2s]\n  Comparing ‘dist.Rout’ to ‘dist.Rout.save’ ... OK\n  Running ‘dplyr.R’ [4s/4s]\n  Comparing ‘dplyr.Rout’ to ‘dplyr.Rout.save’ ... OK\n  Running ‘empty.R’ [1s/2s]\n  Comparing ‘empty.Rout’ to ‘empty.Rout.save’ ... OK\n  Running ‘full.R’ [2s/2s]\n  Comparing ‘full.Rout’ to ‘full.Rout.save’ ... OK\n  Running ‘gdal_geom.R’ [2s/3s]\n  Comparing ‘gdal_geom.Rout’ to ‘gdal_geom.Rout.save’ ... OK\n  Running ‘geos.R’ [30s/35s]\n  Comparing ‘geos.Rout’ to ‘geos.Rout.save’ ... OK\n  Running ‘graticule.R’ [4s/5s]\n  Comparing ‘graticule.Rout’ to ‘graticule.Rout.save’ ... OK\n  Running ‘grid.R’ [2s/3s]\n  Comparing ‘grid.Rout’ to ‘grid.Rout.save’ ... OK\n  Running ‘maps.R’ [3s/3s]\n  Comparing ‘maps.Rout’ to ‘maps.Rout.save’ ...\n43d42\n< There were 50 or more warnings (use warnings() to see the first 50)\n  Running ‘plot.R’ [9s/12s]\n  Comparing ‘plot.Rout’ to ‘plot.Rout.save’ ... OK\n  Running ‘read.R’ [3s/5s]\n  Comparing ‘read.Rout’ to ‘read.Rout.save’ ... OK\n  Running ‘roundtrip.R’ [3s/4s]\n  Comparing ‘roundtrip.Rout’ to ‘roundtrip.Rout.save’ ... OK\n  Running ‘s2.R’ [3s/4s]\n  Comparing ‘s2.Rout’ to ‘s2.Rout.save’ ... OK\n  Running ‘sample.R’ [1s/2s]\n  Comparing ‘sample.Rout’ to ‘sample.Rout.save’ ... OK\n  Running ‘sfc.R’ [17s/21s]\n  Comparing ‘sfc.Rout’ to ‘sfc.Rout.save’ ... OK\n  Running ‘sfg.R’ [1s/2s]\n  Comparing ‘sfg.Rout’ to ‘sfg.Rout.save’ ... OK\n  Running ‘spatstat.R’ [5s/6s]\n  Comparing ‘spatstat.Rout’ to ‘spatstat.Rout.save’ ... OK\n  Running ‘stars.R’ [4s/5s]\n  Comparing ‘stars.Rout’ to ‘stars.Rout.save’ ... OK\n  Running ‘test-by-element.R’ [1s/1s]\n  Comparing ‘test-by-element.Rout’ to ‘test-by-element.Rout.save’ ... OK\n  Running ‘testthat.R’ [26s/31s]\n  Running ‘units.R’ [2s/2s]\n  Comparing ‘units.Rout’ to ‘units.Rout.save’ ... OK\n  Running ‘wkb.R’ [1s/2s]\n  Comparing ‘wkb.Rout’ to ‘wkb.Rout.save’ ... OK\ntests:   Running ‘aggregate.R’ [1s/2s]\n  Comparing ‘aggregate.Rout’ to ‘aggregate.Rout.save’ ... OK\n  Running ‘cast.R’ [2s/3s]\n  Comparing ‘cast.Rout’ to ‘cast.Rout.save’ ... OK\n  Running ‘crs.R’ [1s/2s]\n  Comparing ‘crs.Rout’ to ‘crs.Rout.save’ ... OK\n  Running ‘dist.R’ [1s/2s]\n  Comparing ‘dist.Rout’ to ‘dist.Rout.save’ ... OK\n  Running ‘dplyr.R’ [3s/4s]\n  Comparing ‘dplyr.Rout’ to ‘dplyr.Rout.save’ ... OK\n  Running ‘empty.R’ [1s/2s]\n  Comparing ‘empty.Rout’ to ‘empty.Rout.save’ ... OK\n  Running ‘full.R’ [1s/2s]\n  Comparing ‘full.Rout’ to ‘full.Rout.save’ ... OK\n  Running ‘gdal_geom.R’ [2s/2s]\n  Comparing ‘gdal_geom.Rout’ to ‘gdal_geom.Rout.save’ ... OK\n  Running ‘geos.R’ [21s/27s]\n  Comparing ‘geos.Rout’ to ‘geos.Rout.save’ ... OK\n  Running ‘graticule.R’ [3s/4s]\n  Comparing ‘graticule.Rout’ to ‘graticule.Rout.save’ ... OK\n  Running ‘grid.R’ [1s/2s]\n  Comparing ‘grid.Rout’ to ‘grid.Rout.save’ ... OK\n  Running ‘maps.R’ [2s/3s]\n  Comparing ‘maps.Rout’ to ‘maps.Rout.save’ ...\n43d42\n< There were 50 or more warnings (use warnings() to see the first 50)\n  Running ‘plot.R’ [6s/8s]\n  Comparing ‘plot.Rout’ to ‘plot.Rout.save’ ... OK\n  Running ‘read.R’ [2s/3s]\n  Comparing ‘read.Rout’ to ‘read.Rout.save’ ... OK\n  Running ‘roundtrip.R’ [2s/3s]\n  Comparing ‘roundtrip.Rout’ to ‘roundtrip.Rout.save’ ... OK\n  Running ‘s2.R’ [2s/2s]\n  Comparing ‘s2.Rout’ to ‘s2.Rout.save’ ... OK\n  Running ‘sample.R’ [1s/1s]\n  Comparing ‘sample.Rout’ to ‘sample.Rout.save’ ... OK\n  Running ‘sfc.R’ [11s/15s]\n  Comparing ‘sfc.Rout’ to ‘sfc.Rout.save’ ... OK\n  Running ‘sfg.R’ [1s/1s]\n  Comparing ‘sfg.Rout’ to ‘sfg.Rout.save’ ..",
+      "text_hash": "973381977",
+      "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n- r-oldrel-macos-arm64: NOTE\n- r-oldrel-macos-x86_64: NOTE\n- r-oldrel-windows-x86_64: NOTE\n\ntests:   Running ‘aggregate.R’ [1s/2s]\n  Comparing ‘aggregate.Rout’ to ‘aggregate.Rout.save’ ... OK\n  Running ‘cast.R’ [2s/3s]\n  Comparing ‘cast.Rout’ to ‘cast.Rout.save’ ... OK\n  Running ‘crs.R’ [1s/2s]\n  Comparing ‘crs.Rout’ to ‘crs.Rout.save’ ... OK\n  Running ‘dist.R’ [1s/2s]\n  Comparing ‘dist.Rout’ to ‘dist.Rout.save’ ... OK\n  Running ‘dplyr.R’ [4s/5s]\n  Comparing ‘dplyr.Rout’ to ‘dplyr.Rout.save’ ... OK\n  Running ‘empty.R’ [1s/1s]\n  Comparing ‘empty.Rout’ to ‘empty.Rout.save’ ... OK\n  Running ‘full.R’ [2s/3s]\n  Comparing ‘full.Rout’ to ‘full.Rout.save’ ... OK\n  Running ‘gdal_geom.R’ [3s/4s]\n  Comparing ‘gdal_geom.Rout’ to ‘gdal_geom.Rout.save’ ... OK\n  Running ‘geos.R’ [32s/38s]\n  Comparing ‘geos.Rout’ to ‘geos.Rout.save’ ... OK\n  Running ‘graticule.R’ [4s/6s]\n  Comparing ‘graticule.Rout’ to ‘graticule.Rout.save’ ... OK\n  Running ‘grid.R’ [2s/3s]\n  Comparing ‘grid.Rout’ to ‘grid.Rout.save’ ... OK\n  Running ‘maps.R’ [3s/4s]\n  Comparing ‘maps.Rout’ to ‘maps.Rout.save’ ...\n43d42\n< There were 50 or more warnings (use warnings() to see the first 50)\n  Running ‘plot.R’ [9s/12s]\n  Comparing ‘plot.Rout’ to ‘plot.Rout.save’ ... OK\n  Running ‘read.R’ [3s/5s]\n  Comparing ‘read.Rout’ to ‘read.Rout.save’ ... OK\n  Running ‘roundtrip.R’ [3s/3s]\n  Comparing ‘roundtrip.Rout’ to ‘roundtrip.Rout.save’ ... OK\n  Running ‘s2.R’ [3s/3s]\n  Comparing ‘s2.Rout’ to ‘s2.Rout.save’ ... OK\n  Running ‘sample.R’ [1s/2s]\n  Comparing ‘sample.Rout’ to ‘sample.Rout.save’ ... OK\n  Running ‘sfc.R’ [7s/9s]\n  Comparing ‘sfc.Rout’ to ‘sfc.Rout.save’ ...\n809a810,818\n> \n> Attaching package: 'raster'\n> \n> The following object is masked from 'package:dplyr':\n> \n>     select\n> \n> xmin ymin xmax ymax \n> -180  -90  180   90 \n  Running ‘sfg.R’ [1s/1s]\n  Comparing ‘sfg.Rout’ to ‘sfg.Rout.save’ ... OK\n  Running ‘spatstat.R’ [5s/7s]\n  Comparing ‘spatstat.Rout’ to ‘spatstat.Rout.save’ ... OK\n  Running ‘stars.R’ [4s/5s]\n  Comparing ‘stars.Rout’ to ‘stars.Rout.save’ ... OK\n  Running ‘test-by-element.R’ [1s/2s]\n  Comparing ‘test-by-element.Rout’ to ‘test-by-element.Rout.save’ ... OK\n  Running ‘testthat.R’ [16s/21s]\n  Running ‘units.R’ [1s/2s]\n  Comparing ‘units.Rout’ to ‘units.Rout.save’ ... OK\n  Running ‘wkb.R’ [1s/2s]\n  Comparing ‘wkb.Rout’ to ‘wkb.Rout.save’ ... OK\ntests:   Running ‘aggregate.R’ [1s/1s]\n  Comparing ‘aggregate.Rout’ to ‘aggregate.Rout.save’ ... OK\n  Running ‘cast.R’ [2s/2s]\n  Comparing ‘cast.Rout’ to ‘cast.Rout.save’ ... OK\n  Running ‘crs.R’ [1s/1s]\n  Comparing ‘crs.Rout’ to ‘crs.Rout.save’ ... OK\n  Running ‘dist.R’ [1s/1s]\n  Comparing ‘dist.Rout’ to ‘dist.Rout.save’ ... OK\n  Running ‘dplyr.R’ [3s/4s]\n  Comparing ‘dplyr.Rout’ to ‘dplyr.Rout.save’ ... OK\n  Running ‘empty.R’ [1s/2s]\n  Comparing ‘empty.Rout’ to ‘empty.Rout.save’ ... OK\n  Running ‘full.R’ [1s/2s]\n  Comparing ‘full.Rout’ to ‘full.Rout.save’ ... OK\n  Running ‘gdal_geom.R’ [2s/3s]\n  Comparing ‘gdal_geom.Rout’ to ‘gdal_geom.Rout.save’ ... OK\n  Running ‘geos.R’ [20s/23s]\n  Comparing ‘geos.Rout’ to ‘geos.Rout.save’ ... OK\n  Running ‘graticule.R’ [3s/4s]\n  Comparing ‘graticule.Rout’ to ‘graticule.Rout.save’ ... OK\n  Running ‘grid.R’ [1s/2s]\n  Comparing ‘grid.Rout’ to ‘grid.Rout.save’ ... OK\n  Running ‘maps.R’ [2s/2s]\n  Comparing ‘maps.Rout’ to ‘maps.Rout.save’ ...\n43d42\n< There were 50 or more warnings (use warnings() to see the first 50)\n  Running ‘plot.R’ [6s/8s]\n  Comparing ‘plot.Rout’ to ‘plot.Rout.save’ ... OK\n  Running ‘read.R’ [3s/4s]\n  Comparing ‘read.Rout’ to ‘read.Rout.save’ ... OK\n  Running ‘roundtrip.R’ [2s/3s]\n  Comparing ‘roundtrip.Rout’ to ‘roundtrip.Rout.save’ ... OK\n  Running ‘s2.R’ [2s/2s]\n  Comparing ‘s2.Rout’ to ‘s2.Rout.save’ ... OK\n  Running ‘sample.R’ [1s/1s]\n  Comparing ‘sample.Rout’ to ‘sample.Ro",
       "streak": 1,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-20",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "stars|checks": {
       "status": "NOTE",
-      "text_hash": "663131116",
-      "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n- r-oldrel-macos-arm64: NOTE\n- r-oldrel-macos-x86_64: NOTE\n- r-oldrel-windows-x86_64: NOTE\n- r-patched-linux-x86_64: NOTE\n- r-release-linux-x86_64: NOTE\n- r-release-windows-x86_64: NOTE\n\ntests:   Running ‘aggregate.R’ [15s/17s]\n  Comparing ‘aggregate.Rout’ to ‘aggregate.Rout.save’ ... OK\n  Running ‘align.R’ [2s/2s]\n  Comparing ‘align.Rout’ to ‘align.Rout.save’ ... OK\n  Running ‘area.R’ [2s/2s]\n  Comparing ‘area.Rout’ to ‘area.Rout.save’ ... OK\n  Running ‘crop.R’ [6s/7s]\n  Comparing ‘crop.Rout’ to ‘crop.Rout.save’ ... OK\n  Running ‘curvilinear.R’ [1s/2s]\n  Comparing ‘curvilinear.Rout’ to ‘curvilinear.Rout.save’ ... OK\n  Running ‘datasets.R’ [1s/2s]\n  Comparing ‘datasets.Rout’ to ‘datasets.Rout.save’ ... OK\n  Running ‘dimensions.R’ [3s/4s]\n  Comparing ‘dimensions.Rout’ to ‘dimensions.Rout.save’ ... OK\n  Running ‘downsample.R’ [1s/2s]\n  Comparing ‘downsample.Rout’ to ‘downsample.Rout.save’ ... OK\n  Running ‘ee.R’ [2s/2s]\n  Comparing ‘ee.Rout’ to ‘ee.Rout.save’ ... OK\n  Running ‘extract.R’ [2s/2s]\n  Comparing ‘extract.Rout’ to ‘extract.Rout.save’ ... OK\n  Running ‘gridtypes.R’ [2s/2s]\n  Comparing ‘gridtypes.Rout’ to ‘gridtypes.Rout.save’ ... OK\n  Running ‘mdim.R’ [2s/2s]\n  Comparing ‘mdim.Rout’ to ‘mdim.Rout.save’ ... OK\n  Running ‘nc.R’ [2s/3s]\n  Comparing ‘nc.Rout’ to ‘nc.Rout.save’ ... OK\n  Running ‘plot.R’ [3s/4s]\n  Comparing ‘plot.Rout’ to ‘plot.Rout.save’ ... OK\n  Running ‘predict.R’ [5s/6s]\n  Comparing ‘predict.Rout’ to ‘predict.Rout.save’ ... OK\n  Running ‘proxy.R’ [3s/5s]\n  Comparing ‘proxy.Rout’ to ‘proxy.Rout.save’ ... OK\n  Running ‘raster.R’ [14s/17s]\n  Comparing ‘raster.Rout’ to ‘raster.Rout.save’ ... OK\n  Running ‘rasterize.R’ [2s/3s]\n  Comparing ‘rasterize.Rout’ to ‘rasterize.Rout.save’ ... OK\n  Running ‘rectilinear.R’ [2s/3s]\n  Comparing ‘rectilinear.Rout’ to ‘rectilinear.Rout.save’ ... OK\n  Running ‘redimension.R’ [2s/2s]\n  Comparing ‘redimension.Rout’ to ‘redimension.Rout.save’ ... OK\n  Running ‘sf.R’ [2s/3s]\n  Comparing ‘sf.Rout’ to ‘sf.Rout.save’ ... OK\n  Running ‘sp.R’ [2s/3s]\n  Comparing ‘sp.Rout’ to ‘sp.Rout.save’ ... OK\n  Running ‘spacetime.R’ [3s/3s]\n  Comparing ‘spacetime.Rout’ to ‘spacetime.Rout.save’ ... OK\n  Running ‘spatstat.R’ [3s/4s]\n  Comparing ‘spatstat.Rout’ to ‘spatstat.Rout.save’ ...\n6,8d5\n< Registered S3 method overwritten by 'stars':\n<   method                  from\n<   st_interpolate_aw.stars sf  \n  Running ‘stars.R’ [8s/10s]\n  Comparing ‘stars.Rout’ to ‘stars.Rout.save’ ...\n60c60\n<         AXIS[\"(E)\",east,\n---\n>         AXIS[\"easting\",east,\n63c63\n<         AXIS[\"(N)\",north,\n---\n>         AXIS[\"northing\",north,\n  Running ‘subset.R’ [2s/3s]\n  Comparing ‘subset.Rout’ to ‘subset.Rout.save’ ... OK\n  Running ‘testthat.R’ [26s/34s]\n  Running ‘tidy.R’ [4s/5s]\n  Comparing ‘tidy.Rout’ to ‘tidy.Rout.save’ ... OK\n  Running ‘transform.R’ [2s/2s]\n  Comparing ‘transform.Rout’ to ‘transform.Rout.save’ ... OK\n  Running ‘warp.R’ [3s/5s]\n  Comparing ‘warp.Rout’ to ‘warp.Rout.save’ ... OK\n  Running ‘write.R’ [2s/3s]\n  Comparing ‘write.Rout’ to ‘write.Rout.save’ ... OK\ntests:   Running ‘aggregate.R’ [10s/11s]\n  Comparing ‘aggregate.Rout’ to ‘aggregate.Rout.save’ ... OK\n  Running ‘align.R’ [2s/2s]\n  Comparing ‘align.Rout’ to ‘align.Rout.save’ ... OK\n  Running ‘area.R’ [1s/1s]\n  Comparing ‘area.Rout’ to ‘area.Rout.save’ ... OK\n  Running ‘crop.R’ [4s/5s]\n  Comparing ‘crop.Rout’ to ‘crop.Rout.save’ ... OK\n  Running ‘curvilinear.R’ [1s/1s]\n  Comparing ‘curvilinear.Rout’ to ‘curvilinear.Rout.save’ ... OK\n  Running ‘datasets.R’ [1s/1s]\n  Comparing ‘datasets.Rout’ to ‘datasets.Rout.save’ ... OK\n  Running ‘dimensions.R’ [2s/2s]\n  Comparing ‘dimensions.Rout’ to ‘dimensions.Rout.save’ ... OK\n  Running ‘downsample.R’ [1s/1s]\n  Comparing ‘downsample.Rout’ to ‘downsample.Rout.save’ ... OK\n  Running ‘ee.R’ [1s/1s]\n  Comparing ‘ee.Rout",
+      "text_hash": "738549940",
+      "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n- r-oldrel-macos-arm64: NOTE\n- r-oldrel-macos-x86_64: NOTE\n- r-oldrel-windows-x86_64: NOTE\n- r-patched-linux-x86_64: NOTE\n- r-release-linux-x86_64: NOTE\n- r-release-windows-x86_64: NOTE\n\ntests:   Running ‘aggregate.R’ [3s/5s]\n  Comparing ‘aggregate.Rout’ to ‘aggregate.Rout.save’ ...\n101a102,122\n> stars object with 2 dimensions and 1 attribute\n> attribute(s):\n>     Min. 1st Qu. Median  Mean 3rd Qu. Max.\n> A1    28  194.25  360.5 360.5  526.75  693\n> dimension(s):\n>          from to     offset  delta refsys point\n> geometry    1  4         NA     NA WGS 84 FALSE\n> t           1  6 2019-02-20 1 days   Date FALSE\n>                                                                 values\n> geometry POLYGON ((0 12, 5 12, 5 6...,...,POLYGON ((5 6, 10 6, 10 0...\n> t                                                                 NULL\n>      [,1] [,2] [,3] [,4] [,5] [,6]\n> [1,]   28  148  268  388  508  628\n> [2,]   33  153  273  393  513  633\n> [3,]   88  208  328  448  568  688\n> [4,]   93  213  333  453  573  693\n> [1] TRUE\n> [1] TRUE\n> [1] TRUE\n> [1] TRUE\n> [1] TRUE\n  Running ‘align.R’ [2s/3s]\n  Comparing ‘align.Rout’ to ‘align.Rout.save’ ... OK\n  Running ‘area.R’ [2s/2s]\n  Comparing ‘area.Rout’ to ‘area.Rout.save’ ... OK\n  Running ‘crop.R’ [5s/6s]\n  Comparing ‘crop.Rout’ to ‘crop.Rout.save’ ... OK\n  Running ‘curvilinear.R’ [1s/2s]\n  Comparing ‘curvilinear.Rout’ to ‘curvilinear.Rout.save’ ... OK\n  Running ‘datasets.R’ [1s/2s]\n  Comparing ‘datasets.Rout’ to ‘datasets.Rout.save’ ... OK\n  Running ‘dimensions.R’ [3s/4s]\n  Comparing ‘dimensions.Rout’ to ‘dimensions.Rout.save’ ... OK\n  Running ‘downsample.R’ [1s/2s]\n  Comparing ‘downsample.Rout’ to ‘downsample.Rout.save’ ... OK\n  Running ‘ee.R’ [2s/2s]\n  Comparing ‘ee.Rout’ to ‘ee.Rout.save’ ... OK\n  Running ‘extract.R’ [2s/2s]\n  Comparing ‘extract.Rout’ to ‘extract.Rout.save’ ... OK\n  Running ‘gridtypes.R’ [2s/2s]\n  Comparing ‘gridtypes.Rout’ to ‘gridtypes.Rout.save’ ... OK\n  Running ‘mdim.R’ [2s/2s]\n  Comparing ‘mdim.Rout’ to ‘mdim.Rout.save’ ... OK\n  Running ‘nc.R’ [2s/3s]\n  Comparing ‘nc.Rout’ to ‘nc.Rout.save’ ... OK\n  Running ‘plot.R’ [3s/4s]\n  Comparing ‘plot.Rout’ to ‘plot.Rout.save’ ... OK\n  Running ‘predict.R’ [5s/6s]\n  Comparing ‘predict.Rout’ to ‘predict.Rout.save’ ... OK\n  Running ‘proxy.R’ [3s/4s]\n  Comparing ‘proxy.Rout’ to ‘proxy.Rout.save’ ... OK\n  Running ‘raster.R’ [2s/2s]\n  Comparing ‘raster.Rout’ to ‘raster.Rout.save’ ...\n24a25,33\n> stars_proxy object with 1 attribute in 1 file(s):\n> $L7_ETMs.tif\n> [1] \"[...]/L7_ETMs.tif\"\n> \n> dimension(s):\n>      from  to  offset delta                     refsys point x/y\n> x       1 349  288776  28.5 SIRGAS 2000 / UTM zone 25S FALSE [x]\n> y       1 352 9120761 -28.5 SIRGAS 2000 / UTM zone 25S FALSE [y]\n> band    1   6      NA    NA                         NA    NA    \n80a90,117\n> [1] TRUE\n> [1] TRUE\n> stars object with 3 dimensions and 1 attribute\n> attribute(s):\n>  lyr.1.lyr.2 \n>  c1:34       \n>  c2:32       \n>  c3:34       \n>  x1:28       \n>  x2:37       \n>  x3:35       \n> dimension(s):\n>         from to offset delta         refsys       values x/y\n> x          1 10   -180    36 WGS 84 (CRS84)         NULL [x]\n> y          1 10     90   -18 WGS 84 (CRS84)         NULL [y]\n> new_dim    1  2     NA    NA             NA lyr.1, lyr.2    \n> [[1]]\n>   IDs categories\n> 1   1         c1\n> 2   2         c2\n> 3   3         c3\n> \n> [[2]]\n>   IDs categories\n> 1   0         x1\n> 2   2         x2\n> 3   3         x3\n> \n  Running ‘rasterize.R’ [2s/4s]\n  Comparing ‘rasterize.Rout’ to ‘rasterize.Rout.save’ ... OK\n  Running ‘rectilinear.R’ [2s/3s]\n  Comparing ‘rectilinear.Rout’ to ‘rectilinear.Rout.save’ ... OK\n  Running ‘redimension.R’ [2s/3s]\n  Comparing ‘redimension.Rout’ to ‘redimension.Rout.save’ ... OK\n  Running ‘sf.R’ [2s/3s]\n  Comparing ‘sf.Rout’ to ‘",
       "streak": 1,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-20",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "tmap|checks": {
-      "status": "NOTE",
-      "text_hash": "5444141",
-      "detail": "- r-devel-linux-x86_64-debian-clang: NOTE\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\nR code for possible problems: Found calls to structure() using deprecated special names:\n  tmap/R/misc_other.R (.Names: 2)\n'.Names' should be changed to 'names'.",
-      "streak": 3,
+      "status": "ERROR",
+      "text_hash": "30487599",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\npackage dependencies: Packages required but not available:\n  'leafem', 'leafgl', 'leaflegend', 'leaflet', 'leafsync', 'maptiles'\n\nPackage suggested but not available for checking: 'terra'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.\nR code for possible problems: Found calls to structure() using deprecated special names:\n  tmap/R/misc_other.R (.Names: 2)\n'.Names' should be changed to 'names'.",
+      "streak": 1,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-10-20",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
     },
     "gdal-r-ci#40|canary": {
       "status": "CANARY",
       "text_hash": "488261",
       "detail": "[Canary check failed — 2026-11-01](https://github.com/hypertidy/gdal-r-ci/issues/40)",
-      "streak": 2,
+      "streak": 3,
       "lifecycle": "active",
       "issue_number": {},
       "first_seen": "2026-11-01",
-      "last_seen": "2026-11-07"
+      "last_seen": "2026-11-13"
+    },
+    "affinity|checks": {
+      "status": "ERROR",
+      "text_hash": "6396034",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Package required but not available: 'raster'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "basf|checks": {
+      "status": "ERROR",
+      "text_hash": "6396034",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Package required but not available: 'raster'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "CCAMLRGIS|checks": {
+      "status": "ERROR",
+      "text_hash": "6344564",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Package required but not available: 'terra'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "ceramic|checks": {
+      "status": "ERROR",
+      "text_hash": "7087490",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Packages required but not available: 'terra', 'slippymath'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "controlledburn|checks": {
+      "status": "ERROR",
+      "text_hash": "105627747",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\nre-building of vignette outputs: Error(s) in re-building vignettes:\n  ...\n--- re-building ‘algorithms.Rmd’ using rmarkdown\n\nQuitting from algorithms.Rmd:570-581 [zonal-stats-setup]\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n<error/rlang_error>\nError in `library()`:\n! there is no package called 'terra'\n---\nBacktrace:\n    ▆\n 1. └─base::library(terra)\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nError: processing vignette 'algorithms.Rmd' failed with diagnostics:\nthere is no package called 'terra'\n--- failed re-building ‘algorithms.Rmd’\n\n--- re-building ‘architecture.Rmd’ using rmarkdown\n[WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.\n--- finished re-building ‘architecture.Rmd’\n\nSUMMARY: processing the following file failed:\n  ‘algorithms.Rmd’\n\nError: Vignette re-building failed.\nExecution halted",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "fasterize|checks": {
+      "status": "ERROR",
+      "text_hash": "6396034",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Package required but not available: 'raster'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "graticule|checks": {
+      "status": "ERROR",
+      "text_hash": "9383023",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Package required but not available: 'raster'\n\nPackage suggested but not available for checking: 'spex'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "mapscanner|checks": {
+      "status": "ERROR",
+      "text_hash": "10380269",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Packages required but not available: 'raster', 'slippymath'\n\nPackage suggested but not available for checking: 'mapview'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "mapview|checks": {
+      "status": "ERROR",
+      "text_hash": "13667500",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Packages required but not available:\n  'leafem', 'leaflet', 'raster', 'satellite'\n\nPackages suggested but not available for checking:\n  'leaflet.extras2', 'leafsync', 'plainview'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "raster|checks": {
+      "status": "ERROR",
+      "text_hash": "10702101",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Package required but not available: 'terra'\n\nPackages suggested but not available for checking:\n  'rasterVis', 'exactextractr'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "rbgm|checks": {
+      "status": "ERROR",
+      "text_hash": "6396034",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Package required but not available: 'raster'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "rsi|checks": {
+      "status": "ERROR",
+      "text_hash": "6344564",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Package required but not available: 'terra'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "slippymath|checks": {
+      "status": "ERROR",
+      "text_hash": "6396034",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Package required but not available: 'raster'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "sp|checks": {
+      "status": "ERROR",
+      "text_hash": "749446000",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n- r-devel-linux-x86_64-debian-gcc: NOTE\n- r-devel-linux-x86_64-fedora-clang: NOTE\n- r-devel-linux-x86_64-fedora-gcc: NOTE\n- r-devel-windows-x86_64: NOTE\n\ntests:   Running ‘agg.R’ [1s/1s]\n  Comparing ‘agg.Rout’ to ‘agg.Rout.save’ ... OK\n  Running ‘base.R’ [1s/1s]\n  Comparing ‘base.Rout’ to ‘base.Rout.save’ ... OK\n  Running ‘fail1.R’ [2s/2s]\n  Comparing ‘fail1.Rout’ to ‘fail1.Rout.save’ ...\n82c82\n< 2: In validityMethod(if (exti@simple) object else as(object, superClass)) :\n---\n> 2: In validityMethod(as(object, superClass)) :\n  Running ‘grid.R’ [1s/1s]\n  Comparing ‘grid.Rout’ to ‘grid.Rout.save’ ... OK\n  Running ‘over2.R’ [1s/1s]\n  Comparing ‘over2.Rout’ to ‘over2.Rout.save’ ... OK\n  Running ‘pass1.R’ [2s/2s]\n  Comparing ‘pass1.Rout’ to ‘pass1.Rout.save’ ... OK\n  Running ‘point.in.polygon.R’ [1s/1s]\n  Comparing ‘point.in.polygon.Rout’ to ‘point.in.polygon.Rout.save’ ... OK\n  Running ‘sel.R’ [1s/1s]\n  Comparing ‘sel.Rout’ to ‘sel.Rout.save’ ... OK\n  Running ‘sp1.R’ [1s/1s]\n  Comparing ‘sp1.Rout’ to ‘sp1.Rout.save’ ... OK\n  Running ‘spDists.R’ [1s/2s]\n  Comparing ‘spDists.Rout’ to ‘spDists.Rout.save’ ... OK\n  Running ‘spplot.R’ [1s/1s]\n  Comparing ‘spplot.Rout’ to ‘spplot.Rout.save’ ... OK\n  Running ‘zerodist.R’ [1s/1s]\n  Comparing ‘zerodist.Rout’ to ‘zerodist.Rout.save’ ... OK\n---\nre-building of vignette outputs: Error(s) in re-building vignettes:\n  ...\n--- re-building ‘CRS_warnings.Rmd’ using rmarkdown\n[WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.\n--- finished re-building ‘CRS_warnings.Rmd’\n\n--- re-building ‘retiring_rgdal_geos_1.Rmd’ using rmarkdown\n[WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.\n--- finished re-building ‘retiring_rgdal_geos_1.Rmd’\n\n--- re-building ‘sp_gallery.Rmd’ using rmarkdown\n\nQuitting from sp_gallery.Rmd:428-431 [unnamed-chunk-29]\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n<error/rlang_error>\nError in `library()`:\n! there is no package called 'mapview'\n---\nBacktrace:\n    ▆\n 1. └─base::library(mapview)\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nError: processing vignette 'sp_gallery.Rmd' failed with diagnostics:\nthere is no package called 'mapview'\n--- failed re-building ‘sp_gallery.Rmd’\n\n--- re-building ‘csdacm.Rnw’ using Sweave\n--- finished re-building ‘csdacm.Rnw’\n\n--- re-building ‘intro_sp.Rnw’ using Sweave\n--- finished re-building ‘intro_sp.Rnw’\n\nSUMMARY: processing the following file failed:\n  ‘sp_gallery.Rmd’\n\nError: Vignette re-building failed.\nExecution halted\ntests:   Running ‘agg.R’ [0s/1s]\n  Comparing ‘agg.Rout’ to ‘agg.Rout.save’ ... OK\n  Running ‘base.R’ [1s/1s]\n  Comparing ‘base.Rout’ to ‘base.Rout.save’ ... OK\n  Running ‘fail1.R’ [1s/2s]\n  Comparing ‘fail1.Rout’ to ‘fail1.Rout.save’ ...\n82c82\n< 2: In validityMethod(if (exti@simple) object else as(object, superClass)) :\n---\n> 2: In validityMethod(as(object, superClass)) :\n  Running ‘grid.R’ [1s/1s]\n  Comparing ‘grid.Rout’ to ‘grid.Rout.save’ ... OK\n  Running ‘over2.R’ [0s/1s]\n  Comparing ‘over2.Rout’ to ‘over2.Rout.save’ ... OK\n  Running ‘pass1.R’ [1s/2s]\n  Comparing ‘pass1.Rout’ to ‘pass1.Rout.save’ ... OK\n  Running ‘point.in.polygon.R’ [0s/1s]\n  Comparing ‘point.in.polygon.Rout’ to ‘point.in.polygon.Rout.save’ ... OK\n  Running ‘sel.R’ [1s/1s]\n  Comparing ‘sel.Rout’ to ‘sel.Rout.save’ ... OK\n  Running ‘sp1.R’ [1s/1s]\n  Comparing ‘sp1.Rout’ to ‘sp1.Rout.save’ ... OK\n  Running ‘spDists.R’ [1s/1s]\n  Comparing ‘spDists.Rout’ to ‘spDists.Rout.save’ ... OK\n  Running ‘spplot.R’ [1s/1s]\n  Comparing ‘spplot.Rout’ to ‘spplot.Rout.save’ ... OK\n  Running ‘zerodist.R’ [1s/1s]\n  Comparing ‘zerodist.Rout’ to ‘zerodist.Rout.save’ ... OK\ntests:   Running ‘agg.R’\n  Comparing ‘agg.Rout’ to ‘agg.Rout.save’ ... OK\n  Running ‘base.R’\n  Comparing ‘base.Rout’ to ‘base.Rout.save’ ... OK\n  Running ‘fail1.R’\n  Comparing ‘fail1.Rout’ to ‘fail1.Rout.save’ ...\n82c82\n< 2: In validityMethod(if (exti@si",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "spex|checks": {
+      "status": "ERROR",
+      "text_hash": "7032241",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Packages required but not available: 'quadmesh', 'raster'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "tabularaster|checks": {
+      "status": "ERROR",
+      "text_hash": "7085228",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Packages required but not available: 'fasterize', 'raster'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "terra|checks": {
+      "status": "ERROR",
+      "text_hash": "4006028",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\nwhether package can be installed: Installation failed.\nSee ‘/home/hornik/tmp/R.check/r-devel-clang/Work/PKGS/terra.Rcheck/00install.out’ for details.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "tidyterra|checks": {
+      "status": "ERROR",
+      "text_hash": "9552009",
+      "detail": "- r-devel-linux-x86_64-debian-clang: ERROR\n\npackage dependencies: Package required but not available: 'terra'\n\nPackage suggested but not available for checking: 'maptiles'\n\nSee section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’\nmanual.",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "quadmesh|universe": {
+      "status": "GAP",
+      "text_hash": "21512",
+      "detail": "failing in hypertidy",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "crsmeta|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "1272481",
+      "detail": "3 of 5 reverse dependencies ERROR on CRAN:\n- ceramic: r-devel-linux-x86_64-debian-clang\n- spex: r-devel-linux-x86_64-debian-clang\n- trip: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "decido|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "349961",
+      "detail": "1 of 3 reverse dependencies ERROR on CRAN:\n- rayrender: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "fasterize|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "1464348",
+      "detail": "3 of 3 reverse dependencies ERROR on CRAN:\n- rasterDT: r-devel-linux-x86_64-debian-clang\n- siland: r-devel-linux-x86_64-debian-clang\n- tabularaster: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "ncmeta|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "331122",
+      "detail": "1 of 5 reverse dependencies ERROR on CRAN:\n- ebvcube: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "palr|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "340653",
+      "detail": "1 of 1 reverse dependencies ERROR on CRAN:\n- quadmesh: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "quadmesh|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "307285",
+      "detail": "1 of 1 reverse dependencies ERROR on CRAN:\n- spex: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "reproj|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "5487303",
+      "detail": "7 of 8 reverse dependencies ERROR on CRAN:\n- affinity: r-devel-linux-x86_64-debian-clang\n- graticule: r-devel-linux-x86_64-debian-clang\n- mapscanner: r-devel-linux-x86_64-debian-clang\n- quadmesh: r-devel-linux-x86_64-debian-clang\n- rbgm: r-devel-linux-x86_64-debian-clang\n- spex: r-devel-linux-x86_64-debian-clang\n- trip: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "silicate|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "377103",
+      "detail": "1 of 1 reverse dependencies ERROR on CRAN:\n- tabularaster: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "spbabel|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "350967",
+      "detail": "1 of 1 reverse dependencies ERROR on CRAN:\n- angstroms: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "tidync|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "362723",
+      "detail": "1 of 2 reverse dependencies ERROR on CRAN:\n- read.abares: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "traipse|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "307225",
+      "detail": "1 of 1 reverse dependencies ERROR on CRAN:\n- trip: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "vapour|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "330710",
+      "detail": "1 of 1 reverse dependencies ERROR on CRAN:\n- ceramic: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "vaster|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "396418",
+      "detail": "1 of 2 reverse dependencies ERROR on CRAN:\n- controlledburn: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    "ximage|revdeps": {
+      "status": "REVDEP",
+      "text_hash": "396412",
+      "detail": "1 of 1 reverse dependencies ERROR on CRAN:\n- controlledburn: r-devel-linux-x86_64-debian-clang",
+      "streak": 1,
+      "lifecycle": "observed",
+      "issue_number": {},
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
     }
   },
   "summary": {
-    "date": "2026-11-07",
-    "number": 127,
+    "date": "2026-11-13",
+    "number": 128,
     "seen": {
       "basf|universe": "GAP",
       "bgmfiles|universe": "GAP",
@@ -676,13 +1006,13 @@
       "gdal-r-ci#27|canary": "CANARY",
       "gdal-r-ci#25|canary": "CANARY",
       "gdal-r-ci#23|canary": "CANARY",
-      "angstroms|checks": "NOTE",
+      "angstroms|checks": "ERROR",
       "decido|checks": "NOTE",
       "orsifronts|checks": "NOTE",
-      "quadmesh|checks": "NOTE",
+      "quadmesh|checks": "ERROR",
       "reproj|checks": "NOTE",
       "textures|checks": "NOTE",
-      "trip|checks": "NOTE",
+      "trip|checks": "ERROR",
       "tripEstimation|checks": "NOTE",
       "wk|checks": "NOTE",
       "geographiclib|checks": "WARNING",
@@ -690,8 +1020,41 @@
       "rgl|checks": "NOTE",
       "sf|checks": "NOTE",
       "stars|checks": "NOTE",
-      "tmap|checks": "NOTE",
-      "gdal-r-ci#40|canary": "CANARY"
+      "tmap|checks": "ERROR",
+      "gdal-r-ci#40|canary": "CANARY",
+      "affinity|checks": "ERROR",
+      "basf|checks": "ERROR",
+      "CCAMLRGIS|checks": "ERROR",
+      "ceramic|checks": "ERROR",
+      "controlledburn|checks": "ERROR",
+      "fasterize|checks": "ERROR",
+      "graticule|checks": "ERROR",
+      "mapscanner|checks": "ERROR",
+      "mapview|checks": "ERROR",
+      "raster|checks": "ERROR",
+      "rbgm|checks": "ERROR",
+      "rsi|checks": "ERROR",
+      "slippymath|checks": "ERROR",
+      "sp|checks": "ERROR",
+      "spex|checks": "ERROR",
+      "tabularaster|checks": "ERROR",
+      "terra|checks": "ERROR",
+      "tidyterra|checks": "ERROR",
+      "quadmesh|universe": "GAP",
+      "crsmeta|revdeps": "REVDEP",
+      "decido|revdeps": "REVDEP",
+      "fasterize|revdeps": "REVDEP",
+      "ncmeta|revdeps": "REVDEP",
+      "palr|revdeps": "REVDEP",
+      "quadmesh|revdeps": "REVDEP",
+      "reproj|revdeps": "REVDEP",
+      "silicate|revdeps": "REVDEP",
+      "spbabel|revdeps": "REVDEP",
+      "tidync|revdeps": "REVDEP",
+      "traipse|revdeps": "REVDEP",
+      "vapour|revdeps": "REVDEP",
+      "vaster|revdeps": "REVDEP",
+      "ximage|revdeps": "REVDEP"
     }
   }
 }
