@@ -87,7 +87,8 @@ var STATUS = {
   note:   ["NOTE",         function (p) { return RANK[p.worst] === 2; }],
   issues: ["Open issues",  function (p) { return openIssues(p) > 0; }],
   queue:  ["CRAN queue",   function (p) { return !!(QUEUE[p.package] || EXITS[p.package]); }],
-  notag:  ["No GitHub tag", function (p) { var t = tagOf(p); return !!t && !t.error && !t.tag; }]
+  notag:  ["No GitHub tag", function (p) { var t = tagOf(p); return !!t && !t.error && !t.tag; }],
+  noconda: ["Not on conda-forge", function (p) { var c = CONDA[p.package]; return !p.fresh && !!c && !c.conda; }]
 };
 var role = "all", status = "all", sort = { key: "package", dir: 1 };
 try {
@@ -149,6 +150,30 @@ function tagLine(p) {
     title: (t.release ? "GitHub release for " : "tag ") + t.tag + " in " + t.repo + newer }, (t.release ? "release " : "tag ") + t.tag));
   else div.appendChild(el("a", { href: t.url, "class": "s-NOTE",
     title: "no tag naming " + t.version + " among " + t.tags + " tags in " + t.repo + newer }, "no tag"));
+  return div;
+}
+// conda-forge status (docs/conda.json, checked with the queue): the
+// feedstock's version, an open staged-recipes PR, or not there at all
+function condaLine(p) {
+  var c = CONDA[p.package];
+  if (!c) return null;
+  var div = el("div", { "class": "role" });
+  if (c.conda) {
+    var behind = c.behind && c.version === p.version;
+    div.appendChild(el("a", { href: c.url, "class": behind ? "s-NOTE" : "muted",
+      title: c.name + " " + c.conda + " on conda-forge" + (behind ? ", behind CRAN " + c.version : "") },
+      "conda " + c.conda + (behind ? " (behind)" : "")));
+  } else if ((c.prs || []).length) {
+    c.prs.forEach(function (r, i) {
+      if (i) div.appendChild(document.createTextNode(" "));
+      div.appendChild(el("a", { href: r.url,
+        title: c.name + " in conda-forge/staged-recipes" + (r.draft ? " (draft)" : "") + ", opened " + r.created + " by " + r.user },
+        "staged-recipes #" + r.number + (r.draft ? " (draft)" : "")));
+    });
+  } else {
+    div.appendChild(el("a", { href: "https://github.com/conda-forge/staged-recipes/pulls?q=" + encodeURIComponent("is:pr " + c.name),
+      "class": "s-NOTE", title: "no " + c.name + " on conda-forge and no open staged-recipes PR naming it" }, "no conda"));
+  }
   return div;
 }
 // date of the current CRAN release, with how long ago underneath
@@ -266,6 +291,7 @@ function render(d) {
     }
     v.appendChild(el("a", { href: cranPage(p.package) }, p.version));
     var tl = tagLine(p); if (tl) v.appendChild(tl);
+    var cl = condaLine(p); if (cl) v.appendChild(cl);
     tr.appendChild(v);
     tr.appendChild(publishedCell(p.published));
     tr.appendChild(queueCell(p.package));
@@ -298,16 +324,17 @@ function render(d) {
   if (!(d.other || []).length) o.textContent = "None.";
   (d.other || []).forEach(function (c) { var line = el("div"); line.appendChild(el("span", {}, c.package + " ")); line.appendChild(condLink(c)); o.appendChild(line); });
 }
-var DETAILS = {}, QUEUE = {}, EXITS = {}, QUEUE_AT = "", PUBLISHED = {}, TAGS = {};
+var DETAILS = {}, QUEUE = {}, EXITS = {}, QUEUE_AT = "", PUBLISHED = {}, TAGS = {}, CONDA = {};
 function optional(url) {
   return fetch(url, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; })
     .catch(function () { return null; });
 }
-Promise.all([optional("pkg/index.json"), optional("queue.json"), optional("published.json"), optional("tags.json")])
+Promise.all([optional("pkg/index.json"), optional("queue.json"), optional("published.json"), optional("tags.json"), optional("conda.json")])
   .then(function (x) {
     DETAILS = x[0] || {};
     PUBLISHED = (x[2] || {}).packages || {};
     TAGS = (x[3] || {}).packages || {};
+    CONDA = (x[4] || {}).packages || {};
     if (x[1]) {
       QUEUE_AT = x[1].changed || "";
       (x[1].entries || []).forEach(function (e) {

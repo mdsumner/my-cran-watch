@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # commit docs/queue.json, published.json and tags.json back to this repo
+  contents: write   # commit docs/queue.json, published.json, tags.json and conda.json back to this repo
 
 jobs:
   queue:
@@ -35,6 +35,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/repo_tags.py
 
+      - name: Check conda-forge and staged-recipes
+        continue-on-error: true   # as above: anaconda.org or GitHub hiccups must not hold up the queue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/conda_forge.py
+
       - name: Commit queue
         if: github.ref == 'refs/heads/main'   # a run on another branch is a dry run
         run: |
@@ -42,6 +48,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add docs/queue.json docs/published.json
           if [ -f docs/tags.json ]; then git add docs/tags.json; fi
+          if [ -f docs/conda.json ]; then git add docs/conda.json; fi
           git diff --cached --quiet && exit 0
           git commit -m "queue: $(date -u '+%F %H:%M')"
           git pull --rebase origin main

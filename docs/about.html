@@ -104,6 +104,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <div class="card"><h3>CRAN incoming queue</h3><p>Where your submissions sit (newbies, pretest, pending, a reviewer's folder), including brand-new packages that are not on CRAN yet.</p></div>
   <div class="card"><h3>Reverse dependencies</h3><p>Packages that depend on yours and are failing on CRAN, which is often the first sign a release broke someone.</p></div>
   <div class="card"><h3>GitHub tags</h3><p>Whether the CRAN version has a matching tag (v1.2.3, 1.2.3 and similar) in the package's repository, linked to its GitHub release when there is one. "No tag" links to the repo's tags; the "No GitHub tag" tile lists them all.</p></div>
+  <div class="card"><h3>conda-forge</h3><p>Whether the package is on conda-forge as r-&lt;name&gt; ("conda" and its version, marked "behind" when older than CRAN, linked to the feedstock), or has an open pull request in conda-forge/staged-recipes naming it. "No conda" means neither; the "Not on conda-forge" tile lists those and the ones in review.</p></div>
   <div class="card"><h3>r-universe</h3><p>Whether each package is present in your r-universe and whether the CRAN metadata points back to your repository.</p></div>
   <div class="card"><h3>Package details</h3><p>A weekly per-package page with URL checks (urlchecker), CRAN policy checks (checktor) and, on request, rOpenSci pkgcheck.</p></div>
   <div class="card"><h3>Releases</h3><p>A board for packages on their way to CRAN: GitHub CI, checktor and urlchecker on the GitHub source, win-builder and mac-builder results, then the incoming queue until CRAN publishes. The same page lists every submission of yours in CRAN incoming.</p></div>
@@ -132,7 +133,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <p class="lead">Everything specific to one person lives in <code>config.yml</code>. Fork, edit that file, and turn on Pages.</p>
 <ol class="steps">
   <li><b>Fork the repository</b>
-    Use the Fork button on GitHub. Then clear the previous owner's data so your first run starts fresh: delete <code>state/state.json</code>, <code>docs/status.json</code>, <code>docs/queue.json</code>, <code>docs/published.json</code>, <code>docs/tags.json</code> and the files in <code>docs/pkg/</code>.</li>
+    Use the Fork button on GitHub. Then clear the previous owner's data so your first run starts fresh: delete <code>state/state.json</code>, <code>docs/status.json</code>, <code>docs/queue.json</code>, <code>docs/published.json</code>, <code>docs/tags.json</code>, <code>docs/conda.json</code> and the files in <code>docs/pkg/</code>.</li>
   <li><b>Edit <code>config.yml</code></b>
     Set your Maintainer emails and the name forms that appear in author lists, and replace the previous owner's lists (<code>watch</code>, <code>universes</code>, <code>repo_map</code>, <code>extra_packages</code>, <code>pkgcheck</code>) with your own or empty ones.
 <pre><code>maintainer_emails:

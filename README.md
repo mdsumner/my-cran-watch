@@ -152,6 +152,18 @@ GitHub tag" tile to list them. It reads only; tagging is the version
 watcher's job (above, needs `WATCH_PAT`) or `retro_tag.R` (below), and
 "no tag" on one of mine is the sign one of those has not happened.
 
+## conda-forge check (dashboard only)
+
+In the same twice-daily job, `scripts/conda_forge.py` asks anaconda.org
+for `r-<package>` (lowercased) on the conda-forge channel and, for every
+package not there, looks through the open pull requests of
+[conda-forge/staged-recipes](https://github.com/conda-forge/staged-recipes/pulls)
+for one naming `r-<package>` in its title or branch. The answer goes in
+`docs/conda.json` and under the version on the dashboard: "conda x.y.z"
+linked to the feedstock (flagged "behind" when older than CRAN), the
+staged-recipes PR, or "no conda", with a "Not on conda-forge" tile to list
+them. A PR that names its recipe some other way is missed. It reads only.
+
 ## Retro-tagging (one-shot)
 
 `scripts/retro_tag.R` clears historical tag debt: for each package it

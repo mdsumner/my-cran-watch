@@ -1,0 +1,466 @@
+{
+  "checked": "2026-11-13 05:35 UTC",
+  "packages": {
+    "CCAMLRGIS": {
+      "name": "r-ccamlrgis",
+      "version": "4.3.1",
+      "conda": null,
+      "prs": []
+    },
+    "PROJ": {
+      "name": "r-proj",
+      "version": "0.7.0",
+      "conda": "0.7.0",
+      "url": "https://github.com/conda-forge/r-proj-feedstock",
+      "behind": false
+    },
+    "RTriangle": {
+      "name": "r-rtriangle",
+      "version": "1.6-0.15",
+      "conda": "1.6_0.15",
+      "url": "https://github.com/conda-forge/r-rtriangle-feedstock",
+      "behind": false
+    },
+    "affinity": {
+      "name": "r-affinity",
+      "version": "0.2.5",
+      "conda": null,
+      "prs": []
+    },
+    "angstroms": {
+      "name": "r-angstroms",
+      "version": "0.0.1",
+      "conda": null,
+      "prs": []
+    },
+    "area": {
+      "name": "r-area",
+      "version": "0.2.0",
+      "conda": null,
+      "prs": []
+    },
+    "basf": {
+      "name": "r-basf",
+      "version": "0.2.0",
+      "conda": null,
+      "prs": []
+    },
+    "bgmfiles": {
+      "name": "r-bgmfiles",
+      "version": "0.1.0",
+      "conda": null,
+      "prs": []
+    },
+    "bigcurve": {
+      "name": "r-bigcurve",
+      "version": "0.6.0",
+      "conda": null,
+      "prs": []
+    },
+    "cdtr": {
+      "name": "r-cdtr",
+      "version": "0.1.0",
+      "conda": null,
+      "prs": []
+    },
+    "ceramic": {
+      "name": "r-ceramic",
+      "version": "0.9.5",
+      "conda": null,
+      "prs": []
+    },
+    "controlledburn": {
+      "name": "r-controlledburn",
+      "version": "0.3.2",
+      "conda": null,
+      "prs": []
+    },
+    "crsmeta": {
+      "name": "r-crsmeta",
+      "version": "0.3.0",
+      "conda": "0.3.0",
+      "url": "https://github.com/conda-forge/r-crsmeta-feedstock",
+      "behind": false
+    },
+    "decido": {
+      "name": "r-decido",
+      "version": "0.4.0",
+      "conda": "0.4.0",
+      "url": "https://github.com/conda-forge/r-decido-feedstock",
+      "behind": false
+    },
+    "dsn": {
+      "name": "r-dsn",
+      "version": "0.1.0",
+      "conda": null,
+      "prs": []
+    },
+    "duckdbfs": {
+      "name": "r-duckdbfs",
+      "version": "0.1.2",
+      "conda": "0.1.2",
+      "url": "https://github.com/conda-forge/r-duckdbfs-feedstock",
+      "behind": false
+    },
+    "fasterize": {
+      "name": "r-fasterize",
+      "version": "1.1.0",
+      "conda": "1.1.0",
+      "url": "https://github.com/conda-forge/r-fasterize-feedstock",
+      "behind": false
+    },
+    "fortunes": {
+      "name": "r-fortunes",
+      "version": "1.5-5",
+      "conda": null,
+      "prs": []
+    },
+    "gdalraster": {
+      "name": "r-gdalraster",
+      "version": "2.7.0",
+      "conda": "2.7.0",
+      "url": "https://github.com/conda-forge/r-gdalraster-feedstock",
+      "behind": false
+    },
+    "geodist": {
+      "name": "r-geodist",
+      "version": "0.1.1",
+      "conda": "0.1.1",
+      "url": "https://github.com/conda-forge/r-geodist-feedstock",
+      "behind": false
+    },
+    "geographiclib": {
+      "name": "r-geographiclib",
+      "version": "0.4.2",
+      "conda": null,
+      "prs": []
+    },
+    "geojson": {
+      "name": "r-geojson",
+      "version": "0.3.5",
+      "conda": "0.3.5",
+      "url": "https://github.com/conda-forge/r-geojson-feedstock",
+      "behind": false
+    },
+    "ggpolypath": {
+      "name": "r-ggpolypath",
+      "version": "0.4.0",
+      "conda": "0.4.0",
+      "url": "https://github.com/conda-forge/r-ggpolypath-feedstock",
+      "behind": false
+    },
+    "ggsql": {
+      "name": "r-ggsql",
+      "version": "0.5.2",
+      "conda": null,
+      "prs": []
+    },
+    "gibble": {
+      "name": "r-gibble",
+      "version": "0.4.0",
+      "conda": null,
+      "prs": []
+    },
+    "graticule": {
+      "name": "r-graticule",
+      "version": "0.4.0",
+      "conda": null,
+      "prs": []
+    },
+    "grout": {
+      "name": "r-grout",
+      "version": "0.1.0",
+      "conda": null,
+      "prs": []
+    },
+    "lazysf": {
+      "name": "r-lazysf",
+      "version": "0.4.0",
+      "conda": null,
+      "prs": []
+    },
+    "mapscanner": {
+      "name": "r-mapscanner",
+      "version": "0.1.1",
+      "conda": null,
+      "prs": []
+    },
+    "mapview": {
+      "name": "r-mapview",
+      "version": "2.11.4",
+      "conda": "2.11.4",
+      "url": "https://github.com/conda-forge/r-mapview-feedstock",
+      "behind": false
+    },
+    "ncmeta": {
+      "name": "r-ncmeta",
+      "version": "0.5.0",
+      "conda": "0.5.0",
+      "url": "https://github.com/conda-forge/r-ncmeta-feedstock",
+      "behind": false
+    },
+    "orsifronts": {
+      "name": "r-orsifronts",
+      "version": "0.2.0",
+      "conda": null,
+      "prs": []
+    },
+    "ozmaps": {
+      "name": "r-ozmaps",
+      "version": "0.4.5",
+      "conda": null,
+      "prs": []
+    },
+    "palr": {
+      "name": "r-palr",
+      "version": "0.5.0",
+      "conda": "0.5.0",
+      "url": "https://github.com/conda-forge/r-palr-feedstock",
+      "behind": false
+    },
+    "pkgstats": {
+      "name": "r-pkgstats",
+      "version": "0.2.5",
+      "conda": null,
+      "prs": []
+    },
+    "quadmesh": {
+      "name": "r-quadmesh",
+      "version": "0.6.0",
+      "conda": null,
+      "prs": [
+        {
+          "number": 35618,
+          "url": "https://github.com/conda-forge/staged-recipes/pull/35618",
+          "user": "mdsumner",
+          "draft": false,
+          "created": "2026-11-13"
+        }
+      ]
+    },
+    "raster": {
+      "name": "r-raster",
+      "version": "3.6-32",
+      "conda": "3.6_32",
+      "url": "https://github.com/conda-forge/r-raster-feedstock",
+      "behind": false
+    },
+    "rbgm": {
+      "name": "r-rbgm",
+      "version": "0.2.0",
+      "conda": null,
+      "prs": []
+    },
+    "reproj": {
+      "name": "r-reproj",
+      "version": "0.8.0",
+      "conda": "0.8.0",
+      "url": "https://github.com/conda-forge/r-reproj-feedstock",
+      "behind": false
+    },
+    "rgl": {
+      "name": "r-rgl",
+      "version": "1.3.36",
+      "conda": "1.3.36",
+      "url": "https://github.com/conda-forge/r-rgl-feedstock",
+      "behind": false
+    },
+    "rsi": {
+      "name": "r-rsi",
+      "version": "0.3.3",
+      "conda": null,
+      "prs": []
+    },
+    "sds": {
+      "name": "r-sds",
+      "version": "0.3.0",
+      "conda": null,
+      "prs": []
+    },
+    "sf": {
+      "name": "r-sf",
+      "version": "1.1-3",
+      "conda": "1.1_3",
+      "url": "https://github.com/conda-forge/r-sf-feedstock",
+      "behind": false
+    },
+    "sfdct": {
+      "name": "r-sfdct",
+      "version": "0.3.0",
+      "conda": null,
+      "prs": []
+    },
+    "sfheaders": {
+      "name": "r-sfheaders",
+      "version": "0.4.5",
+      "conda": "0.4.5",
+      "url": "https://github.com/conda-forge/r-sfheaders-feedstock",
+      "behind": false
+    },
+    "silicate": {
+      "name": "r-silicate",
+      "version": "0.7.2",
+      "conda": null,
+      "prs": []
+    },
+    "slippymath": {
+      "name": "r-slippymath",
+      "version": "0.3.1",
+      "conda": "0.3.1",
+      "url": "https://github.com/conda-forge/r-slippymath-feedstock",
+      "behind": false
+    },
+    "sooty": {
+      "name": "r-sooty",
+      "version": "0.6.1",
+      "conda": null,
+      "prs": []
+    },
+    "sp": {
+      "name": "r-sp",
+      "version": "2.2-4",
+      "conda": "2.2_3",
+      "url": "https://github.com/conda-forge/r-sp-feedstock",
+      "behind": true
+    },
+    "spatstat.convert": {
+      "name": "r-spatstat.convert",
+      "version": "1.0-1",
+      "conda": null,
+      "prs": []
+    },
+    "spbabel": {
+      "name": "r-spbabel",
+      "version": "0.6.0",
+      "conda": null,
+      "prs": []
+    },
+    "spex": {
+      "name": "r-spex",
+      "version": "0.7.1",
+      "conda": null,
+      "prs": []
+    },
+    "stars": {
+      "name": "r-stars",
+      "version": "0.7-3",
+      "conda": "0.7_3",
+      "url": "https://github.com/conda-forge/r-stars-feedstock",
+      "behind": false
+    },
+    "tabularaster": {
+      "name": "r-tabularaster",
+      "version": "0.7.2",
+      "conda": null,
+      "prs": []
+    },
+    "terra": {
+      "name": "r-terra",
+      "version": "1.9-50",
+      "conda": "1.9_50",
+      "url": "https://github.com/conda-forge/r-terra-feedstock",
+      "behind": false
+    },
+    "textures": {
+      "name": "r-textures",
+      "version": "0.1.0",
+      "conda": null,
+      "prs": []
+    },
+    "tidync": {
+      "name": "r-tidync",
+      "version": "0.5.0",
+      "conda": "0.5.0",
+      "url": "https://github.com/conda-forge/r-tidync-feedstock",
+      "behind": false
+    },
+    "tidyterra": {
+      "name": "r-tidyterra",
+      "version": "1.3.1",
+      "conda": null,
+      "prs": []
+    },
+    "tidytransit": {
+      "name": "r-tidytransit",
+      "version": "1.8.1",
+      "conda": null,
+      "prs": []
+    },
+    "tissot": {
+      "name": "r-tissot",
+      "version": "0.3.0",
+      "conda": null,
+      "prs": []
+    },
+    "tmap": {
+      "name": "r-tmap",
+      "version": "4.4-1",
+      "conda": "4.4_1",
+      "url": "https://github.com/conda-forge/r-tmap-feedstock",
+      "behind": false
+    },
+    "traipse": {
+      "name": "r-traipse",
+      "version": "0.4.0",
+      "conda": null,
+      "prs": []
+    },
+    "trip": {
+      "name": "r-trip",
+      "version": "1.10.0",
+      "conda": null,
+      "prs": []
+    },
+    "tripEstimation": {
+      "name": "r-tripestimation",
+      "version": "0.0-46",
+      "conda": null,
+      "prs": []
+    },
+    "unjoin": {
+      "name": "r-unjoin",
+      "version": "0.1.0",
+      "conda": null,
+      "prs": []
+    },
+    "vapour": {
+      "name": "r-vapour",
+      "version": "0.16.0",
+      "conda": "0.16.0",
+      "url": "https://github.com/conda-forge/r-vapour-feedstock",
+      "behind": false
+    },
+    "vaster": {
+      "name": "r-vaster",
+      "version": "0.6.0",
+      "conda": null,
+      "prs": []
+    },
+    "wk": {
+      "name": "r-wk",
+      "version": "0.9.5",
+      "conda": "0.9.5",
+      "url": "https://github.com/conda-forge/r-wk-feedstock",
+      "behind": false
+    },
+    "wkpool": {
+      "name": "r-wkpool",
+      "version": "0.4.0",
+      "conda": null,
+      "prs": []
+    },
+    "ximage": {
+      "name": "r-ximage",
+      "version": "0.1.0",
+      "conda": "0.1.0",
+      "url": "https://github.com/conda-forge/r-ximage-feedstock",
+      "behind": false
+    },
+    "xyt": {
+      "name": "r-xyt",
+      "version": "0.1.0",
+      "conda": null,
+      "prs": []
+    }
+  }
+}
