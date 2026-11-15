@@ -1,7 +1,7 @@
 {
   "package": "spbabel",
   "version": "0.6.0",
-  "updated": "2026-11-08",
+  "updated": "2026-11-15",
   "sections": {
     "urlchecker": {
       "summary": "1 URL problem(s)",
@@ -9,7 +9,7 @@
         {
           "url": "https://manifold.net/",
           "status": "Error",
-          "message": "SSL peer certificate or SSH remote key was not OK [manifold.net]:\nSSL certificate problem: unable to get local issuer certificate",
+          "message": "SSL peer certificate or SSH remote key was not OK [manifold.net]:\nSSL certificate OpenSSL verify result: unable to get local issuer certificate (20)",
           "new": "",
           "from": "README.md",
           "_row": "https://manifold.net/"
