@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-08 21:27 UTC",
+  "checked": "2026-11-16 21:27 UTC",
   "packages": {
     "CCAMLRGIS": {
       "repo": "ccamlr/CCAMLRGIS",
@@ -513,10 +513,9 @@
     },
     "wkpool": {
       "repo": "hypertidy/wkpool",
-      "version": "0.4.0",
-      "tag": "v0.4.0",
-      "url": "https://github.com/hypertidy/wkpool/tree/v0.4.0",
-      "release": false,
+      "version": "0.5.0",
+      "tag": null,
+      "url": "https://github.com/hypertidy/wkpool/tags",
       "tags": 2
     },
     "ximage": {
