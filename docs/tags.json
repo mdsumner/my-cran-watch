@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-16 21:27 UTC",
+  "checked": "2026-11-18 21:28 UTC",
   "packages": {
     "CCAMLRGIS": {
       "repo": "ccamlr/CCAMLRGIS",
@@ -72,10 +72,9 @@
     },
     "cdtr": {
       "repo": "hypertidy/cdtr",
-      "version": "0.1.0",
-      "tag": "v0.1.0",
-      "url": "https://github.com/hypertidy/cdtr/releases/tag/v0.1.0",
-      "release": true,
+      "version": "0.2.0",
+      "tag": null,
+      "url": "https://github.com/hypertidy/cdtr/tags",
       "tags": 1
     },
     "ceramic": {
