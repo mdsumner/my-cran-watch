@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-18 21:28 UTC",
+  "checked": "2026-11-20 21:27 UTC",
   "packages": {
     "CCAMLRGIS": {
       "repo": "ccamlr/CCAMLRGIS",
@@ -400,11 +400,11 @@
     },
     "terra": {
       "repo": "rspatial/terra",
-      "version": "1.9-50",
-      "tag": "1.9-50",
-      "url": "https://github.com/rspatial/terra/tree/1.9-50",
+      "version": "1.9-60",
+      "tag": "1.9-60",
+      "url": "https://github.com/rspatial/terra/tree/1.9-60",
       "release": false,
-      "tags": 19
+      "tags": 20
     },
     "textures": {
       "repo": "hypertidy/textures",

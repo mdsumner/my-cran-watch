@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-18 21:28 UTC",
+  "checked": "2026-11-20 21:28 UTC",
   "packages": {
     "CCAMLRGIS": {
       "name": "r-ccamlrgis",
@@ -356,10 +356,10 @@
     },
     "terra": {
       "name": "r-terra",
-      "version": "1.9-50",
+      "version": "1.9-60",
       "conda": "1.9_50",
       "url": "https://github.com/conda-forge/r-terra-feedstock",
-      "behind": false
+      "behind": true
     },
     "textures": {
       "name": "r-textures",

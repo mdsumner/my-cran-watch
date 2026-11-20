@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-18 21:28 UTC",
+  "checked": "2026-11-20 21:27 UTC",
   "source": "https://cran.r-project.org/src/contrib/",
   "packages": {
     "CCAMLRGIS": {
@@ -219,8 +219,8 @@
       "published": "2023-11-01 07:10"
     },
     "terra": {
-      "version": "1.9-50",
-      "published": "2026-09-08 17:50"
+      "version": "1.9-60",
+      "published": "2026-11-20 18:10"
     },
     "textures": {
       "version": "0.1.0",

@@ -1,5 +1,5 @@
 {
-  "changed": "2026-11-19 21:27 UTC",
+  "changed": "2026-11-20 21:27 UTC",
   "source": "https://cran.r-project.org/incoming/",
   "entries": [
     {
@@ -11,25 +11,24 @@
       "url": "https://cran.r-project.org/incoming/newbies/",
       "new": true,
       "first_seen": "2026-11-13 19:15"
-    },
+    }
+  ],
+  "exits": [
     {
       "package": "terra",
       "version": "1.9-57",
       "folder": "pending",
-      "subfolder": "",
-      "modified": "2026-10-30 00:26",
-      "url": "https://cran.r-project.org/incoming/pending/",
-      "first_seen": "2026-10-30 00:26"
+      "first_seen": "2026-10-30 00:26",
+      "left": "2026-11-20 21:27 UTC",
+      "outcome": "left"
     },
     {
       "package": "terra",
       "version": "1.9-60",
       "folder": "pending",
-      "subfolder": "",
-      "modified": "2026-11-19 17:22",
-      "url": "https://cran.r-project.org/incoming/pending/",
-      "first_seen": "2026-11-19 17:22"
+      "first_seen": "2026-11-19 17:22",
+      "left": "2026-11-20 21:27 UTC",
+      "outcome": "published"
     }
-  ],
-  "exits": []
+  ]
 }
