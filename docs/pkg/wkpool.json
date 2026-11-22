@@ -1,20 +1,27 @@
 {
   "package": "wkpool",
-  "version": "0.4.0",
-  "updated": "2026-11-15",
+  "version": "0.5.0",
+  "updated": "2026-11-22",
   "sections": {
     "urlchecker": {
       "summary": "all URLs ok",
       "problems": []
     },
     "checktor": {
-      "summary": "2 opinion, 2 robustness",
+      "summary": "3 opinion, 2 robustness",
       "problems": [
         {
           "category": "description",
           "check": "acronyms",
           "severity": "opinion",
           "location": "ISBN",
+          "message": "Acronyms check"
+        },
+        {
+          "category": "description",
+          "check": "acronyms",
+          "severity": "opinion",
+          "location": "DE",
           "message": "Acronyms check"
         },
         {

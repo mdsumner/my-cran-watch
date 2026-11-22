@@ -1,22 +1,22 @@
 {
   "package": "cdtr",
-  "version": "0.1.0",
-  "updated": "2026-11-15",
+  "version": "0.2.0",
+  "updated": "2026-11-22",
   "sections": {
     "urlchecker": {
       "summary": "all URLs ok",
       "problems": []
     },
     "checktor": {
-      "summary": "12 robustness",
+      "summary": "50 robustness",
       "problems": [
         {
           "category": "code",
           "check": "tf_usage",
           "severity": "robustness",
           "file": "cdt.R",
-          "line": 194,
-          "location": "cdt.R:194",
+          "line": 267,
+          "location": "cdt.R:267",
           "message": "T/F usage check"
         },
         {
@@ -24,8 +24,8 @@
           "check": "tf_usage",
           "severity": "robustness",
           "file": "cdt.R",
-          "line": 195,
-          "location": "cdt.R:195",
+          "line": 268,
+          "location": "cdt.R:268",
           "message": "T/F usage check"
         },
         {
@@ -33,8 +33,8 @@
           "check": "tf_usage",
           "severity": "robustness",
           "file": "cdt.R",
-          "line": 195,
-          "location": "cdt.R:195",
+          "line": 268,
+          "location": "cdt.R:268",
           "message": "T/F usage check"
         },
         {
@@ -42,8 +42,8 @@
           "check": "tf_usage",
           "severity": "robustness",
           "file": "cdt.R",
-          "line": 195,
-          "location": "cdt.R:195",
+          "line": 268,
+          "location": "cdt.R:268",
           "message": "T/F usage check"
         },
         {
@@ -51,8 +51,8 @@
           "check": "tf_usage",
           "severity": "robustness",
           "file": "cdt.R",
-          "line": 223,
-          "location": "cdt.R:223",
+          "line": 296,
+          "location": "cdt.R:296",
           "message": "T/F usage check"
         },
         {
@@ -60,8 +60,8 @@
           "check": "tf_usage",
           "severity": "robustness",
           "file": "cdt.R",
-          "line": 223,
-          "location": "cdt.R:223",
+          "line": 296,
+          "location": "cdt.R:296",
           "message": "T/F usage check"
         },
         {
@@ -69,8 +69,8 @@
           "check": "tf_usage",
           "severity": "robustness",
           "file": "cdt.R",
-          "line": 223,
-          "location": "cdt.R:223",
+          "line": 296,
+          "location": "cdt.R:296",
           "message": "T/F usage check"
         },
         {
@@ -78,8 +78,8 @@
           "check": "tf_usage",
           "severity": "robustness",
           "file": "cdt.R",
-          "line": 224,
-          "location": "cdt.R:224",
+          "line": 297,
+          "location": "cdt.R:297",
           "message": "T/F usage check"
         },
         {
@@ -87,8 +87,305 @@
           "check": "tf_usage",
           "severity": "robustness",
           "file": "cdt.R",
-          "line": 225,
-          "location": "cdt.R:225",
+          "line": 298,
+          "location": "cdt.R:298",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 348,
+          "location": "cdt.R:348",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 348,
+          "location": "cdt.R:348",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 348,
+          "location": "cdt.R:348",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 349,
+          "location": "cdt.R:349",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 350,
+          "location": "cdt.R:350",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 350,
+          "location": "cdt.R:350",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 350,
+          "location": "cdt.R:350",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 350,
+          "location": "cdt.R:350",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 354,
+          "location": "cdt.R:354",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 360,
+          "location": "cdt.R:360",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 361,
+          "location": "cdt.R:361",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 362,
+          "location": "cdt.R:362",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 456,
+          "location": "cdt.R:456",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 459,
+          "location": "cdt.R:459",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 461,
+          "location": "cdt.R:461",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 461,
+          "location": "cdt.R:461",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 462,
+          "location": "cdt.R:462",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 463,
+          "location": "cdt.R:463",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 463,
+          "location": "cdt.R:463",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 463,
+          "location": "cdt.R:463",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 463,
+          "location": "cdt.R:463",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 466,
+          "location": "cdt.R:466",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 466,
+          "location": "cdt.R:466",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 467,
+          "location": "cdt.R:467",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 467,
+          "location": "cdt.R:467",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 468,
+          "location": "cdt.R:468",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 468,
+          "location": "cdt.R:468",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 547,
+          "location": "cdt.R:547",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 548,
+          "location": "cdt.R:548",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 565,
+          "location": "cdt.R:565",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 566,
+          "location": "cdt.R:566",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 580,
+          "location": "cdt.R:580",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cdt.R",
+          "line": 596,
+          "location": "cdt.R:596",
           "message": "T/F usage check"
         },
         {
@@ -98,6 +395,15 @@
           "file": "cpp11.R",
           "line": 8,
           "location": "cpp11.R:8",
+          "message": "T/F usage check"
+        },
+        {
+          "category": "code",
+          "check": "tf_usage",
+          "severity": "robustness",
+          "file": "cpp11.R",
+          "line": 12,
+          "location": "cpp11.R:12",
           "message": "T/F usage check"
         },
         {
@@ -117,9 +423,45 @@
           "line": 33,
           "location": "example cdt_interpolate.Rd:33",
           "message": "Example T/F usage check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_tf_usage",
+          "severity": "robustness",
+          "file": "cdt_locate.Rd",
+          "line": 49,
+          "location": "example cdt_locate.Rd:49",
+          "message": "Example T/F usage check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_tf_usage",
+          "severity": "robustness",
+          "file": "cdt_locate.Rd",
+          "line": 51,
+          "location": "example cdt_locate.Rd:51",
+          "message": "Example T/F usage check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_tf_usage",
+          "severity": "robustness",
+          "file": "cdt_locate.Rd",
+          "line": 54,
+          "location": "example cdt_locate.Rd:54",
+          "message": "Example T/F usage check"
+        },
+        {
+          "category": "documentation",
+          "check": "example_tf_usage",
+          "severity": "robustness",
+          "file": "cdt_locate.Rd",
+          "line": 59,
+          "location": "example cdt_locate.Rd:59",
+          "message": "Example T/F usage check"
         }
       ],
-      "count": 12
+      "count": 50
     }
   }
 }
