@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19 19:19 UTC",
+  "generated": "2026-11-25 19:18 UTC",
   "repo": "mdsumner/my-cran-watch",
   "packages": [
     {
@@ -1074,6 +1074,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1099,6 +1100,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
         "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "NOTE",
         "r-devel-linux-x86_64-fedora-gcc": "NOTE",
         "r-devel-windows-x86_64": "NOTE",
         "r-patched-linux-x86_64": "OK",
@@ -1134,6 +1136,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1169,6 +1172,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1194,6 +1198,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1219,6 +1224,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
         "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "NOTE",
         "r-devel-linux-x86_64-fedora-gcc": "NOTE",
         "r-devel-windows-x86_64": "NOTE",
         "r-patched-linux-x86_64": "OK",
@@ -1254,6 +1260,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
         "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1289,6 +1296,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1314,6 +1322,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1339,6 +1348,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1374,6 +1384,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1399,6 +1410,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1424,6 +1436,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -1504,14 +1517,15 @@
     {
       "package": "terra",
       "role": "interest",
-      "version": "1.9-50",
-      "published": "2026-09-08 15:50:02 UTC",
+      "version": "1.9-60",
+      "published": "2026-11-20 17:10:02 UTC",
       "repo": "rspatial/terra",
-      "worst": "OK",
+      "worst": "ERROR",
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
-        "r-devel-linux-x86_64-fedora-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "ERROR",
+        "r-devel-linux-x86_64-fedora-gcc": "ERROR",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
         "r-release-linux-x86_64": "OK",
@@ -1524,7 +1538,17 @@
       },
       "universe": null,
       "universe_url": null,
-      "conditions": []
+      "conditions": [
+        {
+          "key": "terra|checks",
+          "package": "terra",
+          "kind": "checks",
+          "status": "ERROR",
+          "lifecycle": "observed",
+          "issue": null,
+          "first_seen": "2026-11-25"
+        }
+      ]
     },
     {
       "package": "wk",
@@ -1536,6 +1560,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
         "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "NOTE",
         "r-devel-linux-x86_64-fedora-gcc": "NOTE",
         "r-devel-windows-x86_64": "NOTE",
         "r-patched-linux-x86_64": "OK",
@@ -2053,6 +2078,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -2078,6 +2104,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "OK",
         "r-devel-linux-x86_64-debian-gcc": "OK",
+        "r-devel-linux-x86_64-fedora-clang": "OK",
         "r-devel-linux-x86_64-fedora-gcc": "OK",
         "r-devel-windows-x86_64": "OK",
         "r-patched-linux-x86_64": "OK",
@@ -2103,6 +2130,7 @@
       "flavors": {
         "r-devel-linux-x86_64-debian-clang": "NOTE",
         "r-devel-linux-x86_64-debian-gcc": "NOTE",
+        "r-devel-linux-x86_64-fedora-clang": "NOTE",
         "r-devel-linux-x86_64-fedora-gcc": "NOTE",
         "r-devel-windows-x86_64": "NOTE",
         "r-patched-linux-x86_64": "OK",
