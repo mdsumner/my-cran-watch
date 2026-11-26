@@ -27,6 +27,10 @@ Everything the tool does is an instance of that loop:
 - **gdal-r-ci canary**: open `canary` issues in hypertidy/gdal-r-ci
   (override with `gdal_r_ci:` in config) are mirrored here, so GDAL/PROJ
   breakage shows up alongside everything else without re-running it.
+- **check timings**: CRAN keeps no history of install/check times, so
+  each run appends what it sees to `state/timings.csv` (one row per
+  package/flavor whenever the values change). Nothing is diffed or
+  reported; `timing_history("vapour", "windows")` reads it back.
 - **incoming queue**: via foghorn, logs where submissions sit in the
   newbies/pretest/waiting folders during the days-to-weeks limbo.
 
@@ -197,3 +201,41 @@ solid this becomes a template: blank one file, fork, modify, deploy.
 - weekly digest issue summarizing all-quiet runs
 - winbuilder / r-hub submission hooks
 - template-ification once the pattern has survived a few months
+
+
+## CRAN watch: reference sites
+
+### Check results (official, current only)
+- Per package: https://cran.r-project.org/web/checks/check_results_PKG.html (v)
+- Per maintainer: https://cran.r-project.org/web/checks/check_results_EMAIL_at_DOMAIN.html
+- Timings, all flavors: https://cran.r-project.org/web/checks/check_timings.html (v)
+- Timings, one flavor: https://cran.r-project.org/web/checks/check_timings_r-devel-windows-x86_64.html
+- Flavor definitions: https://cran.r-project.org/web/checks/check_flavors.html
+- Full check log: https://www.r-project.org/nosvn/R.check/FLAVOR/PKG-00check.html (v)
+- In R: tools::CRAN_check_results(), tools::CRAN_check_details()
+
+### Check results (third-party snapshots and history)
+- R Observatory daily SQLite (timings current-only, status-change history):
+  https://github.com/r-observatory/cran-metadata (v)
+- Intermittent-failure report (Lluis Revilla): https://llrs.github.io/intermittent_failures/ (v)
+- Check results frozen at archival time: https://cran-archive.r-project.org/web/checks/
+- Badges only (old API is gone): https://badges.cranchecks.info
+
+### Incoming queue
+- Raw: https://cran.r-project.org/incoming/
+- cransays dashboard (hourly, history branch): https://r-hub.github.io/cransays/articles/dashboard.html (v)
+- R Observatory hourly queue snapshots: https://github.com/r-observatory/cran-queue (v)
+- In R: foghorn::cran_incoming()
+
+### Package metadata and events (METACRAN, Gabor Csardi)
+- Package pages: https://www.r-pkg.org (v)
+- Metadata API: https://crandb.r-pkg.org
+- Download counts: https://cranlogs.r-pkg.org
+- Source mirror with full history: https://github.com/cran
+- New/updated/removed diffs (Dirk Eddelbuettel): https://dirk.eddelbuettel.com/cranberries/
+- Recently archived packages: https://www.cranhaven.org
+
+### Pre-submission builders
+- Windows: https://win-builder.r-project.org/
+- macOS: https://mac.r-project.org/macbuilder/submit.html
+- R-universe builds: https://hypertidy.r-universe.dev/builds

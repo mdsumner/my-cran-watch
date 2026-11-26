@@ -21,6 +21,11 @@ for (r in unique(mine$role)) {
 
 raw_checks <- tools::CRAN_check_results()
 checks <- fetch_check_results(mine$package, cfg, raw_checks)
+# timing history is a log, not a condition: never let it fail the run
+tryCatch({
+  n <- record_timings(fetch_timings(mine$package, raw_checks))
+  msg("timings: %d new row(s) in state/timings.csv", n)
+}, error = function(e) msg("timings not recorded: %s", conditionMessage(e)))
 uni    <- fetch_universe(cfg)
 inc    <- fetch_incoming(cfg)
 if (!is.null(inc) && NROW(inc) > 0) {
