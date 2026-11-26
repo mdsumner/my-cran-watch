@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-20 21:27 UTC",
+  "checked": "2026-11-26 21:27 UTC",
   "packages": {
     "CCAMLRGIS": {
       "repo": "ccamlr/CCAMLRGIS",
@@ -359,7 +359,7 @@
       "tag": "v0.6.1",
       "url": "https://github.com/mdsumner/sooty/tree/v0.6.1",
       "release": false,
-      "tags": 3
+      "tags": 4
     },
     "sp": {
       "repo": "edzer/sp",
@@ -489,11 +489,11 @@
     },
     "vapour": {
       "repo": "hypertidy/vapour",
-      "version": "0.16.0",
-      "tag": "v0.16.0",
-      "url": "https://github.com/hypertidy/vapour/tree/v0.16.0",
-      "release": false,
-      "tags": 24
+      "version": "0.20.0",
+      "tag": "v0.20.0",
+      "url": "https://github.com/hypertidy/vapour/releases/tag/v0.20.0",
+      "release": true,
+      "tags": 25
     },
     "vaster": {
       "repo": "hypertidy/vaster",

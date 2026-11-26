@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-20 21:28 UTC",
+  "checked": "2026-11-26 21:27 UTC",
   "packages": {
     "CCAMLRGIS": {
       "name": "r-ccamlrgis",
@@ -425,10 +425,10 @@
     },
     "vapour": {
       "name": "r-vapour",
-      "version": "0.16.0",
+      "version": "0.20.0",
       "conda": "0.16.0",
       "url": "https://github.com/conda-forge/r-vapour-feedstock",
-      "behind": false
+      "behind": true
     },
     "vaster": {
       "name": "r-vaster",

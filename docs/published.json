@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-20 21:27 UTC",
+  "checked": "2026-11-26 21:27 UTC",
   "source": "https://cran.r-project.org/src/contrib/",
   "packages": {
     "CCAMLRGIS": {
@@ -263,8 +263,8 @@
       "published": "2020-05-13 07:20"
     },
     "vapour": {
-      "version": "0.16.0",
-      "published": "2026-03-14 07:10"
+      "version": "0.20.0",
+      "published": "2026-11-26 11:00"
     },
     "vaster": {
       "version": "0.6.0",
